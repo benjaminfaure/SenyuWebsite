@@ -1,0 +1,35 @@
+
+/**
+
+MENU
+
+**/
+
+.nav-wrap {
+	border: 3px solid #8BC34A;
+	background-color: #8BC34A;
+	min-height: 50px;
+	position: absolute;
+	height: 100%;
+	z-index: 0;
+	width: 100vw;
+	top: 50px;
+}
+
+
+.nav-wrap li > a {
+  text-decoration: none;
+	display: inline-block;
+	height: 2rem;
+	width: 100%;
+}
+
+.nav-wrap ul{
+  list-style-type: none;
+	padding-left: 0;
+	text-align: center;
+}
+
+.nav-wrap .menu-content{
+	background-color: #ccc;
+}
