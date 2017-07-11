@@ -1,24 +1,32 @@
+body {
+	margin: 0;
+}
+
+
+article {
+	border: 3px solid #00ad5e;
+  background-color: #00ad5e;
+	height: 150px;
+  margin: 10px;
+}
+
+footer {
+	border: 3px solid #673AB7;
+  background-color: #673AB7;
+	height: 50px;
+	clear: both;
+}
+
+h4 {
+	color: #fffefe;
+	font-family: "Montserrat",sans-serif;
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+	display: flex;
+	flex-direction: column;
 }

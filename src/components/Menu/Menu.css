@@ -6,30 +6,76 @@ MENU
 **/
 
 .nav-wrap {
-	border: 3px solid #8BC34A;
-	background-color: #8BC34A;
+	border: 3px solid #2b2b2b;
+	background-color: #2b2b2b;
 	min-height: 50px;
 	position: absolute;
-	height: 100%;
+	/*height: 100%;*/
 	z-index: 0;
-	width: 100vw;
+	width: 100%;
 	top: 50px;
 }
 
 
 .nav-wrap li > a {
-  text-decoration: none;
+	text-decoration: none;
 	display: inline-block;
 	height: 2rem;
 	width: 100%;
+	color: #fff;
+	font-size: 0.75em;
+  font-family: "Raleway",sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .nav-wrap ul{
-  list-style-type: none;
+	list-style-type: none;
 	padding-left: 0;
 	text-align: center;
 }
 
 .nav-wrap .menu-content{
-	background-color: #ccc;
+	background-color: #2b2b2b;
+}
+
+.nav-wrap .menu-content a{
+	font-size: 11px;
+	line-height: 43px;
+	padding: 0 20px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+	.nav-wrap {
+		top: auto;
+		z-index: auto;
+		position: relative;
+	}
+
+	.nav-wrap .menu {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.nav-wrap .menu-item {
+		flex: 1;
+		position: relative;
+	}
+
+	.nav-wrap .menu-content {
+		display: none;
+		position: absolute;
+    left: 0;
+    right: 0;
+		z-index: 1;
+	}
+
+	.nav-wrap .menu-item:hover .menu-content {
+		display: block;
+	}
+
+	.nav-wrap .menu-content a:hover {
+		background-color: #29c7ab;
+	}
 }

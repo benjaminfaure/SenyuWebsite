@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
-import logo from '../images/logo.svg';
+import { Router, Route } from 'react-router';
+import browserHistory  from 'history/createBrowserHistory';
+
 import Menu from './Menu/Menu.jsx';
-import MenuIcon from './Menu/MenuIcon.jsx';
+import Header from './Header/Header.jsx';
+import MainPage from './MainPage/MainPage.jsx';
+
+
 import './App.css';
 
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <Router history={browserHistory()}>
+        <div className="App">
+          <Header/>
+          <Menu/>
+
+          <Route path="/" component={MainPage}/>
+
         </div>
-        <MenuIcon/>
-        <Menu/>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      </Router>
     );
   }
 }
+
+
+
 
 export default App;
