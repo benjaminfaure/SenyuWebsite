@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
 import menu, * as fromMenu from './menu';
 import dimensions, * as fromDimensions from './dimensions';
+import intervenants from './intervenants';
 
 
 const rootReducer = combineReducers({
   menu,
-  dimensions
+  dimensions,
+  intervenants
 });
 
 

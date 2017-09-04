@@ -3,18 +3,9 @@ body {
 }
 
 
-article {
-	border: 3px solid #00ad5e;
-  background-color: #00ad5e;
-	height: 150px;
-  margin: 10px;
-}
-
-footer {
-	border: 3px solid #673AB7;
-  background-color: #673AB7;
-	height: 50px;
-	clear: both;
+section {
+	border: 3px solid #009688;
+	background-color: #009688;
 }
 
 h4 {
@@ -29,4 +20,36 @@ h4 {
 .App {
 	display: flex;
 	flex-direction: column;
+}
+
+
+.main-content {
+	border: 3px solid #fff;
+	background-color: #fff;
+	padding: 25px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	position: relative;
+	transition: transform .3s;
+	z-index: 1;
+}
+
+
+.main-content.open {
+	transform: translateX(-100%);
+}
+
+
+#left-content {
+	height: auto;
+	flex: auto;
+}
+
+
+@media screen and (min-width: 1024px) {
+	.main-content {
+		z-index: auto;
+	}
 }

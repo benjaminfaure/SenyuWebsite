@@ -11,6 +11,7 @@
     "react-addons-update": "^15.6.0",
     "react-dom": "^15.5.4",
     "react-google-maps": "^6.3.0",
+    "react-icons": "^2.2.5",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
@@ -23,7 +24,7 @@
     "react-scripts": "1.0.7"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3003 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

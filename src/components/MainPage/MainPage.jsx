@@ -3,30 +3,17 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import './MainPage.css';
-import { WIDTH_BREAKPOINT } from '../../constants';
 import DimensionsActionCreators from '../../actions/DimensionsActionCreators';
-import MenuActionCreators from '../../actions/MenuActionCreators';
 import {
-  getShowMainContent,
   getDimensions
 } from '../../reducers';
 import MainPageSlider from './MainPageSlider.jsx';
-import MainPageGoogleMap from './MainPageGoogleMap.jsx';
 
 
 
 class MainPage extends Component {
   componentWillMount() {
     this.props.updateDimensions();
-  }
-
-
-  componentWillReceiveProps(nextProps) {
-    if(!nextProps.showMainContent
-      && nextProps.dimensions.width >= WIDTH_BREAKPOINT )
-    {
-      nextProps.resetMenuState();
-    }
   }
 
 
@@ -39,9 +26,9 @@ class MainPage extends Component {
 
   render() {
     return (
-      <div className={this.props.showMainContent ? "main-content" : "main-content open"}>
+      <div >
         <MainPageSlider/>
-        <section id="left-content">
+        <section >
           <article>
             <span>{this.props.dimensions.width} x {this.props.dimensions.height}</span>
           </article>
@@ -55,7 +42,6 @@ class MainPage extends Component {
 
           </article>
         </section>
-        <MainPageGoogleMap/>
       </div>
     );
   }
@@ -70,7 +56,6 @@ MainPage.propTypes = {
 
 const mapStateToProps = (state) => (
   {
-    showMainContent: getShowMainContent(state),
     dimensions: getDimensions(state)
   }
 );
@@ -78,7 +63,6 @@ const mapStateToProps = (state) => (
 const mapDispatchToProps = (dispatch) => (
   {
     updateDimensions: () => dispatch(DimensionsActionCreators.updateDimensions()),
-    resetMenuState: () => dispatch(MenuActionCreators.resetMenuState()),
   }
 );
 
