@@ -1,34 +1,61 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import ContentSingle from '../Content/ContentSingle.jsx';
+
+import FaFacebook from 'react-icons/lib/fa/facebook-official';
+import FaTwitch from 'react-icons/lib/fa/twitch';
+import FaTwitter from 'react-icons/lib/fa/twitter';
+import FaYoutube from 'react-icons/lib/fa/youtube';
+import FaWebsite from 'react-icons/lib/fa/external-link';
+
+import GenericContentItem from '../GenericContent/GenericContentItem.jsx';
+import IntervenantsActionCreators from '../../actions/IntervenantsActionCreators';
+
 
 import './Intervenant.css';
 
-class Intervenant extends Component {
-  render() {
-    return (
-      <ContentSingle title={this.props.nom}
-                     content={this.props.description}
-                     image={this.props.image}>
-        <div className="intervenant-social">Intervenant</div>
-      </ContentSingle>
+let intervenantId ;
 
+class Intervenant extends Component {
+
+  componentDidMount(){
+    intervenantId = this.props.match.params.intervenantId;
+
+    if(intervenantId) {
+      this.props.fetchIntervenantById(intervenantId);
+    }
+  }
+
+
+
+  render() {
+
+    console.log(JSON.stringify(this.state));
+
+    return (
+      <GenericContentItem title={this.props.intervenant.nom}>
+      </GenericContentItem>
     );
   }
 }
 
 Intervenant.propTypes = {
-  id: PropTypes.number,
-  nom: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  facebook: PropTypes.string,
-  twitter: PropTypes.string,
-  youtube: PropTypes.string,
-  website: PropTypes.string,
-  twitch: PropTypes.string,
+  intervenant: PropTypes.object,
 };
 
 
-export default Intervenant;
+const mapStateToProps = (state) => (
+  {
+    intervenant: state.intervenantsReducer
+  }
+);
+
+const mapDispatchToProps = (dispatch) => (
+  {
+    fetchIntervenantById: (id) => dispatch(IntervenantsActionCreators.fetchIntervenantById(id)),
+  }
+);
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Intervenant);

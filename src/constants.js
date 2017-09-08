@@ -21,3 +21,6 @@ export const INTERVENANT = 'intervenant';
 
 export const REQUEST_INTERVENANTS = 'request intervenants';
 export const RECEIVE_INTERVENANTS = 'receive intervenants';
+
+export const REQUEST_INTERVENANT_BY_ID = 'request intervenant by id';
+export const RECEIVE_INTERVENANT_BY_ID = 'receive intervenant by id';

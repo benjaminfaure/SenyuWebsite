@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import ContentList from '../Content/ContentList.jsx';
-import Intervenant from './Intervenant.jsx';
+import GenericList from '../GenericContent/GenericList.jsx';
+import GenericListItem from '../GenericContent/GenericListItem.jsx';
 import IntervenantsActionCreators from '../../actions/IntervenantsActionCreators';
 
 import './Intervenants.css';
@@ -18,13 +18,19 @@ class Intervenants extends Component {
   render() {
 
     let intervenantsList = this.props.intervenants.map((intervenant) => {
-            return <Intervenant key={intervenant.id}
-                                {...intervenant}/>
+            return <GenericListItem key={intervenant.id}
+                id={intervenant.id}
+                link={`/intervenant/${intervenant.id}`}
+                propClass="intervenant-list-item"
+                image={intervenant.image}
+                title={intervenant.nom}>
+            </GenericListItem>
         });
 
-
     return(
-      <ContentList itemList = {intervenantsList}> </ContentList>
+      <GenericList itemList = {intervenantsList}
+          titrePage="Liste des Intervenants">
+       </GenericList>
     );
 
   }
@@ -37,7 +43,7 @@ Intervenants.propTypes = {
 
 const mapStateToProps = (state) => (
   {
-    intervenants: state.intervenants
+    intervenants: state.intervenantsReducer
   }
 );
 
@@ -46,7 +52,6 @@ const mapDispatchToProps = (dispatch) => (
     fetchIntervenants: () => dispatch(IntervenantsActionCreators.fetchIntervenants()),
   }
 );
-
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(Intervenants);

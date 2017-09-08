@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Router, Route } from 'react-router';
 import browserHistory  from 'history/createBrowserHistory';
 import { connect } from 'react-redux';
@@ -46,7 +47,7 @@ class App extends Component {
                 <Route exact path="/" component={MainPage}/>
 
 
-                <Route path="/intervenant/:id" component={Intervenant}/>
+                <Route path="/intervenant/:intervenantId" component={Intervenant}/>
                 <Route path="/intervenants" component={Intervenants}/>
 
                 <Route path='/facebook' component={() => window.location = 'https://www.facebook.com/senyuofficiel/'}/>
@@ -63,6 +64,9 @@ class App extends Component {
     }
   }
 
+  App.propTypes = {
+    showMainContent: PropTypes.bool,
+  };
 
   const mapStateToProps = (state) => (
     {

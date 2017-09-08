@@ -9,11 +9,12 @@ class ContentSingle extends Component {
       <article>
         <div className="content-description">
           <h4>{this.props.title}</h4>
-          <p>{this.props.content}</p>
+          <p dangerouslySetInnerHTML={{__html:this.props.content}} />
           {this.props.children}
         </div>
         <div className="content-image">
-          <img src={this.props.image}/>
+          <img src={this.props.image} alt={this.props.title} />
+          <h4>{this.props.title}</h4>
         </div>
 
       </article>

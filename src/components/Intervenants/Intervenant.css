@@ -1,4 +1,12 @@
 
 .intervenant-social {
-  
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+
+
+.intervenant-social a {
+  color: white;
 }

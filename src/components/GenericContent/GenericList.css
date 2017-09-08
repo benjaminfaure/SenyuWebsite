@@ -1,0 +1,15 @@
+
+
+.generic-content-list {
+	border: 3px solid #009688;
+	background-color: #009688;
+	display: flex;
+  flex-wrap: wrap;
+}
+
+
+.generic-page-header {
+  padding-top: 50px;
+  border: none;
+  background-color: #fff;
+}
