@@ -6,13 +6,12 @@ import './GenericContentItem.css';
 class GenericContentSingle extends Component {
   render() {
     return (
-      <section>
-        <article className="content-image">
+      <section className="generic-content">
+        <article className="generic-content-image">
           <img src={this.props.image} alt={this.props.title} />
-          <h4>{this.props.title}</h4>
         </article>
-        <article className="content-description">
-          <h4>{this.props.title}</h4>
+        <article className="generic-content-description">
+          <h4 className="generic-content-title">{this.props.title}</h4>
           <p dangerouslySetInnerHTML={{__html:this.props.content}} />
           {this.props.children}
         </article>

@@ -43,7 +43,7 @@ Intervenants.propTypes = {
 
 const mapStateToProps = (state) => (
   {
-    intervenants: state.intervenantsReducer
+    intervenants: state.intervenants.list
   }
 );
 

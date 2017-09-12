@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Router, Route } from 'react-router';
-import browserHistory  from 'history/createBrowserHistory';
+import {BrowserRouter, Route} from 'react-router-dom';
 import { connect } from 'react-redux';
 
 
 import { WIDTH_BREAKPOINT } from '../constants';
 import {
-  getShowMainContent
+  getShowMainContent,
+  getDimensions
 } from '../reducers';
 import MenuActionCreators from '../actions/MenuActionCreators';
 
@@ -15,7 +15,6 @@ import Menu from './Menu/Menu.jsx';
 import Header from './Header/Header.jsx';
 import Footer from './Footer/Footer.jsx';
 import MainPage from './MainPage/MainPage.jsx';
-
 import Intervenant from './Intervenants/Intervenant.jsx';
 import Intervenants from './Intervenants/Intervenants.jsx';
 
@@ -38,12 +37,14 @@ class App extends Component {
 
     render() {
       return (
-        <Router history={browserHistory()}>
+        <BrowserRouter>
           <div className="App">
             <Header/>
             <Menu/>
             <div className={this.props.showMainContent ? "main-content" : "main-content open"}>
               <div id="left-content">
+
+
                 <Route exact path="/" component={MainPage}/>
 
 
@@ -57,9 +58,9 @@ class App extends Component {
 
               </div>
             </div>
-            <Footer/>
+            <Footer className={this.props.showMainContent ? "main-content" : "main-content open"}/>
           </div>
-        </Router>
+        </BrowserRouter>
       );
     }
   }
@@ -70,7 +71,8 @@ class App extends Component {
 
   const mapStateToProps = (state) => (
     {
-      showMainContent: getShowMainContent(state)
+      showMainContent: getShowMainContent(state),
+      dimensions: getDimensions(state)
     }
   );
 

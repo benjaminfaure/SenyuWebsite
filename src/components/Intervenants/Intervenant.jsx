@@ -31,10 +31,25 @@ class Intervenant extends Component {
 
   render() {
 
-    console.log(JSON.stringify(this.state));
+    const facebook = this.props.intervenant.facebook ? <h2><a href={this.props.intervenant.facebook} target="_blank" rel="noopener noreferrer"><FaFacebook/></a></h2> : "" ;
+    const twitch = this.props.intervenant.twitch ? <h2><a href={this.props.intervenant.twitch} target="_blank" rel="noopener noreferrer"><FaTwitch/></a></h2> : "" ;
+    const twitter = this.props.intervenant.twitter ? <h2><a href={this.props.intervenant.twitter} target="_blank" rel="noopener noreferrer"><FaTwitter/></a></h2> : "" ;
+    const youtube = this.props.intervenant.youtube ? <h2><a href={this.props.intervenant.youtube} target="_blank" rel="noopener noreferrer"><FaYoutube/></a></h2> : "" ;
+    const website = this.props.intervenant.website ? <h2><a href={this.props.intervenant.website} target="_blank" rel="noopener noreferrer"><FaWebsite/></a></h2> : "" ;
 
     return (
-      <GenericContentItem title={this.props.intervenant.nom}>
+      <GenericContentItem
+        title={this.props.intervenant.nom}
+        image={this.props.intervenant.image}
+        content={this.props.intervenant.description}>
+
+        <div className="intervenant-social">
+          {facebook}
+          {twitch}
+          {twitter}
+          {youtube}
+          {website}
+        </div>
       </GenericContentItem>
     );
   }
@@ -47,7 +62,7 @@ Intervenant.propTypes = {
 
 const mapStateToProps = (state) => (
   {
-    intervenant: state.intervenantsReducer
+    intervenant: state.intervenants.selected
   }
 );
 

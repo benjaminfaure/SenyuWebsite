@@ -49,9 +49,7 @@ class MainPage extends Component {
 
 
 MainPage.propTypes = {
-  showMainContent: PropTypes.bool,
-  updateDimensions: PropTypes.func.isRequired,
-  resetMenuState: PropTypes.func.isRequired
+  updateDimensions: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => (
