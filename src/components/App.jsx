@@ -1,36 +1,48 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 
 import { WIDTH_BREAKPOINT } from '../constants';
 import {
-  getShowMainContent,
   getDimensions
 } from '../reducers';
-import MenuActionCreators from '../actions/MenuActionCreators';
 
 import Menu from './Menu/Menu.jsx';
 import Header from './Header/Header.jsx';
 import Footer from './Footer/Footer.jsx';
+
 import MainPage from './MainPage/MainPage.jsx';
+
 import Intervenant from './Intervenants/Intervenant.jsx';
 import Intervenants from './Intervenants/Intervenants.jsx';
+
+import FAQ from './FAQ/FAQ.jsx';
 
 
 import './App.css';
 
 class App extends Component {
 
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      isMenuOpen: false
+    };
+  }
 
   componentWillReceiveProps(nextProps) {
-    if(!nextProps.showMainContent
-      && nextProps.dimensions.width >= WIDTH_BREAKPOINT )
+    if(nextProps.dimensions.width >= WIDTH_BREAKPOINT )
       {
-        nextProps.resetMenuState();
+        this.setState({isMenuOpen: false})
       }
+    }
+
+
+    toggleMenu() {
+      this.setState({isMenuOpen: !this.state.isMenuOpen})
     }
 
 
@@ -39,26 +51,25 @@ class App extends Component {
       return (
         <BrowserRouter>
           <div className="App">
-            <Header/>
+            <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen}/>
             <Menu/>
-            <div className={this.props.showMainContent ? "main-content" : "main-content open"}>
+            <div className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
               <div id="left-content">
 
 
-                <Route exact path="/" component={MainPage}/>
+                <Switch>
+                  <Route exact path="/" component={MainPage}/>
+                  {/* Intervenants */}
+                  <Route exact path="/intervenants" component={Intervenants}/>
+                  <Route path="/intervenants/:intervenantId" component={Intervenant}/>
+                  {/* FAQ */}
+                  <Route exact path="/faq" component={FAQ}/>
 
 
-                <Route path="/intervenant/:intervenantId" component={Intervenant}/>
-                <Route path="/intervenants" component={Intervenants}/>
-
-                <Route path='/facebook' component={() => window.location = 'https://www.facebook.com/senyuofficiel/'}/>
-                <Route path='/twitch' component={() => window.location = 'https://www.twitch.tv/senyutv'}/>
-                <Route path='/twitter' component={() => window.location = 'https://twitter.com/senyuofficiel'}/>
-                <Route path='/youtube' component={() => window.location = 'https://www.youtube.com/channel/UCcQ99DuVbT5M9IC3BC1bd8g'}/>
-
+                </Switch>
               </div>
             </div>
-            <Footer className={this.props.showMainContent ? "main-content" : "main-content open"}/>
+            <Footer/>
           </div>
         </BrowserRouter>
       );
@@ -71,17 +82,11 @@ class App extends Component {
 
   const mapStateToProps = (state) => (
     {
-      showMainContent: getShowMainContent(state),
       dimensions: getDimensions(state)
     }
   );
 
-  const mapDispatchToProps = (dispatch) => (
-    {
-      resetMenuState: () => dispatch(MenuActionCreators.resetMenuState()),
-    }
-  );
 
 
 
-  export default connect(mapStateToProps, mapDispatchToProps)(App);
+  export default connect(mapStateToProps, null)(App);

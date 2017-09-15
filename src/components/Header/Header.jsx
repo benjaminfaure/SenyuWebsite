@@ -11,7 +11,7 @@ class Header extends Component {
         <div className="header-content">
           <h4 className="logo"><Link to="/"><img src="/logo_desktop.png" alt="logo"/></Link></h4>
           <h4 className="header-message"><span>Senyu revient du 3 au 4 Mars 2018 </span></h4>
-          <MenuIcon/>
+          <MenuIcon toggleMenu={this.props.toggleMenu}  isMenuOpen={this.props.isMenuOpen}/>
           <h4 className="ticket-buy"><span></span></h4>
         </div>
       </header>

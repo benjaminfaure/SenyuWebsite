@@ -20,7 +20,7 @@ class Intervenants extends Component {
     let intervenantsList = this.props.intervenants.map((intervenant) => {
             return <GenericListItem key={intervenant.id}
                 id={intervenant.id}
-                link={`/intervenant/${intervenant.id}`}
+                link={`/intervenants/${intervenant.id}`}
                 propClass="intervenant-list-item"
                 image={intervenant.image}
                 title={intervenant.nom}>

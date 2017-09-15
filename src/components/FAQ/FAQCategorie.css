@@ -1,0 +1,32 @@
+
+
+.faq-categorie .faq-categorie-label h4 {
+  text-align: center;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  .faq-categorie {
+    display: flex;
+    padding: 10px 0;
+  }
+
+  .faq-categorie:not(:last-child) {
+    border-bottom: 1px var(--senyu-logo-red) solid;
+
+  }
+
+  .faq-categorie .faq-categorie-label {
+    flex: 2;
+    text-align: center;
+
+  }
+
+
+  .faq-categorie .faq-categorie-questions {
+    flex: 5;
+    padding-left: 10px;
+  }
+
+}

@@ -1,8 +1,6 @@
 
 
 .generic-content-list-item {
-	border: 3px solid #00ad5e;
-  background-color: #00ad5e;
 	height: auto;
   padding: 10px;
   flex-basis: 100%;
@@ -18,10 +16,12 @@
 .generic-content-list-item img {
 	width: 100%;
   border-radius: 90px/30px;
+  border: 3px solid var(--senyu-logo-green);
 }
 
 .generic-content-list-item h4 {
 	text-align: center;
+	color: var(--senyu-logo-black);
 }
 
 
@@ -57,5 +57,14 @@
   	border-radius: 90px/30px;
 
   }
+
+}
+
+@media screen and (min-width: 1600px) {
+
+  .generic-content-list-item {
+    flex-basis: 20%;
+  }
+
 
 }

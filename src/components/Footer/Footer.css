@@ -1,6 +1,6 @@
 footer {
-  border: 3px solid #2b2b2b ;
-  background-color: #2b2b2b;
+  border: 3px solid var(--senyu-logo-black);
+  background-color: var(--senyu-logo-black);
   left: 0;
   right: 0;
   bottom: 0;
@@ -17,6 +17,7 @@ footer .footer-content {
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: var(--senyu-logo-yellow);
 }
 footer .footer-social-links {
   display: flex;
@@ -30,7 +31,7 @@ footer .footer-social-links h2 {
 }
 
 footer .footer-social-links  a {
-  color: white;
+  color: var(--senyu-logo-yellow);
 }
 
 @media screen and (min-width: 1024px) {
@@ -57,6 +58,6 @@ footer .footer-social-links  a {
   }
 
   footer .footer-social-links a:hover {
-    color: #009688;
+    color: white;
   }
 }

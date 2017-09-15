@@ -3,10 +3,17 @@ import PropTypes from 'prop-types';
 
 import './GenericContentItem.css';
 
-class GenericContentSingle extends Component {
+class GenericContentItem extends Component {
   render() {
+
+    let className = "generic-content "
+
+    if(this.props.propClass) {
+      className += this.props.propClass;
+    }
+
     return (
-      <section className="generic-content">
+      <section className={className}>
         <article className="generic-content-image">
           <img src={this.props.image} alt={this.props.title} />
         </article>
@@ -20,11 +27,12 @@ class GenericContentSingle extends Component {
   }
 }
 
-GenericContentSingle.propTypes = {
+GenericContentItem.propTypes = {
   id: PropTypes.number,
   title: PropTypes.string,
   content: PropTypes.string,
-  image: PropTypes.string
+  image: PropTypes.string,
+  propClass: PropTypes.string
 };
 
-export default GenericContentSingle;
+export default GenericContentItem;

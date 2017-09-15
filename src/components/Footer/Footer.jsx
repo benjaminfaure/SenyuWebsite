@@ -15,10 +15,10 @@ class Footer extends Component {
           <h6><span>Senyu</span>© 2017 - tous droits réservés</h6>
         </div>
         <div className="footer-social-links">
-          <h2><a href="/facebook" target="_blank" rel="noopener noreferrer"><FaFacebook/></a></h2>
-          <h2><a href="/twitch" target="_blank" rel="noopener noreferrer"><FaTwitch /></a></h2>
-          <h2><a href="/twitter" target="_blank" rel="noopener noreferrer"><FaTwitter /></a></h2>
-          <h2><a href="/youtube" target="_blank" rel="noopener noreferrer"><FaYoutube /></a></h2>
+          <h2><a href="https://www.facebook.com/senyuofficiel/" target="_blank" rel="noopener noreferrer"><FaFacebook/></a></h2>
+          <h2><a href="https://www.twitch.tv/senyutv" target="_blank" rel="noopener noreferrer"><FaTwitch /></a></h2>
+          <h2><a href="https://twitter.com/senyuofficiel" target="_blank" rel="noopener noreferrer"><FaTwitter /></a></h2>
+          <h2><a href="https://www.youtube.com/channel/UCcQ99DuVbT5M9IC3BC1bd8g" target="_blank" rel="noopener noreferrer"><FaYoutube /></a></h2>
         </div>
       </footer>
     );

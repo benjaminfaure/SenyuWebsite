@@ -41,7 +41,8 @@ class Intervenant extends Component {
       <GenericContentItem
         title={this.props.intervenant.nom}
         image={this.props.intervenant.image}
-        content={this.props.intervenant.description}>
+        content={this.props.intervenant.description}
+        propClass="intervenant">
 
         <div className="intervenant-social">
           {facebook}

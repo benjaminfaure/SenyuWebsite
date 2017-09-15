@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import './Menu.css';
 
+import FaAngleDown from 'react-icons/lib/fa/angle-down';
 
 class Menu extends Component {
   render() {
@@ -10,7 +11,7 @@ class Menu extends Component {
         <ul className="menu">{/* menu principal */}
           <li className="menu-item"><Link to="/"><span>Actualités</span></Link></li>
           <li className="menu-item">{/* sous menu exposants */}
-            <Link to="/"><span>Exposants</span><span className="menu-item-arrow-down">&nbsp;&#9662;</span></Link>
+            <Link to="/"><span>Exposants</span><span className="menu-item-arrow-down">&nbsp;<FaAngleDown/></span></Link>
             <ul className="menu-content">
               <li><Link to="/">Invités</Link></li>
               <li><Link to="/">Boutiques</Link></li>
@@ -19,7 +20,7 @@ class Menu extends Component {
             </ul>
           </li>{/* sous menu exposants */}
           <li className="menu-item">{/* sous menu animations */}
-            <Link to="/"><span>Animations</span><span className="menu-item-arrow-down">&nbsp;&#9662;</span></Link>
+            <Link to="/"><span>Animations</span><span className="menu-item-arrow-down">&nbsp;<FaAngleDown/></span></Link>
             <ul className="menu-content">
               <li><Link to="/">Senyu</Link></li>
               <li><Link to="/">Associations</Link></li>
@@ -27,9 +28,9 @@ class Menu extends Component {
             </ul>
           </li>{/* sous menu animations */}
           <li className="menu-item">{/* sous menu infos */}
-            <Link to="/"><span>Infos</span><span className="menu-item-arrow-down">&nbsp;&#9662;</span></Link>
+            <Link to="/"><span>Infos</span><span className="menu-item-arrow-down">&nbsp;<FaAngleDown/></span></Link>
             <ul className="menu-content">
-              <li><Link to="/"><span>FAQ</span></Link></li>
+              <li><Link to="/faq"><span>FAQ</span></Link></li>
               <li><Link to="/"><span>Règlements</span></Link></li>
               <li><Link to="/"><span>Plan</span></Link></li>
               <li><Link to="/"><span>Planning</span></Link></li>
