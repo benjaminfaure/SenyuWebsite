@@ -2,15 +2,22 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 
+
 import './GenericList.css';
 
-class GenericContentList extends Component {
+class GenericList extends Component {
   render() {
+
+
+    let titrePage = this.props.titrePage && this.props.itemList.length > 0 ? this.props.titrePage : "Aucun enregistrement trouvé"
 
     return (
       <div>
         <section className="generic-page-header">
-          <h1 className="generic-page-title">{this.props.titrePage}</h1>
+          <h1 className="generic-page-title">{titrePage}</h1>
+        </section>
+        <section className="generic-content-list-filters">
+          {this.props.children}
         </section>
         <section className="generic-content-list">
           { this.props.itemList }
@@ -20,9 +27,11 @@ class GenericContentList extends Component {
   }
 }
 
-GenericContentList.propTypes = {
+GenericList.propTypes = {
   itemList: PropTypes.arrayOf(PropTypes.object),
+  activateSearch: PropTypes.bool,
+  genericListSearchOnChange: PropTypes.func,
   titrePage: PropTypes.string
 };
 
-export default GenericContentList;
+export default GenericList;

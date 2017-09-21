@@ -1,5 +1,5 @@
 
-.intervenant-social {
+.exposant-social {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -7,7 +7,7 @@
 
 
 
-.intervenant-social a {
+.exposant-social a {
   color: var(--senyu-logo-black);
 }
 
@@ -15,7 +15,7 @@
 
 @media screen and (min-width: 1024px) {
 
-  .intervenant-social a {
+  .exposant-social a {
     -o-transition:.3s;
     -ms-transition:.3s;
     -moz-transition:.3s;
@@ -23,7 +23,7 @@
     transition:.3s;
   }
 
-  .intervenant-social a:hover {
+  .exposant-social a:hover {
     color: var(--senyu-logo-blue);
   }
 }

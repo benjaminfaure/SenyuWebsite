@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
 import FaAngleRight from 'react-icons/lib/fa/angle-right';
@@ -17,9 +18,17 @@ class FAQQuestion extends Component {
     };
   }
 
+  componentDidUpdate(prevProps, prevState) {
+
+    const node = ReactDOM.findDOMNode(this);
+    if(this.state.showReponse) {
+      window.scrollTo(0, node.offsetTop);
+    }
+  }
 
   toggleReponse() {
     this.setState({showReponse: !this.state.showReponse})
+
   }
 
   render() {

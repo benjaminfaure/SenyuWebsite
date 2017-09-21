@@ -4,17 +4,15 @@
 }
 
 :root {
-	--senyu-logo-green: #4db18b;
+	--senyu-logo-green: #AFD500;
 
-	--senyu-logo-other-green: #BBC179;
-	--senyu-logo-other-green-lighter: #f1f2e4;
+	--senyu-logo-grey: #C5C5C5;
 
-	--senyu-logo-blue: #67C8CE;
-	--senyu-logo-other-blue-lighter: #fbe5ad;
+	--senyu-logo-blue: #3D608B;
 
-	--senyu-logo-black: #373737;
-	--senyu-logo-red: #E1332A;
-	--senyu-logo-yellow: #F7BF34;
+	--senyu-logo-black: #292929;
+	--senyu-logo-red: #D12222;
+	--senyu-logo-yellow: #E6CB15;
 
 }
 
@@ -34,9 +32,8 @@ body {
 	margin: 0;
 	font-family: "Roboto",sans-serif;
 	color: var(--senyu-logo-black);
+	height: 100%;
 }
-
-
 
 
 h4 {
@@ -46,27 +43,29 @@ h4 {
 
 
 
-.App {
-	display: flex;
-	flex-direction: column;
-}
-
-
 .main-content {
-	background-color: var(--senyu-logo-other-green-lighter);
+	margin: auto;
 	padding: 25px;
-	width: 100%;
 	display: flex;
 	flex-direction: column;
 	height: auto;
 	position: relative;
 	transition: transform .3s;
 	z-index: 1;
+	min-height: 90vh;
+	background-color: white;
 }
 
 
 .main-content.open {
 	transform: translateX(-100%);
+}
+
+
+
+.generic-page-header {
+	font-family: "Comic Book",sans-serif;
+	text-align: center;
 }
 
 
@@ -79,5 +78,6 @@ h4 {
 @media screen and (min-width: 1024px) {
 	.main-content {
 		z-index: auto;
+		width: 75%;
 	}
 }

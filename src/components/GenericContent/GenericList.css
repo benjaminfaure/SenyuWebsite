@@ -4,9 +4,3 @@
 	display: flex;
   flex-wrap: wrap;
 }
-
-
-.generic-page-header {
-  padding-top: 50px;
-  border: none;
-}

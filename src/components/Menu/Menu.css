@@ -7,9 +7,7 @@ MENU
 
 .nav-wrap {
 	background-color: var(--senyu-logo-black);
-	min-height: 50px;
 	position: absolute;
-	/*height: 100%;*/
 	z-index: 0;
 	width: 100%;
 }
@@ -31,17 +29,18 @@ MENU
 	list-style-type: none;
 	padding-left: 0;
 	text-align: center;
+	margin: 0;
 }
 .nav-wrap .menu-content  a{
-	background-color: var(--senyu-logo-green);
-	color: white;
+	background-color: var(--senyu-logo-yellow);
+	color: var(--senyu-logo-black);
 
 }
 .nav-wrap .menu-item .menu-item-arrow-down {
 	display: none	;
 }
 .nav-wrap .menu-content{
-	background-color: var(--senyu-logo-black);
+	background-color: var(--senyu-logo-yellow);
 }
 
 .nav-wrap .menu-content a{
@@ -57,6 +56,11 @@ MENU
 		top: auto;
 		z-index: auto;
 		position: relative;
+		background-color: var(--senyu-logo-yellow);
+	}
+
+	.nav-wrap li > a {
+		color: var(--senyu-logo-black);
 	}
 
 	.nav-wrap .menu {
@@ -75,17 +79,16 @@ MENU
 		left: 0;
 		right: 0;
 		z-index: 2;
+
 	}
 
 	.nav-wrap .menu-content li {
 		height: auto;
 	}
 
-	.nav-wrap .menu-content li a {
-		background-color: var(--senyu-logo-black);
-		color: var(--senyu-logo-yellow);
-		font-size: 11px;
-		display: block;
+	.nav-wrap  li a {
+		background-color: var(--senyu-logo-yellow);
+		color: var(--senyu-logo-black);
 		-o-transition:.3s;
 		-ms-transition:.3s;
 		-moz-transition:.3s;
@@ -101,8 +104,9 @@ MENU
 		display: inline	;
 	}
 
+	.nav-wrap a:hover,
 	.nav-wrap .menu-content a:hover {
-		background-color: var(--senyu-logo-green);
-		color: white;
+		background-color: var(--senyu-logo-black);
+		color: var(--senyu-logo-yellow);
 	}
 }

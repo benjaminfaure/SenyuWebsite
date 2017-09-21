@@ -1,0 +1,41 @@
+.generic-category-selector  {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+
+.generic-category-selector input[type="radio"] {
+  display: none;
+}
+
+.generic-category-selector label {
+  font-size: 20px;
+}
+
+
+.generic-category-selector input[type=radio]:checked  ~ label .generic-category-radio {
+  display: none;
+}
+.generic-category-selector input[type=radio]:checked   ~ label .generic-category-radio-checked,
+.generic-category-selector input[type=radio]:checked   ~ label {
+  display: inline-block;
+  color: var(--senyu-logo-blue);
+  font-weight: 700;
+}
+
+
+.generic-category-selector input[type=radio]  ~ label .generic-category-radio-checked {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+
+  .generic-category-selector  {
+    flex-direction: row;
+  }
+
+  .generic-category-selector label {
+    cursor: pointer;
+  }
+}

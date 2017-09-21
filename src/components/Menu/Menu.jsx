@@ -9,16 +9,9 @@ class Menu extends Component {
     return (
       <nav className="nav-wrap">
         <ul className="menu">{/* menu principal */}
-          <li className="menu-item"><Link to="/"><span>Actualités</span></Link></li>
-          <li className="menu-item">{/* sous menu exposants */}
-            <Link to="/"><span>Exposants</span><span className="menu-item-arrow-down">&nbsp;<FaAngleDown/></span></Link>
-            <ul className="menu-content">
-              <li><Link to="/">Invités</Link></li>
-              <li><Link to="/">Boutiques</Link></li>
-              <li><Link to="/">Créateurs</Link></li>
-              <li><Link to="/intervenants">Tous nos exposants</Link></li>
-            </ul>
-          </li>{/* sous menu exposants */}
+          <li className="menu-item"><Link to="/"><span>Accueil</span></Link></li>
+          <li className="menu-item"><Link to="/intervenants"><span>Invités</span></Link></li>
+          <li className="menu-item"><Link to="/exposants"><span>Exposants</span></Link></li>
           <li className="menu-item">{/* sous menu animations */}
             <Link to="/"><span>Animations</span><span className="menu-item-arrow-down">&nbsp;<FaAngleDown/></span></Link>
             <ul className="menu-content">
@@ -27,8 +20,9 @@ class Menu extends Component {
               <li><Link to="/">Culture</Link></li>
             </ul>
           </li>{/* sous menu animations */}
+          <li className="menu-item"><Link to="/"><span>Cosplay</span></Link></li>
           <li className="menu-item">{/* sous menu infos */}
-            <Link to="/"><span>Infos</span><span className="menu-item-arrow-down">&nbsp;<FaAngleDown/></span></Link>
+            <Link to="/"><span>Infos Pratiques</span><span className="menu-item-arrow-down">&nbsp;<FaAngleDown/></span></Link>
             <ul className="menu-content">
               <li><Link to="/faq"><span>FAQ</span></Link></li>
               <li><Link to="/"><span>Règlements</span></Link></li>

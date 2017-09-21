@@ -1,55 +1,66 @@
 footer {
   border: 3px solid var(--senyu-logo-black);
   background-color: var(--senyu-logo-black);
+  color: var(--senyu-logo-yellow);
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 1;
   width: 100%;
 
-  color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
+footer a{
+  text-decoration: none;
+  color: var(--senyu-logo-yellow);
+}
+
+footer .footer-social-links{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
 
 footer .footer-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--senyu-logo-yellow);
-}
-footer .footer-social-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }
 
-footer .footer-social-links h2 {
-  flex: 1;
-  text-align: center;
+footer  .footer-cc{
+  width: 100%;
 }
 
-footer .footer-social-links  a {
-  color: var(--senyu-logo-yellow);
-}
 
 @media screen and (min-width: 1024px) {
 
-  footer {
-    flex-direction: row;
-    height: 75px;
-  }
 
   footer .footer-content {
-    flex: 4;
+    flex-direction: row;
   }
 
-  footer .footer-social-links {
+  footer .footer-social-links{
     flex: 1;
   }
 
-  footer .footer-social-links a {
+  footer .footer-content-links{
+    flex: 5;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  footer  .footer-cc h5{
+    text-align: right;
+    padding-right: 50px;
+  }
+
+  footer a {
     -o-transition:.3s;
     -ms-transition:.3s;
     -moz-transition:.3s;
@@ -57,7 +68,7 @@ footer .footer-social-links  a {
     transition:.3s;
   }
 
-  footer .footer-social-links a:hover {
+  footer a:hover {
     color: white;
   }
 }

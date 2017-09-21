@@ -16,12 +16,21 @@
 .generic-content-list-item img {
 	width: 100%;
   border-radius: 90px/30px;
-  border: 3px solid var(--senyu-logo-green);
+  border: 3px solid var(--senyu-logo-blue);
 }
 
 .generic-content-list-item h4 {
 	text-align: center;
+	margin-top: .5em;
 	color: var(--senyu-logo-black);
+}
+
+
+.generic-content-list-item h5 {
+	text-align: center;
+	text-transform: capitalize;
+	margin: 0;
+	color: var(--senyu-logo-blue);
 }
 
 

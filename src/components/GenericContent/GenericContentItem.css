@@ -19,5 +19,5 @@
 
 .generic-content-description .generic-content-title{
   text-align: center;
-	color: var(--senyu-logo-black);
+  font-family: "Comic Book",sans-serif;
 }

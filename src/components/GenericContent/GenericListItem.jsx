@@ -18,6 +18,7 @@ class GenericListItem extends Component {
       <article className={className}>
         <Link to={this.props.link ? this.props.link : '#'}>
           <img src={this.props.image} alt={this.props.title} />
+          {this.props.children}
           <h4>{this.props.title}</h4>
         </Link>
       </article>

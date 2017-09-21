@@ -18,6 +18,9 @@ import MainPage from './MainPage/MainPage.jsx';
 import Intervenant from './Intervenants/Intervenant.jsx';
 import Intervenants from './Intervenants/Intervenants.jsx';
 
+import Exposant from './Exposants/Exposant.jsx';
+import Exposants from './Exposants/Exposants.jsx';
+
 import FAQ from './FAQ/FAQ.jsx';
 
 
@@ -54,7 +57,6 @@ class App extends Component {
             <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen}/>
             <Menu/>
             <div className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
-              <div id="left-content">
 
 
                 <Switch>
@@ -62,12 +64,14 @@ class App extends Component {
                   {/* Intervenants */}
                   <Route exact path="/intervenants" component={Intervenants}/>
                   <Route path="/intervenants/:intervenantId" component={Intervenant}/>
+                  {/* Exposants */}
+                  <Route exact path="/exposants" component={Exposants}/>
+                  <Route path="/exposants/:exposantId" component={Exposant}/>
                   {/* FAQ */}
                   <Route exact path="/faq" component={FAQ}/>
 
 
                 </Switch>
-              </div>
             </div>
             <Footer/>
           </div>
