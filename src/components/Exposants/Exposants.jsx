@@ -63,7 +63,7 @@ class Exposants extends Component {
         <GenericList itemList = {exposantsList}
           titrePage={titrePage}>
           {searchBar}
-          {categorySelect}
+          {exposantsType ? '' : categorySelect}
         </GenericList>
       );
 
@@ -102,6 +102,7 @@ class Exposants extends Component {
   const mapDispatchToProps = (dispatch) => (
     {
       fetchExposants: () => dispatch(ExposantsActionCreators.fetchExposants()),
+      fetchExposantsByType: (type) => dispatch(ExposantsActionCreators.fetchExposantsByType(type)),
     }
   );
 

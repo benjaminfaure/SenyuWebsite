@@ -36,6 +36,18 @@ let SenyuAPI = {
     .then((response) => response[id - 1]);
   },
 
+
+  fetchSenyuAnimations() {
+
+    return fetch('/animationsSenyu.json')
+    .then((response) => response.json());
+  },
+  fetchSenyuAnimationById(id) {
+    return fetch('/animationsSenyu.json')
+    .then((response) => response.json())
+    .then((response) => response[id - 1]);
+  },
+
 };
 
 

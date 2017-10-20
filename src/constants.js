@@ -12,6 +12,19 @@ export const TYPE_EXPOSANT = [
     code: "createur",
     label: "Créateur"
   }];
+export const TYPE_ANIMATION = [
+  {
+    code: "senyu",
+    label: "Senyu"
+  },
+  {
+    code: "culture",
+    label: "Culture"
+  },
+  {
+    code: "association",
+    label: "Association"
+  }];
 
 /**
 * Constantes REDUX
@@ -43,6 +56,15 @@ export const RECEIVE_EXPOSANTS_BY_TYPE = 'receive exposants by type';
 
 export const REQUEST_EXPOSANT_BY_ID = 'request exposant by id';
 export const RECEIVE_EXPOSANT_BY_ID = 'receive exposant by id';
+
+/**
+* Constantes animations
+*/
+export const REQUEST_SENYU_ANIMATIONS = 'request senyu animations';
+export const RECEIVE_SENYU_ANIMATIONS = 'receive senyu animations';
+
+export const REQUEST_SENYU_ANIMATION_BY_ID = 'request senyu animation by id';
+export const RECEIVE_SENYU_ANIMATION_BY_ID = 'receive senyu animation by id';
 
 
 /**
