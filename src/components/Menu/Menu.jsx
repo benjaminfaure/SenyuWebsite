@@ -10,17 +10,6 @@ class Menu extends Component {
       <nav className="nav-wrap">
         <ul className="menu">{/* menu principal */}
           <li className="menu-item"><Link to="/"><span>Accueil</span></Link></li>
-          <li className="menu-item"><Link to="/intervenants"><span>Invités</span></Link></li>
-          <li className="menu-item"><Link to="/exposants"><span>Exposants</span></Link></li>
-          <li className="menu-item">{/* sous menu animations */}
-            <Link to="/"><span>Animations</span><span className="menu-item-arrow-down">&nbsp;<FaAngleDown/></span></Link>
-            <ul className="menu-content">
-              <li><Link to="/animations/type/senyu">Senyu</Link></li>
-              <li><Link to="/animations/type/culture">Culture</Link></li>
-              <li><Link to="/animations/type/association">Associations</Link></li>
-            </ul>
-          </li>{/* sous menu animations */}
-          <li className="menu-item"><Link to="/"><span>Cosplay</span></Link></li>
           <li className="menu-item">{/* sous menu infos */}
             <Link to="/"><span>Infos Pratiques</span><span className="menu-item-arrow-down">&nbsp;<FaAngleDown/></span></Link>
             <ul className="menu-content">
@@ -31,7 +20,18 @@ class Menu extends Component {
               <li><Link to="/"><span>Contact</span></Link></li>
             </ul>
           </li>{/* sous menu infos */}
-          <li className="menu-item"><Link to="/"><span>Blog</span></Link></li>
+          <li className="menu-item"><Link to="/exposants"><span>Exposants</span></Link></li>
+          <li className="menu-item"><Link to="/intervenants"><span>Invités</span></Link></li>
+          <li className="menu-item"><Link to="/"><span>Cosplay</span></Link></li>
+          <li className="menu-item">{/* sous menu animations */}
+            <Link to="/"><span>Animations</span><span className="menu-item-arrow-down">&nbsp;<FaAngleDown/></span></Link>
+            <ul className="menu-content">
+              <li><Link to="/animations/type/senyu">Senyu</Link></li>
+              <li><Link to="/animations/type/culture">Culture</Link></li>
+              <li><Link to="/animations/type/association">Associations</Link></li>
+            </ul>
+          </li>{/* sous menu animations */}
+          <li className="menu-item"><Link to="/"><span>Stream</span></Link></li>
         </ul>
       </nav>
     );
