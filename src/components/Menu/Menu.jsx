@@ -21,7 +21,7 @@ class Menu extends Component {
             </ul>
           </li>{/* sous menu infos */}
           <li className="menu-item"><Link to="/exposants"><span>Exposants</span></Link></li>
-          <li className="menu-item"><Link to="/intervenants"><span>Invités</span></Link></li>
+          <li className="menu-item"><Link to="/invites"><span>Invités</span></Link></li>
           <li className="menu-item"><Link to="/"><span>Cosplay</span></Link></li>
           <li className="menu-item"><Link to="/animations"><span>Animations</span></Link></li>
           <li className="menu-item"><Link to="/"><span>Stream</span></Link></li>

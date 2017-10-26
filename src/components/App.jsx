@@ -65,8 +65,8 @@ class App extends Component {
                 <Switch>
                   <Route exact path="/" component={MainPage}/>
                   {/* Intervenants */}
-                  <Route exact path="/intervenants" component={Intervenants}/>
-                  <Route path="/intervenants/:intervenantId" component={Intervenant}/>
+                  <Route exact path="/invites" component={Intervenants}/>
+                  <Route path="/invites/:intervenantId" component={Intervenant}/>
                   {/* Exposants */}
                   <Route exact path="/exposants" component={Exposants}/>
                   <Route path="/exposants/:exposantId" component={Exposant}/>
