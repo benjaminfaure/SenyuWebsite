@@ -45,7 +45,7 @@ header .header-message {
 
 	header .header-message {
 		display: block;
-		text-align: center;
+		/*text-align: center;*/
 		flex: 5;
 		min-height: 0;
 	  min-width: 0;

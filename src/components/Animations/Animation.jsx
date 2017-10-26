@@ -42,7 +42,7 @@ class Animation extends Component {
       content={this.props.animation.description}
       propClass="animation">
 
-      <div className="animation-social">
+      <div className="generic-content-social animation-social">
         {facebook}
         {twitch}
         {twitter}

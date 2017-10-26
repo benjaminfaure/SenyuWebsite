@@ -98,6 +98,7 @@ MENU
 
 	.nav-wrap .menu-item:hover .menu-content {
 		display: block;
+		box-shadow: 5px 5px 10px var(--senyu-logo-black-very-light);
 	}
 
 	.nav-wrap .menu-item .menu-item-arrow-down {

@@ -42,7 +42,7 @@ class Exposant extends Component {
       content={this.props.exposant.description}
       propClass="exposant">
 
-      <div className="exposant-social">
+      <div className="generic-content-social exposant-social">
         {facebook}
         {twitch}
         {twitter}

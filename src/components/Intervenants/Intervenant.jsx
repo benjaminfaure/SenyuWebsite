@@ -44,7 +44,7 @@ class Intervenant extends Component {
         content={this.props.intervenant.description}
         propClass="intervenant">
 
-        <div className="intervenant-social">
+        <div className="generic-content-social intervenant-social">
           {facebook}
           {twitch}
           {twitter}

@@ -1,7 +1,7 @@
 footer {
   border: 3px solid var(--senyu-logo-black);
   background-color: var(--senyu-logo-black);
-  color: var(--senyu-logo-yellow);
+  color: white;
   left: 0;
   right: 0;
   bottom: 0;
@@ -17,7 +17,7 @@ footer {
 
 footer a{
   text-decoration: none;
-  color: var(--senyu-logo-yellow);
+  color: white;
 }
 
 footer .footer-social-links{
@@ -69,6 +69,6 @@ footer  .footer-cc{
   }
 
   footer a:hover {
-    color: white;
+    color: var(--senyu-logo-yellow);
   }
 }
