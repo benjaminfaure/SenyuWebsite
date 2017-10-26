@@ -23,14 +23,7 @@ class Menu extends Component {
           <li className="menu-item"><Link to="/exposants"><span>Exposants</span></Link></li>
           <li className="menu-item"><Link to="/intervenants"><span>Invités</span></Link></li>
           <li className="menu-item"><Link to="/"><span>Cosplay</span></Link></li>
-          <li className="menu-item">{/* sous menu animations */}
-            <Link to="/"><span>Animations</span><span className="menu-item-arrow-down">&nbsp;<FaAngleDown/></span></Link>
-            <ul className="menu-content">
-              <li><Link to="/animations/type/senyu">Senyu</Link></li>
-              <li><Link to="/animations/type/culture">Culture</Link></li>
-              <li><Link to="/animations/type/association">Associations</Link></li>
-            </ul>
-          </li>{/* sous menu animations */}
+          <li className="menu-item"><Link to="/animations"><span>Animations</span></Link></li>
           <li className="menu-item"><Link to="/"><span>Stream</span></Link></li>
         </ul>
       </nav>

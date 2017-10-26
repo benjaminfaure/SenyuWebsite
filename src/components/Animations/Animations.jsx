@@ -12,7 +12,7 @@ import AnimationsActionCreators from '../../actions/AnimationsActionCreators';
 
 import './Animations.css';
 
-let animationsType;
+
 class Animations extends Component {
   constructor(props) {
     super(props);
@@ -24,8 +24,6 @@ class Animations extends Component {
   }
 
   componentDidMount(){
-    animationsType = this.props.match.params.animationsType;
-
     this.props.fetchSenyuAnimations();
   }
 
@@ -34,7 +32,7 @@ class Animations extends Component {
     let animationsList = this.filteredSenyuAnimations().map((animation) => {
       return <GenericListItem key={animation.id}
         id={animation.id}
-        link={`/animations/senyu/${animation.id}`}
+        link={`/animations/${animation.id}`}
         propClass="animation-list-item"
         image={animation.image}
         title={animation.nom}>

@@ -19,6 +19,7 @@ import Intervenant from './Intervenants/Intervenant.jsx';
 import Intervenants from './Intervenants/Intervenants.jsx';
 
 import Animations from './Animations/Animations.jsx';
+import Animation from './Animations/Animation.jsx';
 
 import Exposant from './Exposants/Exposant.jsx';
 import Exposants from './Exposants/Exposants.jsx';
@@ -68,11 +69,10 @@ class App extends Component {
                   <Route path="/intervenants/:intervenantId" component={Intervenant}/>
                   {/* Exposants */}
                   <Route exact path="/exposants" component={Exposants}/>
-                  <Route exact path="/exposants/type/:exposantsType" component={Exposants}/>
                   <Route path="/exposants/:exposantId" component={Exposant}/>
                   {/* Animations */}
                   <Route exact path="/animations" component={Animations}/>
-                  <Route exact path="/animations/type/:animationsType" component={Animations}/>
+                  <Route path="/animations/:animationId" component={Animation}/>
                   {/* FAQ */}
                   <Route exact path="/faq" component={FAQ}/>
 
