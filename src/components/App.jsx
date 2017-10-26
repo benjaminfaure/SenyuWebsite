@@ -26,6 +26,8 @@ import Exposants from './Exposants/Exposants.jsx';
 
 import FAQ from './FAQ/FAQ.jsx';
 
+import EnTravaux from './EnTravaux/EnTravaux.jsx';
+
 
 import './App.css';
 
@@ -75,6 +77,20 @@ class App extends Component {
                   <Route path="/animations/:animationId" component={Animation}/>
                   {/* FAQ */}
                   <Route exact path="/faq" component={FAQ}/>
+                  {/* Reglements */}
+                  <Route exact path="/reglements" component={EnTravaux}/>
+                  {/* Plans */}
+                  <Route exact path="/plans" component={EnTravaux}/>
+                  {/* Planning */}
+                  <Route exact path="/planning" component={EnTravaux}/>
+                  {/* Guide */}
+                  <Route exact path="/guide" component={EnTravaux}/>
+                  {/* Contact */}
+                  <Route exact path="/contact" component={EnTravaux}/>
+                  {/* Cosplay */}
+                  <Route exact path="/cosplay" component={EnTravaux}/>
+                  {/* Stream */}
+                  <Route exact path="/stream" component={EnTravaux}/>
 
 
                 </Switch>
