@@ -22,7 +22,7 @@ class EnTravaux extends Component {
             <FaEmpire/>
           </h1>
           <h2>
-            Rejoins l'Empire et participe au projet Stardust
+            Rejoins l'Empire et participe à la construction de l'Etoile de la Mort
           </h2>
         </section>
       );
