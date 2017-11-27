@@ -10,6 +10,7 @@ MENU
 	position: absolute;
 	z-index: 0;
 	width: 100%;
+	margin: auto;
 }
 
 
@@ -52,11 +53,14 @@ MENU
 
 
 @media screen and (min-width: 1024px) {
+
+
 	.nav-wrap {
 		top: auto;
 		z-index: auto;
 		position: relative;
 		background-color: var(--senyu-logo-yellow);
+		max-width: 1600px;
 	}
 
 	.nav-wrap li > a {
@@ -109,5 +113,10 @@ MENU
 	.nav-wrap .menu-content a:hover {
 		background-color: var(--senyu-logo-black);
 		color: var(--senyu-logo-yellow);
+	}
+	.sticky {
+		position: fixed;
+		top: 0;
+		width: 100%
 	}
 }

@@ -7,6 +7,7 @@ footer {
   bottom: 0;
   z-index: 1;
   width: 100%;
+  margin: auto;
 
   display: flex;
   flex-direction: column;
@@ -70,5 +71,9 @@ footer  .footer-cc{
 
   footer a:hover {
     color: var(--senyu-logo-yellow);
+  }
+
+  footer  {
+    max-width: 1600px;
   }
 }

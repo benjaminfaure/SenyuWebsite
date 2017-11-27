@@ -7,7 +7,7 @@ import FaAngleDown from 'react-icons/lib/fa/angle-down';
 class Menu extends Component {
   render() {
     return (
-      <nav className="nav-wrap">
+      <nav id="navbar" className="nav-wrap">
         <ul className="menu">{/* menu principal */}
           <li className="menu-item"><Link to="/"><span>Accueil</span></Link></li>
           <li className="menu-item">{/* sous menu infos */}

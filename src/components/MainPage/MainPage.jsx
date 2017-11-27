@@ -33,7 +33,7 @@ class MainPage extends Component {
             <span>{this.props.dimensions.width} x {this.props.dimensions.height}</span>
           </article>
           <article>
-
+            <div id="twitch-embed"></div>
           </article>
           <article>
 
