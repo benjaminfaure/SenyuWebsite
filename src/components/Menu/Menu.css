@@ -76,6 +76,9 @@ MENU
 		flex: 1;
 		position: relative;
 	}
+	.nav-wrap .menu-item.menu-item-special a {
+		color: var(--senyu-logo-red);
+	}
 
 	.nav-wrap .menu-content {
 		display: none;

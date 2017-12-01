@@ -9,7 +9,7 @@ class Menu extends Component {
     return (
       <nav id="navbar" className="nav-wrap">
         <ul className="menu">{/* menu principal */}
-          <li className="menu-item"><Link to="/"><span>Accueil</span></Link></li>
+          {/*<li className="menu-item"><Link to="/"><span>Accueil</span></Link></li> */}
           <li className="menu-item">{/* sous menu infos */}
             <Link to="/"><span>Infos Pratiques</span><span className="menu-item-arrow-down">&nbsp;<FaAngleDown/></span></Link>
             <ul className="menu-content">
@@ -26,6 +26,7 @@ class Menu extends Component {
           <li className="menu-item"><Link to="/cosplay"><span>Cosplay</span></Link></li>
           <li className="menu-item"><Link to="/animations"><span>Animations</span></Link></li>
           <li className="menu-item"><Link to="/stream"><span>Stream</span></Link></li>
+          <li className="menu-item menu-item-special"><Link to="/billeterie"><span>Billeterie</span></Link></li>
         </ul>
       </nav>
     );

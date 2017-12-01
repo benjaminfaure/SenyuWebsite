@@ -97,6 +97,8 @@ class App extends Component {
                   <Route exact path="/archive" component={EnTravaux}/>
                   {/* Recrutement */}
                   <Route exact path="/recrutement" component={EnTravaux}/>
+                  {/* Recrutement */}
+                  <Route exact path="/billeterie" component={EnTravaux}/>
 
 
                 </Switch>
