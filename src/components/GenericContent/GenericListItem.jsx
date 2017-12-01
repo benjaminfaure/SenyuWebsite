@@ -14,10 +14,19 @@ class GenericListItem extends Component {
       className += this.props.propClass;
     }
 
+    const imgUrl = this.props.image ? this.props.image : '/logo_mobile.png'
+
+    const styles = {
+      backgroundImage: `url(${imgUrl})`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'none',
+      backgroundPosition: 'center center',
+    }
+
     return (
-      <article className={className}>
-        <Link to={this.props.link ? this.props.link : '#'}>
-          <img src={this.props.image} alt={this.props.title} />
+      <article className={className}   >
+        <Link  to={this.props.link ? this.props.link : '#'}>
+          <div className="generic-content-list-item-image" style={styles}></div>
           {this.props.children}
           <h4>{this.props.title}</h4>
         </Link>

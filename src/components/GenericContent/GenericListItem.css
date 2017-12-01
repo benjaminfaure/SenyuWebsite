@@ -13,10 +13,10 @@
 
 }
 
-.generic-content-list-item img {
-	width: 100%;
+.generic-content-list-item .generic-content-list-item-image {
   border-radius: 90px/30px;
   border: 3px solid var(--senyu-logo-blue);
+  height: 300px;
 }
 
 .generic-content-list-item h4 {
@@ -50,7 +50,7 @@
     flex-basis: 25%;
   }
 
-  .generic-content-list-item img {
+  .generic-content-list-item .generic-content-list-item-image {
   	width: 100%;
   	border-radius: 50%;
 
@@ -62,7 +62,7 @@
       transition:.3s;
   }
 
-  .generic-content-list-item img:hover {
+  .generic-content-list-item .generic-content-list-item-image:hover {
   	border-radius: 90px/30px;
 
   }
