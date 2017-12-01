@@ -13,10 +13,10 @@ class Footer extends Component {
       <footer>
         <div className="footer-content">
           <div className="footer-content-links">
-            <h5><a href="/" target="_blank" rel="noopener noreferrer">Contact</a></h5>
-            <h5><a href="/" target="_blank" rel="noopener noreferrer">Presse</a></h5>
-            <h5><a href="/" target="_blank" rel="noopener noreferrer">Archive</a></h5>
-            <h5><a href="/" target="_blank" rel="noopener noreferrer">Recrutement</a></h5>
+            <h5><a href="/contact" rel="noopener noreferrer">Contact</a></h5>
+            <h5><a href="/presse" rel="noopener noreferrer">Presse</a></h5>
+            <h5><a href="/archive" rel="noopener noreferrer">Archive</a></h5>
+            <h5><a href="/recrutement" rel="noopener noreferrer">Recrutement</a></h5>
           </div>
           <div className="footer-social-links">
             <h2><a href="https://www.facebook.com/senyuofficiel/" target="_blank" rel="noopener noreferrer"><FaFacebook/></a></h2>

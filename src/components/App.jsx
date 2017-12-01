@@ -91,6 +91,12 @@ class App extends Component {
                   <Route exact path="/cosplay" component={EnTravaux}/>
                   {/* Stream */}
                   <Route exact path="/stream" component={EnTravaux}/>
+                  {/* Presse */}
+                  <Route exact path="/presse" component={EnTravaux}/>
+                  {/* Archive */}
+                  <Route exact path="/archive" component={EnTravaux}/>
+                  {/* Recrutement */}
+                  <Route exact path="/recrutement" component={EnTravaux}/>
 
 
                 </Switch>
