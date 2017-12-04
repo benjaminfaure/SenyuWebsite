@@ -62,8 +62,6 @@ class App extends Component {
             <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen}/>
             <Menu/>
             <div className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
-
-
                 <Switch>
                   <Route exact path="/" component={MainPage}/>
                   {/* Intervenants */}
@@ -99,8 +97,6 @@ class App extends Component {
                   <Route exact path="/recrutement" component={EnTravaux}/>
                   {/* Recrutement */}
                   <Route exact path="/billeterie" component={EnTravaux}/>
-
-
                 </Switch>
             </div>
             <Footer/>
