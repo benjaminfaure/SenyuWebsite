@@ -34,7 +34,7 @@ body {
 	margin: 0;
 	font-family: "Roboto",sans-serif;
 	color: var(--senyu-logo-black);
-	background-image: url('/background.png');
+	background-image: url('/images/background.png');
 	height: 100%;
 }
 
