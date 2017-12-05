@@ -4,6 +4,7 @@ import exposants from './exposants';
 import intervenants from './intervenants';
 import animations from './animations';
 import faq from './faq';
+import twitch from './twitch';
 
 
 const rootReducer = combineReducers({
@@ -11,7 +12,8 @@ const rootReducer = combineReducers({
   dimensions,
   exposants,
   faq,
-  intervenants
+  intervenants,
+  twitch,
 });
 
 

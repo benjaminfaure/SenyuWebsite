@@ -72,3 +72,10 @@ export const RECEIVE_SENYU_ANIMATION_BY_ID = 'receive senyu animation by id';
 */
 export const REQUEST_FAQ = 'request faq';
 export const RECEIVE_FAQ = 'receive faq';
+
+
+/**
+* Constantes Twitch
+*/
+export const REQUEST_IS_CHANNEL_LIVE = 'request is channel live';
+export const RECEIVE_IS_CHANNEL_LIVE = 'receive is channel live';

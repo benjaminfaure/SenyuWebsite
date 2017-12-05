@@ -1,0 +1,4 @@
+.main-content #twitch-embed {
+  width: 100%;
+  flex: 1;
+}
