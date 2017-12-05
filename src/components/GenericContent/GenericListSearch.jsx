@@ -17,8 +17,8 @@ class GenericListSearch extends Component {
 
     return (
       <div className="generic-list-search">
-        <h4><FaSearch/></h4>
-        <input type="search" placeholder="Rechercher ..." onChange={this.onFilterChange.bind(this)}/>
+        <h4><FaSearch /></h4>
+        <input type="search" placeholder="Rechercher ..." onChange={this.onFilterChange.bind(this)} />
       </div>
     );
   }

@@ -1,14 +1,14 @@
 import {
   UPDATE_DIMENSIONS,
 } from '../constants';
-import {throttle} from '../utils';
+import { throttle } from '../utils';
 
 
 let DimensionsActionCreators = {
 
 
   _updateDimensions: throttle((dispatch) => {
-      dispatch({ type: UPDATE_DIMENSIONS });
+    dispatch({ type: UPDATE_DIMENSIONS });
   }, 200),
 
   updateDimensions() {

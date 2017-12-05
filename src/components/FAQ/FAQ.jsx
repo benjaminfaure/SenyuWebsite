@@ -21,37 +21,37 @@ class FAQ extends Component {
     let categoriesList = this.props.faq.map((categorie) => {
       return <FAQCategorie key={categorie.id}
         categorie={categorie.categorie}
-        questions={categorie.questions}/>
-      });
+        questions={categorie.questions} />
+    });
 
-      return (
-        <div>
-          <section className="generic-page-header">
-            <h1 className="generic-page-title">Foire Aux Questions</h1>
-          </section>
-          <section className="faq">
-            {categoriesList}
-          </section>
-        </div>
-      );
-    }
+    return (
+      <div>
+        <section className="generic-page-header">
+          <h1 className="generic-page-title">Foire Aux Questions</h1>
+        </section>
+        <section className="faq">
+          {categoriesList}
+        </section>
+      </div>
+    );
   }
+}
 
-  FAQ.propTypes = {
-    faq: PropTypes.arrayOf(PropTypes.object),
-  };
+FAQ.propTypes = {
+  faq: PropTypes.arrayOf(PropTypes.object),
+};
 
 
-  const mapStateToProps = (state) => (
-    {
-      faq: state.faq
-    }
-  );
+const mapStateToProps = (state) => (
+  {
+    faq: state.faq
+  }
+);
 
-  const mapDispatchToProps = (dispatch) => (
-    {
-      fetchFAQ: () => dispatch(FAQActionCreators.fetchFAQ()),
-    }
-  );
+const mapDispatchToProps = (dispatch) => (
+  {
+    fetchFAQ: () => dispatch(FAQActionCreators.fetchFAQ()),
+  }
+);
 
-  export default connect(mapStateToProps, mapDispatchToProps)(FAQ);
+export default connect(mapStateToProps, mapDispatchToProps)(FAQ);

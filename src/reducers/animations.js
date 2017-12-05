@@ -7,7 +7,7 @@ import 'babel-polyfill';
 
 const initialState = {
   list: [],
-  selected: { id:0, nom: '', description: ''}
+  selected: { id: 0, nom: '', description: '' }
 }
 
 const animations = (state = initialState, action) => {
@@ -16,7 +16,7 @@ const animations = (state = initialState, action) => {
       return { ...state, list: action.animations };
 
     case RECEIVE_SENYU_ANIMATION_BY_ID:
-      return {...state,  selected: action.animation };
+      return { ...state, selected: action.animation };
 
 
     default:

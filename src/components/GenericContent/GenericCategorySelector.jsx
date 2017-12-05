@@ -16,15 +16,15 @@ class GenericCategorySelector extends Component {
   render() {
 
     let categories = this.props.categories.map((category) =>
-    <div key={category.code}>
-      <input type="radio" name="category" id={category.code} value={category.code}
-        checked={this.props.selectedCategory === category.code}
-        onChange={this.onRadioChange.bind(this)}/>
-      <label htmlFor={category.code}>
-        <FaCircleO className="generic-category-radio"/>
-        <FaCheckCircleO className="generic-category-radio-checked"/>
-        {category.label}
-      </label>
+      <div key={category.code}>
+        <input type="radio" name="category" id={category.code} value={category.code}
+          checked={this.props.selectedCategory === category.code}
+          onChange={this.onRadioChange.bind(this)} />
+        <label htmlFor={category.code}>
+          <FaCircleO className="generic-category-radio" />
+          <FaCheckCircleO className="generic-category-radio-checked" />
+          {category.label}
+        </label>
       </div>
     );
 
@@ -32,26 +32,26 @@ class GenericCategorySelector extends Component {
       <div key="tous">
         <input type="radio" name="category" id="all" value=""
           checked={this.props.selectedCategory === ""}
-          onChange={this.onRadioChange.bind(this)}/>
+          onChange={this.onRadioChange.bind(this)} />
         <label htmlFor="all">
-          <FaCircleO className="generic-category-radio"/>
-          <FaCheckCircleO className="generic-category-radio-checked"/>
+          <FaCircleO className="generic-category-radio" />
+          <FaCheckCircleO className="generic-category-radio-checked" />
           Tous
         </label>
-        </div>
-      );
+      </div>
+    );
 
-      return (
-        <div className="generic-category-selector">
-          {categories}
-        </div>
-      );
-    }
+    return (
+      <div className="generic-category-selector">
+        {categories}
+      </div>
+    );
   }
+}
 
-  GenericCategorySelector.propTypes = {
-    onChange: PropTypes.func.isRequired,
-    selectedCategory: PropTypes.string
-  };
+GenericCategorySelector.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  selectedCategory: PropTypes.string
+};
 
-  export default GenericCategorySelector;
+export default GenericCategorySelector;

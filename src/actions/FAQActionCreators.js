@@ -11,8 +11,8 @@ let FAQActionCreators = {
     return (dispatch) => {
       dispatch({ type: REQUEST_FAQ });
       SenyuAPI.fetchFAQ().then(
-        (faq) => dispatch({ type: RECEIVE_FAQ, success:true, faq }),
-        (error) => dispatch({ type: RECEIVE_FAQ, success:false, error })
+        (faq) => dispatch({ type: RECEIVE_FAQ, success: true, faq }),
+        (error) => dispatch({ type: RECEIVE_FAQ, success: false, error })
       );
     };
   },

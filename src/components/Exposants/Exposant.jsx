@@ -15,41 +15,41 @@ import ExposantsActionCreators from '../../actions/ExposantsActionCreators';
 
 import './Exposant.css';
 
-let exposantId ;
+let exposantId;
 
 class Exposant extends Component {
 
-  componentDidMount(){
+  componentDidMount() {
     exposantId = this.props.match.params.exposantId;
 
-    if(exposantId) {
+    if (exposantId) {
       this.props.fetchExposantById(exposantId);
     }
   }
 
   render() {
 
-      const facebook = this.props.exposant.facebook ? <h2><a href={this.props.exposant.facebook} target="_blank" rel="noopener noreferrer"><FaFacebook/></a></h2> : "" ;
-      const twitch = this.props.exposant.twitch ? <h2><a href={this.props.exposant.twitch} target="_blank" rel="noopener noreferrer"><FaTwitch/></a></h2> : "" ;
-      const twitter = this.props.exposant.twitter ? <h2><a href={this.props.exposant.twitter} target="_blank" rel="noopener noreferrer"><FaTwitter/></a></h2> : "" ;
-      const youtube = this.props.exposant.youtube ? <h2><a href={this.props.exposant.youtube} target="_blank" rel="noopener noreferrer"><FaYoutube/></a></h2> : "" ;
-      const website = this.props.exposant.website ? <h2><a href={this.props.exposant.website} target="_blank" rel="noopener noreferrer"><FaWebsite/></a></h2> : "" ;
+    const facebook = this.props.exposant.facebook ? <h2><a href={this.props.exposant.facebook} target="_blank" rel="noopener noreferrer"><FaFacebook /></a></h2> : "";
+    const twitch = this.props.exposant.twitch ? <h2><a href={this.props.exposant.twitch} target="_blank" rel="noopener noreferrer"><FaTwitch /></a></h2> : "";
+    const twitter = this.props.exposant.twitter ? <h2><a href={this.props.exposant.twitter} target="_blank" rel="noopener noreferrer"><FaTwitter /></a></h2> : "";
+    const youtube = this.props.exposant.youtube ? <h2><a href={this.props.exposant.youtube} target="_blank" rel="noopener noreferrer"><FaYoutube /></a></h2> : "";
+    const website = this.props.exposant.website ? <h2><a href={this.props.exposant.website} target="_blank" rel="noopener noreferrer"><FaWebsite /></a></h2> : "";
 
     return (
       <GenericContentItem
-      title={this.props.exposant.nom}
-      image={this.props.exposant.image}
-      content={this.props.exposant.description}
-      propClass="exposant">
+        title={this.props.exposant.nom}
+        image={this.props.exposant.image}
+        content={this.props.exposant.description}
+        propClass="exposant">
 
-      <div className="generic-content-social exposant-social">
-        {facebook}
-        {twitch}
-        {twitter}
-        {youtube}
-        {website}
-      </div>
-    </GenericContentItem>
+        <div className="generic-content-social exposant-social">
+          {facebook}
+          {twitch}
+          {twitter}
+          {youtube}
+          {website}
+        </div>
+      </GenericContentItem>
     );
   }
 }

@@ -71,7 +71,7 @@ let SenyuAPI = {
     }
   },
 
-  async fetchSenyuAnimationsByType(type){
+  async fetchSenyuAnimationsByType(type) {
     try {
       const response = await axios.get(`${API_URL}/animations`, { headers: API_HEADERS });
       return response.data.filter(animation => animation.type === type);

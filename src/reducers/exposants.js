@@ -8,7 +8,7 @@ import 'babel-polyfill';
 
 const initialState = {
   list: [],
-  selected: { id:0, nom: '', description: ''}
+  selected: { id: 0, nom: '', description: '' }
 }
 
 const intervenants = (state = initialState, action) => {
@@ -20,7 +20,7 @@ const intervenants = (state = initialState, action) => {
       return { ...state, list: action.exposants };
 
     case RECEIVE_EXPOSANT_BY_ID:
-      return {...state,  selected: action.exposant };
+      return { ...state, selected: action.exposant };
 
 
     default:

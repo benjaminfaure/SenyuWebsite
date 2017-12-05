@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 import { WIDTH_BREAKPOINT } from '../constants';
 import {
-  getDimensions
+  getDimensions,
 } from '../reducers';
 
 import Menu from './Menu/Menu.jsx';
@@ -26,6 +26,8 @@ import Exposants from './Exposants/Exposants.jsx';
 
 import FAQ from './FAQ/FAQ.jsx';
 
+import Stream from './Stream/Stream.jsx';
+
 import EnTravaux from './EnTravaux/EnTravaux.jsx';
 
 
@@ -42,81 +44,80 @@ class App extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if(nextProps.dimensions.width >= WIDTH_BREAKPOINT )
-      {
-        this.setState({isMenuOpen: false})
-      }
-    }
-
-
-    toggleMenu() {
-      this.setState({isMenuOpen: !this.state.isMenuOpen})
-    }
-
-
-
-    render() {
-      return (
-        <BrowserRouter>
-          <div className="App">
-            <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen}/>
-            <Menu/>
-            <div className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
-                <Switch>
-                  <Route exact path="/" component={MainPage}/>
-                  {/* Intervenants */}
-                  <Route exact path="/invites" component={Intervenants}/>
-                  <Route path="/invites/:intervenantId" component={Intervenant}/>
-                  {/* Exposants */}
-                  <Route exact path="/exposants" component={Exposants}/>
-                  <Route path="/exposants/:exposantId" component={Exposant}/>
-                  {/* Animations */}
-                  <Route exact path="/animations" component={Animations}/>
-                  <Route path="/animations/:animationId" component={Animation}/>
-                  {/* FAQ */}
-                  <Route exact path="/faq" component={FAQ}/>
-                  {/* Reglements */}
-                  <Route exact path="/reglements" component={EnTravaux}/>
-                  {/* Plans */}
-                  <Route exact path="/plans" component={EnTravaux}/>
-                  {/* Planning */}
-                  <Route exact path="/planning" component={EnTravaux}/>
-                  {/* Guide */}
-                  <Route exact path="/guide" component={EnTravaux}/>
-                  {/* Contact */}
-                  <Route exact path="/contact" component={EnTravaux}/>
-                  {/* Cosplay */}
-                  <Route exact path="/cosplay" component={EnTravaux}/>
-                  {/* Stream */}
-                  <Route exact path="/stream" component={EnTravaux}/>
-                  {/* Presse */}
-                  <Route exact path="/presse" component={EnTravaux}/>
-                  {/* Archive */}
-                  <Route exact path="/archive" component={EnTravaux}/>
-                  {/* Recrutement */}
-                  <Route exact path="/recrutement" component={EnTravaux}/>
-                  {/* Recrutement */}
-                  <Route exact path="/billeterie" component={EnTravaux}/>
-                </Switch>
-            </div>
-            <Footer/>
-          </div>
-        </BrowserRouter>
-      );
+    if (nextProps.dimensions.width >= WIDTH_BREAKPOINT) {
+      this.setState({ isMenuOpen: false })
     }
   }
 
-  App.propTypes = {
-    showMainContent: PropTypes.bool,
-  };
 
-  const mapStateToProps = (state) => (
-    {
-      dimensions: getDimensions(state)
-    }
-  );
+  toggleMenu() {
+    this.setState({ isMenuOpen: !this.state.isMenuOpen })
+  }
 
 
 
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
+          <Menu />
+          <div className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
+            <Switch>
+              <Route exact path="/" component={MainPage} />
+              {/* Intervenants */}
+              <Route exact path="/invites" component={Intervenants} />
+              <Route path="/invites/:intervenantId" component={Intervenant} />
+              {/* Exposants */}
+              <Route exact path="/exposants" component={Exposants} />
+              <Route path="/exposants/:exposantId" component={Exposant} />
+              {/* Animations */}
+              <Route exact path="/animations" component={Animations} />
+              <Route path="/animations/:animationId" component={Animation} />
+              {/* FAQ */}
+              <Route exact path="/faq" component={FAQ} />
+              {/* Reglements */}
+              <Route exact path="/reglements" component={EnTravaux} />
+              {/* Plans */}
+              <Route exact path="/plans" component={EnTravaux} />
+              {/* Planning */}
+              <Route exact path="/planning" component={EnTravaux} />
+              {/* Guide */}
+              <Route exact path="/guide" component={EnTravaux} />
+              {/* Contact */}
+              <Route exact path="/contact" component={EnTravaux} />
+              {/* Cosplay */}
+              <Route exact path="/cosplay" component={EnTravaux} />
+              {/* Stream */}
+              <Route exact path="/stream" component={Stream} />
+              {/* Presse */}
+              <Route exact path="/presse" component={EnTravaux} />
+              {/* Archive */}
+              <Route exact path="/archive" component={EnTravaux} />
+              {/* Recrutement */}
+              <Route exact path="/recrutement" component={EnTravaux} />
+              {/* Recrutement */}
+              <Route exact path="/billeterie" component={EnTravaux} />
+            </Switch>
+          </div>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    );
+  }
+}
 
-  export default connect(mapStateToProps, null)(App);
+App.propTypes = {
+  showMainContent: PropTypes.bool,
+};
+
+const mapStateToProps = (state) => (
+  {
+    dimensions: getDimensions(state),
+  }
+);
+
+
+
+
+export default connect(mapStateToProps, null)(App);

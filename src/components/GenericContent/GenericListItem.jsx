@@ -10,7 +10,7 @@ class GenericListItem extends Component {
 
     let className = "generic-content-list-item "
 
-    if(this.props.propClass) {
+    if (this.props.propClass) {
       className += this.props.propClass;
     }
 
@@ -25,7 +25,7 @@ class GenericListItem extends Component {
 
     return (
       <article className={className}   >
-        <Link  to={this.props.link ? this.props.link : '#'}>
+        <Link to={this.props.link ? this.props.link : '#'}>
           <div className="generic-content-list-item-image" style={styles}></div>
           {this.props.children}
           <h4>{this.props.title}</h4>

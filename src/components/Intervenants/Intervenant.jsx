@@ -15,14 +15,14 @@ import IntervenantsActionCreators from '../../actions/IntervenantsActionCreators
 
 import './Intervenant.css';
 
-let intervenantId ;
+let intervenantId;
 
 class Intervenant extends Component {
 
-  componentDidMount(){
+  componentDidMount() {
     intervenantId = this.props.match.params.intervenantId;
 
-    if(intervenantId) {
+    if (intervenantId) {
       this.props.fetchIntervenantById(intervenantId);
     }
   }
@@ -31,11 +31,11 @@ class Intervenant extends Component {
 
   render() {
 
-    const facebook = this.props.intervenant.facebook ? <h2><a href={this.props.intervenant.facebook} target="_blank" rel="noopener noreferrer"><FaFacebook/></a></h2> : "" ;
-    const twitch = this.props.intervenant.twitch ? <h2><a href={this.props.intervenant.twitch} target="_blank" rel="noopener noreferrer"><FaTwitch/></a></h2> : "" ;
-    const twitter = this.props.intervenant.twitter ? <h2><a href={this.props.intervenant.twitter} target="_blank" rel="noopener noreferrer"><FaTwitter/></a></h2> : "" ;
-    const youtube = this.props.intervenant.youtube ? <h2><a href={this.props.intervenant.youtube} target="_blank" rel="noopener noreferrer"><FaYoutube/></a></h2> : "" ;
-    const website = this.props.intervenant.website ? <h2><a href={this.props.intervenant.website} target="_blank" rel="noopener noreferrer"><FaWebsite/></a></h2> : "" ;
+    const facebook = this.props.intervenant.facebook ? <h2><a href={this.props.intervenant.facebook} target="_blank" rel="noopener noreferrer"><FaFacebook /></a></h2> : "";
+    const twitch = this.props.intervenant.twitch ? <h2><a href={this.props.intervenant.twitch} target="_blank" rel="noopener noreferrer"><FaTwitch /></a></h2> : "";
+    const twitter = this.props.intervenant.twitter ? <h2><a href={this.props.intervenant.twitter} target="_blank" rel="noopener noreferrer"><FaTwitter /></a></h2> : "";
+    const youtube = this.props.intervenant.youtube ? <h2><a href={this.props.intervenant.youtube} target="_blank" rel="noopener noreferrer"><FaYoutube /></a></h2> : "";
+    const website = this.props.intervenant.website ? <h2><a href={this.props.intervenant.website} target="_blank" rel="noopener noreferrer"><FaWebsite /></a></h2> : "";
 
     return (
       <GenericContentItem

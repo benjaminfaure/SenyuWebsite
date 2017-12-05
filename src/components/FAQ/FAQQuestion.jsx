@@ -21,19 +21,19 @@ class FAQQuestion extends Component {
   componentDidUpdate(prevProps, prevState) {
 
     const node = ReactDOM.findDOMNode(this);
-    if(this.state.showReponse) {
+    if (this.state.showReponse) {
       window.scrollTo(0, node.offsetTop);
     }
   }
 
   toggleReponse() {
-    this.setState({showReponse: !this.state.showReponse})
+    this.setState({ showReponse: !this.state.showReponse })
 
   }
 
   render() {
 
-    let arrow = this.state.showReponse ? <FaAngleDown/> : <FaAngleRight/>
+    let arrow = this.state.showReponse ? <FaAngleDown /> : <FaAngleRight />
 
     return (
       <article className="faq-question">
@@ -41,7 +41,7 @@ class FAQQuestion extends Component {
           {this.props.question}
           <span className="faq-question-arrow">{arrow}</span>
         </h4>
-        <p className={this.state.showReponse ? "faq-question-reponse open" : "faq-question-reponse"} dangerouslySetInnerHTML={{__html:this.props.reponse}} />
+        <p className={this.state.showReponse ? "faq-question-reponse open" : "faq-question-reponse"} dangerouslySetInnerHTML={{ __html: this.props.reponse }} />
       </article>
     );
   }

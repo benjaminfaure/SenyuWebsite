@@ -14,8 +14,8 @@ let AnimationsActionCreators = {
     return (dispatch) => {
       dispatch({ type: REQUEST_SENYU_ANIMATIONS });
       SenyuAPI.fetchSenyuAnimations().then(
-        (animations) => dispatch({ type: RECEIVE_SENYU_ANIMATIONS, success:true, animations }),
-        (error) => dispatch({ type: RECEIVE_SENYU_ANIMATIONS, success:false, error })
+        (animations) => dispatch({ type: RECEIVE_SENYU_ANIMATIONS, success: true, animations }),
+        (error) => dispatch({ type: RECEIVE_SENYU_ANIMATIONS, success: false, error })
       );
     };
   },
@@ -24,8 +24,8 @@ let AnimationsActionCreators = {
     return (dispatch) => {
       dispatch({ type: REQUEST_SENYU_ANIMATION_BY_ID });
       SenyuAPI.fetchSenyuAnimationById(id).then(
-        (animation) => dispatch({ type: RECEIVE_SENYU_ANIMATION_BY_ID, success:true, id, animation }),
-        (error) => dispatch({ type: RECEIVE_SENYU_ANIMATION_BY_ID, success:false, id, error })
+        (animation) => dispatch({ type: RECEIVE_SENYU_ANIMATION_BY_ID, success: true, id, animation }),
+        (error) => dispatch({ type: RECEIVE_SENYU_ANIMATION_BY_ID, success: false, id, error })
       );
     };
   },

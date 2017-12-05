@@ -12,7 +12,7 @@ let SenyuAPI = {
   async fetchIsSenyuChannelLive() {
     try {
       const response = await axios.get(`${API_URL}`, { headers: API_HEADERS });
-      if(response.data.stream !== null) {
+      if (response.data.stream !== null) {
         return true;
       } else {
         return false;

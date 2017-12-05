@@ -20,7 +20,7 @@ class GenericList extends Component {
           {this.props.children}
         </section>
         <section className="generic-content-list">
-          { this.props.itemList }
+          {this.props.itemList}
         </section>
       </div>
     );

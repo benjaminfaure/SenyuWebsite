@@ -10,8 +10,8 @@ import './index.css';
 
 
 ReactDOM.render(
-    <Provider store={senyuStore}>
-      <App/>
-    </Provider>
-, document.getElementById('root'));
+  <Provider store={senyuStore}>
+    <App />
+  </Provider>
+  , document.getElementById('root'));
 registerServiceWorker();

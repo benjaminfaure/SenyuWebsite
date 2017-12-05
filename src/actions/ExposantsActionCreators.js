@@ -16,8 +16,8 @@ let ExposantsActionCreators = {
     return (dispatch) => {
       dispatch({ type: REQUEST_EXPOSANTS });
       SenyuAPI.fetchExposants().then(
-        (exposants) => dispatch({ type: RECEIVE_EXPOSANTS, success:true, exposants }),
-        (error) => dispatch({ type: RECEIVE_EXPOSANTS, success:false, error })
+        (exposants) => dispatch({ type: RECEIVE_EXPOSANTS, success: true, exposants }),
+        (error) => dispatch({ type: RECEIVE_EXPOSANTS, success: false, error })
       );
     };
   },
@@ -25,8 +25,8 @@ let ExposantsActionCreators = {
     return (dispatch) => {
       dispatch({ type: REQUEST_EXPOSANTS_BY_TYPE });
       SenyuAPI.fetchExposantsByType(type).then(
-        (exposants) => dispatch({ type: RECEIVE_EXPOSANTS_BY_TYPE, success:true, exposants, typeExposant: type }),
-        (error) => dispatch({ type: RECEIVE_EXPOSANTS_BY_TYPE, success:false, error, typeExposant: type })
+        (exposants) => dispatch({ type: RECEIVE_EXPOSANTS_BY_TYPE, success: true, exposants, typeExposant: type }),
+        (error) => dispatch({ type: RECEIVE_EXPOSANTS_BY_TYPE, success: false, error, typeExposant: type })
       );
     };
   },
@@ -35,8 +35,8 @@ let ExposantsActionCreators = {
     return (dispatch) => {
       dispatch({ type: REQUEST_EXPOSANT_BY_ID });
       SenyuAPI.fetchExposantById(id).then(
-        (exposant) => dispatch({ type: RECEIVE_EXPOSANT_BY_ID, success:true, id, exposant }),
-        (error) => dispatch({ type: RECEIVE_EXPOSANT_BY_ID, success:false, id, error })
+        (exposant) => dispatch({ type: RECEIVE_EXPOSANT_BY_ID, success: true, id, exposant }),
+        (error) => dispatch({ type: RECEIVE_EXPOSANT_BY_ID, success: false, id, error })
       );
     };
   },

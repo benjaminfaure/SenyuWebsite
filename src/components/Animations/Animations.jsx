@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import {TYPE_ANIMATION} from '../../constants';
+import { TYPE_ANIMATION } from '../../constants';
 
 import GenericList from '../GenericContent/GenericList.jsx';
 import GenericListItem from '../GenericContent/GenericListItem.jsx';
@@ -23,7 +23,7 @@ class Animations extends Component {
     };
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.props.fetchSenyuAnimations();
   }
 
@@ -39,15 +39,15 @@ class Animations extends Component {
       </GenericListItem>
     });
 
-    let searchBar = <GenericListSearch onChange={this.handleSearchInputChange.bind(this)}/> ;
+    let searchBar = <GenericListSearch onChange={this.handleSearchInputChange.bind(this)} />;
     let categorySelect = <GenericCategorySelector
       categories={TYPE_ANIMATION}
       selectedCategory={this.state.selectedCategory}
-      onChange={this.handleCategoryFilterChange.bind(this)}/>
+      onChange={this.handleCategoryFilterChange.bind(this)} />
 
 
-    return(
-      <GenericList itemList = {animationsList}
+    return (
+      <GenericList itemList={animationsList}
         titrePage="Liste des Animations Senyu">
         {searchBar}
         {categorySelect}
@@ -58,18 +58,18 @@ class Animations extends Component {
 
 
   handleSearchInputChange(filter) {
-    this.setState({searchInputFilter: filter.toLowerCase()})
+    this.setState({ searchInputFilter: filter.toLowerCase() })
   }
 
 
   handleCategoryFilterChange(category) {
-    this.setState({selectedCategory: category})
+    this.setState({ selectedCategory: category })
   }
 
   filteredSenyuAnimations() {
     return this.props.animations.filter(
       animation => animation.nom.toLowerCase().includes(this.state.searchInputFilter) &&
-      animation.type.includes(this.state.selectedCategory)
+        animation.type.includes(this.state.selectedCategory)
     )
   }
 

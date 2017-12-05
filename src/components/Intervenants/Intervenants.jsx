@@ -19,7 +19,7 @@ class Intervenants extends Component {
   }
 
 
-  componentDidMount(){
+  componentDidMount() {
     this.props.fetchIntervenants();
   }
 
@@ -36,11 +36,11 @@ class Intervenants extends Component {
       </GenericListItem>
     });
 
-    let searchBar = <GenericListSearch onChange={this.handleSearchInputChange.bind(this)}/> ;
+    let searchBar = <GenericListSearch onChange={this.handleSearchInputChange.bind(this)} />;
 
 
-    return(
-      <GenericList itemList = {intervenantsList}
+    return (
+      <GenericList itemList={intervenantsList}
         titrePage="Liste des Intervenants">
         {searchBar}
       </GenericList>
@@ -50,7 +50,7 @@ class Intervenants extends Component {
 
 
   handleSearchInputChange(filter) {
-    this.setState({searchInputFilter: filter.toLowerCase()})
+    this.setState({ searchInputFilter: filter.toLowerCase() })
   }
 
   filteredIntervenants() {

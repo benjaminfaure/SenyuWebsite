@@ -22,15 +22,15 @@ class Menu extends Component {
   render() {
 
     const streamMenu = this.props.isLive ?
-                    <li className="menu-item menu-item-special"><Link to="/stream"><span><FaCircle/></span> <span>Stream</span></Link></li> :
-                    <li className="menu-item"><Link to="/stream"><span>Stream</span></Link></li>;
+      <li className="menu-item menu-item-special"><Link to="/stream"><span><FaCircle /></span> <span>Stream</span></Link></li> :
+      <li className="menu-item"><Link to="/stream"><span>Stream</span></Link></li>;
 
     return (
       <nav id="navbar" className="nav-wrap">
         <ul className="menu">{/* menu principal */}
           {/*<li className="menu-item"><Link to="/"><span>Accueil</span></Link></li> */}
           <li className="menu-item">{/* sous menu infos */}
-            <Link to="/"><span>Infos Pratiques</span><span className="menu-item-arrow-down">&nbsp;<FaAngleDown/></span></Link>
+            <Link to="/"><span>Infos Pratiques</span><span className="menu-item-arrow-down">&nbsp;<FaAngleDown /></span></Link>
             <ul className="menu-content">
               <li><Link to="/faq"><span>FAQ</span></Link></li>
               <li><Link to="/reglements"><span>Règlements</span></Link></li>

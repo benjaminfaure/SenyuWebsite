@@ -8,7 +8,7 @@ class GenericContentItem extends Component {
 
     let className = "generic-content "
 
-    if(this.props.propClass) {
+    if (this.props.propClass) {
       className += this.props.propClass;
     }
 
@@ -19,7 +19,7 @@ class GenericContentItem extends Component {
         </article>
         <article className="generic-content-description">
           <h4 className="generic-content-title">{this.props.title}</h4>
-          <p dangerouslySetInnerHTML={{__html:this.props.content}} />
+          <p dangerouslySetInnerHTML={{ __html: this.props.content }} />
           {this.props.children}
         </article>
       </section>

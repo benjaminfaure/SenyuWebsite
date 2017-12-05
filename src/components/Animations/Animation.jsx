@@ -15,41 +15,41 @@ import AnimationsActionCreators from '../../actions/AnimationsActionCreators';
 
 import './Animation.css';
 
-let animationId ;
+let animationId;
 
 class Animation extends Component {
 
-  componentDidMount(){
+  componentDidMount() {
     animationId = this.props.match.params.animationId;
 
-    if(animationId) {
+    if (animationId) {
       this.props.fetchSenyuAnimationById(animationId);
     }
   }
 
   render() {
 
-      const facebook = this.props.animation.facebook ? <h2><a href={this.props.animation.facebook} target="_blank" rel="noopener noreferrer"><FaFacebook/></a></h2> : "" ;
-      const twitch = this.props.animation.twitch ? <h2><a href={this.props.animation.twitch} target="_blank" rel="noopener noreferrer"><FaTwitch/></a></h2> : "" ;
-      const twitter = this.props.animation.twitter ? <h2><a href={this.props.animation.twitter} target="_blank" rel="noopener noreferrer"><FaTwitter/></a></h2> : "" ;
-      const youtube = this.props.animation.youtube ? <h2><a href={this.props.animation.youtube} target="_blank" rel="noopener noreferrer"><FaYoutube/></a></h2> : "" ;
-      const website = this.props.animation.website ? <h2><a href={this.props.animation.website} target="_blank" rel="noopener noreferrer"><FaWebsite/></a></h2> : "" ;
+    const facebook = this.props.animation.facebook ? <h2><a href={this.props.animation.facebook} target="_blank" rel="noopener noreferrer"><FaFacebook /></a></h2> : "";
+    const twitch = this.props.animation.twitch ? <h2><a href={this.props.animation.twitch} target="_blank" rel="noopener noreferrer"><FaTwitch /></a></h2> : "";
+    const twitter = this.props.animation.twitter ? <h2><a href={this.props.animation.twitter} target="_blank" rel="noopener noreferrer"><FaTwitter /></a></h2> : "";
+    const youtube = this.props.animation.youtube ? <h2><a href={this.props.animation.youtube} target="_blank" rel="noopener noreferrer"><FaYoutube /></a></h2> : "";
+    const website = this.props.animation.website ? <h2><a href={this.props.animation.website} target="_blank" rel="noopener noreferrer"><FaWebsite /></a></h2> : "";
 
     return (
       <GenericContentItem
-      title={this.props.animation.nom}
-      image={this.props.animation.image}
-      content={this.props.animation.description}
-      propClass="animation">
+        title={this.props.animation.nom}
+        image={this.props.animation.image}
+        content={this.props.animation.description}
+        propClass="animation">
 
-      <div className="generic-content-social animation-social">
-        {facebook}
-        {twitch}
-        {twitter}
-        {youtube}
-        {website}
-      </div>
-    </GenericContentItem>
+        <div className="generic-content-social animation-social">
+          {facebook}
+          {twitch}
+          {twitter}
+          {youtube}
+          {website}
+        </div>
+      </GenericContentItem>
     );
   }
 }
