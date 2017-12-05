@@ -18,7 +18,7 @@ class MainPage extends Component {
           <div id="twitch-embed"></div>
         </article>
         <article id="main-page-message">
-          <img src="/logo_mobile.png" alt="logo" />
+          <img src="/images/logo_mobile.png" alt="logo" />
           <span>Senyu est de retour du 3 au 4 Mars 2018</span>
           <span>Centre des Congrès d'Epinal</span>
           <span>7 Avenue St Dié</span>
