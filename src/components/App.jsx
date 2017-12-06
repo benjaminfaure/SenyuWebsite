@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import { withRouter } from 'react-router'
 import { connect } from 'react-redux';
 
 
@@ -33,6 +34,7 @@ import EnTravaux from './EnTravaux/EnTravaux.jsx';
 
 import './App.css';
 
+
 class App extends Component {
 
   constructor(props) {
@@ -41,6 +43,13 @@ class App extends Component {
     this.state = {
       isMenuOpen: false
     };
+
+  }
+
+  componentDidMount() {
+    this.props.history.listen((location, action) => {
+      this.setState({ isMenuOpen: false })
+    });
   }
 
   componentWillReceiveProps(nextProps) {
@@ -58,7 +67,6 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
         <div className="App">
           <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
           <Menu />
@@ -102,7 +110,6 @@ class App extends Component {
           </div>
           <Footer />
         </div>
-      </BrowserRouter>
     );
   }
 }
@@ -120,4 +127,4 @@ const mapStateToProps = (state) => (
 
 
 
-export default connect(mapStateToProps, null)(App);
+export default withRouter(connect(mapStateToProps, null)(App));
