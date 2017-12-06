@@ -10,6 +10,8 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
 
+require('dotenv').config();
+
 ReactDOM.render(
   <Provider store={senyuStore}>
     <BrowserRouter>

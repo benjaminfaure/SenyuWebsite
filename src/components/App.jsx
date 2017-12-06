@@ -47,6 +47,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+
     this.props.history.listen((location, action) => {
       this.setState({ isMenuOpen: false })
     });
