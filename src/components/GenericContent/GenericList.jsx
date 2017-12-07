@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DocumentMeta from 'react-document-meta';
 import PropTypes from 'prop-types';
 
 
@@ -11,10 +12,13 @@ class GenericList extends Component {
 
     let titrePage = this.props.titrePage && this.props.itemList.length > 0 ? this.props.titrePage : "Aucun enregistrement trouvé"
 
-    document.title = `Senyu | ${titrePage}`;
+    const meta = {
+      title: `Senyu | ${titrePage}`,
+    };
 
     return (
       <div>
+        <DocumentMeta {...meta} />
         <section className="generic-page-header">
           <h1 className="generic-page-title">{titrePage}</h1>
         </section>
