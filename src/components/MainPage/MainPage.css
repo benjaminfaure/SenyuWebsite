@@ -16,11 +16,6 @@
   text-align: center;
 }
 
-#senyu-event-adress{
-  display: flex;
-  flex-direction: column;
-}
-
 #main-page-message img {
   border-radius: 50%;
   border: 3px solid var(--senyu-logo-blue);

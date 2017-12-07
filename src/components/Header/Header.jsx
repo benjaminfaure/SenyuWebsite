@@ -17,11 +17,8 @@ class Header extends Component {
               </picture>
             </Link>
           </h4>
-          <h4 className="header-message" itemScope itemType="http://schema.org/Event">
-            <span> <span itemProp="name">Senyu</span> revient du
-            <time itemProp="startDate" dateTime="2018-03-03"> 3</time> au
-            <time itemProp="endDate" dateTime="2018-03-04"> 4</time> Mars 2018
-            </span>
+          <h4 className="header-message" >
+            <span> Senyu est de retour du 3 au 4 Mars 2018 </span>
           </h4>
           <MenuIcon toggleMenu={this.props.toggleMenu} isMenuOpen={this.props.isMenuOpen} />
           <h4 className="ticket-buy"><span></span></h4>
