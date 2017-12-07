@@ -39,19 +39,23 @@
     -->
 
 
-    <div itemScope itemType="http://schema.org/Event">
+    <span itemScope itemType="http://schema.org/Event">
       <meta itemProp="name" content="Senyu" />
       <meta itemProp="startDate" content="2018-03-03T09:00" />
       <meta itemProp="endDate" content="2018-03-04T18:00" />
       <span id="senyu-event-adress" itemProp="location" itemScope itemType="http://schema.org/Place">
         <meta itemProp="name" content="Centre des Congrès d'Epinal" />
+        <span itemProp="geo" itemScope itemType="http://schema.org/GeoCoordinates">
+          <meta itemProp="latitude" content="48.1850019" />
+          <meta itemProp="longitude" content="6.4693901" />
+        </span>
         <span itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
           <meta itemProp="streetAddress" content="7 Avenue St Dié" />
           <meta itemProp="postalCode" content="88000" />
           <meta itemProp="addressLocality" content="Épinal" />
         </span>
       </span>
-    </div>
+    </span>
 </body>
 
 </html>
