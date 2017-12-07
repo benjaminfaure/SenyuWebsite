@@ -14,6 +14,18 @@ class GenericContentItem extends Component {
     let className = "generic-content "
     const meta = {
       title: `Senyu | ${this.props.title}`,
+      meta: {
+        property: {
+          'og:title': `${this.props.title}`,
+          'og:image': this.props.image,
+          'twitter:title': `${this.props.title}`,
+        },
+        itemProp: {
+          name: this.props.title,
+          description: this.props.content,
+          image: this.props.image
+},
+      }
     };
 
     if (this.props.propClass) {
