@@ -4,9 +4,15 @@ import PropTypes from 'prop-types';
 import './GenericContentItem.css';
 
 class GenericContentItem extends Component {
+
+  componentWillReceiveProps(nextProps){
+  }
+
   render() {
 
     let className = "generic-content "
+
+    document.title = `Senyu | ${this.props.title}`;
 
     if (this.props.propClass) {
       className += this.props.propClass;

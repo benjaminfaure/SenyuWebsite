@@ -13,7 +13,7 @@ class Header extends Component {
             <Link to="/">
               <picture>
                 <source media="(min-width: 1024px)" srcSet="/images/logo_desktop.png"></source>
-                <img src="/images/logo_mobile.png" alt="logo" />
+                <img src="/images/logo_mobile.png" alt="senyu logo" />
               </picture>
             </Link>
           </h4>

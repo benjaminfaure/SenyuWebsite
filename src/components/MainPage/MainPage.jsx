@@ -9,6 +9,10 @@ import MainPageSlider from './MainPageSlider.jsx';
 class MainPage extends Component {
 
   render() {
+
+
+    document.title = `Senyu | 3 et 4 Mars 2018`;
+
     return (
       <section id="main-page">
         <article>

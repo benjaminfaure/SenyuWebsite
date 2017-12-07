@@ -13,6 +13,9 @@ class Stream extends Component {
   }
 
   render() {
+
+    document.title = `Senyu | Stream`;
+
     return (
       <div id="twitch-embed"></div>
     );

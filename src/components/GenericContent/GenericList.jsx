@@ -11,6 +11,8 @@ class GenericList extends Component {
 
     let titrePage = this.props.titrePage && this.props.itemList.length > 0 ? this.props.titrePage : "Aucun enregistrement trouvé"
 
+    document.title = `Senyu | ${titrePage}`;
+
     return (
       <div>
         <section className="generic-page-header">

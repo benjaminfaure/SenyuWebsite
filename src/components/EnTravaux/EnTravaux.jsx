@@ -12,6 +12,7 @@ class EnTravaux extends Component {
 
   render() {
 
+    document.title = `Senyu | En Travaux`;
 
     return (
       <section className="work-in-progress">

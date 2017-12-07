@@ -18,6 +18,8 @@ class FAQ extends Component {
 
   render() {
 
+    document.title = `Senyu | FAQ`;
+
     let categoriesList = this.props.faq.map((categorie) => {
       return <FAQCategorie key={categorie.id}
         categorie={categorie.categorie}
