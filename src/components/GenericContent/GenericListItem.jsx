@@ -14,7 +14,7 @@ class GenericListItem extends Component {
       className += this.props.propClass;
     }
 
-    const imgUrl = this.props.image ? this.props.image : '/logo_mobile.png'
+    const imgUrl = this.props.image ? this.props.image : '/images/logo_mobile.png'
 
     const styles = {
       backgroundImage: `url(${imgUrl})`,
