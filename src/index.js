@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 import senyuStore from './store/senyuStore';
+import './index.css';
 import App from './components/App.jsx';
 
 import registerServiceWorker from './registerServiceWorker';
-import './index.css';
 
 
 require('dotenv').config();
