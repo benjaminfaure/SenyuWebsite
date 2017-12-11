@@ -12,18 +12,18 @@ class MainPage extends Component {
 
     return (
       <section id="main-page">
-        <p>
-        </p>
-        <p id="main-page-message">
+        <article>
+        </article>
+        <article id="main-page-message">
           <img src="/images/logo_mobile.png" alt="logo" />
           <span>Senyu est de retour du 3 au 4 Mars 2018</span>
           <span>Centre des Congrès d'Epinal</span>
           <span>7 Avenue St Dié </span>
           <span>88000 Épinal</span>
-        </p>
-        <p>
+        </article>
+        <article>
           <MainPageGoogleMap />
-        </p>
+        </article>
       </section >
     );
   }
