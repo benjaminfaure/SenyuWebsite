@@ -16,15 +16,13 @@ class GenericContentItem extends Component {
       title: `Senyu | ${this.props.title}`,
       meta: {
         property: {
-          'og:title': `${this.props.title}`,
+          'og:title': this.props.title,
           'og:image': this.props.image,
-          'twitter:title': `${this.props.title}`,
+          'og:description ': this.props.content,
+          'twitter:title': this.props.title,
+          'twitter:image': this.props.image,
+          'twitter:description': this.props.content,
         },
-        itemProp: {
-          name: this.props.title,
-          description: this.props.content,
-          image: this.props.image
-},
       }
     };
 
