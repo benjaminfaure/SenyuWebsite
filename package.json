@@ -6,7 +6,9 @@
     "axios": "^0.17.1",
     "babel-polyfill": "^6.23.0",
     "dotenv": "^4.0.0",
+    "express": "^4.16.2",
     "history": "^4.6.3",
+    "morgan": "^1.9.0",
     "prop-types": "^15.5.10",
     "react": "^16.2.0",
     "react-addons-update": "^15.6.0",
@@ -27,7 +29,7 @@
   },
   "scripts": {
     "start": "set PORT=3003 && react-scripts start",
-    "start:prod": "serve -s build",
+    "start:prod": "node server",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
