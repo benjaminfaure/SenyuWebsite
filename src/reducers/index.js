@@ -9,7 +9,7 @@ import twitch from './twitch';
 
 const rootReducer = combineReducers({
   animations,
-  dimensions,
+  //dimensions,
   exposants,
   faq,
   intervenants,
