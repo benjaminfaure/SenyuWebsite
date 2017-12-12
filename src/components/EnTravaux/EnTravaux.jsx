@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DocumentMeta from 'react-document-meta';
+import { Helmet } from "react-helmet";
 
 import FaEmpire from 'react-icons/lib/fa/empire';
 
@@ -12,13 +12,13 @@ class EnTravaux extends Component {
 
 
   render() {
-    const meta = {
-      title: `Senyu | En travaux`,
-    };
 
+    const meta = <Helmet>
+      <title>Senyu | En travaux</title>
+    </Helmet>
     return (
       <section className="work-in-progress">
-      <DocumentMeta {...meta} />
+        {meta}
         <h2>
           En travaux
           </h2>

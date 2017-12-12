@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DocumentMeta from 'react-document-meta';
+import { Helmet } from "react-helmet";
 
 import './Stream.css';
 
@@ -14,13 +14,13 @@ class Stream extends Component {
   }
 
   render() {
-    const meta = {
-      title: `Senyu | Stream`,
-    };
+    const meta = <Helmet>
+      <title>Senyu | Stream</title>
+    </Helmet>
 
     return (
       <div id="twitch-embed">
-        <DocumentMeta {...meta} />
+        {meta}
       </div>
     );
   }

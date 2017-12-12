@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DocumentMeta from 'react-document-meta';
+import {Helmet} from "react-helmet";
 import PropTypes from 'prop-types';
 
 import './GenericContentItem.css';
@@ -11,20 +11,17 @@ class GenericContentItem extends Component {
 
   render() {
 
-    let className = "generic-content "
-    const meta = {
-      title: `Senyu | ${this.props.title}`,
-      meta: {
-        property: {
-          'og:title': this.props.title,
-          'og:image': this.props.image,
-          'og:description ': this.props.content,
-          'twitter:title': this.props.title,
-          'twitter:image': this.props.image,
-          'twitter:description': this.props.content,
-        },
-      }
-    };
+    let className = "generic-content ";
+
+    const meta = <Helmet>
+      <title>Senyu | {this.props.title}</title>
+      <meta property="og:title" content={this.props.title} />
+      <meta property="og:image" content={this.props.image} />
+      <meta property="og:description" content={this.props.content} />
+      <meta property="twitter:title" content={this.props.title} />
+      <meta property="twitter:image" content={this.props.image} />
+      <meta property="twitter:description" content={this.props.content} />
+    </Helmet>
 
     if (this.props.propClass) {
       className += this.props.propClass;
@@ -32,7 +29,7 @@ class GenericContentItem extends Component {
 
     return (
       <section className={className}>
-        <DocumentMeta {...meta} />
+        {meta}
         <article className="generic-content-image">
           <img src={this.props.image} alt={this.props.title} />
         </article>

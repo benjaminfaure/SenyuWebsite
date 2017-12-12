@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DocumentMeta from 'react-document-meta';
+import { Helmet } from "react-helmet";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -19,10 +19,9 @@ class FAQ extends Component {
 
   render() {
 
-    const meta = {
-      title: `Senyu | 3 et 4 Mars 2018`,
-    };
-
+    const meta = <Helmet>
+      <title>Senyu | FAQ</title>
+    </Helmet>
 
     let categoriesList = this.props.faq.map((categorie) => {
       return <FAQCategorie key={categorie.id}
@@ -32,7 +31,7 @@ class FAQ extends Component {
 
     return (
       <div>
-        <DocumentMeta {...meta} />
+        {meta}
         <section className="generic-page-header">
           <h1 className="generic-page-title">Foire Aux Questions</h1>
         </section>

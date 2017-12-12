@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DocumentMeta from 'react-document-meta';
+import { Helmet } from "react-helmet";
 import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router-dom';
 import { withRouter } from 'react-router'
@@ -68,13 +68,13 @@ class App extends Component {
 
 
   render() {
-    const meta = {
-      title: `Senyu | 3 et 4 Mars 2018`,
-    };
+    const meta = <Helmet>
+      <title>Senyu | 3 et 4 Mars 2018</title>
+    </Helmet>
 
     return (
       <div className="App">
-        <DocumentMeta {...meta} />
+        {meta}
         <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
         <Menu />
         <div className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
