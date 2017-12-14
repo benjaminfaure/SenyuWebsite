@@ -32,6 +32,8 @@ import Stream from './Stream/Stream.jsx';
 
 import EnTravaux from './EnTravaux/EnTravaux.jsx';
 
+import NotFound from './NotFound/NotFound.jsx';
+
 
 import './App.css';
 
@@ -113,6 +115,8 @@ class App extends Component {
             <Route exact path="/recrutement" component={EnTravaux} />
             {/* Recrutement */}
             <Route exact path="/billeterie" component={EnTravaux} />
+            {/* 404 */}
+            <Route component={NotFound}/>
           </Switch>
         </div>
         <Footer />
