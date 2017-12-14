@@ -17,6 +17,7 @@ class Footer extends Component {
             <h5><a href="/presse" rel="noopener noreferrer">Presse</a></h5>
             <h5><a href="/archive" rel="noopener noreferrer">Archive</a></h5>
             <h5><a href="/recrutement" rel="noopener noreferrer">Recrutement</a></h5>
+            <h5><a href="/ws/inscriptions" rel="noopener noreferrer">Inscriptions</a></h5>
           </div>
           <div className="footer-social-links">
             <h2><a href="https://www.facebook.com/senyuofficiel/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a></h2>
