@@ -8,6 +8,7 @@
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "history": "^4.6.3",
+    "ignore-styles": "^5.0.1",
     "morgan": "^1.9.0",
     "prop-types": "^15.5.10",
     "react": "^16.2.0",
@@ -19,6 +20,7 @@
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
+    "react-router-redux": "^4.0.8",
     "react-slick": "^0.14.11",
     "recompose": "^0.26.0",
     "redux": "^3.6.0",
@@ -29,7 +31,7 @@
   },
   "scripts": {
     "start": "set PORT=3003 && react-scripts start",
-    "start:prod": "node server",
+    "start:prod": "set NODE_ENV=production&&node server",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

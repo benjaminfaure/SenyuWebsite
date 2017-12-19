@@ -1,10 +1,11 @@
-// server/index.js
-'use strict';
+// Ignore those pesky styles
+require('ignore-styles');
 
-const app = require('./app');
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
+// Set up babel to do its thing... env for the latest toys, react-app for CRA
+require('babel-register')({
+  ignore: /\/(build|node_modules)\//,
+  presets: ['env', 'react-app']
 });
+
+// Now that the nonsense is over... load up the server entry point
+require('./server');

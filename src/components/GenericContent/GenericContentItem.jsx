@@ -6,9 +6,6 @@ import './GenericContentItem.css';
 
 class GenericContentItem extends Component {
 
-  componentWillReceiveProps(nextProps) {
-  }
-
   render() {
 
     let className = "generic-content ";
