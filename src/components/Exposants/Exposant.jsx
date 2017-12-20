@@ -7,6 +7,7 @@ import FaFacebook from 'react-icons/lib/fa/facebook-official';
 import FaTwitch from 'react-icons/lib/fa/twitch';
 import FaTwitter from 'react-icons/lib/fa/twitter';
 import FaYoutube from 'react-icons/lib/fa/youtube';
+import FaInstagram from 'react-icons/lib/fa/instagram';
 import FaWebsite from 'react-icons/lib/fa/external-link';
 
 import GenericContentItem from '../GenericContent/GenericContentItem.jsx';
@@ -34,6 +35,7 @@ class Exposant extends Component {
     const twitter = this.props.exposant.twitter ? <h2><a href={this.props.exposant.twitter} target="_blank" rel="noopener noreferrer"><FaTwitter /></a></h2> : "";
     const youtube = this.props.exposant.youtube ? <h2><a href={this.props.exposant.youtube} target="_blank" rel="noopener noreferrer"><FaYoutube /></a></h2> : "";
     const website = this.props.exposant.website ? <h2><a href={this.props.exposant.website} target="_blank" rel="noopener noreferrer"><FaWebsite /></a></h2> : "";
+    const instagram = this.props.exposant.instagram ? <h2><a href={this.props.exposant.instagram} target="_blank" rel="noopener noreferrer"><FaInstagram /></a></h2> : "";
 
     return (
       <GenericContentItem
@@ -48,6 +50,7 @@ class Exposant extends Component {
           {twitter}
           {youtube}
           {website}
+          {instagram}
         </div>
       </GenericContentItem>
     );
