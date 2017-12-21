@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Helmet} from "react-helmet";
 import PropTypes from 'prop-types';
+import {withRouter} from 'react-router-dom';
 
 import './GenericContentItem.css';
 
@@ -16,7 +17,7 @@ class GenericContentItem extends Component {
       <meta property="og:image" content={this.props.image} />
       <meta property="og:description" content={this.props.content} />
       <meta property="og:type" content="article"/>
-      <meta property="og:url" content={window.location}/>
+      <meta property="og:url" content={this.props.location.pathname}/>
       <meta property="twitter:title" content={this.props.title} />
       <meta property="twitter:image" content={this.props.image} />
       <meta property="twitter:description" content={this.props.content} />
@@ -50,4 +51,4 @@ GenericContentItem.propTypes = {
   propClass: PropTypes.string
 };
 
-export default GenericContentItem;
+export default withRouter(GenericContentItem);
