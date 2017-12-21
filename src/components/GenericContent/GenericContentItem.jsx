@@ -15,6 +15,8 @@ class GenericContentItem extends Component {
       <meta property="og:title" content={this.props.title} />
       <meta property="og:image" content={this.props.image} />
       <meta property="og:description" content={this.props.content} />
+      <meta property="og:type" content="article"/>
+      <meta property="og:url" content={window.location}/>
       <meta property="twitter:title" content={this.props.title} />
       <meta property="twitter:image" content={this.props.image} />
       <meta property="twitter:description" content={this.props.content} />
