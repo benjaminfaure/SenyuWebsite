@@ -1,5 +1,6 @@
 // Ignore those pesky styles
 require('ignore-styles');
+require('dotenv').config();
 
 // Set up babel to do its thing... env for the latest toys, react-app for CRA
 require('babel-register')({
