@@ -27,12 +27,7 @@ class Exposants extends Component {
 
   componentDidMount() {
     exposantsType = this.props.match.params.exposantsType;
-
-    if (exposantsType) {
-      this.props.fetchExposantsByType(exposantsType);
-    } else {
-      this.props.fetchExposants();
-    }
+    this.props.fetchExposants();
   }
 
 
@@ -102,7 +97,6 @@ const mapStateToProps = (state) => (
 const mapDispatchToProps = (dispatch) => (
   {
     fetchExposants: () => dispatch(ExposantsActionCreators.fetchExposants()),
-    fetchExposantsByType: (type) => dispatch(ExposantsActionCreators.fetchExposantsByType(type)),
   }
 );
 
