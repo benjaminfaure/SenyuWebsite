@@ -10,10 +10,14 @@ let FAQActionCreators = {
   fetchFAQ() {
     return (dispatch) => {
       dispatch({ type: REQUEST_FAQ });
-      SenyuAPI.fetchFAQ().then(
-        (faq) => dispatch({ type: RECEIVE_FAQ, success: true, faq }),
-        (error) => dispatch({ type: RECEIVE_FAQ, success: false, error })
-      );
+      SenyuAPI.fetchFAQ().then((response) => {
+        if(response.status >= 200 && response.status < 300) {
+          const faq = response.data;
+          dispatch({ type: RECEIVE_FAQ, success: true, faq});
+        } else {
+          dispatch({ type: RECEIVE_FAQ, success: false, error: response.message })
+        }
+      });
     };
   },
 

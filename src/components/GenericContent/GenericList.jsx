@@ -10,7 +10,7 @@ class GenericList extends Component {
   render() {
 
 
-    let titrePage = this.props.titrePage && this.props.itemList.length > 0 ? this.props.titrePage : "Aucun enregistrement trouvé"
+    let titrePage = this.props.titrePage && this.props.itemList && this.props.itemList.length > 0 ? this.props.titrePage : "Aucun enregistrement trouvé"
 
     const meta = <Helmet>
       <title>Senyu | {titrePage}</title>

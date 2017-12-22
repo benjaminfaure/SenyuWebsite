@@ -19,8 +19,7 @@ let SenyuAPI = {
         return false;
       }
     } catch (err) {
-      console.error(`Un erreur s'est produire lors de l'appel à l'API twitch : ${err.message}`);
-      return false;
+      return { message: `Un erreur s'est produire lors de l'appel à l'API twitch : ${err.message}` };
     }
   },
 
