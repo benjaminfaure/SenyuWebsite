@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Page } from 'react-pdf';
-import { Document } from 'react-pdf/build/entry.webpack';
+import { Page,  Document} from 'react-pdf';
+/*import { Document } from 'react-pdf/build/entry.webpack';*/
 import PropTypes from 'prop-types';
 import MediaQuery from 'react-responsive';
 
