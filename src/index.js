@@ -13,7 +13,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 require('dotenv').config();
 const rootElement = document.getElementById('root');
-render(
+hydrate(
   <Provider store={senyuStore}>
     <BrowserRouter>
       <App />
