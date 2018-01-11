@@ -1,5 +1,6 @@
 import React from 'react';
 import { hydrate } from 'react-dom';
+import { render } from 'react-snapshot';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -12,7 +13,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 require('dotenv').config();
 const rootElement = document.getElementById('root');
-hydrate(
+render(
   <Provider store={senyuStore}>
     <BrowserRouter>
       <App />

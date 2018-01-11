@@ -30,6 +30,8 @@ import FAQ from './FAQ/FAQ.jsx';
 
 import Stream from './Stream/Stream.jsx';
 
+import Cosplay from './Cosplay/Cosplay.jsx';
+
 import EnTravaux from './EnTravaux/EnTravaux.jsx';
 
 import Redirect from './Redirect/Redirect.jsx';
@@ -106,7 +108,7 @@ class App extends Component {
             {/* Contact */}
             <Route exact path="/contact" component={EnTravaux} />
             {/* Cosplay */}
-            <Route exact path="/cosplay" component={EnTravaux} />
+            <Route exact path="/cosplay" component={Cosplay} />
             {/* Stream */}
             <Route exact path="/stream" component={Stream} />
             {/* Presse */}
