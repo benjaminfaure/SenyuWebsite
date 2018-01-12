@@ -32,6 +32,8 @@ import Stream from './Stream/Stream.jsx';
 
 import Cosplay from './Cosplay/Cosplay.jsx';
 
+import Billeterie from './Billeterie/Billeterie.jsx';
+
 import EnTravaux from './EnTravaux/EnTravaux.jsx';
 
 import Redirect from './Redirect/Redirect.jsx';
@@ -117,8 +119,8 @@ class App extends Component {
             <Route exact path="/archive" component={EnTravaux} />
             {/* Recrutement */}
             <Route exact path="/recrutement" component={EnTravaux} />
-            {/* Recrutement */}
-            <Route exact path="/billeterie" component={EnTravaux} />
+            {/* Billeterie */}
+            <Route exact path="/billeterie" component={Billeterie} />
             {/* Redirection Inscriptions */}
             <Route exact path="/ws/inscriptions" component={Redirect} />
             <Route path="/ws/inscriptions/:typeInscription" component={Redirect} />
