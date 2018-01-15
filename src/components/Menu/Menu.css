@@ -57,7 +57,7 @@ MENU
 
 	.nav-wrap {
 		top: auto;
-		z-index: auto;
+		z-index: 2;
 		position: relative;
 		background-color: var(--senyu-logo-yellow);
 		max-width: 1600px;
@@ -116,10 +116,16 @@ MENU
 	.nav-wrap .menu-content a:hover {
 		background-color: var(--senyu-logo-black);
 		color: var(--senyu-logo-yellow);
-	}
-	.sticky {
-		position: fixed;
-		top: 0;
-		width: 100%
-	}
+  }
+
+  .sticky-menu{
+    left: 0;
+    width: 100% !important;
+
+		-o-transition:1s;
+		-ms-transition:.1s;
+		-moz-transition:1s;
+		-webkit-transition:1s;
+		transition:1s;
+  }
 }

@@ -81,7 +81,7 @@ class App extends Component {
     </Helmet>
 
     return (
-      <div className="App">
+      <div className="App" >
         {meta}
         <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
         <Menu />
@@ -126,7 +126,7 @@ class App extends Component {
             <Route path="/ws/inscriptions/:typeInscription" component={Redirect} />
 
             {/* 404 */}
-            <Route component={NotFound}/>
+            <Route component={NotFound} />
           </Switch>
         </div>
         <Footer />
