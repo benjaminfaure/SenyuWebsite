@@ -35,6 +35,7 @@ class GenericContentItem extends Component {
         </article>
         <article className="generic-content-description">
           <h4 className="generic-content-title">{this.props.title}</h4>
+          <h5 className="generic-content-type">{this.props.type}</h5>
           <p dangerouslySetInnerHTML={{ __html: this.props.content }} />
           {this.props.children}
         </article>

@@ -42,6 +42,7 @@ class Exposant extends Component {
         title={this.props.exposant.nom}
         image={this.props.exposant.image}
         content={this.props.exposant.description}
+        type={this.props.exposant.type}
         propClass="exposant">
 
         <div className="generic-content-social exposant-social">

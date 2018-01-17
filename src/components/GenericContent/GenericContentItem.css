@@ -8,6 +8,11 @@
   padding: 10px;
 }
 
+.generic-content h5 {
+	text-transform: capitalize;
+	color: var(--senyu-logo-blue);
+}
+
 .generic-content-image {
   width: 50%;
   text-align: center;

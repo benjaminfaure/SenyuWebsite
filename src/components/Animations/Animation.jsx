@@ -40,6 +40,7 @@ class Animation extends Component {
         title={this.props.animation.nom}
         image={this.props.animation.image}
         content={this.props.animation.description}
+        type={this.props.animation.type}
         propClass="animation">
 
         <div className="generic-content-social animation-social">
