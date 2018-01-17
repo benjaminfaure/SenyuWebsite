@@ -36,6 +36,7 @@ class Animations extends Component {
         propClass="animation-list-item"
         image={animation.image}
         title={animation.nom}>
+        <h5>{animation.type}</h5>
       </GenericListItem>
     });
 
@@ -48,7 +49,7 @@ class Animations extends Component {
 
     return (
       <GenericList itemList={animationsList}
-        titrePage="Liste des Animations Senyu">
+        titrePage="Liste des Animations">
         {searchBar}
         {categorySelect}
       </GenericList>
