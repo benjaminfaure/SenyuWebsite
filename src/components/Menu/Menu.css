@@ -40,6 +40,12 @@ MENU
 .nav-wrap .menu-item .menu-item-arrow-down {
 	display: none	;
 }
+
+
+.nav-wrap .menu-item.accueil   {
+  display: none	;
+}
+
 .nav-wrap .menu-content{
 	background-color: var(--senyu-logo-yellow);
 }
@@ -118,14 +124,24 @@ MENU
 		color: var(--senyu-logo-yellow);
   }
 
-  .sticky-menu{
+  .nav-wrap .sticky-menu{
     left: 0;
     width: 100% !important;
-
-		-o-transition:1s;
-		-ms-transition:.1s;
-		-moz-transition:1s;
-		-webkit-transition:1s;
-		transition:1s;
   }
+
+  .nav-wrap .sticky-menu .menu-item.accueil{
+    display: block;
+    height: 43px;
+  }
+
+  .nav-wrap .sticky-menu .menu-item.accueil img,
+  .nav-wrap .sticky-menu .menu-item.accueil a{
+    height: 43px;
+  }
+
+  .nav-wrap .sticky-menu .menu-item.accueil a:hover{
+    background-color: var(--senyu-logo-yellow);
+  }
+
+
 }
