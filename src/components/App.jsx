@@ -127,7 +127,7 @@ class App extends Component {
             {/* Recrutement */}
             <Route exact path="/recrutement" component={EnTravaux} />
             {/* Billeterie */}
-            <Route exact path="/billeterie" component={EnTravaux} />
+            <Route exact path="/billeterie" component={Billeterie} />
             {/* Redirection Inscriptions */}
             <Route exact path="/ws/inscriptions" component={Redirect} />
             <Route path="/ws/inscriptions/:typeInscription" component={Redirect} />
