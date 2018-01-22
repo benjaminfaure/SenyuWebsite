@@ -15,7 +15,7 @@ class Footer extends Component {
         <div className="footer-content">
           <div className="footer-content-links">
             <h5><a href="/contact" rel="noopener noreferrer">Contact</a></h5>
-            <h5><a href="/dossier_presse.zip" rel="noopener noreferrer">Presse</a></h5>
+            <h5><a href="https://drive.google.com/open?id=1XnTqZUOnckPCh-XYAFI61HWJ5pFKG4Xf" target="_blank" rel="noopener noreferrer" title="Dossier Presse">Presse</a></h5>
             <h5><a href="/archive" rel="noopener noreferrer">Archive</a></h5>
             <h5><a href="/recrutement" rel="noopener noreferrer">Recrutement</a></h5>
             <h5><a href="/ws/inscriptions" rel="noopener noreferrer">Inscriptions</a></h5>
