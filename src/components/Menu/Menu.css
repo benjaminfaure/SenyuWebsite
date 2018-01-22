@@ -111,7 +111,7 @@ MENU
 
 	.nav-wrap .menu-item:hover .menu-content {
 		display: block;
-		box-shadow: 5px 5px 10px var(--senyu-logo-black-very-light);
+		box-shadow: 5px 5px 10px rgba(190, 190, 190, 0.6);
 	}
 
 	.nav-wrap .menu-item .menu-item-arrow-down {
