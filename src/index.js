@@ -9,6 +9,7 @@ import './index.css';
 import App from './components/App.jsx';
 
 import registerServiceWorker from './registerServiceWorker';
+import { unregister } from './registerServiceWorker';
 
 
 require('dotenv').config();
@@ -19,4 +20,4 @@ hydrate(
       <App />
     </BrowserRouter>
   </Provider>, rootElement);
-registerServiceWorker();
+unregister();
