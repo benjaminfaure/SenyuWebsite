@@ -44,7 +44,12 @@ header .header-message {
 @media screen and (min-width: 1024px) {
 
 	header .header-content {
-		width: 90%;
+		display: flex;
+    justify-content: space-around;
+    min-width: 1024px;
+    max-width: 1310px;
+    width: 100%;
+    margin: 0 auto;
 	}
 
 	header .header-message {
@@ -64,7 +69,5 @@ header .header-message {
 		flex: 1;
 	}
 
-	header{
-		max-width: 1600px;
-	}
+
 }

@@ -81,6 +81,7 @@ h4 {
 @media screen and (min-width: 1024px) {
 	.main-content {
 		z-index: 1;
-		max-width: 1600px;
+    min-width: 1024px;
+    max-width: 1310px;
 	}
 }

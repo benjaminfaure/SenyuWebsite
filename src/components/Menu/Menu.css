@@ -65,8 +65,7 @@ MENU
 		top: auto;
 		z-index: 2;
 		position: relative;
-		background-color: var(--senyu-logo-yellow);
-		max-width: 1600px;
+    background-color: var(--senyu-logo-yellow);
 	}
 
 	.nav-wrap li > a {
@@ -75,7 +74,10 @@ MENU
 
 	.nav-wrap .menu {
 		display: flex;
-		justify-content: space-around;
+    justify-content: space-around;
+    min-width: 1024px;
+    max-width: 1310px;
+    margin: 0 auto
 	}
 
 	.nav-wrap .menu-item {
@@ -126,8 +128,13 @@ MENU
 
   .nav-wrap .sticky-menu{
     left: 0;
+		background-color: var(--senyu-logo-yellow);
     width: 100% !important;
   }
+
+  .nav-wrap  .sticky-menu .menu {
+    max-width: 100%;
+	}
 
   .nav-wrap .sticky-menu .menu-item.accueil{
     display: block;

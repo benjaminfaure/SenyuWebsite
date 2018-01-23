@@ -68,12 +68,3 @@
   }
 
 }
-
-@media screen and (min-width: 1600px) {
-
-  .generic-content-list-item {
-    flex-basis: 20%;
-  }
-
-
-}

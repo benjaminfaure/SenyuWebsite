@@ -92,7 +92,7 @@ class App extends Component {
         {meta}
         <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
         <Menu />
-        <div className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
+        <main className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
           <Switch>
             <Route exact path="/" component={MainPage} />
             {/* Intervenants */}
@@ -135,7 +135,7 @@ class App extends Component {
             {/* 404 */}
             <Route component={NotFound} />
           </Switch>
-        </div>
+        </main>
         <Footer />
       </div>
     );

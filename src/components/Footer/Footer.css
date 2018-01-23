@@ -43,7 +43,18 @@ footer  .footer-cc{
 
 
   footer .footer-content {
+		display: flex;
+    justify-content: space-around;
+    min-width: 1024px;
+    max-width: 1310px;
+    margin: 0 auto;
     flex-direction: row;
+  }
+
+  footer  .footer-cc{
+    min-width: 1024px;
+    max-width: 1310px;
+    margin: 0 auto;
   }
 
   footer .footer-social-links{
@@ -73,7 +84,4 @@ footer  .footer-cc{
     color: var(--senyu-logo-yellow);
   }
 
-  footer  {
-    max-width: 1600px;
-  }
 }
