@@ -21,6 +21,7 @@ MENU
 	width: 100%;
 	font-size: 0.75em;
 	color: var(--senyu-logo-yellow);
+	background-color: var(--senyu-logo-black);
 	font-family: "Raleway",sans-serif;
 	font-weight: 700;
 	text-transform: uppercase;
