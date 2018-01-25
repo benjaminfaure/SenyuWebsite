@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import PropTypes from 'prop-types';
+import ScrollToTop from 'react-scroll-up';
+import FaCircleOArrowUp from 'react-icons/lib/fa/arrow-circle-o-up';
 import { Route, Switch } from 'react-router-dom';
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux';
@@ -87,8 +89,17 @@ class App extends Component {
       <title>Senyu | 3 et 4 Mars 2018</title>
     </Helmet>
 
+    const scrollStyle = {
+        color: "#D12222",
+        zIndex: 3,
+        fontSize: '50px',
+    }
+
     return (
       <div className="App" >
+        <ScrollToTop showUnder={160} style={scrollStyle}>
+          <FaCircleOArrowUp />
+        </ScrollToTop>
         {meta}
         <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
         <Menu />
