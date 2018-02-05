@@ -34,6 +34,8 @@ import Stream from './Stream/Stream.jsx';
 
 import Cosplay from './Cosplay/Cosplay.jsx';
 
+import Contact from './Contact/Contact.jsx';
+
 import Billeterie from './Billeterie/Billeterie.jsx';
 
 import EnTravaux from './EnTravaux/EnTravaux.jsx';
@@ -126,7 +128,7 @@ class App extends Component {
             {/* Guide */}
             <Route exact path="/guide" component={EnTravaux} />
             {/* Contact */}
-            <Route exact path="/contact" component={EnTravaux} />
+            <Route exact path="/contact" component={Contact} />
             {/* Cosplay */}
             <Route exact path="/cosplay" component={Cosplay} />
             {/* Stream */}
