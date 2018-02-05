@@ -49,14 +49,14 @@ class GenericPDFDisplay extends Component {
       <MediaQuery query="(min-width: 1024px)">
         {pager}
         <Document
-          file="/cosplay.pdf"
+          file={this.props.filePath}
           className="generic-pdf-display"
           onLoadSuccess={this.onDocumentLoad.bind(this)}>
           <Page pageNumber={pageNumber} />
         </Document>
         {pager}
         </MediaQuery>
-        <h2><a href="/cosplay.pdf" target="_blank" className="generic-pdf-download">Télécharger <FaCloudDownload /></a></h2>
+        <h2><a href={this.props.filePath} target="_blank" className="generic-pdf-download">Télécharger <FaCloudDownload /></a></h2>
       </div>
     );
   }
