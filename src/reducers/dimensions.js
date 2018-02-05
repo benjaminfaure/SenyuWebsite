@@ -1,7 +1,7 @@
 import {
   UPDATE_DIMENSIONS,
 } from '../constants';
-import update from 'react-addons-update';
+import update from 'immutability-helper';
 import 'babel-polyfill';
 
 const defaultDimensions = () => {
