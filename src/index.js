@@ -13,6 +13,7 @@ import { unregister } from './registerServiceWorker';
 
 
 require('dotenv').config();
+
 const rootElement = document.getElementById('root');
 hydrate(
   <Provider store={senyuStore}>

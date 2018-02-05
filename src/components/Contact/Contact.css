@@ -1,0 +1,18 @@
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.contact-form h2 {
+  color: var(--senyu-logo-blue);
+  margin: auto;
+}
+
+.contact-form h3 {
+  color: var(--senyu-logo-blue);
+  font-size: 12px;
+}
