@@ -19,7 +19,7 @@ class Cosplay extends Component {
         {meta}
         <GenericPDFDisplay filePath="/cosplay.pdf" />
         <p className="formulaire-inscription-cosplay">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvUVuJPq5twxyaisPLWRXXM677IhBbPgBNaS4f67dcP9utQA/viewform">Formulaire d'inscription</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvUVuJPq5twxyaisPLWRXXM677IhBbPgBNaS4f67dcP9utQA/viewform" target="_blank" rel="noopener noreferrer">Formulaire d'inscription</a>
         </p>
       </div>
     );
