@@ -54,7 +54,9 @@ class Intervenants extends Component {
   }
 
   filteredIntervenants() {
-    return this.props.intervenants.filter(
+    return this.props.intervenants
+    .sort(function (a, b) { return a.nom.toLowerCase() > b.nom.toLowerCase(); })
+    .filter(
       intervenant => intervenant.nom.toLowerCase().includes(this.state.searchInputFilter)
     )
   }

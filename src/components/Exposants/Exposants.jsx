@@ -76,7 +76,9 @@ class Exposants extends Component {
 
 
   filteredExposants() {
-    return this.props.exposants.filter(
+    return this.props.exposants
+    .sort(function (a, b) { return a.nom.toLowerCase() > b.nom.toLowerCase(); })
+    .filter(
       exposant => exposant.nom.toLowerCase().includes(this.state.searchInputFilter) &&
         exposant.type.includes(this.state.selectedCategory)
     )

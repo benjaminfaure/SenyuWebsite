@@ -68,7 +68,9 @@ class Animations extends Component {
   }
 
   filteredSenyuAnimations() {
-    return this.props.animations.filter(
+    return this.props.animations
+    .sort(function (a, b) { return a.nom.toLowerCase() > b.nom.toLowerCase(); })
+    .filter(
       animation => animation.nom.toLowerCase().includes(this.state.searchInputFilter) &&
         animation.type.includes(this.state.selectedCategory)
     )
