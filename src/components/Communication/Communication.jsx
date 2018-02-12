@@ -17,6 +17,9 @@ class Cosplay extends Component {
     return (
       <div>
         {meta}
+        <section className="generic-page-header">
+          <h1 className="generic-page-title">Communication sur la sélection des Créateurs</h1>
+        </section>
         <GenericPDFDisplay filePath="/communication_selection_createurs.pdf" />
       </div>
     );
