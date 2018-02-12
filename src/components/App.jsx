@@ -34,6 +34,8 @@ import Stream from './Stream/Stream.jsx';
 
 import Cosplay from './Cosplay/Cosplay.jsx';
 
+import Communication from './Communication/Communication.jsx';
+
 import Contact from './Contact/Contact.jsx';
 
 import Billeterie from './Billeterie/Billeterie.jsx';
@@ -131,6 +133,8 @@ class App extends Component {
             <Route exact path="/contact" component={Contact} />
             {/* Cosplay */}
             <Route exact path="/cosplay" component={Cosplay} />
+            {/* Communication */}
+            <Route exact path="/communication" component={Communication} />
             {/* Stream */}
             <Route exact path="/stream" component={Stream} />
             {/* Presse */}

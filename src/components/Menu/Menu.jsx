@@ -44,6 +44,7 @@ class Menu extends Component {
             <li><Link to="/planning"><span>Planning</span></Link></li>
             <li><Link to="/guide"><span>Guide du Visiteur</span></Link></li>
             <li><Link to="/contact"><span>Contact</span></Link></li>
+            <li><Link to="/communication"><span>Communication</span></Link></li>
           </ul>
         </li>{/* sous menu infos */}
         <li className="menu-item"><Link to="/exposants"><span>Exposants</span></Link></li>
