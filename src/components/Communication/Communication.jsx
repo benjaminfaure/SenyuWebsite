@@ -6,7 +6,7 @@ import GenericPDFDisplay from '../GenericContent/GenericPDFDisplay.jsx';
 
 import './Communication.css';
 
-class Cosplay extends Component {
+class Communication extends Component {
 
   render() {
 
@@ -27,4 +27,4 @@ class Cosplay extends Component {
 }
 
 
-export default Cosplay;
+export default Communication;
