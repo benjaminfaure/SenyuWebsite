@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Page,  Document} from 'react-pdf';
 import PropTypes from 'prop-types';
 
 import FaCloudDownload from 'react-icons/lib/fa/cloud-download';

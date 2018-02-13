@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import FaShoppingCart from 'react-icons/lib/fa/shopping-cart';
 
 import './Billeterie.css';
 

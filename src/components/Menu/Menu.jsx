@@ -23,11 +23,6 @@ class Menu extends Component {
 
   render() {
 
-    const stickyStyle = {
-      maxWidth: '100%',
-      left: '0px'
-    };
-
     const streamMenu = this.props.isLive ?
       <li className="menu-item menu-item-special"><Link to="/stream"><span><FaCircle /></span> <span>Stream</span></Link></li> :
       <li className="menu-item"><Link to="/stream"><span>Stream</span></Link></li>;
