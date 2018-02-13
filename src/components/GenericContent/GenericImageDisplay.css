@@ -1,0 +1,22 @@
+.generic-image-viewer {
+  text-align: center;
+}
+
+.generic-image-viewer img {
+  width: 100%;
+}
+
+.generic-image-viewer .generic-image-download {
+  text-decoration: none;
+  color: var(--senyu-logo-blue);
+}
+
+@media screen and (min-width: 1024px) {
+
+  .generic-image-viewer img {
+    width: 50%;
+  }
+
+
+}
+

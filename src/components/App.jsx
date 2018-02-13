@@ -36,9 +36,13 @@ import Cosplay from './Cosplay/Cosplay.jsx';
 
 import Communication from './Communication/Communication.jsx';
 
+import Reglements from './Reglements/Reglements.jsx';
+
 import Contact from './Contact/Contact.jsx';
 
 import Billeterie from './Billeterie/Billeterie.jsx';
+
+import Planning from './Planning/Planning.jsx';
 
 import EnTravaux from './EnTravaux/EnTravaux.jsx';
 
@@ -122,11 +126,11 @@ class App extends Component {
             {/* FAQ */}
             <Route exact path="/faq" component={FAQ} />
             {/* Reglements */}
-            <Route exact path="/reglements" component={EnTravaux} />
+            <Route exact path="/reglements" component={Reglements} />
             {/* Plans */}
             <Route exact path="/plans" component={EnTravaux} />
             {/* Planning */}
-            <Route exact path="/planning" component={EnTravaux} />
+            <Route exact path="/planning" component={Planning} />
             {/* Guide */}
             <Route exact path="/guide" component={EnTravaux} />
             {/* Contact */}
