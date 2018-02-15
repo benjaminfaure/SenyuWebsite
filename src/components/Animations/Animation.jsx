@@ -63,7 +63,7 @@ Animation.propTypes = {
 const mapStateToProps = (state) => (
   {
     animation: state.animations.selected,
-    error: state.error
+    error: state.animations.error
   }
 );
 

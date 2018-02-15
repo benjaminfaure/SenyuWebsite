@@ -93,7 +93,7 @@ Exposants.propTypes = {
 const mapStateToProps = (state) => (
   {
     exposants: state.exposants.list,
-    error: state.error
+    error: state.exposants.error
   }
 );
 

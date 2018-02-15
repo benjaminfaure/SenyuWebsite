@@ -67,7 +67,7 @@ Intervenant.propTypes = {
 const mapStateToProps = (state) => (
   {
     intervenant: state.intervenants.selected,
-    error: state.error
+    error: state.intervenants.error
   }
 );
 

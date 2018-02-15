@@ -10,6 +10,8 @@ import GenericListSearch from '../GenericContent/GenericListSearch.jsx';
 import GenericCategorySelector from '../GenericContent/GenericCategorySelector.jsx';
 import AnimationsActionCreators from '../../actions/AnimationsActionCreators';
 
+import withErrorHandling from '../../services/withErrorHandling';
+
 import './Animations.css';
 
 
@@ -86,7 +88,7 @@ Animations.propTypes = {
 const mapStateToProps = (state) => (
   {
     animations: state.animations.list,
-    error: state.error
+    error: state.animations.error
   }
 );
 

@@ -66,7 +66,7 @@ Exposant.propTypes = {
 const mapStateToProps = (state) => (
   {
     exposant: state.exposants.selected,
-    error: state.error
+    error: state.exposants.error
   }
 );
 
