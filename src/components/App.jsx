@@ -44,6 +44,8 @@ import Billeterie from './Billeterie/Billeterie.jsx';
 
 import Planning from './Planning/Planning.jsx';
 
+import Plans from './Plans/Plans.jsx';
+
 import EnTravaux from './EnTravaux/EnTravaux.jsx';
 
 import Redirect from './Redirect/Redirect.jsx';
@@ -128,7 +130,7 @@ class App extends Component {
             {/* Reglements */}
             <Route exact path="/reglements" component={Reglements} />
             {/* Plans */}
-            <Route exact path="/plans" component={EnTravaux} />
+            <Route exact path="/plans" component={Plans} />
             {/* Planning */}
             <Route exact path="/planning" component={Planning} />
             {/* Guide */}
