@@ -1,8 +1,10 @@
 import {
   REQUEST_INTERVENANTS,
-  RECEIVE_INTERVENANTS,
+  RECEIVE_INTERVENANTS_SUCCESS,
+  RECEIVE_INTERVENANTS_ERROR,
   REQUEST_INTERVENANT_BY_ID,
-  RECEIVE_INTERVENANT_BY_ID
+  RECEIVE_INTERVENANT_BY_ID_SUCCESS,
+  RECEIVE_INTERVENANT_BY_ID_ERROR
 } from '../constants';
 import SenyuAPI from '../api/SenyuAPI';
 
@@ -16,9 +18,9 @@ let IntervenantsActionCreators = {
       SenyuAPI.fetchIntervenants().then((response) => {
         if(response.status >= 200 && response.status < 300) {
           const intervenants = response.data;
-          dispatch({ type: RECEIVE_INTERVENANTS, success: true, intervenants});
+          dispatch({ type: RECEIVE_INTERVENANTS_SUCCESS, intervenants});
         } else {
-          dispatch({ type: RECEIVE_INTERVENANTS, success: false, error: response.message })
+          dispatch({ type: RECEIVE_INTERVENANTS_ERROR, error: response.message })
         }
       });
     };
@@ -30,9 +32,9 @@ let IntervenantsActionCreators = {
       SenyuAPI.fetchIntervenantById(id).then((response) => {
         if(response.status >= 200 && response.status < 300) {
           const intervenant = response.data;
-          dispatch({ type: RECEIVE_INTERVENANT_BY_ID, success: true, id, intervenant});
+          dispatch({ type: RECEIVE_INTERVENANT_BY_ID_SUCCESS, id, intervenant});
         } else {
-          dispatch({ type: RECEIVE_INTERVENANT_BY_ID, success: false, id, error: response.message })
+          dispatch({ type: RECEIVE_INTERVENANT_BY_ID_ERROR, id, error: response.message })
         }
       });
     };

@@ -50,7 +50,8 @@ FAQ.propTypes = {
 
 const mapStateToProps = (state) => (
   {
-    faq: state.faq
+    faq: state.faq,
+    error: state.error
   }
 );
 

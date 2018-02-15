@@ -1,5 +1,6 @@
 import {
-  RECEIVE_FAQ
+  RECEIVE_FAQ_SUCCESS,
+  RECEIVE_FAQ_ERROR
 } from '../constants';
 import 'babel-polyfill';
 
@@ -12,8 +13,11 @@ const initialState = [{
 
 const faq = (state = initialState, action) => {
   switch (action.type) {
-    case RECEIVE_FAQ:
+    case RECEIVE_FAQ_SUCCESS:
       return action.faq;
+
+      case RECEIVE_FAQ_ERROR:
+      return action.error;
 
     default:
       return state;

@@ -40,38 +40,46 @@ export const UPDATE_DIMENSIONS = 'update dimensions';
 * Constantes intervenants
 */
 export const REQUEST_INTERVENANTS = 'request intervenants';
-export const RECEIVE_INTERVENANTS = 'receive intervenants';
+export const RECEIVE_INTERVENANTS_SUCCESS = 'receive intervenants success';
+export const RECEIVE_INTERVENANTS_ERROR = 'receive intervenants error';
 
 export const REQUEST_INTERVENANT_BY_ID = 'request intervenant by id';
-export const RECEIVE_INTERVENANT_BY_ID = 'receive intervenant by id';
+export const RECEIVE_INTERVENANT_BY_ID_SUCCESS = 'receive intervenant by id success';
+export const RECEIVE_INTERVENANT_BY_ID_ERROR = 'receive intervenant by id error';
 
 /**
 * Constantes exposants
 */
 export const REQUEST_EXPOSANTS = 'request exposants';
-export const RECEIVE_EXPOSANTS = 'receive exposants';
+export const RECEIVE_EXPOSANTS_SUCCESS = 'receive exposants success';
+export const RECEIVE_EXPOSANTS_ERROR = 'receive exposants error';
 
 export const REQUEST_EXPOSANTS_BY_TYPE = 'request exposants by type';
-export const RECEIVE_EXPOSANTS_BY_TYPE = 'receive exposants by type';
+export const RECEIVE_EXPOSANTS_BY_TYPE_SUCCESS = 'receive exposants by type success';
+export const RECEIVE_EXPOSANTS_BY_TYPE_ERROR = 'receive exposants by type error';
 
 export const REQUEST_EXPOSANT_BY_ID = 'request exposant by id';
-export const RECEIVE_EXPOSANT_BY_ID = 'receive exposant by id';
+export const RECEIVE_EXPOSANT_BY_ID_SUCCESS = 'receive exposant by id success';
+export const RECEIVE_EXPOSANT_BY_ID_ERROR = 'receive exposant by id error';
 
 /**
 * Constantes animations
 */
 export const REQUEST_SENYU_ANIMATIONS = 'request senyu animations';
-export const RECEIVE_SENYU_ANIMATIONS = 'receive senyu animations';
+export const RECEIVE_SENYU_ANIMATIONS_SUCCESS = 'receive senyu animations success';
+export const RECEIVE_SENYU_ANIMATIONS_ERROR = 'receive senyu animations error';
 
 export const REQUEST_SENYU_ANIMATION_BY_ID = 'request senyu animation by id';
-export const RECEIVE_SENYU_ANIMATION_BY_ID = 'receive senyu animation by id';
+export const RECEIVE_SENYU_ANIMATION_BY_ID_SUCCESS = 'receive senyu animation by id success';
+export const RECEIVE_SENYU_ANIMATION_BY_ID_ERROR = 'receive senyu animation by id error';
 
 
 /**
 * Constantes FAQ
 */
 export const REQUEST_FAQ = 'request faq';
-export const RECEIVE_FAQ = 'receive faq';
+export const RECEIVE_FAQ_SUCCESS = 'receive faq success';
+export const RECEIVE_FAQ_ERROR = 'receive faq error';
 
 
 /**

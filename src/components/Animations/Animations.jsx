@@ -85,7 +85,8 @@ Animations.propTypes = {
 
 const mapStateToProps = (state) => (
   {
-    animations: state.animations.list
+    animations: state.animations.list,
+    error: state.error
   }
 );
 
