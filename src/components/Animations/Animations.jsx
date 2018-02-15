@@ -10,7 +10,6 @@ import GenericListSearch from '../GenericContent/GenericListSearch.jsx';
 import GenericCategorySelector from '../GenericContent/GenericCategorySelector.jsx';
 import AnimationsActionCreators from '../../actions/AnimationsActionCreators';
 
-import withErrorHandling from '../../services/withErrorHandling';
 
 import './Animations.css';
 
