@@ -80,14 +80,13 @@ class Animations extends Component {
 }
 
 Animations.propTypes = {
-  animations: PropTypes.arrayOf(PropTypes.object),
+  animations: PropTypes.arrayOf(PropTypes.object)
 };
 
 
 const mapStateToProps = (state) => (
   {
-    animations: state.animations.list,
-    error: state.animations.error
+    animations: state.animations.list
   }
 );
 

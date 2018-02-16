@@ -100,9 +100,18 @@ class App extends Component {
     </Helmet>
 
     const scrollStyle = {
-        color: "#D12222",
-        zIndex: 3,
-        fontSize: '50px',
+      color: "#D12222",
+      zIndex: 3,
+      fontSize: '50px',
+    }
+
+    let errorMessage;
+    if (this.props.errorMessage) {
+      errorMessage = (
+        <p className="generic-error-message">
+          {this.props.errorMessage}
+        </p>
+      )
     }
 
     return (
@@ -114,6 +123,7 @@ class App extends Component {
         <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
         <Menu />
         <main className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
+          {errorMessage}
           <Switch>
             <Route exact path="/" component={MainPage} />
             {/* Intervenants */}
@@ -167,14 +177,15 @@ class App extends Component {
 
 App.propTypes = {
   showMainContent: PropTypes.bool,
+  errorMessage: PropTypes.string,
 };
 
 const mapStateToProps = (state) => (
   {
     dimensions: getDimensions(state),
+    errorMessage: state.errorHandling,
   }
 );
-
 
 
 

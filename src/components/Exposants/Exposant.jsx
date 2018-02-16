@@ -59,14 +59,13 @@ class Exposant extends Component {
 }
 
 Exposant.propTypes = {
-  exposant: PropTypes.object,
+  exposant: PropTypes.object
 };
 
 
 const mapStateToProps = (state) => (
   {
-    exposant: state.exposants.selected,
-    error: state.exposants.error
+    exposant: state.exposants.selected
   }
 );
 

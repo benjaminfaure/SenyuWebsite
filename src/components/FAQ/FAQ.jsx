@@ -44,14 +44,13 @@ class FAQ extends Component {
 }
 
 FAQ.propTypes = {
-  faq: PropTypes.arrayOf(PropTypes.object),
+  faq: PropTypes.arrayOf(PropTypes.object)
 };
 
 
 const mapStateToProps = (state) => (
   {
-    faq: state.faq,
-    error: state.error
+    faq: state.faq
   }
 );
 

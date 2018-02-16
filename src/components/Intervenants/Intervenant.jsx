@@ -60,14 +60,13 @@ class Intervenant extends Component {
 }
 
 Intervenant.propTypes = {
-  intervenant: PropTypes.object,
+  intervenant: PropTypes.object
 };
 
 
 const mapStateToProps = (state) => (
   {
-    intervenant: state.intervenants.selected,
-    error: state.intervenants.error
+    intervenant: state.intervenants.selected
   }
 );
 

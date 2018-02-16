@@ -71,6 +71,14 @@ h4 {
 	text-align: center;
 }
 
+.generic-error-message {
+  text-align: center;
+  color: var(--senyu-logo-red);
+  border: 1px solid var(--senyu-logo-red);
+  border-radius: 2px;
+  background-color: #fae8e8;
+  padding: 5px 0 5px 0;
+}
 
 #left-content {
 	height: auto;

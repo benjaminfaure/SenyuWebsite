@@ -87,13 +87,12 @@ class Exposants extends Component {
 }
 
 Exposants.propTypes = {
-  exposants: PropTypes.arrayOf(PropTypes.object),
+  exposants: PropTypes.arrayOf(PropTypes.object)
 };
 
 const mapStateToProps = (state) => (
   {
-    exposants: state.exposants.list,
-    error: state.exposants.error
+    exposants: state.exposants.list
   }
 );
 

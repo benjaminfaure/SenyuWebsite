@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import dimensions, * as fromDimensions from './dimensions';
+import errorHandling  from './errorHandling';
 import exposants from './exposants';
 import intervenants from './intervenants';
 import animations from './animations';
@@ -10,6 +11,7 @@ import twitch from './twitch';
 const rootReducer = combineReducers({
   animations,
   dimensions,
+  errorHandling,
   exposants,
   faq,
   intervenants,

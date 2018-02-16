@@ -65,14 +65,13 @@ class Intervenants extends Component {
 }
 
 Intervenants.propTypes = {
-  intervenants: PropTypes.arrayOf(PropTypes.object),
+  intervenants: PropTypes.arrayOf(PropTypes.object)
 };
 
 
 const mapStateToProps = (state) => (
   {
     intervenants: state.intervenants.list,
-    error: state.intervenants.error
   }
 );
 

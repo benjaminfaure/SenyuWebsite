@@ -56,14 +56,13 @@ class Animation extends Component {
 }
 
 Animation.propTypes = {
-  animation: PropTypes.object,
+  animation: PropTypes.object
 };
 
 
 const mapStateToProps = (state) => (
   {
-    animation: state.animations.selected,
-    error: state.animations.error
+    animation: state.animations.selected
   }
 );
 
