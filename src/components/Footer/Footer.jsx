@@ -18,6 +18,7 @@ class Footer extends Component {
             <h5><a href="https://drive.google.com/open?id=1XnTqZUOnckPCh-XYAFI61HWJ5pFKG4Xf" target="_blank" rel="noopener noreferrer" title="Dossier Presse">Presse</a></h5>
             {/*<h5><a href="/archive" rel="noopener noreferrer">Archive</a></h5>*/}
             <h5><a href="/recrutement" rel="noopener noreferrer">Recrutement</a></h5>
+            <h5><a href="/partenaires" rel="noopener noreferrer">Partenaires</a></h5>
             {/*<h5><a href="/ws/inscriptions" rel="noopener noreferrer">Inscriptions</a></h5>*/}
           </div>
           <div className="footer-social-links">

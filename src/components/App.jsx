@@ -46,6 +46,8 @@ import Planning from './Planning/Planning.jsx';
 
 import Plans from './Plans/Plans.jsx';
 
+import Partenaires from './Partenaires/Partenaires.jsx';
+
 import EnTravaux from './EnTravaux/EnTravaux.jsx';
 
 import Redirect from './Redirect/Redirect.jsx';
@@ -157,6 +159,8 @@ class App extends Component {
             <Route exact path="/presse" component={EnTravaux} />
             {/* Archive */}
             <Route exact path="/archive" component={EnTravaux} />
+            {/* Partenaires */}
+            <Route exact path="/partenaires" component={EnTravaux} />
             {/* Recrutement */}
             <Route exact path="/recrutement" component={EnTravaux} />
             {/* Billeterie */}
