@@ -1,0 +1,17 @@
+.reglements .reglements-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  padding: 10px;
+}
+
+
+.reglements .reglements-links a {
+  text-decoration: none;
+  color: var(--senyu-logo-blue);
+}
+
+

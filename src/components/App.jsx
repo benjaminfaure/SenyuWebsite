@@ -37,6 +37,7 @@ import Cosplay from './Cosplay/Cosplay.jsx';
 import Communication from './Communication/Communication.jsx';
 
 import Reglements from './Reglements/Reglements.jsx';
+import Reglement from './Reglements/Reglement.jsx';
 
 import Contact from './Contact/Contact.jsx';
 
@@ -141,6 +142,7 @@ class App extends Component {
             <Route exact path="/faq" component={FAQ} />
             {/* Reglements */}
             <Route exact path="/reglements" component={Reglements} />
+            <Route path="/reglements/:reglementType" component={Reglement} />
             {/* Plans */}
             <Route exact path="/plans" component={Plans} />
             {/* Planning */}

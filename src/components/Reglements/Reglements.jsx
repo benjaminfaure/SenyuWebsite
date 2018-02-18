@@ -1,25 +1,33 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
+import { Link } from 'react-router-dom';
 
 import GenericImageDisplay from '../GenericContent/GenericImageDisplay.jsx';
 
 import './Reglements.css';
 
+
 class Reglements extends Component {
+
 
   render() {
 
+    let titrePage = 'Liste des Règlements';
+
     const meta = <Helmet>
-      <title>Senyu | Règlements</title>
+      <title>Senyu | {titrePage}</title>
     </Helmet>
 
     return (
-      <div>
+      <div className="reglements">
         {meta}
         <section className="generic-page-header">
-          <h1 className="generic-page-title">Règlement répliques Cosplay</h1>
+          <h1 className="generic-page-title">{titrePage}</h1>
         </section>
-        <GenericImageDisplay filePath="/images/reglement_replique_cosplay.jpg" altTag="reglement replique cosplay"/>
+      <section className="reglements-links">
+        <h2><Link to="/reglements/cosplay">Règlement répliques cosplay</Link></h2>
+        <h2><Link to="/reglements/interieur">Règlement Intérieur</Link></h2>
+      </section>
       </div>
     );
   }
