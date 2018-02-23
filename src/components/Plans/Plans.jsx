@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 
-import GenericImageDisplay from '../GenericContent/GenericImageDisplay.jsx';
+import GenericPDFDisplay from '../GenericContent/GenericPDFDisplay.jsx';
 
 import './Plans.css';
 
@@ -19,7 +19,7 @@ class Plans extends Component {
         <section className="generic-page-header">
           <h1 className="generic-page-title">Plans</h1>
         </section>
-        <GenericImageDisplay filePath="/images/plan.png" altTag="plan"/>
+        <GenericPDFDisplay filePath="/plan.pdf" />
       </div>
     );
   }

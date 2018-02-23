@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Page,  Document} from 'react-pdf';
+import { Page, Document } from 'react-pdf';
 /*import { Document } from 'react-pdf/build/entry.webpack';*/
 import PropTypes from 'prop-types';
 import MediaQuery from 'react-responsive';
@@ -38,23 +38,26 @@ class GenericPDFDisplay extends Component {
     const { pageNumber, numPages } = this.state;
 
 
-    const pager = <div className="generic-pdf-pager">
-      <span className="generic-pdf-pager-button" onClick={this.onClickPrevious.bind(this)} ><FaAngleLeft /> </span>
-      <span>Page {pageNumber} of {numPages}</span>
-      <span className="generic-pdf-pager-button" onClick={this.onClickNext.bind(this)} ><FaAngleRight /> </span>
-    </div>;
+    let pager;
+    if (this.state.numPages > 1) {
+      pager = <div className="generic-pdf-pager">
+        <span className="generic-pdf-pager-button" onClick={this.onClickPrevious.bind(this)} ><FaAngleLeft /> </span>
+        <span>Page {pageNumber} of {numPages}</span>
+        <span className="generic-pdf-pager-button" onClick={this.onClickNext.bind(this)} ><FaAngleRight /> </span>
+      </div>;
+    }
 
     return (
       <div className="generic-pdf-viewer">
-      <MediaQuery query="(min-width: 1024px)">
-        {pager}
-        <Document
-          file={this.props.filePath}
-          className="generic-pdf-display"
-          onLoadSuccess={this.onDocumentLoad.bind(this)}>
-          <Page pageNumber={pageNumber} />
-        </Document>
-        {pager}
+        <MediaQuery query="(min-width: 1024px)">
+          {pager}
+          <Document
+            file={this.props.filePath}
+            className="generic-pdf-display"
+            onLoadSuccess={this.onDocumentLoad.bind(this)}>
+            <Page pageNumber={pageNumber} />
+          </Document>
+          {pager}
         </MediaQuery>
         <h2><a href={this.props.filePath} target="_blank" className="generic-pdf-download">Télécharger <FaCloudDownload /></a></h2>
       </div>
