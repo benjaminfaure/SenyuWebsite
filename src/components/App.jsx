@@ -162,7 +162,7 @@ class App extends Component {
             {/* Archive */}
             <Route exact path="/archive" component={EnTravaux} />
             {/* Partenaires */}
-            <Route exact path="/partenaires" component={EnTravaux} />
+            <Route exact path="/partenaires" component={Partenaires} />
             {/* Recrutement */}
             <Route exact path="/recrutement" component={EnTravaux} />
             {/* Billeterie */}
