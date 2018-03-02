@@ -51,7 +51,7 @@ class Partenaires extends Component {
             </a>
           </article>
           <article className="partenaire-item generic-content-list-item">
-            <a href="https://www.francebleu.fr/sud-lorraine" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.francebleu.fr" target="_blank" rel="noopener noreferrer">
               <img className="partenaire-item-image" src="/images/logos/france_bleu.jpg" alt="logo" />
             </a>
           </article>
