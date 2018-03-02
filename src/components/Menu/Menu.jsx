@@ -47,7 +47,7 @@ class Menu extends Component {
         <li className="menu-item"><Link to="/cosplay"><span>Cosplay</span></Link></li>
         <li className="menu-item"><Link to="/animations"><span>Animations</span></Link></li>
         {streamMenu}
-        <li className="menu-item menu-item-special"><Link to="/billeterie"><span>Billeterie</span></Link></li>
+        {/*<li className="menu-item menu-item-special"><Link to="/billeterie"><span>Billeterie</span></Link></li>*/}
       </ul>
     );
 
