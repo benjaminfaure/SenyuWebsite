@@ -42,6 +42,8 @@ import Reglement from './Reglements/Reglement.jsx';
 
 import Contact from './Contact/Contact.jsx';
 
+import Recrutement from './Recrutement/Recrutement.jsx';
+
 import Billeterie from './Billeterie/Billeterie.jsx';
 
 import Planning from './Planning/Planning.jsx';
@@ -171,7 +173,7 @@ class App extends Component {
             {/* Partenaires */}
             <Route exact path="/partenaires" component={Partenaires} />
             {/* Recrutement */}
-            <Route exact path="/recrutement" component={EnTravaux} />
+            <Route exact path="/recrutement" component={Recrutement} />
             {/* Billeterie */}
             <Route exact path="/billeterie" component={EnTravaux} />
             {/* Redirection Inscriptions */}

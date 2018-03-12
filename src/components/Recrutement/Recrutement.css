@@ -1,0 +1,18 @@
+.recrutement-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.recrutement-form h2 {
+  color: var(--senyu-logo-blue);
+  margin: auto;
+}
+
+.recrutement-form h3 {
+  color: var(--senyu-logo-blue);
+  font-size: 12px;
+}
