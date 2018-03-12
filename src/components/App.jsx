@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GoogleAnalytics from 'react-ga';
 import { Helmet } from "react-helmet";
 import PropTypes from 'prop-types';
 import ScrollToTop from 'react-scroll-up';
@@ -57,9 +58,11 @@ import Redirect from './Redirect/Redirect.jsx';
 
 import NotFound from './NotFound/NotFound.jsx';
 
-
 import './App.css';
 
+
+
+GoogleAnalytics.initialize(process.env.REACT_APP_ANALYTICS_ID, { debug: true });
 
 class App extends Component {
 
@@ -80,9 +83,11 @@ class App extends Component {
 
 
   componentDidMount() {
-
     this.props.history.listen((location, action) => {
       this.setState({ isMenuOpen: false })
+      const page = location.pathname;
+      GoogleAnalytics.set({ page });
+      GoogleAnalytics.pageview(page);
     });
   }
 
