@@ -18,7 +18,7 @@
     "react-google-maps": "^9.4.5",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
-    "react-pdf": "^2.5.3",
+    "react-pdf": "^3.0.1",
     "react-redux": "^5.0.7",
     "react-responsive": "^4.0.5",
     "react-router": "^4.2.0",
