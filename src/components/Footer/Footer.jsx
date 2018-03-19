@@ -30,7 +30,7 @@ class Footer extends Component {
           </div>
         </div>
         <div className="footer-cc">
-          <h5><span>Senyu</span>© 2017 - tous droits réservés</h5>
+          <h5><span>Senyu</span>© 2017-2018 - tous droits réservés</h5>
         </div>
       </footer>
     );

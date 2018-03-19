@@ -18,7 +18,7 @@ class Header extends Component {
             </Link>
           </h4>
           <h4 className="header-message" >
-            <span> Senyu est de retour du 3 au 4 Mars 2018 </span>
+            <span> Rendez-vous en 2019 ! </span>
           </h4>
           <MenuIcon toggleMenu={this.props.toggleMenu} isMenuOpen={this.props.isMenuOpen} />
           <h4 className="ticket-buy"><span></span></h4>

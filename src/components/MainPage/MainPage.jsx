@@ -16,10 +16,10 @@ class MainPage extends Component {
         </article>
         <article id="main-page-message">
           <img src="/images/logo_mobile.png" alt="logo" />
-          <span>Senyu est de retour du 3 au 4 Mars 2018</span>
-          <span>Centre des Congrès d'Epinal</span>
-          <span>7 Avenue St Dié </span>
-          <span>88000 Épinal</span>
+          <span>Merci</span>
+          <span>Vous avez été nombreux à nous rejoindre pour Senyu 6.</span>
+          <span>Votre avis nous intéresse !</span>
+          <span><a href="https://tinyurl.com/ybbt5wvx">Cliquez ici pour répondre à notre questionnaire.</a></span>
         </article>
         <article>
           <MainPageGoogleMap />
