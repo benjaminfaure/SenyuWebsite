@@ -73,7 +73,7 @@ class App extends Component {
 
     this.state = {
       isMenuOpen: false,
-      currentLocation: this.props.location.pathname ,
+      currentLocation: this.props.location.pathname,
     };
 
   }
