@@ -110,6 +110,11 @@ MENU
 		-moz-transition:.3s;
 		-webkit-transition:.3s;
 		transition:.3s;
+  }
+
+	.nav-wrap  li.active a {
+		background-color: var(--senyu-logo-black);
+		color: var(--senyu-logo-yellow);
 	}
 
 	.nav-wrap .menu-item:hover .menu-content {

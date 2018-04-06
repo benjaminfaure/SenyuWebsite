@@ -72,21 +72,23 @@ class App extends Component {
     super(props);
 
     this.state = {
-      isMenuOpen: false
+      isMenuOpen: false,
+      currentLocation: this.props.location.pathname ,
     };
 
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.location !== prevProps.location) {
-      window.scrollTo(0, 0)
+      window.scrollTo(0, 0);
+      this.setState({ currentLocation: this.props.location.pathname });
     }
   }
 
 
   componentDidMount() {
     this.props.history.listen((location, action) => {
-      this.setState({ isMenuOpen: false })
+      this.setState({ isMenuOpen: false, currentLocation: this.props.location.pathname });
       const page = location.pathname;
       GoogleAnalytics.set({ page });
       GoogleAnalytics.pageview(page);
@@ -133,7 +135,7 @@ class App extends Component {
         </ScrollToTop>
         {meta}
         <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
-        <Menu />
+        <Menu currentLocation={this.state.currentLocation}/>
         <main className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
           {errorMessage}
           <Switch>
