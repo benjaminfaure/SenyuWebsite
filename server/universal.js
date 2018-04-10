@@ -7,10 +7,11 @@ import Helmet from 'react-helmet';
 
 import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router'
-import { Route } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
 import createServerStore from './store';
 import senyuStore from '../src/store/senyuStore';
 import App from '../src/components/App.jsx';
+import routes from '../src/routes'
 
 // A simple helper function to prepare the HTML markup
 const prepHTML = (data, { html, head, body }) => {
@@ -33,15 +34,14 @@ const universalLoader = (req, res) => {
 
       return res.status(404).end();
     }
-
     // Create a store and sense of history based on the current path
-   const { store, history } = createServerStore(req.path);
+    const { store, history } = createServerStore(req.path);
 
     // Render App in React
     const routeMarkup = renderToString(
       <Provider store={store}>
         <StaticRouter location={req.url} context={context}>
-          <Route component={App} />
+          {renderRoutes(routes)}
         </StaticRouter>
       </Provider>
     );
@@ -58,7 +58,7 @@ const universalLoader = (req, res) => {
         helmet.link.toString(),
       body: routeMarkup
     });
-    console.log(helmet.meta.toString())
+
     // Up, up, and away...
     res.send(html);
   });
