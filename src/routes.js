@@ -168,7 +168,7 @@ const routes = [
       },
       /* Redirection Inscriptions */
       {
-        path: '//ws/inscriptions',
+        path: '/ws/inscriptions',
         exact: true,
         component: Redirect
       },
@@ -178,6 +178,7 @@ const routes = [
       },
       /* 404 */
       {
+        path: '*',
         component: NotFound
       },
     ]
