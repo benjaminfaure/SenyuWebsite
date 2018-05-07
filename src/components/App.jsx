@@ -14,8 +14,6 @@ import {
   getDimensions,
 } from '../reducers';
 
-import thunk from 'redux-thunk';
-
 
 import Menu from './Menu/Menu.jsx';
 import Header from './Header/Header.jsx';

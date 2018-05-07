@@ -6,7 +6,6 @@ import { renderRoutes } from 'react-router-config';
 
 import senyuStore from './store/senyuStore';
 import './index.css';
-import App from './components/App.jsx';
 import routes from './routes';
 
 import { unregister } from './registerServiceWorker';
