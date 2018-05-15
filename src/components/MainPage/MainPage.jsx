@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import './MainPage.css';
-import MainPageGoogleMap from './MainPageGoogleMap.jsx';
+import MainPageMap from './MainPageMap.jsx';
 
 
 
@@ -22,7 +22,7 @@ class MainPage extends Component {
           <span><a href="https://tinyurl.com/ybbt5wvx">Cliquez ici pour répondre à notre questionnaire.</a></span>
         </article>
         <article>
-          <MainPageGoogleMap />
+          <MainPageMap />
         </article>
       </section >
     );
