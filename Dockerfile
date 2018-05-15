@@ -14,7 +14,8 @@ ENV NODE_ENV production
 COPY . /app
 
 
-RUN npm run build
+RUN node -r dotenv/config /app/src/index.js && \
+    npm run build
 
 EXPOSE 5000
 CMD ["npm", "run", "start:prod"]

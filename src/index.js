@@ -11,7 +11,6 @@ import routes from './routes';
 import { unregister } from './registerServiceWorker';
 
 
-require('dotenv').config();
 
 const rootElement = document.getElementById('root');
 
