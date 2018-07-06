@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { translate } from 'react-i18next';
 
 import FaCloudDownload from 'react-icons/lib/fa/cloud-download';
 
@@ -12,12 +13,14 @@ class GenericImageDisplay extends Component {
 
   render() {
 
+    const { t } = this.props;
+
     return (
       <div className="generic-image-viewer">
         <a href={this.props.filePath} target="_blank" className="generic-image-download">
         <img src={this.props.filePath} alt={this.props.altTag}/>
         </a>
-        <h2><a href={this.props.filePath} target="_blank" className="generic-image-download">Télécharger <FaCloudDownload /></a></h2>
+        <h2><a href={this.props.filePath} target="_blank" className="generic-image-download">{t('content.generic.download')} <FaCloudDownload /></a></h2>
       </div>
     );
   }
@@ -28,4 +31,4 @@ GenericImageDisplay.propTypes = {
   altTag: PropTypes.string,
 };
 
-export default GenericImageDisplay;
+export default translate('translations')(GenericImageDisplay);

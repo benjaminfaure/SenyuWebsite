@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
+import { translate } from 'react-i18next';
 
 import GenericImageDisplay from '../GenericContent/GenericImageDisplay.jsx';
 
@@ -9,15 +10,17 @@ class Planning extends Component {
 
   render() {
 
+    const { t } = this.props;
+
     const meta = <Helmet>
-      <title>Senyu | Planning</title>
+      <title>Senyu | {t('titles.planning')}</title>
     </Helmet>
 
     return (
       <div className="planning">
         {meta}
         <section className="generic-page-header">
-          <h1 className="generic-page-title">Planning</h1>
+          <h1 className="generic-page-title">{t('content.planning.pageTitle')}</h1>
         </section>
         <GenericImageDisplay filePath="/images/planning.png" altTag="planning"/>
       </div>
@@ -26,4 +29,4 @@ class Planning extends Component {
 }
 
 
-export default Planning;
+export default translate('translations')(Planning);

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import PropTypes from 'prop-types';
+import { translate } from 'react-i18next';
 
 
 
@@ -9,8 +10,9 @@ import './GenericList.css';
 class GenericList extends Component {
   render() {
 
+    const { t } = this.props;
 
-    let titrePage = this.props.titrePage && this.props.itemList && this.props.itemList.length > 0 ? this.props.titrePage : "Aucun enregistrement trouvé"
+    let titrePage = this.props.titrePage && this.props.itemList && this.props.itemList.length > 0 ? this.props.titrePage : t("content.generic.noRecord")
 
     const meta = <Helmet>
       <title>Senyu | {titrePage}</title>
@@ -40,4 +42,4 @@ GenericList.propTypes = {
   titrePage: PropTypes.string
 };
 
-export default GenericList;
+export default translate('translations')(GenericList);

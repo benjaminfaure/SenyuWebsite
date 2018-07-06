@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { translate } from 'react-i18next';
 
 import FAQActionCreators from '../../actions/FAQActionCreators';
 
@@ -19,8 +20,10 @@ class FAQ extends Component {
 
   render() {
 
+    const { t } = this.props;
+
     const meta = <Helmet>
-      <title>Senyu | FAQ</title>
+      <title>Senyu | {t('titles.faq')}</title>
     </Helmet>
 
     let categoriesList = this.props.faq.map((categorie) => {
@@ -33,7 +36,7 @@ class FAQ extends Component {
       <div>
         {meta}
         <section className="generic-page-header">
-          <h1 className="generic-page-title">Foire Aux Questions</h1>
+          <h1 className="generic-page-title">{t('content.faq.pageTitle')}</h1>
         </section>
         <section className="faq">
           {categoriesList}
@@ -60,4 +63,4 @@ const mapDispatchToProps = (dispatch) => (
   }
 );
 
-export default connect(mapStateToProps, mapDispatchToProps)(FAQ);
+export default translate('translations')(connect(mapStateToProps, mapDispatchToProps)(FAQ));

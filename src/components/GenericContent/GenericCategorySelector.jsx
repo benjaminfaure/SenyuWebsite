@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { translate } from 'react-i18next';
 
 
 import './GenericCategorySelector.css';
@@ -15,6 +16,8 @@ class GenericCategorySelector extends Component {
 
   render() {
 
+    const { t } = this.props;
+
     let categories = this.props.categories.map((category) =>
       <div key={category.code}>
         <input type="radio" name="category" id={category.code} value={category.code}
@@ -23,20 +26,20 @@ class GenericCategorySelector extends Component {
         <label htmlFor={category.code}>
           <FaCircleO className="generic-category-radio" />
           <FaCheckCircleO className="generic-category-radio-checked" />
-          {category.label}
+          {t(`content.generic.${category.code}`)}
         </label>
       </div>
     );
 
     categories.push(
-      <div key="tous">
+      <div key="all">
         <input type="radio" name="category" id="all" value=""
           checked={this.props.selectedCategory === ""}
           onChange={this.onRadioChange.bind(this)} />
         <label htmlFor="all">
           <FaCircleO className="generic-category-radio" />
           <FaCheckCircleO className="generic-category-radio-checked" />
-          Tous
+          {t("content.generic.all")}
         </label>
       </div>
     );
@@ -54,4 +57,4 @@ GenericCategorySelector.propTypes = {
   selectedCategory: PropTypes.string
 };
 
-export default GenericCategorySelector;
+export default translate('translations')(GenericCategorySelector);

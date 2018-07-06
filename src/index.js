@@ -10,7 +10,7 @@ import routes from './routes';
 
 import { unregister } from './registerServiceWorker';
 
-
+import './i18n';
 
 const rootElement = document.getElementById('root');
 

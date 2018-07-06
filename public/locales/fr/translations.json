@@ -1,0 +1,123 @@
+{
+  "navigation": {
+    "infos": "Infos Pratiques",
+    "faq": "FAQ",
+    "regulations": "Règlements",
+    "plans": "Plan",
+    "planning": "Planning",
+    "guide": "Guide du visiteur",
+    "contact": "Contact",
+    "communication": "Communication",
+    "exhibitors": "Exposants",
+    "guests": "Invités",
+    "cosplay": "Cosplay",
+    "animations": "Animations",
+    "stream": "Stream",
+    "language": "Langue",
+    "tickets": "Billeterie"
+  },
+  "footer": {
+    "contact": "Contact",
+    "press": "Presse",
+    "recruitment": "Recrutement",
+    "partners": "Partenaires",
+    "allright": "tous droits réservés"
+  },
+  "banner": {
+    "message": "Rendez-vous en 2019 !"
+  },
+  "titles": {
+    "generic": "3 et 4 Mars 2018",
+    "communication": "Communication",
+    "contact": "Contact",
+    "cosplay": "Cosplay",
+    "workInProgress": "En travaux",
+    "faq": "FAQ",
+    "guide": "Guide du visiteur",
+    "404": "Four oh Four !",
+    "partners": "Partenaires",
+    "planning": "Planning",
+    "plans": "Plans",
+    "recruitment": "Recrutement",
+    "redirect": "Redirection ...",
+    "stream": "Stream"
+  },
+  "content": {
+    "animation": {
+      "pageTitle": "Liste des Animations"
+    },
+    "communication": {
+      "pageTitle": "Communication sur la sélection des Créateurs"
+    },
+    "contact": {
+      "line1": "Le formulaire de contact est en cours de création.",
+      "line2": "En attendant sa mise en ligne, vous pouvez nous contacter à l'adresse suivante :",
+      "line3": "(c'est une image)"
+    },
+    "cosplay": {
+      "pageTitle": "Règlement Cosplay",
+      "message": "L'inscription au concours octroie une réduction sur le billet d'entrée qui correspond à 1,5€ de remise. La réduction s'applique sur le billet les  jours de participation au concours cosplay. Ainsi, si vous participez aux deux jours du concours, vous pourrez bénéficier jusqu'à 3€ de remise. Vous aurez également la possibilité d'avoir un coupe-fil en accédant directement à la convention depuis l'entrée sur le parking P4. Une vérification sera effectuée par cette entrée. Cette réduction s'appliquera par une remise lors de la validation de votre inscription au concours cosplay, dans la zone dédiée au Cosplay.",
+      "formLink": "Formulaire d'inscription"
+    },
+    "workInProgress": {
+      "pageTitle": "En travaux",
+      "message": "Rejoins l'Empire et participe à la construction de l'Etoile de la Mort"
+    },
+    "exhibitor": {
+      "pageTitle": "Liste des exposants"
+    },
+    "faq": {
+      "pageTitle": "Foire Aux Questions"
+    },
+    "generic": {
+      "download": "Télécharger",
+      "pagination": "Page <1>{{pageNumber}}</1> sur <3>{{numPages}}</3>",
+      "noRecord": "Aucun enregistrement trouvé",
+      "search": "Rechercher ...",
+      "all": "Tous",
+      "boutique": "Boutique",
+      "createur": "Créateur",
+      "senyu": "Senyu",
+      "culture": "Culture",
+      "association": "Association"
+    },
+    "guest": {
+      "pageTitle": "Liste des intervenants"
+    },
+    "guide": {
+      "pageTitle": "Guide du visiteur"
+    },
+    "home": {
+      "line1": "Merci",
+      "line2": "Vous avez été nombreux à nous rejoindre pour Senyu 6.",
+      "line3": "Votre avis nous intéresse !",
+      "line4": "Cliquez ici pour répondre à notre questionnaire."
+    },
+    "404": {
+      "line1": "Achievement Unlocked",
+      "line2": "Trouver une page qui n'existe pas.",
+      "line3": "404"
+    },
+    "partners": {
+      "pageTitle": "Partenaires"
+    },
+    "planning": {
+      "pageTitle": "Planning"
+    },
+    "plans": {
+      "pageTitle": "Plans"
+    },
+    "recruitment": {
+      "line1": "Le formulaire de recrutement est en cours de création.",
+      "line2": "En attendant sa mise en ligne, vous pouvez nous contacter à l'adresse suivante :",
+      "line3": "(c'est une image)"
+    },
+    "redirect": "Redirection ...",
+    "regulation": {
+      "list": "Regulations list",
+      "none": "Aucun règlement trouvé",
+      "cosplay": "Règlement sur les répliques Cosplay",
+      "interior": "Règlement intérieur"
+    }
+  }
+}

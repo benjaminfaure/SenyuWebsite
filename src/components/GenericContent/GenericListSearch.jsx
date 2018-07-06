@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { translate } from 'react-i18next';
 
 import FaSearch from 'react-icons/lib/fa/search';
 
@@ -14,11 +15,12 @@ class GenericListSearch extends Component {
 
   render() {
 
+    const { t } = this.props;
 
     return (
       <div className="generic-list-search">
         <h4><FaSearch /></h4>
-        <input type="search" placeholder="Rechercher ..." onChange={this.onFilterChange.bind(this)} />
+        <input type="search" placeholder={t("content.generic.search")} onChange={this.onFilterChange.bind(this)} />
       </div>
     );
   }
@@ -28,4 +30,4 @@ GenericListSearch.propTypes = {
   onChange: PropTypes.func.isRequired
 };
 
-export default GenericListSearch;
+export default translate('translations')(GenericListSearch);

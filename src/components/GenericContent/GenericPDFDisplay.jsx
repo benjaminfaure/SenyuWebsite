@@ -3,6 +3,7 @@ import { Page, Document } from 'react-pdf';
 /*import { Document } from 'react-pdf/build/entry.webpack';*/
 import PropTypes from 'prop-types';
 import MediaQuery from 'react-responsive';
+import { translate, Trans } from 'react-i18next';
 
 import FaAngleLeft from 'react-icons/lib/fa/angle-left';
 import FaAngleRight from 'react-icons/lib/fa/angle-right';
@@ -35,6 +36,9 @@ class GenericPDFDisplay extends Component {
   }
 
   render() {
+
+    const { t } = this.props;
+
     const { pageNumber, numPages } = this.state;
 
 
@@ -42,7 +46,11 @@ class GenericPDFDisplay extends Component {
     if (this.state.numPages > 1) {
       pager = <div className="generic-pdf-pager">
         <span className="generic-pdf-pager-button" onClick={this.onClickPrevious.bind(this)} ><FaAngleLeft /> </span>
-        <span>Page {pageNumber} of {numPages}</span>
+        <span>
+          <Trans i18nKey="content.generic.pagination" pageNumber={pageNumber} numPages={numPages}>
+            Page {pageNumber} sur {numPages}
+          </Trans>
+        </span>
         <span className="generic-pdf-pager-button" onClick={this.onClickNext.bind(this)} ><FaAngleRight /> </span>
       </div>;
     }
@@ -59,7 +67,7 @@ class GenericPDFDisplay extends Component {
           </Document>
           {pager}
         </MediaQuery>
-        <h2><a href={this.props.filePath} target="_blank" className="generic-pdf-download">Télécharger <FaCloudDownload /></a></h2>
+        <h2><a href={this.props.filePath} target="_blank" className="generic-pdf-download">{t('content.generic.download')} <FaCloudDownload /></a></h2>
       </div>
     );
   }
@@ -69,4 +77,4 @@ GenericPDFDisplay.propTypes = {
   filePath: PropTypes.string
 };
 
-export default GenericPDFDisplay;
+export default translate('translations')(GenericPDFDisplay);

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
+import { translate } from 'react-i18next';
 
 
 
@@ -9,15 +10,17 @@ class Partenaires extends Component {
 
   render() {
 
+    const { t } = this.props;
+
     const meta = <Helmet>
-      <title>Senyu | Partenaires</title>
+      <title>Senyu | {t('titles.partners')}</title>
     </Helmet>
 
     return (
       <div className="partenaires">
         {meta}
         <section className="generic-page-header">
-          <h1 className="generic-page-title">Partenaires</h1>
+          <h1 className="generic-page-title">{t('content.partners.pageTitle')}</h1>
         </section>
         <div className="partenaires-list generic-content-list">
           <article className="partenaire-item generic-content-list-item">
@@ -62,4 +65,4 @@ class Partenaires extends Component {
 }
 
 
-export default Partenaires;
+export default translate('translations')(Partenaires);

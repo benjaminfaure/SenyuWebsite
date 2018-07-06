@@ -38,6 +38,15 @@ footer  .footer-cc{
   width: 100%;
 }
 
+footer .footer-language a{
+  padding: 0px 5px;
+  cursor: pointer;
+}
+
+footer .footer-language .flag{
+  border: 1px solid white;
+}
+
 
 @media screen and (min-width: 1024px) {
 
@@ -51,11 +60,6 @@ footer  .footer-cc{
     flex-direction: row;
   }
 
-  footer  .footer-cc{
-    min-width: 1024px;
-    max-width: 1310px;
-    margin: 0 auto;
-  }
 
   footer .footer-social-links{
     flex: 1;
@@ -67,10 +71,24 @@ footer  .footer-cc{
     justify-content: space-around;
   }
 
-  footer  .footer-cc h5{
+  footer  .footer-cc{
     text-align: right;
     padding-right: 50px;
+    flex: 3;
   }
+
+  footer .footer-language{
+    text-align: left;
+    padding-left: 50px;
+    flex: 1;
+    display: flex;
+  }
+
+  footer .footer-language a{
+    padding: 0px 5px;
+    cursor: pointer;
+  }
+
 
   footer a {
     -o-transition:.3s;

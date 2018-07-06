@@ -7,6 +7,7 @@ import FaCircleOArrowUp from 'react-icons/lib/fa/arrow-circle-o-up';
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux';
 import { renderRoutes } from 'react-router-config';
+import { translate } from 'react-i18next';
 
 
 import { WIDTH_BREAKPOINT } from '../constants';
@@ -69,8 +70,11 @@ class App extends Component {
 
 
   render() {
+
+    const { t } = this.props;
+
     const meta = <Helmet>
-      <title>Senyu | 3 et 4 Mars 2018</title>
+      <title>Senyu | {t('titles.generic')}</title>
     </Helmet>
 
     const scrollStyle = {
@@ -121,4 +125,4 @@ const mapStateToProps = (state) => (
 
 
 
-export default withRouter(connect(mapStateToProps, null)(App));
+export default translate('translations')(withRouter(connect(mapStateToProps, null)(App)));

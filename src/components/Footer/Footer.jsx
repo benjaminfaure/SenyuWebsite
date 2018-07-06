@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Flag from 'react-world-flags'
+import { translate } from 'react-i18next';
 
 import FaFacebook from 'react-icons/lib/fa/facebook-official';
 import FaTwitch from 'react-icons/lib/fa/twitch';
@@ -10,16 +12,23 @@ import './Footer.css';
 
 class Footer extends Component {
   render() {
+
+    const { t, i18n } = this.props;
+
+    const changeLanguage = (lng) => {
+      i18n.changeLanguage(lng);
+    }
+
     return (
       <footer>
         <div className="footer-content">
           <div className="footer-content-links">
-            <h5><a href="/contact" rel="noopener noreferrer">Contact</a></h5>
-            <h5><a href="https://drive.google.com/open?id=1XnTqZUOnckPCh-XYAFI61HWJ5pFKG4Xf" target="_blank" rel="noopener noreferrer" title="Dossier Presse">Presse</a></h5>
-            {/*<h5><a href="/archive" rel="noopener noreferrer">Archive</a></h5>*/}
-            <h5><a href="/recrutement" rel="noopener noreferrer">Recrutement</a></h5>
-            <h5><a href="/partenaires" rel="noopener noreferrer">Partenaires</a></h5>
-            {/*<h5><a href="/ws/inscriptions" rel="noopener noreferrer">Inscriptions</a></h5>*/}
+            <h5><a href="/contact" rel="noopener noreferrer">{t('footer.contact')}</a></h5>
+            <h5><a href="https://drive.google.com/open?id=1XnTqZUOnckPCh-XYAFI61HWJ5pFKG4Xf" target="_blank" rel="noopener noreferrer" title={t('footer.press')}>{t('footer.press')}</a></h5>
+            {/*<h5><a href="/archive" rel="noopener noreferrer">{t('footer.archive')}</a></h5>*/}
+            <h5><a href="/recrutement" rel="noopener noreferrer">{t('footer.recruitment')}</a></h5>
+            <h5><a href="/partenaires" rel="noopener noreferrer">{t('footer.partners')}</a></h5>
+            {/*<h5><a href="/ws/inscriptions" rel="noopener noreferrer">{t('footer.registrations')}</a></h5>*/}
           </div>
           <div className="footer-social-links">
             <h2><a href="https://www.facebook.com/senyuofficiel/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a></h2>
@@ -29,8 +38,14 @@ class Footer extends Component {
             <h2><a href="https://www.youtube.com/channel/UCcQ99DuVbT5M9IC3BC1bd8g" target="_blank" rel="noopener noreferrer"><FaYoutube /></a></h2>
           </div>
         </div>
-        <div className="footer-cc">
-          <h5><span>Senyu</span>© 2017-2018 - tous droits réservés</h5>
+        <div className="footer-content">
+          <div className="footer-language">
+            <h5><a onClick={() => changeLanguage('fr')}><span><Flag code="FR"  height="14" className="flag"/> Français</span></a></h5>
+            <h5><a onClick={() => changeLanguage('en')}><span><Flag code="GB"  height="14" className="flag"/> English</span></a></h5>
+          </div>
+          <div className="footer-cc">
+            <h5><span>Senyu</span>© 2017-2018 - {t('footer.allright')}</h5>
+          </div>
         </div>
       </footer>
     );
@@ -38,4 +53,4 @@ class Footer extends Component {
 }
 
 
-export default Footer;
+export default translate('translations')(Footer);

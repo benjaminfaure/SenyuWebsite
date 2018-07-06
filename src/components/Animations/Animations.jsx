@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { translate } from 'react-i18next';
 
 import { TYPE_ANIMATION } from '../../constants';
 
@@ -30,6 +31,7 @@ class Animations extends Component {
 
   render() {
 
+    const { t } = this.props;
     let animationsList = this.filteredSenyuAnimations().map((animation) => {
       return <GenericListItem key={animation.id}
         id={animation.id}
@@ -37,7 +39,8 @@ class Animations extends Component {
         propClass="animation-list-item"
         image={animation.image}
         title={animation.nom}>
-        <h5>{animation.type}</h5>
+        <h5>{t(`content.generic.${animation.type}`)}</h5>
+
       </GenericListItem>
     });
 
@@ -50,7 +53,7 @@ class Animations extends Component {
 
     return (
       <GenericList itemList={animationsList}
-        titrePage="Liste des Animations">
+        titrePage={t("content.animation.pageTitle")}>
         {searchBar}
         {categorySelect}
       </GenericList>
@@ -100,4 +103,4 @@ const mapDispatchToProps = (dispatch) => (
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Animations);
+export default translate('translations')(connect(mapStateToProps, mapDispatchToProps)(Animations));

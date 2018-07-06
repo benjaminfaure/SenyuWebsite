@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { translate } from 'react-i18next';
 
 import './Header.css';
 import MenuIcon from '../Menu/MenuIcon.jsx';
 
 class Header extends Component {
   render() {
+
+    const { t } = this.props;
+
     return (
       <header>
         <div className="header-content">
@@ -18,7 +22,7 @@ class Header extends Component {
             </Link>
           </h4>
           <h4 className="header-message" >
-            <span> Rendez-vous en 2019 ! </span>
+            <span> {t('banner.message')} </span>
           </h4>
           <MenuIcon toggleMenu={this.props.toggleMenu} isMenuOpen={this.props.isMenuOpen} />
           <h4 className="ticket-buy"><span></span></h4>
@@ -29,4 +33,4 @@ class Header extends Component {
 }
 
 
-export default Header;
+export default translate('translations')(Header);

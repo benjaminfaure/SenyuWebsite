@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { translate } from 'react-i18next';
 
 import { TYPE_EXPOSANT } from '../../constants';
 
@@ -33,7 +34,7 @@ class Exposants extends Component {
 
   render() {
 
-    let titrePage = exposantsType ? "Liste des ".concat(TYPE_EXPOSANT[exposantsType.toUpperCase()]) : "Liste des Exposants";
+    const { t } = this.props;
 
     let exposantsList = this.filteredExposants().map((exposant) => {
       return <GenericListItem key={exposant.id}
@@ -42,7 +43,7 @@ class Exposants extends Component {
         propClass="exposant-list-item"
         image={exposant.image}
         title={exposant.nom}>
-        <h5>{exposant.type}</h5>
+        <h5>{t(`content.generic.${exposant.type}`)}</h5>
       </GenericListItem>
     });
 
@@ -56,7 +57,7 @@ class Exposants extends Component {
 
     return (
       <GenericList itemList={exposantsList}
-        titrePage={titrePage}>
+        titrePage={t("content.exhibitor.pageTitle")}>
         {searchBar}
         {exposantsType ? '' : categorySelect}
       </GenericList>
@@ -103,4 +104,4 @@ const mapDispatchToProps = (dispatch) => (
 );
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Exposants);
+export default translate('translations')(connect(mapStateToProps, mapDispatchToProps)(Exposants));

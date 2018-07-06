@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { translate } from 'react-i18next';
 
 import GenericList from '../GenericContent/GenericList.jsx';
 import GenericListItem from '../GenericContent/GenericListItem.jsx';
@@ -27,6 +28,8 @@ class Intervenants extends Component {
 
   render() {
 
+    const { t } = this.props;
+
     let intervenantsList = this.filteredIntervenants().map((intervenant) => {
       return <GenericListItem key={intervenant.id}
         id={intervenant.id}
@@ -43,7 +46,7 @@ class Intervenants extends Component {
 
     return (
       <GenericList itemList={intervenantsList}
-        titrePage="Liste des Intervenants">
+        titrePage={t("content.guest.pageTitle")}>
         {searchBar}
       </GenericList>
     );
@@ -82,4 +85,4 @@ const mapDispatchToProps = (dispatch) => (
 );
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Intervenants);
+export default translate('translations')(connect(mapStateToProps, mapDispatchToProps)(Intervenants));

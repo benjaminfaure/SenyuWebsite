@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
+import { translate } from 'react-i18next';
 
 import GenericPDFDisplay from '../GenericContent/GenericPDFDisplay.jsx';
 
@@ -10,22 +11,24 @@ class Cosplay extends Component {
 
   render() {
 
+    const { t } = this.props;
+
     const meta = <Helmet>
-      <title>Senyu | Cosplay</title>
+      <title>Senyu | {t('titles.cosplay')}</title>
     </Helmet>
 
     return (
       <div>
         {meta}
         <section className="generic-page-header">
-          <h1 className="generic-page-title">Règlement Cosplay</h1>
+          <h1 className="generic-page-title">{t('content.cosplay.pageTitle')}</h1>
         </section>
         <GenericPDFDisplay filePath="/cosplay.pdf" />
         <p className="info-inscription-cosplay">
-          L'inscription au concours octroie une réduction sur le billet d'entrée qui correspond à 1,5€ de remise. La réduction s'applique sur le billet les  jours de participation au concours cosplay. Ainsi, si vous participez aux deux jours du concours, vous pourrez bénéficier jusqu'à 3€ de remise. Vous aurez également la possibilité d'avoir un coupe-fil en accédant directement à la convention depuis l'entrée sur le parking P4. Une vérification sera effectuée par cette entrée. Cette réduction s'appliquera par une remise lors de la validation de votre inscription au concours cosplay, dans la zone dédiée au Cosplay.
+          {t('content.cosplay.message')}
         </p>
         <p className="formulaire-inscription-cosplay">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvUVuJPq5twxyaisPLWRXXM677IhBbPgBNaS4f67dcP9utQA/viewform" target="_blank" rel="noopener noreferrer">Formulaire d'inscription</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvUVuJPq5twxyaisPLWRXXM677IhBbPgBNaS4f67dcP9utQA/viewform" target="_blank" rel="noopener noreferrer">{t('content.cosplay.formLink')}</a>
         </p>
       </div>
     );
@@ -33,4 +36,4 @@ class Cosplay extends Component {
 }
 
 
-export default Cosplay;
+export default translate('translations')(Cosplay);

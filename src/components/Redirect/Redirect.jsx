@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
+import { translate } from 'react-i18next';
 
 import './Redirect.css';
 
@@ -19,15 +20,17 @@ class Redirect extends Component {
 
   render() {
 
+    const { t } = this.props;
+
     const meta = <Helmet>
-      <title>Senyu | Redirection ...</title>
+      <title>Senyu | {t('titles.redirect')}</title>
     </Helmet>
     return (
       <section className="redirect">
         {meta}
         <h2>
-          Redirection...
-          </h2>
+          {t('content.redirect')}
+        </h2>
       </section>
     );
 
@@ -39,4 +42,4 @@ class Redirect extends Component {
 }
 
 
-export default Redirect;
+export default translate('translations')(Redirect);

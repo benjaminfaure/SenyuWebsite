@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
+import { translate } from 'react-i18next';
 
 import GenericImageDisplay from '../GenericContent/GenericImageDisplay.jsx';
 import GenericPDFDisplay from '../GenericContent/GenericPDFDisplay.jsx';
@@ -9,7 +10,6 @@ import './Reglement.css';
 const initialState = {
   reglementType: null
 }
-let titrePage = 'Aucun règlement trouvé';
 let contenuPage;
 
 class Reglement extends Component {
@@ -26,13 +26,18 @@ class Reglement extends Component {
   }
 
   render() {
+
+    const { t } = this.props;
+
+    let titrePage = t('content.regulation.none');
+
     switch (this.state.reglementType) {
       case "cosplay":
-        titrePage = "Règlement sur les répliques Cosplay";
+        titrePage = t('content.regulation.cosplay');
         contenuPage = <GenericImageDisplay filePath="/images/reglement_replique_cosplay.jpg" altTag="reglement replique cosplay" />;
         break;
       case "interieur":
-        titrePage = "Règlement intérieur";
+        titrePage = t('content.regulation.interior');
         contenuPage = <GenericPDFDisplay filePath="/reglement_interieur.pdf" />;
         break;
       default:
@@ -59,4 +64,4 @@ class Reglement extends Component {
 }
 
 
-export default Reglement;
+export default translate('translations')(Reglement);

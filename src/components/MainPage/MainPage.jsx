@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { translate } from 'react-i18next';
 
 import './MainPage.css';
 import MainPageMap from './MainPageMap.jsx';
@@ -9,6 +10,7 @@ class MainPage extends Component {
 
   render() {
 
+    const { t } = this.props;
 
     return (
       <section id="main-page">
@@ -16,10 +18,10 @@ class MainPage extends Component {
         </article>
         <article id="main-page-message">
           <img src="/images/logo_mobile.png" alt="logo" />
-          <span>Merci</span>
-          <span>Vous avez été nombreux à nous rejoindre pour Senyu 6.</span>
-          <span>Votre avis nous intéresse !</span>
-          <span><a href="https://tinyurl.com/ybbt5wvx">Cliquez ici pour répondre à notre questionnaire.</a></span>
+          <span>{t('content.home.line1')}</span>
+          <span>{t('content.home.line2')}</span>
+          <span>{t('content.home.line3')}</span>
+          <span><a href="https://tinyurl.com/ybbt5wvx">{t('content.home.line4')}</a></span>
         </article>
         <article>
           <MainPageMap />
@@ -32,4 +34,4 @@ class MainPage extends Component {
 
 
 
-export default MainPage;
+export default translate('translations')(MainPage);

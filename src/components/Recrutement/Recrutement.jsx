@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
+import { translate } from 'react-i18next';
 
 
 
@@ -9,22 +10,24 @@ class Recrutement extends Component {
 
   render() {
 
+    const { t } = this.props;
+
     const meta = <Helmet>
-      <title>Senyu | Recrutement</title>
+      <title>Senyu | {t('titles.recruitment')}</title>
     </Helmet>
 
     return (
       <section className="recrutement-form">
         {meta}
         <h2>
-          Le formulaire de recrutement est en cours de création.
+          {t('content.recruitment.line1')}
         </h2>
         <h2>
-          En attendant sa mise en ligne, vous pouvez nous contacter à l'adresse suivante :
+          {t('content.recruitment.line2')}
         </h2>
         <img src="/images/contact.png" alt="mail recrutement senyu" />
         <h3>
-          (c'est une image)
+          {t('content.recruitment.line3')}
       </h3>
       </section>
     );
@@ -32,4 +35,4 @@ class Recrutement extends Component {
 }
 
 
-export default Recrutement;
+export default translate('translations')(Recrutement);

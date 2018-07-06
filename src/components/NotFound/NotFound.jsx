@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
+import { translate } from 'react-i18next';
 
 import FaTrophy from 'react-icons/lib/fa/trophy';
 
@@ -11,24 +12,26 @@ class NotFound extends Component {
 
   render() {
 
+    const { t } = this.props;
+
     const meta = <Helmet>
-      <title>Senyu | Four oh Four !</title>
+      <title>Senyu | {t('titles.404')}</title>
     </Helmet>
     return (
       <section className="not-found">
         {meta}
         <h2>
-          Achievement Unlocked
-          </h2>
+          {t('content.404.line1')}
+        </h2>
         <h1 >
           <FaTrophy />
         </h1>
         <h2>
-          Trouver une page qui n'existe pas.
-          </h2>
+          {t('content.404.line2')}
+        </h2>
         <h5>
-          404
-          </h5>
+          {t('content.404.line3')}
+        </h5>
       </section>
     );
 
@@ -40,4 +43,4 @@ class NotFound extends Component {
 }
 
 
-export default NotFound;
+export default translate('translations')(NotFound);

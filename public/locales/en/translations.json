@@ -1,0 +1,119 @@
+{
+  "navigation": {
+    "infos": "Informations",
+    "faq": "FAQ",
+    "regulations": "Regulations",
+    "plans": "Floor map",
+    "planning": "Planning",
+    "guide": "Attendee's guide",
+    "contact": "Contact",
+    "communication": "Communication",
+    "exhibitors": "Exhibitors",
+    "guests": "Guests",
+    "cosplay": "Cosplay",
+    "animations": "Animations",
+    "stream": "Stream",
+    "language": "Language",
+    "tickets": "Ticketing"
+  },
+  "footer": {
+    "contact": "Contact us",
+    "press": "Press",
+    "recruitment": "Recruitment",
+    "partners": "Partners",
+    "allright": "all rights reserved"
+  },
+  "banner": {
+    "message": "Come back in 2019 !"
+  },
+  "titles": {
+    "generic": "March 3-4, 2018",
+    "communication": "Communication",
+    "contact": "Contact",
+    "workInProgress": "Work in progress",
+    "faq": "FAQ",
+    "guide": "Attendee's guide",
+    "404": "Four oh Four !",
+    "partners": "Partners",
+    "planning": "Planning",
+    "plans": "Plans",
+    "recruitment": "Recruitment"
+  },
+  "content": {
+    "animation": {
+      "pageTitle": "List of Animations"
+    },
+    "communication": {
+      "pageTitle": "Communication on creators selection"
+    },
+    "contact": {
+      "line1": "The contact form is being created.",
+      "line2": "In the meantime, you can contact us at: ",
+      "line3": "(it's a picture)"
+    },
+    "cosplay": {
+      "pageTitle": "Cosplay rules",
+      "message": "L'inscription au concours octroie une réduction sur le billet d'entrée qui correspond à 1,5€ de remise. La réduction s'applique sur le billet les  jours de participation au concours cosplay. Ainsi, si vous participez aux deux jours du concours, vous pourrez bénéficier jusqu'à 3€ de remise. Vous aurez également la possibilité d'avoir un coupe-fil en accédant directement à la convention depuis l'entrée sur le parking P4. Une vérification sera effectuée par cette entrée. Cette réduction s'appliquera par une remise lors de la validation de votre inscription au concours cosplay, dans la zone dédiée au Cosplay.",
+      "formLink": "Registration form"
+    },
+    "workInProgress": {
+      "pageTitle": "Work in progress",
+      "message": "Join the Empire and help us build the Death Star"
+    },
+    "exhibitor": {
+      "pageTitle": "List of Exhibitors"
+    },
+    "faq": {
+      "pageTitle": "Frequently Asked Questions"
+    },
+    "generic": {
+      "download": "Download",
+      "pagination": "Page <1>{{pageNumber}}</1> of <3>{{numPages}}</3>",
+      "noRecord": "No record found",
+      "search": "Search...",
+      "all": "All",
+      "boutique": "Shop",
+      "createur": "Creator",
+      "senyu": "Senyu",
+      "culture": "Culture",
+      "association": "Association"
+    },
+    "guest": {
+      "pageTitle": "List of Guests"
+    },
+    "guide": {
+      "pageTitle": "Attendee's guide"
+    },
+    "home": {
+      "line1": "Thank you",
+      "line2": "A lot of you joined us for Senyu 6.",
+      "line3": "Your feedback is precious to us!",
+      "line4": "Click here to answer to our feedback form"
+    },
+    "404": {
+      "line1": "Achievement Unlocked",
+      "line2": "Find a missing page.",
+      "line3": "404"
+    },
+    "partners": {
+      "pageTitle": "Partners"
+    },
+    "planning": {
+      "pageTitle": "Planning"
+    },
+    "plans": {
+      "pageTitle": "Floor map"
+    },
+    "recruitment": {
+      "line1": "The recruitment form is being created.",
+      "line2": "In the meantime, you can contact us at: ",
+      "line3": "(it's a picture)"
+    },
+    "redirect": "Redirection ...",
+    "regulation": {
+      "none": "No rules available",
+      "cosplay": "Rules on cosplay replicas",
+      "interior": "Rules of procedure"
+    }
+  }
+}

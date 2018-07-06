@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
+import { translate } from 'react-i18next';
 
 import GenericPDFDisplay from '../GenericContent/GenericPDFDisplay.jsx';
 
@@ -10,15 +11,17 @@ class Guide extends Component {
 
   render() {
 
+    const { t } = this.props;
+
     const meta = <Helmet>
-      <title>Senyu | Guide du visiteur</title>
+      <title>Senyu | {t('titles.guide')}</title>
     </Helmet>
 
     return (
       <div>
         {meta}
         <section className="generic-page-header">
-          <h1 className="generic-page-title">Guide du visiteur</h1>
+          <h1 className="generic-page-title">{t('content.guide.pageTitle')}</h1>
         </section>
         <GenericPDFDisplay filePath="/guide.pdf" />
       </div>
@@ -27,4 +30,4 @@ class Guide extends Component {
 }
 
 
-export default Guide;
+export default translate('translations')(Guide);

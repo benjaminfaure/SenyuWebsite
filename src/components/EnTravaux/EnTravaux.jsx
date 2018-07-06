@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
+import { translate } from 'react-i18next';
 
 import FaEmpire from 'react-icons/lib/fa/empire';
 
@@ -13,21 +14,23 @@ class EnTravaux extends Component {
 
   render() {
 
+    const { t } = this.props;
+
     const meta = <Helmet>
-      <title>Senyu | En travaux</title>
+      <title>Senyu | {t('titles.workInProgress')}</title>
     </Helmet>
     return (
       <section className="work-in-progress">
         {meta}
         <h2>
-          En travaux
-          </h2>
+          {t('content.workInProgress.pageTitle')}
+        </h2>
         <h1 >
           <FaEmpire />
         </h1>
         <h2>
-          Rejoins l'Empire et participe à la construction de l'Etoile de la Mort
-          </h2>
+          {t('content.workInProgress.message')}
+        </h2>
       </section>
     );
 
@@ -39,4 +42,4 @@ class EnTravaux extends Component {
 }
 
 
-export default EnTravaux;
+export default translate('translations')(EnTravaux);

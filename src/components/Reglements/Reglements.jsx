@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import { Link } from 'react-router-dom';
+import { translate } from 'react-i18next';
 
-import GenericImageDisplay from '../GenericContent/GenericImageDisplay.jsx';
 
 import './Reglements.css';
 
@@ -12,7 +12,9 @@ class Reglements extends Component {
 
   render() {
 
-    let titrePage = 'Liste des Règlements';
+
+    const { t } = this.props;
+    let titrePage = t('content.regulation.list');
 
     const meta = <Helmet>
       <title>Senyu | {titrePage}</title>
@@ -25,8 +27,8 @@ class Reglements extends Component {
           <h1 className="generic-page-title">{titrePage}</h1>
         </section>
       <section className="reglements-links">
-        <h2><Link to="/reglements/cosplay">Règlement répliques cosplay</Link></h2>
-        <h2><Link to="/reglements/interieur">Règlement Intérieur</Link></h2>
+        <h2><Link to="/reglements/cosplay">{t('content.regulation.cosplay')}</Link></h2>
+        <h2><Link to="/reglements/interieur">{t('content.regulation.interior')}</Link></h2>
       </section>
       </div>
     );
@@ -34,4 +36,4 @@ class Reglements extends Component {
 }
 
 
-export default Reglements;
+export default translate('translations')(Reglements);

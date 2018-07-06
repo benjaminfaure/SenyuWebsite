@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
+import { translate } from 'react-i18next';
 
 import './Stream.css';
 
@@ -14,8 +15,11 @@ class Stream extends Component {
   }
 
   render() {
+
+    const { t } = this.props;
+
     const meta = <Helmet>
-      <title>Senyu | Stream</title>
+      <title>Senyu | {t('titles.stream')}</title>
     </Helmet>
 
     return (
@@ -27,4 +31,4 @@ class Stream extends Component {
 }
 
 
-export default Stream;
+export default translate('translations')(Stream);

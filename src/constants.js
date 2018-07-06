@@ -5,25 +5,20 @@
 export const WIDTH_BREAKPOINT = 1024;
 export const TYPE_EXPOSANT = [
   {
-    code: "boutique",
-    label: "Boutique"
+    code: "boutique"
   },
   {
-    code: "createur",
-    label: "Créateur"
+    code: "createur"
   }];
 export const TYPE_ANIMATION = [
   {
-    code: "senyu",
-    label: "Senyu"
+    code: "senyu"
   },
   {
-    code: "culture",
-    label: "Culture"
+    code: "culture"
   },
   {
-    code: "association",
-    label: "Association"
+    code: "association"
   }];
 
 /**
