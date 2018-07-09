@@ -4,14 +4,14 @@ import fs from 'fs';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import Helmet from 'react-helmet';
+import { I18nextProvider } from 'react-i18next'
 
 import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router'
 import { renderRoutes } from 'react-router-config';
 import createServerStore from './store';
-import senyuStore from '../src/store/senyuStore';
-import App from '../src/components/App.jsx';
 import routes from '../src/routes'
+import i18n from '../src/i18n'
 
 // A simple helper function to prepare the HTML markup
 const prepHTML = (data, { html, head, body }) => {
@@ -27,6 +27,9 @@ const universalLoader = (req, res) => {
   const filePath = path.resolve(__dirname, '../build/index.html');
   const context = {};
 
+  let useri18n = i18n.cloneInstance()
+  useri18n.changeLanguage(req.language)
+
   fs.readFile(filePath, 'utf8', (err, htmlData) => {
     // If there's an error... serve up something nasty
     if (err) {
@@ -39,11 +42,13 @@ const universalLoader = (req, res) => {
 
     // Render App in React
     const routeMarkup = renderToString(
-      <Provider store={store}>
-        <StaticRouter location={req.url} context={context}>
-          {renderRoutes(routes)}
-        </StaticRouter>
-      </Provider>
+      <I18nextProvider i18n={ useri18n }>
+        <Provider store={store}>
+          <StaticRouter location={req.url} context={context}>
+            {renderRoutes(routes)}
+          </StaticRouter>
+        </Provider>
+      </I18nextProvider>
     );
 
     // Let Helmet know to insert the right tags
