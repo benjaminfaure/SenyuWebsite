@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Flag from 'react-world-flags'
 import { translate } from 'react-i18next';
 
 import FaFacebook from 'react-icons/lib/fa/facebook-official';
@@ -40,8 +39,8 @@ class Footer extends Component {
         </div>
         <div className="footer-content">
           <div className="footer-language">
-            <h5><a onClick={() => changeLanguage('fr')}><span><Flag code="FR"  height="14" className="flag"/> Français</span></a></h5>
-            <h5><a onClick={() => changeLanguage('en')}><span><Flag code="GB"  height="14" className="flag"/> English</span></a></h5>
+            <h5><a onClick={() => changeLanguage('fr')}><span><img src="/images/FR.png" title="french flag"/> Français</span></a></h5>
+            <h5><a onClick={() => changeLanguage('en')}><span><img src="/images/GB.png" title="english flag"/> English</span></a></h5>
           </div>
           <div className="footer-cc">
             <h5><span>Senyu</span>© 2017-2018 - {t('footer.allright')}</h5>
