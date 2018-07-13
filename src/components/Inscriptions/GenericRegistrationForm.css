@@ -1,0 +1,59 @@
+.generic-form {
+  margin-left: 25%;
+  width: 50%;
+}
+
+.generic-form span.requiredField {
+  color: brown;
+  padding-left: 2px;
+}
+
+.generic-form label,
+.generic-form textarea {
+  display: inline-block;
+  max-width: 100%;
+  margin: 5px 0;
+  font-weight: 700;
+}
+
+.generic-form label.checkbox {
+  display: flex;
+}
+
+
+.generic-form input,
+.generic-form textarea,
+.generic-form select {
+  width: 100%;
+}
+
+.tab {
+  padding: 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border: 1px var(--senyu-logo-blue) solid;
+  margin-bottom: 50px;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: var(--senyu-logo-blue);
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: var(--senyu-logo-green);
+}

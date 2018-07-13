@@ -6,7 +6,8 @@ import {
   RECEIVE_EXPOSANTS_ERROR,
   RECEIVE_EXPOSANTS_BY_TYPE_ERROR,
   RECEIVE_EXPOSANT_BY_ID_ERROR,
-  RECEIVE_FAQ_ERROR
+  RECEIVE_FAQ_ERROR,
+  RECEIVE_MODELES_DE_STAND_ERROR
 } from '../constants';
 import 'babel-polyfill';
 
@@ -46,6 +47,9 @@ const errorHandling = (state = null, action) => {
     case RECEIVE_INTERVENANT_BY_ID_ERROR:
       return action.error;
 
+    /* Modeles */
+    case RECEIVE_MODELES_DE_STAND_ERROR:
+    return action.error;
 
     default:
       return state;

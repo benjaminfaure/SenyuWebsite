@@ -11,8 +11,6 @@ class GenericListItem extends Component {
 
     let className = "generic-content-list-item "
 
-    const { t } = this.props;
-
     if (this.props.propClass) {
       className += this.props.propClass;
     }

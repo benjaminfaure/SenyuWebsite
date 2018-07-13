@@ -65,6 +65,23 @@ let SenyuAPI = {
     }
   },
 
+  async submitRegistration(values) {
+    try {
+      console.log({ values })
+      return 'coucou';
+    } catch (err) {
+      return { message: `Un erreur s'est produire lors de l'inscription : ${err.message}` };
+    }
+  },
+
+  async fetchModelesDeStands(type) {
+    try {
+      return await axios.get(`/modeles.json`);
+    } catch (err) {
+      return { message: `Un erreur s'est produire la récupération des modèles : ${err.message}` };
+    }
+  }
+
 };
 
 

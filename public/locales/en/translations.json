@@ -21,6 +21,7 @@
     "press": "Press",
     "recruitment": "Recruitment",
     "partners": "Partners",
+    "registration": "Registration",
     "allright": "all rights reserved"
   },
   "banner": {
@@ -37,7 +38,10 @@
     "partners": "Partners",
     "planning": "Planning",
     "plans": "Plans",
-    "recruitment": "Recruitment"
+    "recruitment": "Recruitment",
+    "registration": "Registration",
+    "redirect": "Redirection ...",
+    "stream": "Stream"
   },
   "content": {
     "animation": {
@@ -108,6 +112,21 @@
       "line1": "The recruitment form is being created.",
       "line2": "In the meantime, you can contact us at: ",
       "line3": "(it's a picture)"
+    },
+    "registration": {
+      "pageTitle": "Choose you registration form",
+      "animation": {
+        "pageTitle": "Animation form"
+      },
+      "createur": {
+        "pageTitle": "Creator form"
+      },
+      "invite": {
+        "pageTitle": "Guest form"
+      },
+      "boutique": {
+        "pageTitle": "Shop form"
+      }
     },
     "redirect": "Redirection ...",
     "regulation": {

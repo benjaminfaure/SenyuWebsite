@@ -82,3 +82,12 @@ export const RECEIVE_FAQ_ERROR = 'receive faq error';
 */
 export const REQUEST_IS_CHANNEL_LIVE = 'request is channel live';
 export const RECEIVE_IS_CHANNEL_LIVE = 'receive is channel live';
+
+
+/**
+* Constantes Inscriptions
+*/
+export const REQUEST_REGISTRATION_SUBMIT = 'request registration submit';
+export const REQUEST_MODELES_DE_STAND = 'request modeles de stand';
+export const RECEIVE_MODELES_DE_STAND_SUCCESS = 'receive modeles de stand success';
+export const RECEIVE_MODELES_DE_STAND_ERROR = 'receive modeles de stand error';

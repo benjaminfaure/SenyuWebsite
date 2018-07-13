@@ -22,7 +22,6 @@ class Intervenants extends Component {
 
   componentDidMount() {
     this.props.fetchIntervenants();
-    console.log(this.props.error);
   }
 
 
@@ -39,7 +38,6 @@ class Intervenants extends Component {
         title={intervenant.nom}>
       </GenericListItem>
     });
-    console.log(this.props.error);
 
     let searchBar = <GenericListSearch onChange={this.handleSearchInputChange.bind(this)} />;
 
