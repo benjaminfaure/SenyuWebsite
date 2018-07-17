@@ -3,6 +3,7 @@
   width: 50%;
 }
 
+
 .generic-form span.requiredField {
   color: brown;
   padding-left: 2px;
@@ -27,7 +28,38 @@
   width: 100%;
 }
 
-.tab {
+.generic-form button {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.generic-form #nextBtn,
+.generic-form #validBtn {
+  background-color: var(--senyu-logo-blue)
+}
+
+.generic-form #prevBtn {
+  background-color: var(--senyu-logo-grey);
+  margin-right: 5px;
+}
+
+.generic-form #validBtn:disabled {
+  background-color: var(--senyu-logo-grey)
+}
+
+.generic-form #prevBtn {
+  background-color: var(--senyu-logo-grey);
+  margin-right: 5px;
+}
+
+.generic-form .not-shown {
+  display: none;
+}
+
+.generic-form .tab {
   padding: 18px;
   background-color: white;
   display: none;
@@ -37,8 +69,19 @@
   margin-bottom: 50px;
 }
 
+.generic-form .parametreStand {
+  display: none;
+}
+
+
+.generic-form .validation-tab .libelle {
+  font-weight: 700;
+}
+
+
+
 /* Make circles that indicate the steps of the form: */
-.step {
+.generic-form .step {
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -50,10 +93,10 @@
 }
 
 /* Mark the active step: */
-.step.active {
+.generic-form .step.active {
   opacity: 1;
 }
 /* Mark the steps that are finished and valid: */
-.step.finish {
+.generic-form .step.finish {
   background-color: var(--senyu-logo-green);
 }

@@ -21,6 +21,14 @@ export const TYPE_ANIMATION = [
     code: "association"
   }];
 
+export const LIBELLE_REPARTITIONS_CLOISONS = {
+  "0A3CC": "Pas d’angle et 3 côtés cloisonnés",
+  "0A2CC": "Pas d’angle et 2 côtés parallèles cloisonnés",
+  "1A2CC": "2 côtés cloisonnés et  perpendiculaires entre eux",
+  "2A1CC": "1 côté cloisonné",
+  "4A0CC": "Ilôt : aucune cloison",
+}
+
 /**
 * Constantes REDUX
 */

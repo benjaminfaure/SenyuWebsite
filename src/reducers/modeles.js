@@ -5,6 +5,7 @@ import 'babel-polyfill';
 
 
 const initialState = {
+  selectedModele: 0,
   list: []
 }
 

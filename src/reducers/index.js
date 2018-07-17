@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form'
+
 import dimensions, * as fromDimensions from './dimensions';
 import errorHandling  from './errorHandling';
 import exposants from './exposants';
@@ -27,3 +28,4 @@ export default rootReducer;
 
 
 export const getDimensions = (state) => fromDimensions.getDimensions(state.dimensions);
+
