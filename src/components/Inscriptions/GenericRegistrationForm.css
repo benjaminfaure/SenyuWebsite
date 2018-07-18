@@ -2,13 +2,22 @@
   margin-left: 25%;
   width: 50%;
 }
-
+.generic-form .generic-form-header {
+  background-color: var(--senyu-logo-blue);
+  color: white;
+  padding: 10px 15px;
+}
+.generic-form .generic-form-body {
+  padding: 18px;
+}
+.generic-form  .generic-form-recap-title {
+  color: var(--senyu-logo-blue);
+}
 
 .generic-form span.requiredField {
   color: brown;
   padding-left: 2px;
 }
-
 .generic-form label,
 .generic-form textarea {
   display: inline-block;
@@ -16,12 +25,9 @@
   margin: 5px 0;
   font-weight: 700;
 }
-
 .generic-form label.checkbox {
   display: flex;
 }
-
-
 .generic-form input,
 .generic-form textarea,
 .generic-form select {
@@ -36,31 +42,12 @@
   cursor: pointer;
 }
 
-.generic-form #nextBtn,
-.generic-form #validBtn {
-  background-color: var(--senyu-logo-blue)
-}
-
-.generic-form #prevBtn {
-  background-color: var(--senyu-logo-grey);
-  margin-right: 5px;
-}
-
-.generic-form #validBtn:disabled {
-  background-color: var(--senyu-logo-grey)
-}
-
-.generic-form #prevBtn {
-  background-color: var(--senyu-logo-grey);
-  margin-right: 5px;
-}
 
 .generic-form .not-shown {
   display: none;
 }
 
 .generic-form .tab {
-  padding: 18px;
   background-color: white;
   display: none;
   overflow: hidden;
@@ -74,11 +61,20 @@
 }
 
 
+/*
+  Validation Tab
+*/
 .generic-form .validation-tab .libelle {
   font-weight: 700;
 }
+.generic-form .validation-tab .value {
+  color: var(--senyu-logo-red);
+}
 
 
+/*
+  Tabs
+*/
 
 /* Make circles that indicate the steps of the form: */
 .generic-form .step {
@@ -99,4 +95,24 @@
 /* Mark the steps that are finished and valid: */
 .generic-form .step.finish {
   background-color: var(--senyu-logo-green);
+}
+
+
+.generic-form #nextBtn,
+.generic-form #validBtn {
+  background-color: var(--senyu-logo-blue)
+}
+
+.generic-form #prevBtn {
+  background-color: var(--senyu-logo-grey);
+  margin-right: 5px;
+}
+
+.generic-form #validBtn:disabled {
+  background-color: var(--senyu-logo-grey)
+}
+
+.generic-form #prevBtn {
+  background-color: var(--senyu-logo-grey);
+  margin-right: 5px;
 }

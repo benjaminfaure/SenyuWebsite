@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import ReferentForm from './ReferentForm.jsx';
 import IntervenantForm from './IntervenantForm.jsx';
 import StandForm from './StandForm.jsx';
+import InfosComplementairesForm from './InfosComplementairesForm.jsx';
 import ValidationForm from './ValidationForm.jsx';
 import RegistrationsActionCreators from '../../actions/RegistrationsActionCreators';
 
@@ -54,6 +55,7 @@ class GenericRegistrationForm extends Component {
             <ReferentForm/>
             <IntervenantForm/>
             <StandForm modeles={this.props.modeles}/>
+            <InfosComplementairesForm registrationType={registrationType}/>
             <ValidationForm pristine={pristine} submitting={submitting} invalid={invalid} />
 
           <div style={{ overflow: 'auto' }}>
@@ -64,6 +66,7 @@ class GenericRegistrationForm extends Component {
           </div>
 
           <div style={{ textAlign: 'center', marginTop: "40px" }}>
+            <span className="step"></span>
             <span className="step"></span>
             <span className="step"></span>
             <span className="step"></span>

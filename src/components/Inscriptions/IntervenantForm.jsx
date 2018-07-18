@@ -13,70 +13,74 @@ class IntervenantForm extends Component {
 
     return (
       <div className="tab" ref="intervenant">
-        <label htmlFor="nomIntervenant">
-          Nom de l'intervenant sur le site et sur le panonceau du stand
+        <div className="generic-form-header">Informations publiées sur le site</div>
+        <div className="generic-form-body">
+          <label htmlFor="nomIntervenant">
+            Nom de l'intervenant sur le site et sur le panonceau du stand
             <span className="requiredField">*</span>
-        </label>
-        <Field
-          component="input"
-          type="text"
-          id="nomIntervenant" name="nomIntervenant" required />
+          </label>
+          <Field
+            component="input"
+            type="text"
+            id="nomIntervenant" name="nomIntervenant" required />
 
-        <label htmlFor="descriptionIntervenant">
-          Description de l'intervenant publiée sur le site
+          <label htmlFor="descriptionIntervenant">
+            Description de l'intervenant publiée sur le site
             <span className="requiredField">*</span>
-        </label>
-        <Field
-          component="textarea"
-          id="descriptionIntervenant" name="descriptionIntervenant"
-          rows="10" required />
+          </label>
+          <Field
+            component="textarea"
+            maxlength="2048"
+            id="descriptionIntervenant" name="descriptionIntervenant"
+            rows="10" required />
 
-        <label htmlFor="facebook">
-          Lien vers la page Facebook officielle
+          <label htmlFor="facebook">
+            Lien vers la page Facebook officielle
               </label>
-        <Field
-          component="input"
-          type="url"
-          id="facebook" name="facebook" />
+          <Field
+            component="input"
+            type="url"
+            id="facebook" name="facebook" />
 
-        <label htmlFor="twitter">
-          Lien vers la page Twitter officielle
+          <label htmlFor="twitter">
+            Lien vers la page Twitter officielle
               </label>
-        <Field
-          component="input"
-          type="url"
-          id="twitter" name="twitter" />
+          <Field
+            component="input"
+            type="url"
+            id="twitter" name="twitter" />
 
-        <label htmlFor="youtube">
-          Lien vers la page Youtube officielle
+          <label htmlFor="youtube">
+            Lien vers la page Youtube officielle
               </label>
-        <Field
-          component="input"
-          type="url"
-          id="youtube" name="youtube" />
+          <Field
+            component="input"
+            type="url"
+            id="youtube" name="youtube" />
 
-        <label htmlFor="twitch">
-          Lien vers la page Twitch officielle
+          <label htmlFor="twitch">
+            Lien vers la page Twitch officielle
             </label>
-        <Field
-          component="input"
-          type="url"
-          id="twitch" name="twitch" />
+          <Field
+            component="input"
+            type="url"
+            id="twitch" name="twitch" />
 
-        <label htmlFor="siteWeb">
-          Lien vers le site web officiel
+          <label htmlFor="siteWeb">
+            Lien vers le site web officiel
             </label>
-        <Field
-          component="input"
-          type="url"
-          id="siteWeb" name="siteWeb" />
+          <Field
+            component="input"
+            type="url"
+            id="siteWeb" name="siteWeb" />
 
-        <label htmlFor="image">
-          Image affichée sur le site web
+          <label htmlFor="image">
+            Image affichée sur le site web
             </label>
-        <Field
-          component={GenericFileUpload}
-          id="image" name="image" />
+          <Field
+            component={GenericFileUpload}
+            id="image" name="image" />
+        </div>
       </div>
 
 
