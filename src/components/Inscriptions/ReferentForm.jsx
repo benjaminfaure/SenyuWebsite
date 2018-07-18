@@ -20,7 +20,7 @@ class ReferentForm extends Component {
           <Field
             component="input"
             type="text"
-            id="nomReferent" name="nomReferent" required />
+            id="nomReferent" className="generic-form-field" name="nomReferent" required />
 
           <label htmlFor="prenomReferent">
             Prénom de la personne référente
@@ -29,7 +29,7 @@ class ReferentForm extends Component {
           <Field
             component="input"
             type="text"
-            id="prenomReferent" name="prenomReferent" required />
+            id="prenomReferent" className="generic-form-field" name="prenomReferent" required />
 
           <label htmlFor="dateNaissanceReferent">
             Date de naissance de la personne référente
@@ -38,7 +38,7 @@ class ReferentForm extends Component {
           <Field
             component="input"
             type="date"
-            id="dateNaissanceReferent" name="dateNaissanceReferent" required />
+            id="dateNaissanceReferent" className="generic-form-field" name="dateNaissanceReferent" required />
 
           <label htmlFor="mailReferent">
             Mail de la personne référente
@@ -47,7 +47,7 @@ class ReferentForm extends Component {
           <Field
             component="input"
             type="email"
-            id="mailReferent" name="mailReferent" required />
+            id="mailReferent" className="generic-form-field" name="mailReferent" required />
 
           <label htmlFor="adresseReferent">
             Adresse de la personne référente
@@ -56,7 +56,7 @@ class ReferentForm extends Component {
           <Field
             component="input"
             type="text"
-            id="adresseReferent" name="adresseReferent" required />
+            id="adresseReferent" className="generic-form-field" name="adresseReferent" required />
 
           <label htmlFor="telephoneReferent">
             Téléphone de la personne référente
@@ -65,7 +65,7 @@ class ReferentForm extends Component {
           <Field
             component="input"
             type="tel"
-            id="telephoneReferent" name="telephoneReferent"
+            id="telephoneReferent" className="generic-form-field" name="telephoneReferent"
             placeholder="01-23-45-67-89"
             pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required />
 
@@ -74,7 +74,7 @@ class ReferentForm extends Component {
               <Field
               component="input"
               type="checkbox"
-              id="informationsDeContactConfidentielles" name="informationsDeContactConfidentielles" />
+              id="informationsDeContactConfidentielles" className="generic-form-field" name="informationsDeContactConfidentielles" />
           </label>
         </div>
       </div>

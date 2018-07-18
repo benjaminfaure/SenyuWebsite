@@ -71,7 +71,7 @@ class StandForm extends Component {
             component="select"
             type="text"
             onChange={this.handleModelesSelect}
-            id="modeleDeStand" name="modeleDeStand" required >
+            id="modeleDeStand" className="generic-form-field" name="modeleDeStand" required >
             {modelesList}
           </Field>
 
@@ -86,7 +86,7 @@ class StandForm extends Component {
                 min={this.state.longueurMin}
                 max={this.state.longueurMax}
                 type="number" ref="longueur"
-                id="longueur" name="longueur" />
+                id="longueur" className="generic-form-field" name="longueur" />
             </p>
             <p className={this.state.profondeurVisible ? '' : 'not-shown'}>
               <label htmlFor="profondeur">
@@ -98,7 +98,7 @@ class StandForm extends Component {
                 min={this.state.profondeurMin}
                 max={this.state.profondeurMax}
                 type="number" ref="profondeur"
-                id="profondeur" name="profondeur" />
+                id="profondeur" className="generic-form-field" name="profondeur" />
             </p>
 
             <p className={this.state.nombreDeChaisesVisible ? '' : 'not-shown'}>
@@ -110,7 +110,7 @@ class StandForm extends Component {
                 min={this.state.nombreDeChaisesMin}
                 max={this.state.nombreDeChaisesMax}
                 type="number" ref="nombreDeChaises"
-                id="nombreDeChaises" name="nombreDeChaises" />
+                id="nombreDeChaises" className="generic-form-field" name="nombreDeChaises" />
             </p>
 
             <p className={this.state.nombreDeTablesVisible ? '' : 'not-shown'}>
@@ -122,7 +122,7 @@ class StandForm extends Component {
                 min={this.state.nombreDeTablesMin}
                 max={this.state.nombreDeTablesMax}
                 type="number" ref="nombreDeTables"
-                id="nombreDeTables" name="nombreDeTables" />
+                id="nombreDeTables" className="generic-form-field" name="nombreDeTables" />
             </p>
 
             <p className={this.state.nombreDeBadgesVisible ? '' : 'not-shown'}>
@@ -134,7 +134,7 @@ class StandForm extends Component {
                 min={this.state.nombreDeBadgesMin}
                 max={this.state.nombreDeBadgesMax}
                 type="number" ref="nombreDeBadges"
-                id="nombreDeBadges" name="nombreDeBadges" />
+                id="nombreDeBadges" className="generic-form-field" name="nombreDeBadges" />
             </p>
 
             <p className={this.state.repartitionsDesCloisonsVisible ? '' : 'not-shown'}>
@@ -144,7 +144,7 @@ class StandForm extends Component {
               <Field
                 component="select"
                 type="text"
-                id="repartitionsDesCloisons" name="repartitionsDesCloisons" required >
+                id="repartitionsDesCloisons" className="generic-form-field" name="repartitionsDesCloisons" required >
                 {cloisonRepartitionList}
               </Field>
             </p>
@@ -157,7 +157,7 @@ class StandForm extends Component {
                 component="input"
                 disabled={this.state.presenceRaccordementElectriqueModifiable ? false : true}
                 type="checkbox" ref="raccordementElectriquePresent"
-                id="raccordementElectriquePresent" name="raccordementElectriquePresent" />
+                id="raccordementElectriquePresent" className="generic-form-field" name="raccordementElectriquePresent" />
             </p>
 
             <label htmlFor="dossierInscriptionPrisEnCompte">
@@ -166,7 +166,7 @@ class StandForm extends Component {
             <Field
               component="input"
               type="checkbox"
-              id="dossierInscriptionPrisEnCompte" name="dossierInscriptionPrisEnCompte" />
+              id="dossierInscriptionPrisEnCompte" className="generic-form-field" name="dossierInscriptionPrisEnCompte" />
           </div>
         </div>
       </div>

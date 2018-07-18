@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { reduxForm, FormSection  } from 'redux-form'
+import { reduxForm } from 'redux-form'
 import { Helmet } from "react-helmet";
 import { translate } from 'react-i18next';
 import { connect } from 'react-redux';
@@ -25,6 +25,16 @@ class GenericRegistrationForm extends Component {
     this.handleNextPrev = this.handleNextPrev.bind(this);
     this.handleShowTab = this.handleShowTab.bind(this);
     this.fixStepIndicator = this.fixStepIndicator.bind(this);
+    this.validateFormTab = this.validateFormTab.bind(this);
+
+    this.formRefs = {
+      referent: {
+        nomReferent: React.createRef(),
+        prenomReferent: React.createRef(),
+
+      }
+    }
+
   }
 
   componentDidMount() {
@@ -52,11 +62,11 @@ class GenericRegistrationForm extends Component {
           <h1 className="generic-page-title">{pageTitle}</h1>
         </section>
         <form onSubmit={handleSubmit(this.props.submitRegistration)}>
-            <ReferentForm/>
-            <IntervenantForm/>
-            <StandForm modeles={this.props.modeles}/>
-            <InfosComplementairesForm registrationType={registrationType}/>
-            <ValidationForm pristine={pristine} submitting={submitting} invalid={invalid} />
+          <ReferentForm formRefs={this.formRefs.referent} />
+          <IntervenantForm />
+          <StandForm modeles={this.props.modeles} />
+          <InfosComplementairesForm registrationType={registrationType} />
+          <ValidationForm pristine={pristine} submitting={submitting} invalid={invalid} />
 
           <div style={{ overflow: 'auto' }}>
             <div style={{ float: 'right' }}>
@@ -80,7 +90,8 @@ class GenericRegistrationForm extends Component {
 
   handleNextPrev(n) {
     // Exit the function if any field in the current tab is invalid:
-    if (tabs.length > 0) {
+    if (n == 1 && !this.validateFormTab()) return false;
+    if (tabs.length > 0 ) {
 
       // Hide the current tab:
       tabs[currentTab].style.display = "none";
@@ -126,6 +137,19 @@ class GenericRegistrationForm extends Component {
     steps[n].className += " active";
   }
 
+  validateFormTab() {
+    if (tabs.length > 0) {
+      let tab = tabs[currentTab];
+      let formFields = tab.getElementsByClassName("generic-form-field")
+      for (let i = 0; i < formFields.length; i++) {
+        if(!formFields[i].checkValidity())
+          return false;
+      }
+      return true;
+    }
+    return false;
+  }
+
 }
 
 const mapStateToProps = (state) => (
@@ -136,7 +160,7 @@ const mapStateToProps = (state) => (
 
 const mapDispatchToProps = (dispatch) => (
   {
-    submitRegistration: (values) => dispatch(RegistrationsActionCreators.submitRegistration({ ...values, type: registrationType })),
+    submitRegistration: (values) => dispatch(RegistrationsActionCreators.submitRegistration({ ...values, typeIntervenant: registrationType })),
     fetchModelesDeStands: (type) => dispatch(RegistrationsActionCreators.fetchModelesDeStands(type))
   }
 );

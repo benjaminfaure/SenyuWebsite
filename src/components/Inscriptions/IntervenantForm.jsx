@@ -22,7 +22,7 @@ class IntervenantForm extends Component {
           <Field
             component="input"
             type="text"
-            id="nomIntervenant" name="nomIntervenant" required />
+            id="nomIntervenant" className="generic-form-field" name="nomIntervenant" required />
 
           <label htmlFor="descriptionIntervenant">
             Description de l'intervenant publiée sur le site
@@ -30,8 +30,8 @@ class IntervenantForm extends Component {
           </label>
           <Field
             component="textarea"
-            maxlength="2048"
-            id="descriptionIntervenant" name="descriptionIntervenant"
+            maxLength="2048"
+            id="descriptionIntervenant" className="generic-form-field" name="descriptionIntervenant"
             rows="10" required />
 
           <label htmlFor="facebook">
@@ -40,7 +40,7 @@ class IntervenantForm extends Component {
           <Field
             component="input"
             type="url"
-            id="facebook" name="facebook" />
+            id="facebook" className="generic-form-field" name="facebook" />
 
           <label htmlFor="twitter">
             Lien vers la page Twitter officielle
@@ -48,7 +48,7 @@ class IntervenantForm extends Component {
           <Field
             component="input"
             type="url"
-            id="twitter" name="twitter" />
+            id="twitter" className="generic-form-field" name="twitter" />
 
           <label htmlFor="youtube">
             Lien vers la page Youtube officielle
@@ -56,7 +56,7 @@ class IntervenantForm extends Component {
           <Field
             component="input"
             type="url"
-            id="youtube" name="youtube" />
+            id="youtube" className="generic-form-field" name="youtube" />
 
           <label htmlFor="twitch">
             Lien vers la page Twitch officielle
@@ -64,7 +64,7 @@ class IntervenantForm extends Component {
           <Field
             component="input"
             type="url"
-            id="twitch" name="twitch" />
+            id="twitch" className="generic-form-field" name="twitch" />
 
           <label htmlFor="siteWeb">
             Lien vers le site web officiel
@@ -72,14 +72,14 @@ class IntervenantForm extends Component {
           <Field
             component="input"
             type="url"
-            id="siteWeb" name="siteWeb" />
+            id="siteWeb" className="generic-form-field" name="siteWeb" />
 
           <label htmlFor="image">
             Image affichée sur le site web
             </label>
           <Field
             component={GenericFileUpload}
-            id="image" name="image" />
+            id="image" className="generic-form-field" name="image" />
         </div>
       </div>
 

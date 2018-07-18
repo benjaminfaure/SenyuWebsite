@@ -35,7 +35,7 @@ class InfosComplementairesForm extends Component {
             type="text" ref="numeroSIRET"
             placeholder="Renseignez votre SIRET"
             onBlur={this.handleSiretValidation}
-            id="numeroSIRET" name="numeroSIRET" required />
+            id="numeroSIRET" className="generic-form-field" name="numeroSIRET" required />
         </div>;
 
     }
@@ -48,8 +48,8 @@ class InfosComplementairesForm extends Component {
           </label>
           <Field
             component="textarea"
-            maxlength="1024"
-            id="materielApporte" name="materielApporte"
+            maxLength="1024"
+            id="materielApporte" className="generic-form-field" name="materielApporte"
             rows="10" />
 
           <label htmlFor="animationsProposees">
@@ -57,8 +57,8 @@ class InfosComplementairesForm extends Component {
           </label>
           <Field
             component="textarea"
-            maxlength="2048"
-            id="animationsProposees" name="animationsProposees"
+            maxLength="2048"
+            id="animationsProposees" className="generic-form-field" name="animationsProposees"
             rows="10" />
 
           <label htmlFor="moyenDeTransport">
@@ -68,7 +68,7 @@ class InfosComplementairesForm extends Component {
           <Field
             component="select"
             type="text"
-            id="moyenDeTransport" name="moyenDeTransport" required >
+            id="moyenDeTransport" className="generic-form-field" name="moyenDeTransport" required >
             <option key="none" style={{ display: "none" }}></option>
             <option value="voiture">Voiture</option>
             <option value="train">Train</option>
@@ -82,7 +82,7 @@ class InfosComplementairesForm extends Component {
           <Field
             component="select"
             type="text"
-            id="typeDeLogement" name="typeDeLogement" required >
+            id="typeDeLogement" className="generic-form-field" name="typeDeLogement" required >
             <option key="none" style={{ display: "none" }}></option>
             <option value="hotel">Hotel</option>
             <option value="autre">Autre</option>
