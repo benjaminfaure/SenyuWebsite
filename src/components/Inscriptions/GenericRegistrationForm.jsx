@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { reduxForm } from 'redux-form'
+import { reduxForm, FormSection } from 'redux-form'
 import { Helmet } from "react-helmet";
 import { translate } from 'react-i18next';
 import { connect } from 'react-redux';
@@ -16,6 +16,13 @@ import './GenericRegistrationForm.css';
 let registrationType;
 let currentTab = 0;
 let tabs = [];
+let initialValues = {
+  etape1: {},
+  etape2: {},
+  etape3: {},
+  etape4: {},
+  etape5: {}
+}
 
 class GenericRegistrationForm extends Component {
 
@@ -55,18 +62,26 @@ class GenericRegistrationForm extends Component {
       <title>Senyu | {pageTitle}</title>
     </Helmet>
 
-    return (
-      <div className="generic-form">
-        {meta}
-        <section className="generic-page-header">
-          <h1 className="generic-page-title">{pageTitle}</h1>
-        </section>
-        <form onSubmit={handleSubmit(this.props.submitRegistration)}>
-          <ReferentForm formRefs={this.formRefs.referent} />
-          <IntervenantForm />
-          <StandForm modeles={this.props.modeles} />
-          <InfosComplementairesForm registrationType={registrationType} />
-          <ValidationForm pristine={pristine} submitting={submitting} invalid={invalid} />
+    let form;
+
+    if(!this.props.registrations.registrationComplete) {
+      form =
+      <form onSubmit={handleSubmit(this.props.submitRegistration)}>
+          <FormSection name="etape1">
+            <ReferentForm formRefs={this.formRefs.referent} />
+          </FormSection>
+          <FormSection name="etape2">
+            <IntervenantForm />
+          </FormSection>
+          <FormSection name="etape3">
+            <StandForm modeles={this.props.modeles} />
+          </FormSection>
+          <FormSection name="etape4">
+            <InfosComplementairesForm registrationType={registrationType} />
+          </FormSection>
+          <FormSection name="etape5">
+            <ValidationForm pristine={pristine} submitting={submitting} invalid={invalid} />
+          </FormSection>
 
           <div style={{ overflow: 'auto' }}>
             <div style={{ float: 'right' }}>
@@ -83,6 +98,17 @@ class GenericRegistrationForm extends Component {
             <span className="step"></span>
           </div>
         </form>
+    } else {
+      form = <p className="generic-form-completed" >Merci, votre inscription a bien été prise en compte</p>
+    }
+
+    return (
+      <div className="generic-form">
+        {meta}
+        <section className="generic-page-header">
+          <h1 className="generic-page-title">{pageTitle}</h1>
+        </section>
+        {form}
       </div>
     );
 
@@ -90,8 +116,8 @@ class GenericRegistrationForm extends Component {
 
   handleNextPrev(n) {
     // Exit the function if any field in the current tab is invalid:
-    if (n == 1 && !this.validateFormTab()) return false;
-    if (tabs.length > 0 ) {
+    if (n === 1 && !this.validateFormTab()) return false;
+    if (tabs.length > 0) {
 
       // Hide the current tab:
       tabs[currentTab].style.display = "none";
@@ -142,7 +168,7 @@ class GenericRegistrationForm extends Component {
       let tab = tabs[currentTab];
       let formFields = tab.getElementsByClassName("generic-form-field")
       for (let i = 0; i < formFields.length; i++) {
-        if(!formFields[i].checkValidity())
+        if (!formFields[i].checkValidity())
           return false;
       }
       return true;
@@ -155,6 +181,7 @@ class GenericRegistrationForm extends Component {
 const mapStateToProps = (state) => (
   {
     modeles: state.modeles.list,
+    registrations: state.registrations
   }
 );
 
@@ -165,6 +192,6 @@ const mapDispatchToProps = (dispatch) => (
   }
 );
 
-const createReduxForm = reduxForm({ form: 'registration' })
+const createReduxForm = reduxForm({ form: 'registration', initialValues })
 
 export default createReduxForm(translate('translations')(connect(mapStateToProps, mapDispatchToProps)(GenericRegistrationForm)));

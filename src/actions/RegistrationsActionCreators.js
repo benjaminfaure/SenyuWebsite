@@ -1,5 +1,7 @@
 import {
   REQUEST_REGISTRATION_SUBMIT,
+  RECEIVE_REGISTRATION_SUBMIT_SUCCESS,
+  RECEIVE_REGISTRATION_SUBMIT_ERROR,
   REQUEST_MODELES_DE_STAND,
   RECEIVE_MODELES_DE_STAND_SUCCESS,
   RECEIVE_MODELES_DE_STAND_ERROR
@@ -13,7 +15,13 @@ let RegistrationsActionCreators = {
   submitRegistration(values) {
     return (dispatch) => {
       dispatch({ type: REQUEST_REGISTRATION_SUBMIT });
-      SenyuAPI.submitRegistration(values).then((response) => {});
+      SenyuAPI.submitRegistration(values).then((response) => {
+        if(response.status >= 200 && response.status < 300) {
+          dispatch({ type: RECEIVE_REGISTRATION_SUBMIT_SUCCESS, values, response});
+        } else {
+          dispatch({ type: RECEIVE_REGISTRATION_SUBMIT_ERROR, values, error: response.data })
+        }
+      });
     };
   },
 

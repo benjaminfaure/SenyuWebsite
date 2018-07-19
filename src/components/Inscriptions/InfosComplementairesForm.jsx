@@ -108,7 +108,6 @@ class InfosComplementairesForm extends Component {
     } else {
       e.target.setCustomValidity("");
     }
-    console.log(isValid)
   }
 
 

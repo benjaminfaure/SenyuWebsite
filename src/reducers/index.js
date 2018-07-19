@@ -9,6 +9,7 @@ import animations from './animations';
 import faq from './faq';
 import twitch from './twitch';
 import modeles from './modeles';
+import registrations from './registrations';
 
 
 const rootReducer = combineReducers({
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
   form: formReducer,
   intervenants,
   modeles,
+  registrations,
   twitch,
 });
 

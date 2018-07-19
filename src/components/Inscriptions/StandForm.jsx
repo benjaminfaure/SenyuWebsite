@@ -162,11 +162,12 @@ class StandForm extends Component {
 
             <label htmlFor="dossierInscriptionPrisEnCompte">
               Je certifie avoir pris connaissance du dossier d’inscription
+              <span className="requiredField">*</span>
             </label>
             <Field
               component="input"
               type="checkbox"
-              id="dossierInscriptionPrisEnCompte" className="generic-form-field" name="dossierInscriptionPrisEnCompte" />
+              id="dossierInscriptionPrisEnCompte" className="generic-form-field" name="dossierInscriptionPrisEnCompte" required/>
           </div>
         </div>
       </div>
@@ -183,13 +184,13 @@ class StandForm extends Component {
 
     if (modele) {
       this.setState(modele)
-      this.props.changeFieldValue('longueur', modele.longueurParDefaut);
-      this.props.changeFieldValue('profondeur', modele.profondeurParDefaut);
-      this.props.changeFieldValue('nombreDeChaises', modele.nombreDeChaisesParDefaut);
-      this.props.changeFieldValue('nombreDeTables', modele.nombreDeTablesParDefaut);
-      this.props.changeFieldValue('nombreDeBadges', modele.nombreDeBadgesParDefaut);
-      this.props.changeFieldValue('repartitionsDesCloisons', modele.repartitionsDesCloisonsParDefaut);
-      this.props.changeFieldValue('raccordementElectriquePresent', modele.raccordementElectriquePresentParDefaut);
+      this.props.changeFieldValue('etape3.longueur', modele.longueurParDefaut);
+      this.props.changeFieldValue('etape3.profondeur', modele.profondeurParDefaut);
+      this.props.changeFieldValue('etape3.nombreDeChaises', modele.nombreDeChaisesParDefaut);
+      this.props.changeFieldValue('etape3.nombreDeTables', modele.nombreDeTablesParDefaut);
+      this.props.changeFieldValue('etape3.nombreDeBadges', modele.nombreDeBadgesParDefaut);
+      this.props.changeFieldValue('etape3.repartitionsDesCloisons', modele.repartitionsDesCloisonsParDefaut);
+      this.props.changeFieldValue('etape3.raccordementElectriquePresent', modele.raccordementElectriquePresentParDefaut);
       this.refs["parametreStand"].style.display = "block";
     }
   }
