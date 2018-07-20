@@ -2,6 +2,9 @@ import App from './components/App.jsx';
 
 import MainPage from './components/MainPage/MainPage.jsx';
 
+import Inscriptions from './components/Inscriptions/Inscriptions.jsx';
+import GenericRegistrationForm from './components/Inscriptions/GenericRegistrationForm.jsx';
+
 import Intervenant from './components/Intervenants/Intervenant.jsx';
 import Intervenants from './components/Intervenants/Intervenants.jsx';
 
@@ -53,6 +56,16 @@ const routes = [
         path: '/',
         exact: true,
         component: MainPage
+      },
+      /* Inscriptions */
+      {
+        path: '/inscription',
+        exact: true,
+        component: Inscriptions
+      },
+      {
+        path: '/inscription/:registrationType',
+        component: GenericRegistrationForm
       },
       /* Intervenants */
       {

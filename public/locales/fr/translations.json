@@ -21,6 +21,7 @@
     "press": "Presse",
     "recruitment": "Recrutement",
     "partners": "Partenaires",
+    "registration": "Inscription",
     "allright": "tous droits réservés"
   },
   "banner": {
@@ -39,6 +40,7 @@
     "planning": "Planning",
     "plans": "Plans",
     "recruitment": "Recrutement",
+    "registration": "Inscription",
     "redirect": "Redirection ...",
     "stream": "Stream"
   },
@@ -111,6 +113,21 @@
       "line1": "Le formulaire de recrutement est en cours de création.",
       "line2": "En attendant sa mise en ligne, vous pouvez nous contacter à l'adresse suivante :",
       "line3": "(c'est une image)"
+    },
+    "registration": {
+      "pageTitle": "Choisissez votre formulaire d'inscription",
+      "animation": {
+        "pageTitle": "Formulaire animation"
+      },
+      "createur": {
+        "pageTitle": "Formulaire créateur"
+      },
+      "invite": {
+        "pageTitle": "Formulaire invité"
+      },
+      "boutique": {
+        "pageTitle": "Formulaire boutique"
+      }
     },
     "redirect": "Redirection ...",
     "regulation": {

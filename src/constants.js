@@ -21,6 +21,14 @@ export const TYPE_ANIMATION = [
     code: "association"
   }];
 
+export const LIBELLE_REPARTITIONS_CLOISONS = {
+  "0A3CC": "Pas d’angle et 3 côtés cloisonnés",
+  "0A2CC": "Pas d’angle et 2 côtés parallèles cloisonnés",
+  "1A2CC": "2 côtés cloisonnés et  perpendiculaires entre eux",
+  "2A1CC": "1 côté cloisonné",
+  "4A0CC": "Ilôt : aucune cloison",
+}
+
 /**
 * Constantes REDUX
 */
@@ -82,3 +90,14 @@ export const RECEIVE_FAQ_ERROR = 'receive faq error';
 */
 export const REQUEST_IS_CHANNEL_LIVE = 'request is channel live';
 export const RECEIVE_IS_CHANNEL_LIVE = 'receive is channel live';
+
+
+/**
+* Constantes Inscriptions
+*/
+export const REQUEST_REGISTRATION_SUBMIT = 'request registration submit';
+export const RECEIVE_REGISTRATION_SUBMIT_SUCCESS = 'receive registration submit success';
+export const RECEIVE_REGISTRATION_SUBMIT_ERROR = 'receive registration submit error';
+export const REQUEST_MODELES_DE_STAND = 'request modeles de stand';
+export const RECEIVE_MODELES_DE_STAND_SUCCESS = 'receive modeles de stand success';
+export const RECEIVE_MODELES_DE_STAND_ERROR = 'receive modeles de stand error';

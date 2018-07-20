@@ -65,6 +65,27 @@ let SenyuAPI = {
     }
   },
 
+  async submitRegistration(values) {
+    try {
+      //return await axios.post(`${API_URL}/inscriptions`, values, { headers: API_HEADERS });
+      return {
+        status: 200,
+        data : {}
+      };
+    } catch (err) {
+      return { message: `Un erreur s'est produire lors de l'inscription : ${err.message}` };
+    }
+  },
+
+  async fetchModelesDeStands(type) {
+    try {
+      return await axios.get(`/modeles.json`);
+      //return await axios.get(`${API_URL}/modeles-de-stands?type=${type}`, { headers: API_HEADERS });
+    } catch (err) {
+      return { message: `Un erreur s'est produire la récupération des modèles : ${err.message}` };
+    }
+  }
+
 };
 
 

@@ -4,7 +4,10 @@
 }
 
 :root {
+
+	--senyu-logo-lighter-green: #e7f2b2;
 	--senyu-logo-green: #AFD500;
+	--senyu-logo-darker-green: #8caa00;
 
 	--senyu-logo-grey: #C5C5C5;
 	--senyu-logo-light-grey: #ECEBE9;

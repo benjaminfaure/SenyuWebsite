@@ -1,0 +1,10 @@
+.generic-file-upload {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.generic-file-preview {
+  height: 200px;
+  width: auto;
+}
