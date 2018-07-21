@@ -27,7 +27,7 @@ class ValidationForm extends Component {
           <p><span className="libelle">Date de naissance de la personne référente : </span> <span className="value">{formValues.etape1.dateNaissanceReferent}</span></p>
           <p><span className="libelle">Mail de la personne référente : </span> <span className="value">{formValues.etape1.mailReferent}</span></p>
           <p><span className="libelle">Adresse de la personne référente : </span> <span className="value">{formValues.etape1.adresseReferent}</span></p>
-          <p><span className="libelle">Téléphone de la personne référente : </span> <span className="value">{formValues.etape1.nomReferent}</span></p>
+          <p><span className="libelle">Téléphone de la personne référente : </span> <span className="value">{formValues.etape1.telephoneReferent}</span></p>
           <p>
             <span className="libelle">J’autorise la transmission de mes informations de contact à des tiers. </span>
             <span className="value">
