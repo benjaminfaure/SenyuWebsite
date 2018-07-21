@@ -84,7 +84,7 @@ class ValidationForm extends Component {
           <hr />
 
           <h2 className="generic-form-recap-title">Informations complémentaires</h2>
-          {formValues.etape3.numeroSIRET ?
+          {formValues.etape4.numeroSIRET ?
             <p><span className="libelle">Numéro SIRET : </span> <span className="value">{formValues.etape4.numeroSIRET}</span></p> :
             ''
           }
