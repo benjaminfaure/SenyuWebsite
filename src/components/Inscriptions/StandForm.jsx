@@ -32,15 +32,15 @@ class StandForm extends Component {
       nombreDeBadgesMin: 1,
       nombreDeBadgesMax: 3,
       nombreDeBadgesVisible: true,
-      repartitionsDesCloisonsParDefaut: "0A3CC",
-      repartitionsDesCloisonsPossibles: [
+     repartitionDesCloisonsParDefaut: "0A3CC",
+     repartitionDesCloisonsPossibles: [
         "0A3CC",
         "0A2CC",
         "1A2CC",
         "2A1CC",
         "4A0CC"
       ],
-      repartitionsDesCloisonsVisible: true,
+     repartitionDesCloisonsVisible: true,
       presenceRaccordementElectriqueModifiable: false,
       presenceRaccordementElectriqueVisible: false
     }
@@ -55,7 +55,7 @@ class StandForm extends Component {
     });
     modelesList.unshift(<option key="none" style={{ display: "none" }}></option>)
 
-    let cloisonRepartitionList = this.state.repartitionsDesCloisonsPossibles.map((value) => {
+    let cloisonRepartitionList = this.state.repartitionDesCloisonsPossibles.map((value) => {
       return <option value={value} key={value} >{LIBELLE_REPARTITIONS_CLOISONS[value]}</option>
     });
 
@@ -144,14 +144,14 @@ class StandForm extends Component {
                 id="nombreDeBadges" className="generic-form-field" name="nombreDeBadges" />
             </p>
 
-            <p className={this.state.repartitionsDesCloisonsVisible ? '' : 'not-shown'}>
-              <label htmlFor="repartitionsDesCloisons">
+            <p className={this.state.repartitionDesCloisonsVisible ? '' : 'not-shown'}>
+              <label htmlFor="repartitionDesCloisons">
                 Répartition des cloisons
               </label>
               <Field
                 component="select"
                 type="text"
-                id="repartitionsDesCloisons" className="generic-form-field" name="repartitionsDesCloisons" required >
+                id="repartitionDesCloisons" className="generic-form-field" name="repartitionDesCloisons" required >
                 {cloisonRepartitionList}
               </Field>
             </p>

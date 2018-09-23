@@ -70,7 +70,7 @@ class ReferentForm extends Component {
             pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required />
 
           <label htmlFor="informationsDeContactConfidentielles" className="checkbox">
-            J’autorise la transmission de mes informations de contact à des tiers.
+            J’autorise la transmission de mes informations de contact à d'autres organisateurs d'évènements.
               <Field
               component="input"
               type="checkbox"
