@@ -88,6 +88,10 @@ class ValidationForm extends Component {
             <p><span className="libelle">Numéro SIRET : </span> <span className="value">{formValues.etape4.numeroSIRET}</span></p> :
             ''
           }
+          {formValues.etape4.raisonSociale ?
+            <p><span className="libelle">Raison Sociale : </span> <span className="value">{formValues.etape4.raisonSociale}</span></p> :
+            ''
+          }
           {formValues.etape4.materielApporte ?
             <p><span className="libelle">Matériel apporté : </span> <span className="value">{formValues.etape4.materielApporte}</span></p> :
             ''
