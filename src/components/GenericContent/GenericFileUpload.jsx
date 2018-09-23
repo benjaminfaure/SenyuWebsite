@@ -12,9 +12,16 @@ const renderDropzoneInput = (field) => {
     <div className="generic-file-upload">
       <Dropzone
         name={field.name}
-        accept={"image/png, image/jpeg" }
+        accept={"image/png, image/jpeg"}
         multiple={false}
-        onDrop={( filesToUpload, e ) => field.input.onChange(filesToUpload)}
+        onDrop={(files, e) => field.input.onChange(files) }
+          /*{
+          const reader = new FileReader();
+          const file = files[0]
+          reader.readAsDataURL(file);
+
+          field.input.onChange({ preview: file.preview, data: reader.result });
+        }}*/
       >
         <div>Glissez/Déposez votre image ou cliquez ici pour la sélectionner</div>
       </Dropzone>
@@ -22,11 +29,12 @@ const renderDropzoneInput = (field) => {
         field.meta.error &&
         <span className="error">{field.meta.error}</span>}
       {files && Array.isArray(files) && (
-           files.map((file, i) => <img key={i} className="generic-file-preview" alt="file preview" src={file.preview} />)
+        files.map((file, i) => <img key={i} className="generic-file-preview" alt="file preview" src={file.preview} />)
       )}
     </div>
   );
 }
+
 
 
 export default translate('translations')(renderDropzoneInput);
