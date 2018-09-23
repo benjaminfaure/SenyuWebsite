@@ -57,6 +57,19 @@ class GenericRegistrationForm extends Component {
 
     const { t, handleSubmit, pristine, invalid, submitting } = this.props;
     const pageTitle = t(`content.registration.${registrationType}.pageTitle`);
+    let messageDossier = '';
+
+    if (registrationType === "boutique") {
+      messageDossier = <span className="message-dossier">
+        Avant de procéder à votre inscription, assurez vous d'avoir lu le
+        <a target="_blank" href="/DossierBoutiqueWEB.pdf"> dossier d'inscription.</a>
+      </span>
+    } else if (registrationType === "createur") {
+      messageDossier = <span className="message-dossier">
+        Avant de procéder à votre inscription, assurez vous d'avoir lu le
+      <a target="_blank" href="/DossierCreateursWEB.pdf"> dossier d'inscription.</a>
+      </span>
+    }
 
     const meta = <Helmet>
       <title>Senyu | {pageTitle}</title>
@@ -64,9 +77,9 @@ class GenericRegistrationForm extends Component {
 
     let form;
 
-    if(!this.props.registrations.registrationComplete) {
+    if (!this.props.registrations.registrationComplete) {
       form =
-      <form onSubmit={handleSubmit(this.props.submitRegistration)}>
+        <form onSubmit={handleSubmit(this.props.submitRegistration)}>
           <FormSection name="etape1">
             <ReferentForm formRefs={this.formRefs.referent} />
           </FormSection>
@@ -74,7 +87,7 @@ class GenericRegistrationForm extends Component {
             <IntervenantForm />
           </FormSection>
           <FormSection name="etape3">
-            <StandForm modeles={this.props.modeles} />
+            <StandForm modeles={this.props.modeles} registrationType={registrationType} />
           </FormSection>
           <FormSection name="etape4">
             <InfosComplementairesForm registrationType={registrationType} />
@@ -107,6 +120,7 @@ class GenericRegistrationForm extends Component {
         {meta}
         <section className="generic-page-header">
           <h1 className="generic-page-title">{pageTitle}</h1>
+          {messageDossier}
         </section>
         {form}
       </div>

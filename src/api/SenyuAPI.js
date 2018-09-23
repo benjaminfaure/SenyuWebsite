@@ -1,7 +1,7 @@
 import axios from 'axios';
 import 'babel-polyfill';
 
-const API_URL = 'http://localhost:9876/ws';//'https://ws.senyu.fr/';
+const API_URL = 'https://ws.senyu.fr/';//'https://ws.senyu.fr/';
 const API_HEADERS = {
   'Content-Type': 'application/json',
 	'Accept': 'application/json'
