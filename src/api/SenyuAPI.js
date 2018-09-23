@@ -1,9 +1,10 @@
 import axios from 'axios';
 import 'babel-polyfill';
 
-const API_URL = 'https://ws.senyu.fr/';
+const API_URL = 'https://ws.senyu.fr/';//'https://ws.senyu.fr/';
 const API_HEADERS = {
-  'Content-Type': 'application/json;charset=UTF-8',
+  'Content-Type': 'application/json',
+	'Accept': 'application/json'
 }
 
 let SenyuAPI = {
@@ -67,13 +68,14 @@ let SenyuAPI = {
 
   async submitRegistration(values) {
     try {
-      //return await axios.post(`${API_URL}/inscriptions`, values, { headers: API_HEADERS });
-      return {
+      let promise = await axios.put(`${API_URL}/inscriptions`, values, { headers: API_HEADERS });
+			return promise;
+      /*return {
         status: 200,
         data : {}
-      };
+      };*/
     } catch (err) {
-      return { message: `Un erreur s'est produire lors de l'inscription : ${err.message}` };
+      return err.response;//{ message: `Un erreur s'est produire lors de l'inscription : ${err.message}` };
     }
   },
 

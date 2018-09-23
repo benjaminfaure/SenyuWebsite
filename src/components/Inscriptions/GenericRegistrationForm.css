@@ -125,3 +125,20 @@
   background-color: var(--senyu-logo-grey);
   margin-right: 5px;
 }
+
+
+/*
+Message Dossier
+*/
+.generic-form .message-dossier {
+  color: var(--senyu-logo-red);
+}
+
+.generic-form .message-dossier a{
+  color: var(--senyu-logo-blue);
+  text-decoration: none;
+}
+.generic-form .lien-dossier{
+  color: var(--senyu-logo-red);
+  text-decoration: none;
+}

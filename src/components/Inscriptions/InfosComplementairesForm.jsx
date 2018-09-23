@@ -28,7 +28,7 @@ class InfosComplementairesForm extends Component {
         <div className="generic-form-body">
           <label htmlFor="numeroSIRET">
             Numéro SIRET
-            <span className="requiredField">*</span>
+          <span className="requiredField">*</span>
           </label>
           <Field
             component="input"
@@ -36,6 +36,16 @@ class InfosComplementairesForm extends Component {
             placeholder="Renseignez votre SIRET"
             onBlur={this.handleSiretValidation}
             id="numeroSIRET" className="generic-form-field" name="numeroSIRET" required />
+
+          <label htmlFor="raisonSociale">
+            Raison sociale
+            <span className="requiredField">*</span>
+          </label>
+          <Field
+            component="input"
+            type="text" ref="raisonSociale"
+            placeholder="Renseignez votre raison sociale"
+            id="raisonSociale" className="generic-form-field" name="raisonSociale" required />
         </div>;
 
     }

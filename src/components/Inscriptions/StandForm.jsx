@@ -59,6 +59,13 @@ class StandForm extends Component {
       return <option value={value} key={value} >{LIBELLE_REPARTITIONS_CLOISONS[value]}</option>
     });
 
+    let lienDossier = "dossier d'inscription";
+    if (this.props.registrationType === "boutique") {
+      lienDossier = <a className="lien-dossier" target="_blank" href="/DossierBoutiqueWEB.pdf"> dossier d'inscription.</a>
+    } else if (this.props.registrationType === "createur") {
+      lienDossier = <a className="lien-dossier" target="_blank" href="/DossierCreateursWEB.pdf"> dossier d'inscription.</a>
+    }
+
     return (
       <div className="tab" ref="stand">
         <div className="generic-form-header">Paramétrage du stand</div>
@@ -161,7 +168,7 @@ class StandForm extends Component {
             </p>
 
             <label htmlFor="dossierInscriptionPrisEnCompte">
-              Je certifie avoir pris connaissance du dossier d’inscription
+              Je certifie avoir pris connaissance du {lienDossier}
               <span className="requiredField">*</span>
             </label>
             <Field

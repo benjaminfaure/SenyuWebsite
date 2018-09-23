@@ -58,8 +58,8 @@ const errorHandling = (state = null, action) => {
 
       return <p> Les champs suivants ne sont pas valides :
         <ul>
-          {action.error.parametersViolations ?
-            action.error.parametersViolations.map((violation) => {
+          {action.error.parameterViolations ?
+            action.error.parameterViolations.map((violation) => {
               return <li>{violation.message}</li>
             }) :
             ''}
