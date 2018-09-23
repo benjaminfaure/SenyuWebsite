@@ -34,6 +34,15 @@ class IntervenantForm extends Component {
             id="descriptionIntervenant" className="generic-form-field" name="descriptionIntervenant"
             rows="10" required />
 
+
+          <label htmlFor="nombreParticipationsPrecedentes">
+            Nombre de participations aux éditions précédentes
+          </label>
+          <Field
+            component="input"
+            type="number"
+            id="nombreParticipationsPrecedentes" className="generic-form-field" name="nombreParticipationsPrecedentes" />
+
           <label htmlFor="facebook">
             Lien vers la page Facebook officielle
               </label>
