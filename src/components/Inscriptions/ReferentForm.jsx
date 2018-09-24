@@ -7,8 +7,6 @@ class ReferentForm extends Component {
 
   render() {
 
-    const { t } = this.props;
-
     return (
       <div className="tab" ref="referent">
         <div className="generic-form-header">Informations concernant le référent</div>

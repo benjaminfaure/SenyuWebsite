@@ -16,8 +16,6 @@ class InfosComplementairesForm extends Component {
 
   render() {
 
-    const { t } = this.props;
-
 
     let infosComplementairesField =
       <div className="generic-form-body">

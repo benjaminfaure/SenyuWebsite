@@ -58,3 +58,8 @@ export const isValidSiret = siret => {
   return estValide;
 }
 
+export const dateFormatter = dateToFormat => {
+  const splittedDate = dateToFormat.split('-')
+  return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
+}
+

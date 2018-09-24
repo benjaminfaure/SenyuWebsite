@@ -9,8 +9,6 @@ class IntervenantForm extends Component {
 
   render() {
 
-    const { t } = this.props;
-
     return (
       <div className="tab" ref="intervenant">
         <div className="generic-form-header">Informations publiées sur le site</div>

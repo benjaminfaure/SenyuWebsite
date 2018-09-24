@@ -1,6 +1,8 @@
 import axios from 'axios';
 import 'babel-polyfill';
 
+import { dateFormatter } from '../utils';
+
 const API_URL = 'https://ws.senyu.fr';//'https://ws.senyu.fr/';
 const API_HEADERS = {
   'Content-Type': 'application/json',
@@ -13,7 +15,7 @@ let SenyuAPI = {
     try {
       return await axios.get(`${API_URL}/invites`, { headers: API_HEADERS });
     } catch (err) {
-      return { message: `Un erreur s'est produire lors de la réception des invités : ${err.message}` };
+      return { message: `Un erreur s'est produite lors de la réception des invités : ${err.message}` };
     }
   },
   async fetchIntervenantById(id) {
@@ -21,7 +23,7 @@ let SenyuAPI = {
     try {
       return await axios.get(`${API_URL}/invites/${id}`, { headers: API_HEADERS });
     } catch (err) {
-      return { message: `Un erreur s'est produire lors de la réception d'un invité' : ${err.message}` };
+      return { message: `Un erreur s'est produite lors de la réception d'un invité' : ${err.message}` };
     }
   },
 
@@ -29,7 +31,7 @@ let SenyuAPI = {
     try {
       return await axios.get(`${API_URL}/faq`, { headers: API_HEADERS });
     } catch (err) {
-      return { message: `Un erreur s'est produire lors de la réception de la faq' : ${err.message}` };
+      return { message: `Un erreur s'est produite lors de la réception de la faq' : ${err.message}` };
     }
   },
 
@@ -37,7 +39,7 @@ let SenyuAPI = {
     try {
       return await axios.get(`${API_URL}/exposants`, { headers: API_HEADERS });
     } catch (err) {
-      return { message: `Un erreur s'est produire lors de la réception des exposants : ${err.message}` };
+      return { message: `Un erreur s'est produite lors de la réception des exposants : ${err.message}` };
     }
   },
 
@@ -45,7 +47,7 @@ let SenyuAPI = {
     try {
       return await axios.get(`${API_URL}/exposants/${id}`, { headers: API_HEADERS });
     } catch (err) {
-      return { message: `Un erreur s'est produire lors de la réception d'un exposant' : ${err.message}` };
+      return { message: `Un erreur s'est produite lors de la réception d'un exposant' : ${err.message}` };
     }
   },
 
@@ -53,7 +55,7 @@ let SenyuAPI = {
     try {
       return await axios.get(`${API_URL}/animations`, { headers: API_HEADERS });
     } catch (err) {
-      return { message: `Un erreur s'est produire lors de la réception des animations : ${err.message}` };
+      return { message: `Un erreur s'est produite lors de la réception des animations : ${err.message}` };
     }
   },
 
@@ -62,21 +64,22 @@ let SenyuAPI = {
     try {
       return await axios.get(`${API_URL}/animations/${id}`, { headers: API_HEADERS });
     } catch (err) {
-      return { message: `Un erreur s'est produire lors de la réception d'une animation' : ${err.message}` };
+      return { message: `Un erreur s'est produite lors de la réception d'une animation' : ${err.message}` };
     }
   },
 
   async submitRegistration(values) {
     try {
-      values.etape2.image = values.etape2.image.preview
-     let promise = await axios.put(`${API_URL}/inscriptions`, values, { headers: API_HEADERS });
+      values.etape2.image = values.etape2.image[0].preview
+      //values.etape3.repartitionDesCloisons = "0A3CC"
+      if (values.etape1.dateNaissanceReferent) {
+        values.etape1.dateNaissanceReferent = dateFormatter(values.etape1.dateNaissanceReferent)
+      }
+
+      let promise = await axios.put(`${API_URL}/inscriptions`, values, { headers: API_HEADERS });
       return promise;
-       /*return {
-        status: 200,
-        data : {}
-      };*/
     } catch (err) {
-      return err.response;//{ message: `Un erreur s'est produire lors de l'inscription : ${err.message}` };
+      return { message: `Un erreur s'est produite lors de l'inscription : ${err.message}`, data: err.response.data };
     }
   },
 
@@ -84,7 +87,7 @@ let SenyuAPI = {
     try {
       return await axios.get(`${API_URL}/modeles-de-stands?type=${type}`, { headers: API_HEADERS });
     } catch (err) {
-      return { message: `Un erreur s'est produire la récupération des modèles : ${err.message}` };
+      return { message: `Un erreur s'est produite la récupération des modèles : ${err.message}` };
     }
   }
 

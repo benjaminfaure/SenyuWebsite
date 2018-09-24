@@ -48,8 +48,6 @@ class StandForm extends Component {
 
   render() {
 
-    const { t } = this.props;
-
     let modelesList = this.props.modeles.map((modele) => {
       return <option value={modele.id} key={modele.id} >{modele.libelle}</option>
     });
@@ -188,7 +186,7 @@ class StandForm extends Component {
   handleModelesSelect(e) {
     let modeleId = e.target.value;
     let modele = this.props.modeles.find((item) => parseInt(item.id, 10) === parseInt(modeleId, 10));
-    console.log(modele);
+
     if (modele) {
       this.setState(modele)
       this.props.changeFieldValue('etape3.longueur', modele.longueurParDefaut);

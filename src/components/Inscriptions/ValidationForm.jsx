@@ -14,8 +14,6 @@ class ValidationForm extends Component {
 
   render() {
 
-    const { t } = this.props;
-
     const formValues = this.props.values ? this.props.values : {}
     return (
       <div className="tab validation-tab" ref="validation">

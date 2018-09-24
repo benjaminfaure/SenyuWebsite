@@ -21,12 +21,12 @@ export const TYPE_ANIMATION = [
     code: "association"
   }];
 
-export const LIBELLE_REPARTITIONS_CLOISONS = {
-  "0A3CC": "Pas d’angle et 3 côtés cloisonnés",
-  "0A2CC": "Pas d’angle et 2 côtés parallèles cloisonnés",
-  "1A2CC": "2 côtés cloisonnés et  perpendiculaires entre eux",
-  "2A1CC": "1 côté cloisonné",
-  "4A0CC": "Ilôt : aucune cloison",
+export const LIBELLE_REPARTITION_CLOISONS = {
+  "ZERO_ANGLE_TROIS_COTES_CLOISONNES": "Pas d’angle et 3 côtés cloisonnés",
+  "ZERO_ANGLE_DEUX_COTES_CLOISONNES": "Pas d’angle et 2 côtés parallèles cloisonnés",
+  "UN_ANGLE_DEUX_COTES_CLOISONNES": "2 côtés cloisonnés et  perpendiculaires entre eux",
+  "DEUX_ANGLES_UN_COTE_CLOISONNE": "1 côté cloisonné",
+  "QUATRE_ANGLES_ZERO_COTE_CLOISONNE": "Ilôt : aucune cloison",
 }
 
 /**

@@ -56,15 +56,15 @@ const errorHandling = (state = null, action) => {
     /* Inscriptions */
     case RECEIVE_REGISTRATION_SUBMIT_ERROR:
 
-      return <p> Les champs suivants ne sont pas valides :
+      return <span> Les champs suivants ne sont pas valides :
         <ul>
           {action.error.parameterViolations ?
-            action.error.parameterViolations.map((violation) => {
-              return <li>{violation.message}</li>
+            action.error.parameterViolations.map((violation, i) => {
+              return <li key={i}>{violation.message}</li>
             }) :
             ''}
         </ul>
-      </p>;
+      </span>;
 
     default:
       return state;
