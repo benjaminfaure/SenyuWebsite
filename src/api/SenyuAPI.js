@@ -68,9 +68,10 @@ let SenyuAPI = {
 
   async submitRegistration(values) {
     try {
-      let promise = await axios.put(`${API_URL}/inscriptions`, values, { headers: API_HEADERS });
+      values.etape2.image = values.etape2.image.preview
+     let promise = await axios.put(`${API_URL}/inscriptions`, values, { headers: API_HEADERS });
       return promise;
-      /*return {
+       /*return {
         status: 200,
         data : {}
       };*/

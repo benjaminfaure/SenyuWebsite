@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 
 import {
-  LIBELLE_REPARTITIONS_CLOISONS
+  LIBELLE_REPARTITION_CLOISONS
 } from '../../constants';
 
 class StandForm extends Component {
@@ -32,13 +32,13 @@ class StandForm extends Component {
       nombreDeBadgesMin: 1,
       nombreDeBadgesMax: 3,
       nombreDeBadgesVisible: true,
-     repartitionDesCloisonsParDefaut: "0A3CC",
+     repartitionDesCloisonsParDefaut: "ZERO_ANGLE_TROIS_COTES_CLOISONNES",
      repartitionDesCloisonsPossibles: [
-        "0A3CC",
-        "0A2CC",
-        "1A2CC",
-        "2A1CC",
-        "4A0CC"
+        "ZERO_ANGLE_TROIS_COTES_CLOISONNES",
+        "ZERO_ANGLE_DEUX_COTES_CLOISONNES",
+        "UN_ANGLE_DEUX_COTES_CLOISONNES",
+        "DEUX_ANGLES_UN_COTE_CLOISONNE",
+        "QUATRE_ANGLES_ZERO_COTE_CLOISONNE"
       ],
      repartitionDesCloisonsVisible: true,
       presenceRaccordementElectriqueModifiable: false,
@@ -56,7 +56,7 @@ class StandForm extends Component {
     modelesList.unshift(<option key="none" style={{ display: "none" }}></option>)
 
     let cloisonRepartitionList = this.state.repartitionDesCloisonsPossibles.map((value) => {
-      return <option value={value} key={value} >{LIBELLE_REPARTITIONS_CLOISONS[value]}</option>
+      return <option value={value} key={value} >{LIBELLE_REPARTITION_CLOISONS[value]}</option>
     });
 
     let lienDossier = "dossier d'inscription";
@@ -188,7 +188,7 @@ class StandForm extends Component {
   handleModelesSelect(e) {
     let modeleId = e.target.value;
     let modele = this.props.modeles.find((item) => parseInt(item.id, 10) === parseInt(modeleId, 10));
-
+    console.log(modele);
     if (modele) {
       this.setState(modele)
       this.props.changeFieldValue('etape3.longueur', modele.longueurParDefaut);
@@ -196,7 +196,7 @@ class StandForm extends Component {
       this.props.changeFieldValue('etape3.nombreDeChaises', modele.nombreDeChaisesParDefaut);
       this.props.changeFieldValue('etape3.nombreDeTables', modele.nombreDeTablesParDefaut);
       this.props.changeFieldValue('etape3.nombreDeBadges', modele.nombreDeBadgesParDefaut);
-      this.props.changeFieldValue('etape3.repartitionsDesCloisons', modele.repartitionsDesCloisonsParDefaut);
+      this.props.changeFieldValue('etape3.repartitionDesCloisons', modele.repartitionDesCloisonsPossibles[0]);
       this.props.changeFieldValue('etape3.raccordementElectriquePresent', modele.raccordementElectriquePresentParDefaut);
       this.refs["parametreStand"].style.display = "block";
     }

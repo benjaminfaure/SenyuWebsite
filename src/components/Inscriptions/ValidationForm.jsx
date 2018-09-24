@@ -5,7 +5,7 @@ import { getFormValues } from 'redux-form'
 import { connect } from 'react-redux';
 
 import {
-  LIBELLE_REPARTITIONS_CLOISONS
+  LIBELLE_REPARTITION_CLOISONS
 } from '../../constants';
 
 
@@ -74,7 +74,7 @@ class ValidationForm extends Component {
           <p><span className="libelle">Nombre de chaises désirées sur le stand : </span> <span className="value">{formValues.etape3.nombreDeChaises}</span></p>
           <p><span className="libelle">Nombre de tables désirées sur le stand : </span> <span className="value">{formValues.etape3.nombreDeTables}</span></p>
           <p><span className="libelle">Nombre de badges à éditer : </span> <span className="value">{formValues.etape3.nombreDeBadges}</span></p>
-          <p><span className="libelle">Répartition des cloisons) : </span> <span className="value">{LIBELLE_REPARTITIONS_CLOISONS[formValues.etape3.repartitionsDesCloisons]}</span></p>
+          <p><span className="libelle">Répartition des cloisons : </span> <span className="value">{LIBELLE_REPARTITION_CLOISONS[formValues.etape3.repartitionDesCloisons]}</span></p>
           <p>
             <span className="libelle">Raccordement électrique présent </span>
             <span className="value">
