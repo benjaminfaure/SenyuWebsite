@@ -17,7 +17,7 @@ import './Menu.css';
 class Menu extends Component {
 
   componentDidMount() {
-    this.props.fetchIsSenyuChannelLive();
+    //this.props.fetchIsSenyuChannelLive();
   }
 
 
@@ -86,7 +86,7 @@ Menu.propTypes = {
 
 const mapStateToProps = (state) => (
   {
-    isLive: state.twitch
+    isLive: false
   }
 );
 

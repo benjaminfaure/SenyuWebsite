@@ -55,6 +55,10 @@ class GenericRegistrationForm extends Component {
 
   render() {
 
+    // fix pour Chrome
+    tabs = document.getElementsByClassName('tab');
+    this.handleShowTab(currentTab);
+
     const { t, handleSubmit, pristine, invalid, submitting } = this.props;
     const pageTitle = t(`content.registration.${registrationType}.pageTitle`);
     let messageDossier = '';
