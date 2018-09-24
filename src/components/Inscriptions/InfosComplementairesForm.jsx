@@ -78,9 +78,9 @@ class InfosComplementairesForm extends Component {
             type="text"
             id="moyenDeTransport" className="generic-form-field" name="moyenDeTransport" required >
             <option key="none" style={{ display: "none" }}></option>
-            <option value="voiture">Voiture</option>
-            <option value="train">Train</option>
-            <option value="autre">Autre</option>
+            <option value="Voiture">Voiture</option>
+            <option value="Train">Train</option>
+            <option value="Autre">Autre</option>
           </Field>
 
           <label htmlFor="typeDeLogement">
@@ -92,8 +92,8 @@ class InfosComplementairesForm extends Component {
             type="text"
             id="typeDeLogement" className="generic-form-field" name="typeDeLogement" required >
             <option key="none" style={{ display: "none" }}></option>
-            <option value="hotel">Hotel</option>
-            <option value="autre">Autre</option>
+            <option value="Hotel">Hotel</option>
+            <option value="Autre">Autre</option>
           </Field>
         </div>;
     }
