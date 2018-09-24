@@ -3,6 +3,7 @@ import { Field } from 'redux-form';
 import { translate } from 'react-i18next';
 import { getFormValues } from 'redux-form'
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import {
   LIBELLE_REPARTITION_CLOISONS
@@ -109,7 +110,7 @@ class ValidationForm extends Component {
           <hr />
 
           <label htmlFor="conditionsGeneralesDeServiceAcceptees">
-            J’accepte les conditions générales de service
+            J’accepte les <Link to="/cg" target="_blank">conditions générales de service</Link>
               <span className="requiredField">*</span>
           </label>
           <Field

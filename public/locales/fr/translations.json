@@ -6,6 +6,7 @@
     "plans": "Plan",
     "planning": "Planning",
     "guide": "Guide du visiteur",
+    "cg": "Conditions générales",
     "contact": "Contact",
     "communication": "Communication",
     "exhibitors": "Exposants",
@@ -29,6 +30,7 @@
   },
   "titles": {
     "generic": "3 et 4 Mars 2018",
+    "cg": "Conditions générales",
     "communication": "Communication",
     "contact": "Contact",
     "cosplay": "Cosplay",
@@ -47,6 +49,9 @@
   "content": {
     "animation": {
       "pageTitle": "Liste des Animations"
+    },
+    "cg": {
+      "pageTitle": "Conditions générales"
     },
     "communication": {
       "pageTitle": "Communication sur la sélection des Créateurs"

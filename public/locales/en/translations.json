@@ -6,6 +6,7 @@
     "plans": "Floor map",
     "planning": "Planning",
     "guide": "Attendee's guide",
+    "cg": "Terms of use",
     "contact": "Contact",
     "communication": "Communication",
     "exhibitors": "Exhibitors",
@@ -29,6 +30,7 @@
   },
   "titles": {
     "generic": "March 3-4, 2018",
+    "cg": "Terms of use",
     "communication": "Communication",
     "contact": "Contact",
     "workInProgress": "Work in progress",
@@ -46,6 +48,9 @@
   "content": {
     "animation": {
       "pageTitle": "List of Animations"
+    },
+    "cg": {
+      "pageTitle": "Terms of use"
     },
     "communication": {
       "pageTitle": "Communication on creators selection"

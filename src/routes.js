@@ -18,6 +18,8 @@ import FAQ from './components/FAQ/FAQ.jsx';
 
 import Stream from './components/Stream/Stream.jsx';
 
+import CG from './components/CG/CG.jsx';
+
 import Cosplay from './components/Cosplay/Cosplay.jsx';
 
 import Communication from './components/Communication/Communication.jsx';
@@ -130,6 +132,12 @@ const routes = [
         path: '/guide',
         exact: true,
         component: Guide
+      },
+      /* CG */
+      {
+        path: '/cg',
+        exact: true,
+        component: CG
       },
       /* Contact */
       {
