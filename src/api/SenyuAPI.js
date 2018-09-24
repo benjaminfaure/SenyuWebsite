@@ -4,7 +4,7 @@ import 'babel-polyfill';
 const API_URL = 'https://ws.senyu.fr';//'https://ws.senyu.fr/';
 const API_HEADERS = {
   'Content-Type': 'application/json',
-	'Accept': 'application/json'
+  'Accept': 'application/json'
 }
 
 let SenyuAPI = {
@@ -69,7 +69,7 @@ let SenyuAPI = {
   async submitRegistration(values) {
     try {
       let promise = await axios.put(`${API_URL}/inscriptions`, values, { headers: API_HEADERS });
-			return promise;
+      return promise;
       /*return {
         status: 200,
         data : {}
@@ -81,8 +81,7 @@ let SenyuAPI = {
 
   async fetchModelesDeStands(type) {
     try {
-      return await axios.get(`/modeles.json`);
-      //return await axios.get(`${API_URL}/modeles-de-stands?type=${type}`, { headers: API_HEADERS });
+      return await axios.get(`${API_URL}/modeles-de-stands?type=${type}`, { headers: API_HEADERS });
     } catch (err) {
       return { message: `Un erreur s'est produire la récupération des modèles : ${err.message}` };
     }
