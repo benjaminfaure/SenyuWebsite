@@ -86,9 +86,9 @@ class App extends Component {
     let errorMessage;
     if (this.props.errorMessage) {
       errorMessage = (
-        <p className="generic-error-message">
+        <span className="generic-error-message">
           {this.props.errorMessage}
-        </p>
+        </span>
       )
     }
 

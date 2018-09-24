@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Field } from 'redux-form';
 import { translate } from 'react-i18next';
 
+import { normalizePhone } from '../../utils';
+
 class ReferentForm extends Component {
 
 
@@ -65,7 +67,7 @@ class ReferentForm extends Component {
             type="tel"
             id="telephoneReferent" className="generic-form-field" name="telephoneReferent"
             placeholder="01-23-45-67-89"
-            pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required />
+            normalize={normalizePhone} required />
 
           <label htmlFor="informationsDeContactConfidentielles" className="checkbox">
             J’autorise la transmission de mes informations de contact à d'autres organisateurs d'évènements.
