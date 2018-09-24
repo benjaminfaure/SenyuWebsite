@@ -32,13 +32,13 @@ class StandForm extends Component {
       nombreDeBadgesMin: 1,
       nombreDeBadgesMax: 3,
       nombreDeBadgesVisible: true,
-     repartitionDesCloisonsParDefaut: "ZERO_ANGLE_TROIS_COTES_CLOISONNES",
+     repartitionDesCloisonsParDefaut: "0A3CC",
      repartitionDesCloisonsPossibles: [
-        "ZERO_ANGLE_TROIS_COTES_CLOISONNES",
-        "ZERO_ANGLE_DEUX_COTES_CLOISONNES",
-        "UN_ANGLE_DEUX_COTES_CLOISONNES",
-        "DEUX_ANGLES_UN_COTE_CLOISONNE",
-        "QUATRE_ANGLES_ZERO_COTE_CLOISONNE"
+        "0A3CC",
+        "0A2CC",
+        "1A2CC",
+        "2A1CC",
+        "4A0CC"
       ],
      repartitionDesCloisonsVisible: true,
       presenceRaccordementElectriqueModifiable: false,

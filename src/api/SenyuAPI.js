@@ -76,7 +76,6 @@ let SenyuAPI = {
           dateNaissanceReferent: { $set: values.etape1.dateNaissanceReferent ? dateFormatter(values.etape1.dateNaissanceReferent) : '' }
         },
         etape2: { image: { $set: await filesReader(values.etape2.image) } },
-        etape3: { repartitionDesCloisons: { $set: "0A3CC" } },
       }
       )
 
