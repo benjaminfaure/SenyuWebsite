@@ -54,6 +54,10 @@ class ValidationForm extends Component {
             <p><span className="libelle">Lien vers la page Twitch officielle : </span> <span className="value"><a href={formValues.etape2.twitch} alt="twitch-link">{formValues.etape2.twitch}</a></span></p> :
             ''
           }
+          {formValues.etape2.instagram ?
+            <p><span className="libelle">Lien vers la page Instagram officielle : </span> <span className="value"><a href={formValues.etape2.instagram} alt="instagram-link">{formValues.etape2.instagram}</a></span></p> :
+            ''
+          }
           {formValues.etape2.siteWeb ?
             <p><span className="libelle">Lien vers le site web officiel : </span> <span className="value"><a href={formValues.etape2.siteWeb} alt="siteWeb-link">{formValues.etape2.siteWeb}</a></span></p> :
             ''

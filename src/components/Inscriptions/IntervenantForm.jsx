@@ -67,11 +67,19 @@ class IntervenantForm extends Component {
 
           <label htmlFor="twitch">
             Lien vers la page Twitch officielle
-            </label>
+              </label>
           <Field
             component="input"
             type="url"
             id="twitch" className="generic-form-field" name="twitch" />
+
+          <label htmlFor="instagram">
+            Lien vers la page Instagram officielle
+                </label>
+          <Field
+            component="input"
+            type="url"
+            id="instagram" className="generic-form-field" name="instagram" />
 
           <label htmlFor="siteWeb">
             Lien vers le site web officiel
