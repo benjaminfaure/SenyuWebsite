@@ -85,3 +85,19 @@ export const normalizePhone = value => {
   return `${onlyNums.slice(0, 2)}-${onlyNums.slice(2, 4)}-${onlyNums.slice(4, 6)}-${onlyNums.slice(6, 8)}-${onlyNums.slice(8, 10)}`;
 };
 
+
+
+export const filesReader = (uploadedFiles) => {
+  const reader = new FileReader();
+  return new Promise((resolve, reject) => {
+    reader.onerror = () => {
+      reader.abort();
+      reject(new DOMException("Problem parsing input file."));
+    };
+
+    reader.onload = () => {
+      resolve(reader.result);
+    };
+    reader.readAsDataURL(uploadedFiles[0]);
+  });
+}

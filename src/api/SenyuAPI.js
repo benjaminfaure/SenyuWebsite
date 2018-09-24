@@ -1,7 +1,7 @@
+import update from 'immutability-helper';
 import axios from 'axios';
 import 'babel-polyfill';
-
-import { dateFormatter } from '../utils';
+import { dateFormatter, filesReader } from '../utils';
 
 const API_URL = 'https://ws.senyu.fr';//'https://ws.senyu.fr/';
 const API_HEADERS = {
@@ -70,14 +70,17 @@ let SenyuAPI = {
 
   async submitRegistration(values) {
     try {
-      values.etape2.image = values.etape2.image[0].preview
-      //values.etape3.repartitionDesCloisons = "0A3CC"
-      if (values.etape1.dateNaissanceReferent) {
-        values.etape1.dateNaissanceReferent = dateFormatter(values.etape1.dateNaissanceReferent)
+      const valuesToSubmit = update(values, {
+        etape1: {
+          typeIntervenant: { $set: values.typeIntervenant },
+          dateNaissanceReferent: { $set: values.etape1.dateNaissanceReferent ? dateFormatter(values.etape1.dateNaissanceReferent) : '' }
+        },
+        etape2: { image: { $set: await filesReader(values.etape2.image) } },
+        etape3: { repartitionDesCloisons: { $set: "0A3CC" } },
       }
+      )
 
-      let promise = await axios.put(`${API_URL}/inscriptions`, values, { headers: API_HEADERS });
-      return promise;
+      return await axios.put(`${API_URL}/inscriptions`, valuesToSubmit, { headers: API_HEADERS });
     } catch (err) {
       return { message: `Un erreur s'est produite lors de l'inscription : ${err.message}`, data: err.response.data };
     }

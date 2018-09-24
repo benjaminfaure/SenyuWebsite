@@ -2,7 +2,7 @@ import React from 'react';
 import { translate } from 'react-i18next';
 import Dropzone from 'react-dropzone';
 
-
+import { filesReader } from '../../utils';
 
 import './GenericFileUpload.css';
 
