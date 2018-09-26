@@ -14,15 +14,14 @@ import {
 import 'babel-polyfill';
 import React from 'react';
 
-const initialState = [];
 
 
-const errorHandling = (state = initialState, action) => {
+const errorHandling = (state = null, action) => {
   switch (action.type) {
 
     /* Gestion erreur bien lue */
     case REQUEST_ERROR_HAS_BEEN_READ:
-      return [];
+      return null;
 
     /* Animations */
     case RECEIVE_SENYU_ANIMATIONS_ERROR:
@@ -38,19 +37,18 @@ const errorHandling = (state = initialState, action) => {
     case RECEIVE_INTERVENANT_BY_ID_ERROR:
     /* Modeles */
     case RECEIVE_MODELES_DE_STAND_ERROR:
-      return [...state, action.error];
+      return action.error;
     /* Inscriptions */
     case RECEIVE_REGISTRATION_SUBMIT_ERROR:
-     const error = <span> Les champs suivants ne sont pas valides :
-        <ul>
-          {action.error.parameterViolations ?
-            action.error.parameterViolations.map((violation, i) => {
-              return <li key={i}>{violation.message}</li>
-            }) :
-            ''}
-        </ul>
-      </span>
-      return [...state,error];
+      return <span> Les champs suivants ne sont pas valides :
+      <ul>
+        {action.error.parameterViolations ?
+          action.error.parameterViolations.map((violation, i) => {
+            return <li key={i}>{violation.message}</li>
+          }) :
+          ''}
+      </ul>
+    </span>
 
     default:
       return state;

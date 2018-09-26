@@ -91,17 +91,13 @@ class App extends Component {
       fontSize: '50px',
     }
 
-    let errorMessages = [];
-    let errorClose;
-    if (this.props.errorMessage && this.props.errorMessage.length > 0) {
-      errorClose = <span className="close-button" onClick={this.closeErrorWindow.bind(this)}>Fermer <FaWindowClose/></span>
-      this.props.errorMessage.forEach((message, i) => {
-        errorMessages.push(
-          <span key={i} className="generic-error-message">
-            {message}
-          </span>)
-      })
-
+    let errorMessage;
+    if (this.props.errorMessage) {
+      errorMessage =
+        <div className="generic-error-message">
+          <span>{this.props.errorMessage}</span>
+          <span className="close-button" onClick={this.closeErrorWindow.bind(this)}>Fermer <FaWindowClose /></span>
+        </div>
     }
 
     return (
@@ -113,10 +109,7 @@ class App extends Component {
         <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
         <Menu currentLocation={this.state.currentLocation} />
         <main className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
-          <div className="generic-error-message-list">
-            {errorClose}
-            {errorMessages}
-          </div>
+          {errorMessage}
 
           {renderRoutes(this.props.route.routes)}
         </main>
