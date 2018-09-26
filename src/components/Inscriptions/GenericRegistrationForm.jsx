@@ -186,12 +186,8 @@ class GenericRegistrationForm extends Component {
       let tab = tabs[currentTab];
       let formFields = tab.getElementsByClassName("generic-form-field")
       for (let i = 0; i < formFields.length; i++) {
-        if (!formFields[i].checkValidity()) {
-          formFields[i].classList.add("invalid");
+        if (!formFields[i].checkValidity())
           return false;
-        } else {
-          formFields[i].classList.remove("invalid");
-        }
       }
       return true;
     }

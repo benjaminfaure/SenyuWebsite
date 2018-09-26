@@ -1,7 +1,7 @@
 import update from 'immutability-helper';
 import axios from 'axios';
 import 'babel-polyfill';
-import { dateFormatter, filesReader } from '../utils';
+import { dateFormatter, filesReader, normalizeFacebooUrl } from '../utils';
 
 const API_URL = 'https://ws.senyu.fr';//'https://ws.senyu.fr/';
 const API_HEADERS = {
@@ -75,7 +75,10 @@ let SenyuAPI = {
           typeIntervenant: { $set: values.typeIntervenant },
           dateNaissanceReferent: { $set: values.etape1.dateNaissanceReferent ? dateFormatter(values.etape1.dateNaissanceReferent) : '' }
         },
-        etape2: { image: { $set: values.etape2.image ? await filesReader(values.etape2.image): null } },
+        etape2: {
+          facebook:  { $set: normalizeFacebooUrl(values.etape2.facebook) } ,
+          image: { $set: values.etape2.image ? await filesReader(values.etape2.image): null }
+        },
       }
       )
 
