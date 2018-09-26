@@ -27,6 +27,11 @@
   color: brown;
   padding-left: 2px;
 }
+
+.generic-form .invalid {
+  background-color: #fae8e8;
+}
+
 .generic-form label,
 .generic-form textarea {
   display: inline-block;

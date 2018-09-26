@@ -80,6 +80,7 @@ h4 {
   padding: 5px 0 5px 0;
   color: var(--senyu-logo-red);
   border: 1px solid var(--senyu-logo-red);
+  background-color: #fae8e8;
   display: flex;
 }
 .generic-error-message span {
