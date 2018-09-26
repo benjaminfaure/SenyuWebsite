@@ -4,6 +4,7 @@ import { translate } from 'react-i18next';
 import { getFormValues } from 'redux-form'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import ScrollToTop from 'react-scroll-up';
 
 import {
   LIBELLE_REPARTITION_CLOISONS
@@ -11,6 +12,11 @@ import {
 
 
 class ValidationForm extends Component {
+
+  scrollTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
 
 
   render() {
@@ -115,16 +121,16 @@ class ValidationForm extends Component {
 
           <label htmlFor="conditionsGeneralesDeServiceAcceptees">
             J’accepte les <Link to="/cg" target="_blank">conditions générales de service</Link>
-              <span className="requiredField">*</span>
+            <span className="requiredField">*</span>
           </label>
           <Field
             component="input"
             type="checkbox"
             id="conditionsGeneralesDeServiceAcceptees" name="conditionsGeneralesDeServiceAcceptees" required />
 
-          <button type="submit" id="validBtn" disabled={this.props.pristine || this.props.submitting || this.props.invalid}>
+          <button type="submit" id="validBtn" onClick={this.scrollTop.bind(this)} disabled={this.props.pristine || this.props.submitting || this.props.invalid}>
             Submit
-        </button>
+          </button>
         </div>
       </div>
 

@@ -4,10 +4,12 @@ import { Helmet } from "react-helmet";
 import PropTypes from 'prop-types';
 import ScrollToTop from 'react-scroll-up';
 import FaCircleOArrowUp from 'react-icons/lib/fa/arrow-circle-o-up';
+import FaWindowClose from 'react-icons/lib/fa/close';
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux';
 import { renderRoutes } from 'react-router-config';
 import { translate } from 'react-i18next';
+
 
 
 import { WIDTH_BREAKPOINT } from '../constants';
@@ -19,6 +21,9 @@ import {
 import Menu from './Menu/Menu.jsx';
 import Header from './Header/Header.jsx';
 import Footer from './Footer/Footer.jsx';
+
+
+import ErrorsActionCreators from '../actions/ErrorsActionCreators';
 
 
 import './App.css';
@@ -67,6 +72,9 @@ class App extends Component {
     this.setState({ isMenuOpen: !this.state.isMenuOpen })
   }
 
+  closeErrorWindow() {
+    this.props.markHasBeenRead();
+  }
 
 
   render() {
@@ -83,13 +91,17 @@ class App extends Component {
       fontSize: '50px',
     }
 
-    let errorMessage;
-    if (this.props.errorMessage) {
-      errorMessage = (
-        <span className="generic-error-message">
-          {this.props.errorMessage}
-        </span>
-      )
+    let errorMessages = [];
+    let errorClose;
+    if (this.props.errorMessage && this.props.errorMessage.length > 0) {
+      errorClose = <span className="close-button" onClick={this.closeErrorWindow.bind(this)}>Fermer <FaWindowClose/></span>
+      this.props.errorMessage.forEach((message, i) => {
+        errorMessages.push(
+          <span key={i} className="generic-error-message">
+            {message}
+          </span>)
+      })
+
     }
 
     return (
@@ -99,9 +111,12 @@ class App extends Component {
         </ScrollToTop>
         {meta}
         <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
-        <Menu currentLocation={this.state.currentLocation}/>
+        <Menu currentLocation={this.state.currentLocation} />
         <main className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
-          {errorMessage}
+          <div className="generic-error-message-list">
+            {errorClose}
+            {errorMessages}
+          </div>
 
           {renderRoutes(this.props.route.routes)}
         </main>
@@ -113,7 +128,7 @@ class App extends Component {
 
 App.propTypes = {
   showMainContent: PropTypes.bool,
-  errorMessage: PropTypes.object,
+  errorMessage: PropTypes.array,
 };
 
 const mapStateToProps = (state) => (
@@ -123,6 +138,12 @@ const mapStateToProps = (state) => (
   }
 );
 
+const mapDispatchToProps = (dispatch) => (
+  {
+    markHasBeenRead: () => dispatch(ErrorsActionCreators.markErrorshasBeenRead())
+  }
+)
 
 
-export default translate('translations')(withRouter(connect(mapStateToProps, null)(App)));
+
+export default translate('translations')(withRouter(connect(mapStateToProps, mapDispatchToProps)(App)));

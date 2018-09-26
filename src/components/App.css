@@ -74,14 +74,26 @@ h4 {
 	text-align: center;
 }
 
-.generic-error-message {
+.generic-error-message-list {
   text-align: center;
+  border-radius: 2px;
+  padding: 5px 0 5px 0;
+  display: flex;
+  flex-direction: column;
+}
+.generic-error-message{
+  padding: 5px 0 5px 0;
+  margin: 5px 0 5px 0;
   color: var(--senyu-logo-red);
   border: 1px solid var(--senyu-logo-red);
-  border-radius: 2px;
   background-color: #fae8e8;
-  padding: 5px 0 5px 0;
 }
+.generic-error-message-list .close-button {
+  cursor: pointer;
+  float: right;
+  color: var(--senyu-logo-red);
+}
+
 
 #left-content {
 	height: auto;

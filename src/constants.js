@@ -101,3 +101,8 @@ export const RECEIVE_REGISTRATION_SUBMIT_ERROR = 'receive registration submit er
 export const REQUEST_MODELES_DE_STAND = 'request modeles de stand';
 export const RECEIVE_MODELES_DE_STAND_SUCCESS = 'receive modeles de stand success';
 export const RECEIVE_MODELES_DE_STAND_ERROR = 'receive modeles de stand error';
+
+/**
+ * Erreurs
+ */
+export const REQUEST_ERROR_HAS_BEEN_READ = 'request error has been read';

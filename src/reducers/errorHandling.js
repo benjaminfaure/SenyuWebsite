@@ -1,4 +1,5 @@
 import {
+  REQUEST_ERROR_HAS_BEEN_READ,
   RECEIVE_SENYU_ANIMATIONS_ERROR,
   RECEIVE_SENYU_ANIMATION_BY_ID_ERROR,
   RECEIVE_INTERVENANTS_ERROR,
@@ -13,50 +14,34 @@ import {
 import 'babel-polyfill';
 import React from 'react';
 
+const initialState = [];
 
 
-const errorHandling = (state = null, action) => {
+const errorHandling = (state = initialState, action) => {
   switch (action.type) {
+
+    /* Gestion erreur bien lue */
+    case REQUEST_ERROR_HAS_BEEN_READ:
+      return [];
 
     /* Animations */
     case RECEIVE_SENYU_ANIMATIONS_ERROR:
-      return action.error;
-
     case RECEIVE_SENYU_ANIMATION_BY_ID_ERROR:
-      return action.error;
-
-
     /* Exposants */
     case RECEIVE_EXPOSANTS_ERROR:
-      return action.error;
-
     case RECEIVE_EXPOSANTS_BY_TYPE_ERROR:
-      return action.error;
-
     case RECEIVE_EXPOSANT_BY_ID_ERROR:
-      return action.error;
-
-
     /* FAQ */
     case RECEIVE_FAQ_ERROR:
-      return action.error;
-
-
     /* Intervenants */
     case RECEIVE_INTERVENANTS_ERROR:
-      return action.error;
-
     case RECEIVE_INTERVENANT_BY_ID_ERROR:
-      return action.error;
-
     /* Modeles */
     case RECEIVE_MODELES_DE_STAND_ERROR:
-      return action.error;
-
+      return [...state, action.error];
     /* Inscriptions */
     case RECEIVE_REGISTRATION_SUBMIT_ERROR:
-
-      return <span> Les champs suivants ne sont pas valides :
+     const error = <span> Les champs suivants ne sont pas valides :
         <ul>
           {action.error.parameterViolations ?
             action.error.parameterViolations.map((violation, i) => {
@@ -64,7 +49,8 @@ const errorHandling = (state = null, action) => {
             }) :
             ''}
         </ul>
-      </span>;
+      </span>
+      return [...state,error];
 
     default:
       return state;
