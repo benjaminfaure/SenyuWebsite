@@ -121,7 +121,7 @@ class App extends Component {
 
 App.propTypes = {
   showMainContent: PropTypes.bool,
-  errorMessage: PropTypes.array,
+  errorMessage: PropTypes.object,
 };
 
 const mapStateToProps = (state) => (

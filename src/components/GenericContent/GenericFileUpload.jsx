@@ -2,7 +2,6 @@ import React from 'react';
 import { translate } from 'react-i18next';
 import Dropzone from 'react-dropzone';
 
-import { filesReader } from '../../utils';
 
 import './GenericFileUpload.css';
 
@@ -15,13 +14,6 @@ const renderDropzoneInput = (field) => {
         accept={"image/png, image/jpeg"}
         multiple={false}
         onDrop={(files, e) => field.input.onChange(files) }
-          /*{
-          const reader = new FileReader();
-          const file = files[0]
-          reader.readAsDataURL(file);
-
-          field.input.onChange({ preview: file.preview, data: reader.result });
-        }}*/
       >
         <div>Glissez/Déposez votre image ou cliquez ici pour la sélectionner</div>
       </Dropzone>

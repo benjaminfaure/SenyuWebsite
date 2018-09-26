@@ -75,7 +75,7 @@ let SenyuAPI = {
           typeIntervenant: { $set: values.typeIntervenant },
           dateNaissanceReferent: { $set: values.etape1.dateNaissanceReferent ? dateFormatter(values.etape1.dateNaissanceReferent) : '' }
         },
-        etape2: { image: { $set: await filesReader(values.etape2.image) } },
+        etape2: { image: { $set: values.etape2.image ? await filesReader(values.etape2.image): null } },
       }
       )
 
