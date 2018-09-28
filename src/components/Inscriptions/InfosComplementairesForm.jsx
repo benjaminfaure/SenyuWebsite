@@ -3,7 +3,7 @@ import { Field } from 'redux-form';
 import { translate } from 'react-i18next';
 
 
-import { isValidSiret } from '../../utils';
+import { luhn_calculate } from '../../utils';
 
 
 class InfosComplementairesForm extends Component {
@@ -111,7 +111,7 @@ class InfosComplementairesForm extends Component {
   }
 
   handleSiretValidation(e) {
-    let isValid = isValidSiret(e.target.value, this.props.registrationType)
+    let isValid = luhn_calculate(e.target.value, this.props.registrationType)
 
     if (!isValid) {
       e.target.setCustomValidity(`SIRET non valide`);

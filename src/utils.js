@@ -24,6 +24,35 @@ export const throttle = (func, wait) => {
   };
 };
 
+/*
+ * JavaScript implementation of the Luhn algorithm, with calculation and validation functions
+ */
+
+
+
+export const luhn_calculate = (value, typeIntervenant) => {
+  // accept only digits, dashes or spaces
+  if (/[^0-9-\s]+/.test(value)) return false;
+  if (value === '00000000000000' && typeIntervenant !== 'createur') return false;
+  // The Luhn Algorithm. It's so pretty.
+  let nCheck = 0, nDigit = 0, bEven = false;
+  value = value.replace(/\D/g, "");
+
+  for (var n = value.length - 1; n >= 0; n--) {
+    let cDigit = value.charAt(n);
+    nDigit = parseInt(cDigit, 10);
+
+    if (bEven) {
+      if ((nDigit *= 2) > 9) nDigit -= 9;
+    }
+
+    nCheck += nDigit;
+    bEven = !bEven;
+  }
+
+  return (nCheck % 10) === 0;
+}
+
 // https://codes-sources.commentcamarche.net/source/16330-verification-de-la-validite-des-codes-siret-et-siren-algo-de-luhn
 export const isValidSiret = (siret, typeIntervenant) => {
   let estValide;
