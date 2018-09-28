@@ -187,16 +187,6 @@ const routes = [
         exact: true,
         component: EnTravaux
       },
-      /* Redirection Inscriptions */
-      {
-        path: '/ws/inscriptions',
-        exact: true,
-        component: Redirect
-      },
-      {
-        path: '/ws/inscriptions/:typeInscription',
-        component: Redirect
-      },
       /* 404 */
       {
         path: '*',
