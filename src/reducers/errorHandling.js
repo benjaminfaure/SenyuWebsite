@@ -23,20 +23,15 @@ const errorHandling = (state = null, action) => {
     case REQUEST_ERROR_HAS_BEEN_READ:
       return null;
 
-    /* Animations */
-    case RECEIVE_SENYU_ANIMATIONS_ERROR:
-    case RECEIVE_SENYU_ANIMATION_BY_ID_ERROR:
-    /* Exposants */
+    case RECEIVE_SENYU_ANIMATIONS_ERROR:/* Animations */
+    case RECEIVE_SENYU_ANIMATION_BY_ID_ERROR: /* Exposants */
     case RECEIVE_EXPOSANTS_ERROR:
     case RECEIVE_EXPOSANTS_BY_TYPE_ERROR:
-    case RECEIVE_EXPOSANT_BY_ID_ERROR:
-    /* FAQ */
-    case RECEIVE_FAQ_ERROR:
-    /* Intervenants */
+    case RECEIVE_EXPOSANT_BY_ID_ERROR: /* FAQ */
+    case RECEIVE_FAQ_ERROR: /* Intervenants */
     case RECEIVE_INTERVENANTS_ERROR:
     case RECEIVE_INTERVENANT_BY_ID_ERROR:
-    /* Modeles */
-    case RECEIVE_MODELES_DE_STAND_ERROR:
+    case RECEIVE_MODELES_DE_STAND_ERROR: /* Modeles */
       return action.error;
     /* Inscriptions */
     case RECEIVE_REGISTRATION_SUBMIT_ERROR:

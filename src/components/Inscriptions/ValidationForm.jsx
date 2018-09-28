@@ -4,7 +4,6 @@ import { translate } from 'react-i18next';
 import { getFormValues } from 'redux-form'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import ScrollToTop from 'react-scroll-up';
 
 import {
   LIBELLE_REPARTITION_CLOISONS
