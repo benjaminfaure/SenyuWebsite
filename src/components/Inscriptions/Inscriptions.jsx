@@ -18,28 +18,28 @@ class Inscriptions extends Component {
 
 
     return (
-      <div>
+      <div className="inscriptions">
         {meta}
         <section className="generic-page-header">
           <h1 className="generic-page-title">{t('content.registration.pageTitle')}</h1>
         </section>
 
         <section className="generic-content-list">
-          <article className="generic-content-list-item">
+          {/*<article className="generic-content-list-item">
             <a href="/inscription/animation" rel="noopener noreferrer">
               <h4>{t('content.registration.animation.pageTitle')}</h4>
             </a>
-          </article>
+          </article>*/}
           <article className="generic-content-list-item">
             <a href="/inscription/createur" rel="noopener noreferrer">
               <h4>{t('content.registration.createur.pageTitle')}</h4>
             </a>
           </article>
-          <article className="generic-content-list-item">
+          {/*<article className="generic-content-list-item">
             <a href="/inscription/invite" rel="noopener noreferrer">
               <h4>{t('content.registration.invite.pageTitle')}</h4>
             </a>
-          </article>
+          </article>*/}
           <article className="generic-content-list-item">
             <a href="/inscription/boutique" rel="noopener noreferrer">
               <h4>{t('content.registration.boutique.pageTitle')}</h4>
