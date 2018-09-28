@@ -22,7 +22,7 @@ class InfosComplementairesForm extends Component {
       </div>;
 
     if (this.props.registrationType === "boutique" || this.props.registrationType === "createur") {
-      const libelleSiret = this.props.registrationType === "createur" ? ' Numéro SIRET (ou remplissez 00000000000000)' : ' Numéro SIRET'
+      const libelleSiret = this.props.registrationType === "createur" ? ' Numéro SIRET/SIREN (ou remplissez 00000000000000)' : ' Numéro SIRET'
 
       infosComplementairesField =
         <div className="generic-form-body">
