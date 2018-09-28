@@ -127,7 +127,7 @@ class ValidationForm extends Component {
             type="checkbox"
             id="conditionsGeneralesDeServiceAcceptees" name="conditionsGeneralesDeServiceAcceptees" required />
 
-          <button type="submit" id="validBtn"  disabled={this.props.pristine || this.props.submitting || this.props.invalid}>
+          <button type="submit" id="validBtn"  onClick={this.scrollTop} disabled={this.props.pristine || this.props.submitting || this.props.invalid}>
             Submit
           </button>
         </div>

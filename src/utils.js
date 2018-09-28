@@ -25,12 +25,15 @@ export const throttle = (func, wait) => {
 };
 
 // https://codes-sources.commentcamarche.net/source/16330-verification-de-la-validite-des-codes-siret-et-siren-algo-de-luhn
-export const isValidSiret = siret => {
+export const isValidSiret = (siret, typeIntervenant) => {
   let estValide;
   siret = siret.replace(/\s+/g, '');
   if (siret) {
     if ((siret.length !== 14) || (isNaN(siret)))
       estValide = false;
+    else if (siret === '00000000000000' && typeIntervenant !== 'createur') {
+      estValide = false;
+    }
     else {
       // Donc le SIRET est un numérique à 14 chiffres
       // Les 9 premiers chiffres sont ceux du SIREN (ou RCS), les 4 suivants
@@ -86,7 +89,7 @@ export const normalizePhone = value => {
 };
 
 export const normalizeFacebooUrl = (facebook) => {
-  if(facebook.slice(-1) === "/") {
+  if (facebook.slice(-1) === "/") {
     return facebook.slice(0, -1);
   }
   return facebook;

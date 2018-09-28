@@ -22,11 +22,13 @@ class InfosComplementairesForm extends Component {
       </div>;
 
     if (this.props.registrationType === "boutique" || this.props.registrationType === "createur") {
+      const libelleSiret = this.props.registrationType === "createur" ? ' Numéro SIRET (ou remplissez 00000000000000)' : ' Numéro SIRET'
+
       infosComplementairesField =
         <div className="generic-form-body">
           <label htmlFor="numeroSIRET">
-            Numéro SIRET
-          <span className="requiredField">*</span>
+            {libelleSiret}
+            <span className="requiredField">*</span>
           </label>
           <Field
             component="input"
@@ -109,7 +111,7 @@ class InfosComplementairesForm extends Component {
   }
 
   handleSiretValidation(e) {
-    let isValid = isValidSiret(e.target.value)
+    let isValid = isValidSiret(e.target.value, this.props.registrationType)
 
     if (!isValid) {
       e.target.setCustomValidity(`SIRET non valide`);
