@@ -70,21 +70,24 @@ let SenyuAPI = {
 
   async submitRegistration(values) {
     try {
+      const image = values.etape2.image ? await filesReader(values.etape2.image): null;
+      const facebook =  values.etape2.facebook ? normalizeFacebooUrl(values.etape2.facebook) : null;
       const valuesToSubmit = update(values, {
         etape1: {
           typeIntervenant: { $set: values.typeIntervenant },
           dateNaissanceReferent: { $set: values.etape1.dateNaissanceReferent ? dateFormatter(values.etape1.dateNaissanceReferent) : '' }
         },
         etape2: {
-          facebook:  { $set: normalizeFacebooUrl(values.etape2.facebook) } ,
-          image: { $set: values.etape2.image ? await filesReader(values.etape2.image): null }
+          facebook:  { $set: facebook } ,
+          image: { $set: image }
         },
       }
       )
 
       return await axios.put(`${API_URL}/inscriptions`, valuesToSubmit, { headers: API_HEADERS });
     } catch (err) {
-      return { message: `Un erreur s'est produite lors de l'inscription : ${err.message}`, data: err.response.data };
+      const errorData = err.response ? err.response.data : {}
+      return { message: `Un erreur s'est produite lors de l'inscription : ${err.message}`, data: errorData };
     }
   },
 

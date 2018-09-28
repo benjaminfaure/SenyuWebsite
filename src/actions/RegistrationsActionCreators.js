@@ -16,6 +16,7 @@ let RegistrationsActionCreators = {
     return (dispatch) => {
       dispatch({ type: REQUEST_REGISTRATION_SUBMIT });
       SenyuAPI.submitRegistration(values).then((response) => {
+        console.log(response);
         if(response.status >= 200 && response.status < 300) {
           dispatch({ type: RECEIVE_REGISTRATION_SUBMIT_SUCCESS, values, response});
         } else {
