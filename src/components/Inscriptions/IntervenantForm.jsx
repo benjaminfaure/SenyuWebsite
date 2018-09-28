@@ -90,7 +90,7 @@ class IntervenantForm extends Component {
             id="siteWeb" className="generic-form-field" name="siteWeb" />
 
           <label htmlFor="image">
-            Image affichée sur le site web
+            Image affichée sur le site web (10 Mo maximum)
             </label>
           <Field
             component={GenericFileUpload}
