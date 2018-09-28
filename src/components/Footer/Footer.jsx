@@ -27,7 +27,7 @@ class Footer extends Component {
             {/*<h5><a href="/archive" rel="noopener noreferrer">{t('footer.archive')}</a></h5>*/}
             <h5><a href="/recrutement" rel="noopener noreferrer">{t('footer.recruitment')}</a></h5>
             <h5><a href="/partenaires" rel="noopener noreferrer">{t('footer.partners')}</a></h5>
-            <h5><a href="/inscription" rel="noopener noreferrer">{t('footer.registration')}</a></h5>
+            {/*<h5><a href="/inscription" rel="noopener noreferrer">{t('footer.registration')}</a></h5>*/}
           </div>
           <div className="footer-social-links">
             <h2><a href="https://www.facebook.com/senyuofficiel/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a></h2>
