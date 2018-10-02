@@ -4,8 +4,7 @@ import { translate } from 'react-i18next';
 
 
 import './GenericCategorySelector.css';
-import FaCircleO from 'react-icons/lib/fa/circle-o';
-import FaCheckCircleO from 'react-icons/lib/fa/check-circle-o';
+import { FaRegCircle, FaRegCheckCircle } from 'react-icons/fa';
 
 class GenericCategorySelector extends Component {
 
@@ -24,8 +23,8 @@ class GenericCategorySelector extends Component {
           checked={this.props.selectedCategory === category.code}
           onChange={this.onRadioChange.bind(this)} />
         <label htmlFor={category.code}>
-          <FaCircleO className="generic-category-radio" />
-          <FaCheckCircleO className="generic-category-radio-checked" />
+          <FaRegCircle className="generic-category-radio" />
+          <FaRegCheckCircle className="generic-category-radio-checked" />
           {t(`content.generic.${category.code}`)}
         </label>
       </div>
@@ -37,8 +36,8 @@ class GenericCategorySelector extends Component {
           checked={this.props.selectedCategory === ""}
           onChange={this.onRadioChange.bind(this)} />
         <label htmlFor="all">
-          <FaCircleO className="generic-category-radio" />
-          <FaCheckCircleO className="generic-category-radio-checked" />
+          <FaRegCircle className="generic-category-radio" />
+          <FaRegCheckCircle className="generic-category-radio-checked" />
           {t("content.generic.all")}
         </label>
       </div>

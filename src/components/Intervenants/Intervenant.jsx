@@ -3,12 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 
-import FaFacebook from 'react-icons/lib/fa/facebook-official';
-import FaTwitch from 'react-icons/lib/fa/twitch';
-import FaTwitter from 'react-icons/lib/fa/twitter';
-import FaYoutube from 'react-icons/lib/fa/youtube';
-import FaInstagram from 'react-icons/lib/fa/instagram';
-import FaWebsite from 'react-icons/lib/fa/external-link';
+import {FaFacebook, FaTwitch, FaTwitter, FaYoutube, FaInstagram, FaExternalLinkAlt} from 'react-icons/fa';
 
 import GenericContentItem from '../GenericContent/GenericContentItem.jsx';
 import IntervenantsActionCreators from '../../actions/IntervenantsActionCreators';
@@ -36,7 +31,7 @@ class Intervenant extends Component {
     const twitch = this.props.intervenant.twitch ? <h2><a href={this.props.intervenant.twitch} target="_blank" rel="noopener noreferrer"><FaTwitch /></a></h2> : "";
     const twitter = this.props.intervenant.twitter ? <h2><a href={this.props.intervenant.twitter} target="_blank" rel="noopener noreferrer"><FaTwitter /></a></h2> : "";
     const youtube = this.props.intervenant.youtube ? <h2><a href={this.props.intervenant.youtube} target="_blank" rel="noopener noreferrer"><FaYoutube /></a></h2> : "";
-    const website = this.props.intervenant.website ? <h2><a href={this.props.intervenant.website} target="_blank" rel="noopener noreferrer"><FaWebsite /></a></h2> : "";
+    const website = this.props.intervenant.website ? <h2><a href={this.props.intervenant.website} target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /></a></h2> : "";
     const instagram = this.props.intervenant.instagram ? <h2><a href={this.props.intervenant.instagram} target="_blank" rel="noopener noreferrer"><FaInstagram /></a></h2> : "";
 
     return (

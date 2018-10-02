@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import { translate } from 'react-i18next';
 
-import FaTrophy from 'react-icons/lib/fa/trophy';
+import { FaTrophy } from 'react-icons/fa';
 
 import './NotFound.css';
 

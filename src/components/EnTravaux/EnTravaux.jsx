@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import { translate } from 'react-i18next';
 
-import FaEmpire from 'react-icons/lib/fa/empire';
+import { FaEmpire } from 'react-icons/fa';
 
 import './EnTravaux.css';
 

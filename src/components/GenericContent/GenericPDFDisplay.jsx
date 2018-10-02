@@ -5,9 +5,7 @@ import PropTypes from 'prop-types';
 import MediaQuery from 'react-responsive';
 import { translate, Trans } from 'react-i18next';
 
-import FaAngleLeft from 'react-icons/lib/fa/angle-left';
-import FaAngleRight from 'react-icons/lib/fa/angle-right';
-import FaCloudDownload from 'react-icons/lib/fa/cloud-download';
+import { FaAngleLeft, FaAngleRight, FaCloudDownloadAlt } from 'react-icons/fa';
 
 
 
@@ -67,7 +65,7 @@ class GenericPDFDisplay extends Component {
           </Document>
           {pager}
         </MediaQuery>
-        <h2><a href={this.props.filePath} target="_blank" className="generic-pdf-download">{t('content.generic.download')} <FaCloudDownload /></a></h2>
+        <h2><a href={this.props.filePath} target="_blank" className="generic-pdf-download">{t('content.generic.download')} <FaCloudDownloadAlt /></a></h2>
       </div>
     );
   }

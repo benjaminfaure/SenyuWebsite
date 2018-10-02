@@ -3,11 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 
-import FaFacebook from 'react-icons/lib/fa/facebook-official';
-import FaTwitch from 'react-icons/lib/fa/twitch';
-import FaTwitter from 'react-icons/lib/fa/twitter';
-import FaYoutube from 'react-icons/lib/fa/youtube';
-import FaWebsite from 'react-icons/lib/fa/external-link';
+import { FaFacebook, FaTwitter, FaTwitch, FaYoutube, FaExternalLinkAlt } from 'react-icons/fa';
 
 import GenericContentItem from '../GenericContent/GenericContentItem.jsx';
 import AnimationsActionCreators from '../../actions/AnimationsActionCreators';
@@ -33,7 +29,7 @@ class Animation extends Component {
     const twitch = this.props.animation.twitch ? <h2><a href={this.props.animation.twitch} target="_blank" rel="noopener noreferrer"><FaTwitch /></a></h2> : "";
     const twitter = this.props.animation.twitter ? <h2><a href={this.props.animation.twitter} target="_blank" rel="noopener noreferrer"><FaTwitter /></a></h2> : "";
     const youtube = this.props.animation.youtube ? <h2><a href={this.props.animation.youtube} target="_blank" rel="noopener noreferrer"><FaYoutube /></a></h2> : "";
-    const website = this.props.animation.website ? <h2><a href={this.props.animation.website} target="_blank" rel="noopener noreferrer"><FaWebsite /></a></h2> : "";
+    const website = this.props.animation.website ? <h2><a href={this.props.animation.website} target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /></a></h2> : "";
 
     return (
       <GenericContentItem

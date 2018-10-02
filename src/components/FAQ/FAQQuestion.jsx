@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-import FaAngleRight from 'react-icons/lib/fa/angle-right';
-import FaAngleDown from 'react-icons/lib/fa/angle-down';
+import { FaAngleRight, FaAngleDown } from 'react-icons/fa';
 
 
 import './FAQQuestion.css';

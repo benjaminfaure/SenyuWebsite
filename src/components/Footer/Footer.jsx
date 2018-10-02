@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { translate } from 'react-i18next';
 
-import FaFacebook from 'react-icons/lib/fa/facebook-official';
-import FaTwitch from 'react-icons/lib/fa/twitch';
-import FaTwitter from 'react-icons/lib/fa/twitter';
-import FaYoutube from 'react-icons/lib/fa/youtube';
-import FaInstagram from 'react-icons/lib/fa/instagram';
+import { FaFacebook, FaTwitter, FaTwitch, FaYoutube, FaInstagram } from 'react-icons/fa';
+
 
 import './Footer.css';
 

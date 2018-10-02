@@ -3,8 +3,8 @@ import GoogleAnalytics from 'react-ga';
 import { Helmet } from "react-helmet";
 import PropTypes from 'prop-types';
 import ScrollToTop from 'react-scroll-up';
-import FaCircleOArrowUp from 'react-icons/lib/fa/arrow-circle-o-up';
-import FaWindowClose from 'react-icons/lib/fa/close';
+import { FaRegArrowAltCircleUp, FaWindowClose } from 'react-icons/fa';
+import { IconContext } from 'react-icons';
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux';
 import { renderRoutes } from 'react-router-config';
@@ -101,20 +101,22 @@ class App extends Component {
     }
 
     return (
-      <div className="App" >
-        <ScrollToTop showUnder={160} style={scrollStyle}>
-          <FaCircleOArrowUp />
-        </ScrollToTop>
-        {meta}
-        <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
-        <Menu currentLocation={this.state.currentLocation} />
-        <main className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
-          {errorMessage}
+      <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
+        <div className="App" >
+          <ScrollToTop showUnder={160} style={scrollStyle}>
+            <FaRegArrowAltCircleUp />
+          </ScrollToTop>
+          {meta}
+          <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
+          <Menu currentLocation={this.state.currentLocation} />
+          <main className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
+            {errorMessage}
 
-          {renderRoutes(this.props.route.routes)}
-        </main>
-        <Footer />
-      </div>
+            {renderRoutes(this.props.route.routes)}
+          </main>
+          <Footer />
+        </div>
+      </IconContext.Provider>
     );
   }
 }
