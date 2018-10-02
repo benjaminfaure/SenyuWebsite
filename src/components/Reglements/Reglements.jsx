@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import { Link } from 'react-router-dom';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 
 import './Reglements.css';
@@ -36,4 +36,4 @@ class Reglements extends Component {
 }
 
 
-export default translate('translations')(Reglements);
+export default withNamespaces('translations')(Reglements);

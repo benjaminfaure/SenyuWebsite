@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 import './Stream.css';
 
@@ -31,4 +31,4 @@ class Stream extends Component {
 }
 
 
-export default translate('translations')(Stream);
+export default withNamespaces('translations')(Stream);

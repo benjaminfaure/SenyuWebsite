@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 import { FaTrophy } from 'react-icons/fa';
 
@@ -43,4 +43,4 @@ class NotFound extends Component {
 }
 
 
-export default translate('translations')(NotFound);
+export default withNamespaces('translations')(NotFound);

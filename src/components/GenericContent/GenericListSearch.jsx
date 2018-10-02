@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 import { FaSearch } from 'react-icons/fa';
 
@@ -30,4 +30,4 @@ GenericListSearch.propTypes = {
   onChange: PropTypes.func.isRequired
 };
 
-export default translate('translations')(GenericListSearch);
+export default withNamespaces('translations')(GenericListSearch);

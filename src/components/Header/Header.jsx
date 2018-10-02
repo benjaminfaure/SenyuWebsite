@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 import './Header.css';
 import MenuIcon from '../Menu/MenuIcon.jsx';
@@ -33,4 +33,4 @@ class Header extends Component {
 }
 
 
-export default translate('translations')(Header);
+export default withNamespaces('translations')(Header);

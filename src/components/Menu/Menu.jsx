@@ -4,7 +4,7 @@ import MediaQuery from 'react-responsive';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 import TwitchActionCreators from '../../actions/TwitchActionCreators';
 
@@ -95,4 +95,4 @@ const mapDispatchToProps = (dispatch) => (
   }
 );
 
-export default translate('translations')(connect(mapStateToProps, mapDispatchToProps)(Menu));
+export default withNamespaces('translations')(connect(mapStateToProps, mapDispatchToProps)(Menu));

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 import GenericPDFDisplay from '../GenericContent/GenericPDFDisplay';
 
@@ -30,4 +30,4 @@ class CG extends Component {
 }
 
 
-export default translate('translations')(CG);
+export default withNamespaces('translations')(CG);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Field } from 'redux-form';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 import { getFormValues } from 'redux-form'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -143,4 +143,4 @@ const mapStateToProps = (state) => ({
   values: getFormValues('registration')(state)
 });
 
-export default translate('translations')(connect(mapStateToProps, null)(ValidationForm));
+export default withNamespaces('translations')(connect(mapStateToProps, null)(ValidationForm));

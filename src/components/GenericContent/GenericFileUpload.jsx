@@ -1,5 +1,5 @@
 import React from 'react';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 import Dropzone from 'react-dropzone';
 
 
@@ -29,4 +29,4 @@ const renderDropzoneInput = (field) => {
 
 
 
-export default translate('translations')(renderDropzoneInput);
+export default withNamespaces('translations')(renderDropzoneInput);

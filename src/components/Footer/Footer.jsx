@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 import { FaFacebook, FaTwitter, FaTwitch, FaYoutube, FaInstagram } from 'react-icons/fa';
 
@@ -49,4 +49,4 @@ class Footer extends Component {
 }
 
 
-export default translate('translations')(Footer);
+export default withNamespaces('translations')(Footer);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 import GenericImageDisplay from '../GenericContent/GenericImageDisplay.jsx';
 
@@ -29,4 +29,4 @@ class Planning extends Component {
 }
 
 
-export default translate('translations')(Planning);
+export default withNamespaces('translations')(Planning);

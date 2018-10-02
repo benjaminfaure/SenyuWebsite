@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { reduxForm, FormSection } from 'redux-form'
 import { Helmet } from "react-helmet";
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 import { connect } from 'react-redux';
 
 import ReferentForm from './ReferentForm.jsx';
@@ -216,4 +216,4 @@ const mapDispatchToProps = (dispatch) => (
 
 const createReduxForm = reduxForm({ form: 'registration', initialValues })
 
-export default createReduxForm(translate('translations')(connect(mapStateToProps, mapDispatchToProps)(GenericRegistrationForm)));
+export default createReduxForm(withNamespaces('translations')(connect(mapStateToProps, mapDispatchToProps)(GenericRegistrationForm)));

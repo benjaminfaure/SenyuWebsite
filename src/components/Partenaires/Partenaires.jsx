@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 
 
@@ -65,4 +65,4 @@ class Partenaires extends Component {
 }
 
 
-export default translate('translations')(Partenaires);
+export default withNamespaces('translations')(Partenaires);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Field } from 'redux-form';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 import { normalizePhone } from '../../utils';
 
@@ -84,4 +84,4 @@ class ReferentForm extends Component {
 
   }
 }
-export default translate('translations')(ReferentForm);
+export default withNamespaces('translations')(ReferentForm);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Field } from 'redux-form';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 import GenericFileUpload from '../GenericContent/GenericFileUpload.jsx';
 
@@ -103,4 +103,4 @@ class IntervenantForm extends Component {
 
   }
 }
-export default translate('translations')(IntervenantForm);
+export default withNamespaces('translations')(IntervenantForm);

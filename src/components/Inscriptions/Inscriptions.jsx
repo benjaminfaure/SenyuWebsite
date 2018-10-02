@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 import './Inscriptions.css';
 
@@ -54,4 +54,4 @@ class Inscriptions extends Component {
 }
 
 
-export default translate('translations')(Inscriptions);
+export default withNamespaces('translations')(Inscriptions);

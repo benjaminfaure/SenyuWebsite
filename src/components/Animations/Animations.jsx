@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 import { TYPE_ANIMATION } from '../../constants';
 
@@ -103,4 +103,4 @@ const mapDispatchToProps = (dispatch) => (
 
 
 
-export default translate('translations')(connect(mapStateToProps, mapDispatchToProps)(Animations));
+export default withNamespaces('translations')(connect(mapStateToProps, mapDispatchToProps)(Animations));

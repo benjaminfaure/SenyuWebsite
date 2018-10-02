@@ -8,7 +8,7 @@ import { IconContext } from 'react-icons';
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux';
 import { renderRoutes } from 'react-router-config';
-import { translate } from 'react-i18next';
+import { withNamespaces } from 'react-i18next';
 
 
 
@@ -141,4 +141,4 @@ const mapDispatchToProps = (dispatch) => (
 
 
 
-export default translate('translations')(withRouter(connect(mapStateToProps, mapDispatchToProps)(App)));
+export default withNamespaces('translations')(withRouter(connect(mapStateToProps, mapDispatchToProps)(App)));
