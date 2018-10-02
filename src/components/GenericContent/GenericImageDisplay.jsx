@@ -17,10 +17,10 @@ class GenericImageDisplay extends Component {
 
     return (
       <div className="generic-image-viewer">
-        <a href={this.props.filePath} target="_blank" className="generic-image-download">
+        <a href={this.props.filePath} target="_blank" rel="noopener noreferrer" className="generic-image-download">
           <img src={this.props.filePath} alt={this.props.altTag} />
         </a>
-        <h2><a href={this.props.filePath} target="_blank" className="generic-image-download">{t('content.generic.download')} <FaCloudDownloadAlt /></a></h2>
+        <h2><a href={this.props.filePath} target="_blank" rel="noopener noreferrer" className="generic-image-download">{t('content.generic.download')} <FaCloudDownloadAlt /></a></h2>
       </div>
     );
   }

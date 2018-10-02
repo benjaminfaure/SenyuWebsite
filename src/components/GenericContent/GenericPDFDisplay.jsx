@@ -65,7 +65,7 @@ class GenericPDFDisplay extends Component {
           </Document>
           {pager}
         </MediaQuery>
-        <h2><a href={this.props.filePath} target="_blank" className="generic-pdf-download">{t('content.generic.download')} <FaCloudDownloadAlt /></a></h2>
+        <h2><a href={this.props.filePath} target="_blank" rel="noopener noreferrer" className="generic-pdf-download">{t('content.generic.download')} <FaCloudDownloadAlt /></a></h2>
       </div>
     );
   }
