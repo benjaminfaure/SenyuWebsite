@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Field } from 'redux-form';
 import { withNamespaces } from 'react-i18next';
 
-import { normalizePhone } from '../../utils';
+import { normalizePhone, normalizeBirthDay } from '../../utils';
 
 class ReferentForm extends Component {
 
@@ -37,8 +37,10 @@ class ReferentForm extends Component {
           </label>
           <Field
             component="input"
-            type="date"
-            id="dateNaissanceReferent" className="generic-form-field" name="dateNaissanceReferent" required />
+            type="text"
+            id="dateNaissanceReferent" className="generic-form-field" name="dateNaissanceReferent"
+            placeholder="JJ/MM/AAAA"
+            normalize={normalizeBirthDay} required />
 
           <label htmlFor="mailReferent">
             Mail de la personne référente

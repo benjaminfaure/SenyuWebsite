@@ -1,7 +1,7 @@
 import update from 'immutability-helper';
 import axios from 'axios';
 import 'babel-polyfill';
-import { dateFormatter, filesReader, normalizeFacebooUrl } from '../utils';
+import { filesReader, normalizeFacebooUrl } from '../utils';
 
 const API_URL = 'https://ws.senyu.fr';//'https://ws.senyu.fr/';
 const API_HEADERS = {
@@ -75,7 +75,6 @@ let SenyuAPI = {
       const valuesToSubmit = update(values, {
         etape1: {
           typeIntervenant: { $set: values.typeIntervenant },
-          dateNaissanceReferent: { $set: values.etape1.dateNaissanceReferent ? dateFormatter(values.etape1.dateNaissanceReferent) : '' }
         },
         etape2: {
           facebook:  { $set: facebook } ,
