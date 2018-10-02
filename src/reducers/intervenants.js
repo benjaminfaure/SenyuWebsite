@@ -2,7 +2,7 @@ import {
   RECEIVE_INTERVENANTS_SUCCESS,
   RECEIVE_INTERVENANT_BY_ID_SUCCESS,
 } from '../constants';
-import 'babel-polyfill';
+import "@babel/polyfill";
 
 
 const initialState = {

@@ -2,7 +2,7 @@ import {
   RECEIVE_REGISTRATION_SUBMIT_SUCCESS,
 	//REQUEST_REGISTRATION_SUBMIT
 } from '../constants';
-import 'babel-polyfill';
+import "@babel/polyfill";
 
 
 const initialState = {

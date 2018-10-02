@@ -2,7 +2,7 @@ import {
   RECEIVE_SENYU_ANIMATIONS_SUCCESS,
   RECEIVE_SENYU_ANIMATION_BY_ID_SUCCESS,
 } from '../constants';
-import 'babel-polyfill';
+import "@babel/polyfill";
 
 
 const initialState = {

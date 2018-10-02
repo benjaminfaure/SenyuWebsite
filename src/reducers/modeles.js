@@ -1,7 +1,7 @@
 import {
   RECEIVE_MODELES_DE_STAND_SUCCESS,
 } from '../constants';
-import 'babel-polyfill';
+import "@babel/polyfill";
 
 
 const initialState = {

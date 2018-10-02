@@ -1,7 +1,7 @@
 import {
   RECEIVE_FAQ_SUCCESS
 } from '../constants';
-import 'babel-polyfill';
+import "@babel/polyfill";
 
 
 const initialState = [{

@@ -1,7 +1,7 @@
 import {
   RECEIVE_IS_CHANNEL_LIVE
 } from '../constants';
-import 'babel-polyfill';
+import "@babel/polyfill";
 
 const initialState = [{
   isLive: false

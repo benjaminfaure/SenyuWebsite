@@ -1,6 +1,6 @@
 import update from 'immutability-helper';
 import axios from 'axios';
-import 'babel-polyfill';
+import "@babel/polyfill";
 import { filesReader, normalizeFacebooUrl } from '../utils';
 
 const API_URL = 'https://ws.senyu.fr';//'https://ws.senyu.fr/';
