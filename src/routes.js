@@ -31,7 +31,7 @@ import Contact from './components/Contact/Contact.jsx';
 
 import Recrutement from './components/Recrutement/Recrutement.jsx';
 
-import Billeterie from './components/Billeterie/Billeterie.jsx';
+//import Billeterie from './components/Billeterie/Billeterie.jsx';
 
 import Planning from './components/Planning/Planning.jsx';
 
@@ -43,7 +43,7 @@ import Guide from './components/Guide/Guide.jsx';
 
 import EnTravaux from './components/EnTravaux/EnTravaux.jsx';
 
-import Redirect from './components/Redirect/Redirect.jsx';
+//import Redirect from './components/Redirect/Redirect.jsx';
 
 import NotFound from './components/NotFound/NotFound.jsx';
 
