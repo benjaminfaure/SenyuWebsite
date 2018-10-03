@@ -7,7 +7,7 @@ require("@babel/register")({
   ignore: [
     /\/(build|node_modules)\//
   ],
-  presets: ['env', 'react-app']
+  presets: ['@babel/preset-env', '@babel/react']
 });
 // Now that the nonsense is over... load up the server entry point
 require('./server');

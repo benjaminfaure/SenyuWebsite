@@ -12,9 +12,12 @@ import { FaAngleLeft, FaAngleRight, FaCloudDownloadAlt } from 'react-icons/fa';
 import './GenericPDFDisplay.css';
 
 class GenericPDFDisplay extends Component {
-  state = {
-    numPages: null,
-    pageNumber: 1,
+  constructor(props) {
+    super(props);
+    this. state = {
+      numPages: null,
+      pageNumber: 1,
+    }
   }
 
   onDocumentLoad({ numPages }) {
