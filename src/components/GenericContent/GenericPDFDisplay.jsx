@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Page, Document } from 'react-pdf';
-/*import { Document } from 'react-pdf/build/entry.webpack';*/
+import { Page } from 'react-pdf';
+import { Document } from 'react-pdf/dist/entry.webpack';
 import PropTypes from 'prop-types';
 import MediaQuery from 'react-responsive';
 import { withNamespaces, Trans } from 'react-i18next';
@@ -14,7 +14,7 @@ import './GenericPDFDisplay.css';
 class GenericPDFDisplay extends Component {
   constructor(props) {
     super(props);
-    this. state = {
+    this.state = {
       numPages: null,
       pageNumber: 1,
     }
