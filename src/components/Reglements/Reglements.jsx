@@ -9,22 +9,20 @@ import './Reglements.css';
 
 class Reglements extends Component {
 
-
   render() {
 
 
     const { t } = this.props;
-    let titrePage = t('content.regulation.list');
+    let titrePage = `Senyu | ${ t('content.regulation.list') }`;
 
     const meta = <Helmet>
-      <title>Senyu | {titrePage}</title>
+      <title>{ titrePage }</title>
     </Helmet>
 
     return (
       <div className="reglements">
-        {meta}
         <section className="generic-page-header">
-          <h1 className="generic-page-title">{titrePage}</h1>
+          <h1 className="generic-page-title">{t('content.regulation.list') }</h1>
         </section>
       <section className="reglements-links">
         <h2><Link to="/reglements/cosplay">{t('content.regulation.cosplay')}</Link></h2>

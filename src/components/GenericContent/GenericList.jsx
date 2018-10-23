@@ -15,7 +15,7 @@ class GenericList extends Component {
     let titrePage = this.props.titrePage && this.props.itemList && this.props.itemList.length > 0 ? this.props.titrePage : t("content.generic.noRecord")
 
     const meta = <Helmet>
-      <title>Senyu | {titrePage}</title>
+      <title>{ `Senyu | ${ titrePage }` }</title>
     </Helmet>
 
     return (

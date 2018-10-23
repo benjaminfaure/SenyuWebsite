@@ -14,7 +14,7 @@ class Cosplay extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.cosplay')}</title>
+      <title>{ `Senyu | ${ t('titles.cosplay') }` }</title>
     </Helmet>
 
     return (

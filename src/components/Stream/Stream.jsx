@@ -19,7 +19,7 @@ class Stream extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.stream')}</title>
+      <title>{ `Senyu | ${ t('titles.stream') }` }</title>
     </Helmet>
 
     return (

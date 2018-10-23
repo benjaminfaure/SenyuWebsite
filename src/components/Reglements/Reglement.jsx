@@ -46,7 +46,7 @@ class Reglement extends Component {
 
 
     const meta = <Helmet>
-      <title>Senyu | {titrePage}</title>
+      <title>{ `Senyu | ${ titrePage }` }</title>
     </Helmet>
 
     return (

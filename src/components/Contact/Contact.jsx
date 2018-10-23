@@ -11,14 +11,14 @@ class Contact extends Component {
   render() {
 
     const { t } = this.props;
+    let titrePage = `Senyu | ${ t('titles.contact') }`;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.contact')}</title>
+      <title>{ titrePage }</title>
     </Helmet>
 
     return (
       <section className="contact-form">
-        {meta}
         <h2>
           {t('content.contact.line1')}
         </h2>

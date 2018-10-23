@@ -14,7 +14,7 @@ class Guide extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.guide')}</title>
+      <title>{ `Senyu | ${ t('titles.guide') }` }</title>
     </Helmet>
 
     return (

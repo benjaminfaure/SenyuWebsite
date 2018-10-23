@@ -23,7 +23,7 @@ class Redirect extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.redirect')}</title>
+      <title>{ `Senyu | ${ t('titles.redirect') }` }</title>
     </Helmet>
     return (
       <section className="redirect">

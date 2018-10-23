@@ -14,7 +14,7 @@ class Communication extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.communication')}</title>
+      <title>{ `Senyu | ${ t('titles.communication') }` }</title>
     </Helmet>
 
     return (

@@ -13,7 +13,7 @@ class Inscriptions extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.registration')}</title>
+      <title>{ `Senyu | ${ t('titles.registration') }` }</title>
     </Helmet>
 
 

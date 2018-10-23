@@ -14,7 +14,7 @@ class CG extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.CG')}</title>
+      <title>{ `Senyu | ${ t('titles.CG') }` }</title>
     </Helmet>
 
     return (

@@ -82,7 +82,7 @@ class App extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.generic')}</title>
+      <title>{ `Senyu | ${ t('titles.generic') }` }</title>
     </Helmet>
 
     const scrollStyle = {

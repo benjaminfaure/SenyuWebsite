@@ -13,7 +13,7 @@ class Recrutement extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.recruitment')}</title>
+      <title>{ `Senyu | ${ t('titles.recruitment') }` }</title>
     </Helmet>
 
     return (

@@ -13,7 +13,7 @@ class Planning extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.planning')}</title>
+      <title>{ `Senyu | ${ t('titles.planning') }` }</title>
     </Helmet>
 
     return (

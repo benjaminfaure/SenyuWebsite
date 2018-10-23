@@ -17,7 +17,7 @@ class EnTravaux extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.workInProgress')}</title>
+      <title>{ `Senyu | ${ t('titles.workInProgress') }` }</title>
     </Helmet>
     return (
       <section className="work-in-progress">

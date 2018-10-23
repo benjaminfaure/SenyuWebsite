@@ -15,7 +15,7 @@ class NotFound extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.404')}</title>
+      <title>{ `Senyu | ${ t('titles.404') }` }</title>
     </Helmet>
     return (
       <section className="not-found">

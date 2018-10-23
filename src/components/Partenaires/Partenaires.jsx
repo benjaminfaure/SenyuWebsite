@@ -13,7 +13,7 @@ class Partenaires extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.partners')}</title>
+      <title>{ `Senyu | ${ t('titles.partners') }` }</title>
     </Helmet>
 
     return (

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Page } from 'react-pdf';
-import { Document } from 'react-pdf/dist/entry.webpack';
+//import { Page } from 'react-pdf';
+//import { Document } from 'react-pdf/dist/entry.webpack';
 import PropTypes from 'prop-types';
 import MediaQuery from 'react-responsive';
 import { withNamespaces, Trans } from 'react-i18next';
@@ -58,7 +58,7 @@ class GenericPDFDisplay extends Component {
 
     return (
       <div className="generic-pdf-viewer">
-        <MediaQuery query="(min-width: 1024px)">
+        {/*<MediaQuery query="(min-width: 1024px)">
           {pager}
           <Document
             file={this.props.filePath}
@@ -67,7 +67,7 @@ class GenericPDFDisplay extends Component {
             <Page pageNumber={pageNumber} />
           </Document>
           {pager}
-        </MediaQuery>
+    </MediaQuery>*/}
         <h2><a href={this.props.filePath} target="_blank" rel="noopener noreferrer" className="generic-pdf-download">{t('content.generic.download')} <FaCloudDownloadAlt /></a></h2>
       </div>
     );

@@ -12,7 +12,7 @@ class GenericContentItem extends Component {
     let className = "generic-content ";
 
     const meta = <Helmet>
-      <title>Senyu | {this.props.title}</title>
+      <title>{ `Senyu | ${ this.props.title }` }</title>
       <meta property="og:title" content={this.props.title} />
       <meta property="og:image" content={this.props.image} />
       <meta property="og:description" content={this.props.content} />

@@ -23,7 +23,7 @@ class FAQ extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>Senyu | {t('titles.faq')}</title>
+      <title>{ `Senyu | ${ t('titles.faq') }` }</title>
     </Helmet>
 
     let categoriesList = this.props.faq.map((categorie) => {

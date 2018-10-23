@@ -76,7 +76,7 @@ class GenericRegistrationForm extends Component {
     }
 
     const meta = <Helmet>
-      <title>Senyu | {pageTitle}</title>
+      <title>{ `Senyu | ${ pageTitle }` }</title>
     </Helmet>
 
     let form;
