@@ -34,7 +34,7 @@ class InfosComplementairesForm extends Component {
             component="input"
             type="text" ref="numeroSIRET"
             placeholder="Renseignez votre SIRET"
-            onBlur={this.handleSiretValidation}
+            //onBlur={this.handleSiretValidation}
             id="numeroSIRET" className="generic-form-field" name="numeroSIRET" required />
 
           <label htmlFor="raisonSociale">
