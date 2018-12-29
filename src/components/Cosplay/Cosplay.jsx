@@ -25,7 +25,7 @@ class Cosplay extends Component {
         </section>
         <GenericPDFDisplay filePath="/cosplay.pdf" />
         <p className="info-inscription-cosplay">
-          {t('content.cosplay.message')}
+          {/*t('content.cosplay.message')*/}
         </p>
         <p className="formulaire-inscription-cosplay">
         {/*<a href="https://docs.google.com/forms/d/e/1FAIpQLSe5J6qk0mJly7ZR8wLLhQfX4OJPPnn_Xq-B3OgAy01gbC7M1w/viewform" target="_blank" rel="noopener noreferrer">{t('content.cosplay.formLink')}</a>*/}
