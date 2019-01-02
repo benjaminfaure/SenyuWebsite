@@ -58,6 +58,21 @@ class Partenaires extends Component {
               <img className="partenaire-item-image" src="/images/logos/france_bleu.jpg" alt="logo" />
             </a>
           </article>
+          <article className="partenaire-item generic-content-list-item">
+            <a href="https://www.japancandybox.com/" target="_blank" rel="noopener noreferrer">
+              <img className="partenaire-item-image" src="/images/logos/japan_candy_box.png" alt="logo" />
+            </a>
+          </article>
+          <article className="partenaire-item generic-content-list-item">
+            <a href="https://www.kawaiibox.com/" target="_blank" rel="noopener noreferrer">
+              <img className="partenaire-item-image" src="/images/logos/kawaii_box.png" alt="logo" />
+            </a>
+          </article>
+          <article className="partenaire-item generic-content-list-item">
+            <a href="http://www.vosgesfm.fr/" target="_blank" rel="noopener noreferrer">
+              <img className="partenaire-item-image" src="/images/logos/vosgesfm.jpg" alt="logo" />
+            </a>
+          </article>
         </div>
       </div>
     );
