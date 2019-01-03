@@ -21,11 +21,14 @@ class ValidationForm extends Component {
   render() {
 
     const formValues = this.props.values ? this.props.values : {}
-    return (
-      <div className="tab validation-tab" ref="validation">
-        <div className="generic-form-header">Récapitulatif et validation</div>
-        <div className="generic-form-body">
-          <h2 className="generic-form-recap-title">Informations concernant le référent</h2>
+    let recapEtape1 = null;
+    let recapEtape2 = null;
+    let recapEtape3 = null;
+    let recapEtape4 = null;
+
+    if (formValues.etape1) {
+      recapEtape1 = (
+        <div className="generic-form-recap-step">
           <p><span className="libelle">Nom de la personne référente : </span> <span className="value">{formValues.etape1.nomReferent}</span></p>
           <p><span className="libelle">Prénom de la personne référente : </span> <span className="value">{formValues.etape1.prenomReferent}</span></p>
           <p><span className="libelle">Date de naissance de la personne référente : </span> <span className="value">{formValues.etape1.dateNaissanceReferent}</span></p>
@@ -38,10 +41,14 @@ class ValidationForm extends Component {
               {formValues.etape1.informationsDeContactConfidentielles ? "Oui" : "Non"}
             </span>
           </p>
-          <hr />
+        </div>
+      );
+    }
 
-          <h2 className="generic-form-recap-title">Informations publiées sur le site</h2>
-          <p><span className="libelle">Nom de l'intervenant sur le site et sur le panonceau du stand : </span> <span className="value">{formValues.etape2.nomIntervenant}</span></p>
+    if (formValues.etape2) {
+      recapEtape2 = (
+        <div className="generic-form-recap-step">
+        <p><span className="libelle">Nom de l'intervenant sur le site et sur le panonceau du stand : </span> <span className="value">{formValues.etape2.nomIntervenant}</span></p>
           <p><span className="libelle">Description de l'intervenant publiée sur le site : </span> <span className="value">{formValues.etape2.descriptionIntervenant}</span></p>
           {formValues.etape2.facebook ?
             <p><span className="libelle">Lien vers la page Facebook officielle : </span> <span className="value"><a href={formValues.etape2.facebook} alt="facebook-link">{formValues.etape2.facebook}</a></span></p> :
@@ -74,10 +81,14 @@ class ValidationForm extends Component {
                 src={formValues.etape2.image ? formValues.etape2.image[0].preview : '/images/logo_mobile.png'} />
             </span>
           </p>
-          <hr />
+        </div>
+      );
+    }
 
-          <h2 className="generic-form-recap-title">Paramétrage du stand</h2>
-          <p><span className="libelle">Longueur désirée du stand (en mètres) : </span> <span className="value">{formValues.etape3.longueur}</span></p>
+    if (formValues.etape3) {
+      recapEtape3 = (
+        <div className="generic-form-recap-step">
+        <p><span className="libelle">Longueur désirée du stand (en mètres) : </span> <span className="value">{formValues.etape3.longueur}</span></p>
           <p><span className="libelle">Profondeur désirée du stand (en mètres) : </span> <span className="value">{formValues.etape3.profondeur}</span></p>
           <p><span className="libelle">Nombre de chaises désirées sur le stand : </span> <span className="value">{formValues.etape3.nombreDeChaises}</span></p>
           <p><span className="libelle">Nombre de tables désirées sur le stand : </span> <span className="value">{formValues.etape3.nombreDeTables}</span></p>
@@ -89,10 +100,14 @@ class ValidationForm extends Component {
               {formValues.etape3.raccordementElectriquePresent ? "Oui" : "Non"}
             </span>
           </p>
-          <hr />
+        </div>
+      );
+    }
 
-          <h2 className="generic-form-recap-title">Informations complémentaires</h2>
-          {formValues.etape4.numeroSIRET ?
+    if (formValues.etape4) {
+      recapEtape4 = (
+        <div className="generic-form-recap-step">
+        {formValues.etape4.numeroSIRET ?
             <p><span className="libelle">Numéro SIRET : </span> <span className="value">{formValues.etape4.numeroSIRET}</span></p> :
             ''
           }
@@ -116,6 +131,28 @@ class ValidationForm extends Component {
             <p><span className="libelle">Type de logement : </span> <span className="value">{formValues.etape4.typeDeLogement}</span></p> :
             ''
           }
+        </div>
+      );
+    }
+
+    return (
+      <div className="tab validation-tab" ref="validation">
+        <div className="generic-form-header">Récapitulatif et validation</div>
+        <div className="generic-form-body">
+          <h2 className="generic-form-recap-title">Informations concernant le référent</h2>
+          {recapEtape1}
+          <hr />
+
+          <h2 className="generic-form-recap-title">Informations publiées sur le site</h2>
+          {recapEtape2}
+          <hr />
+
+          <h2 className="generic-form-recap-title">Paramétrage du stand</h2>
+          {recapEtape3}
+          <hr />
+
+          <h2 className="generic-form-recap-title">Informations complémentaires</h2>
+          {recapEtape4}
           <hr />
 
           <label htmlFor="conditionsGeneralesDeServiceAcceptees">
@@ -127,7 +164,7 @@ class ValidationForm extends Component {
             type="checkbox"
             id="conditionsGeneralesDeServiceAcceptees" name="conditionsGeneralesDeServiceAcceptees" required />
 
-          <button type="submit" id="validBtn"  onClick={this.scrollTop} disabled={this.props.pristine || this.props.submitting || this.props.invalid}>
+          <button type="submit" id="validBtn" onClick={this.scrollTop} disabled={this.props.pristine || this.props.submitting || this.props.invalid}>
             Submit
           </button>
         </div>
