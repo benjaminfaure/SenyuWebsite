@@ -48,7 +48,7 @@ class Menu extends Component {
         <li className={this.menuClassName("cosplay", true)}><Link to="/cosplay"><span>{t('navigation.cosplay')}</span></Link></li>
         <li className={this.menuClassName("animations", true)}><Link to="/animations"><span>{t('navigation.animations')}</span></Link></li>
         {streamMenu}
-        {/* <li className="menu-item menu-item-special"><Link to="/billeterie"><span>{t('navigation.tickets')}</span></Link></li> */}
+        <li className="menu-item menu-item-special"><Link to="/billeterie"><span>{t('navigation.tickets')}</span></Link></li>
       </ul>
     );
 

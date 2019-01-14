@@ -31,7 +31,7 @@ import Contact from './components/Contact/Contact.jsx';
 
 import Recrutement from './components/Recrutement/Recrutement.jsx';
 
-//import Billeterie from './components/Billeterie/Billeterie.jsx';
+import Billeterie from './components/Billeterie/Billeterie.jsx';
 
 import Planning from './components/Planning/Planning.jsx';
 
@@ -185,7 +185,7 @@ const routes = [
       {
         path: '/billeterie',
         exact: true,
-        component: EnTravaux
+        component: Billeterie
       },
       /* 404 */
       {
