@@ -30,7 +30,7 @@ import './App.css';
 
 
 
-GoogleAnalytics.initialize(process.env.REACT_APP_ANALYTICS_ID, { debug: true });
+GoogleAnalytics.initialize(process.env.REACT_APP_ANALYTICS_ID);
 
 class App extends Component {
 
@@ -123,7 +123,7 @@ class App extends Component {
 
 App.propTypes = {
   showMainContent: PropTypes.bool,
-  errorMessage: PropTypes.object,
+  errorMessage: PropTypes.string,
 };
 
 const mapStateToProps = (state) => (
