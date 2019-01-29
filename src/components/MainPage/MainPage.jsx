@@ -19,9 +19,6 @@ class MainPage extends Component {
         <article id="main-page-message">
           <img src="/images/logo_mobile.png" alt="logo" />
           <span>{t('content.home.line1')}</span>
-          <span>{t('content.home.line2')}</span>
-          <span>{t('content.home.line3')}</span>
-          <span><a href="https://tinyurl.com/ybbt5wvx">{t('content.home.line4')}</a></span>
         </article>
         <article>
           <MainPageMap />
