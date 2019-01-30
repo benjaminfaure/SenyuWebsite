@@ -73,6 +73,11 @@ class Partenaires extends Component {
               <img className="partenaire-item-image" src="/images/logos/vosgesfm.jpg" alt="logo" />
             </a>
           </article>
+          <article className="partenaire-item generic-content-list-item">
+            <a href="https://www.funradio.fr/" target="_blank" rel="noopener noreferrer">
+              <img className="partenaire-item-image" src="/images/logos/funradio.png" alt="logo" />
+            </a>
+          </article>
         </div>
       </div>
     );
