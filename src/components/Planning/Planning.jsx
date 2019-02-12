@@ -22,7 +22,7 @@ class Planning extends Component {
         <section className="generic-page-header">
           <h1 className="generic-page-title">{t('content.planning.pageTitle')}</h1>
         </section>
-        <GenericImageDisplay filePath="/images/planning.png" altTag="planning"/>
+        <GenericImageDisplay filePath="/images/planningS7.png" noDL={false} altTag="planning"/>
       </div>
     );
   }

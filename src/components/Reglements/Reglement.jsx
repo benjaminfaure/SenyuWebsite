@@ -34,7 +34,7 @@ class Reglement extends Component {
     switch (this.state.reglementType) {
       case "cosplay":
         titrePage = t('content.regulation.cosplay');
-        contenuPage = <GenericImageDisplay filePath="/images/reglement_replique_cosplay.jpg" altTag="reglement replique cosplay" />;
+        contenuPage = <GenericImageDisplay filePath="/images/reglement_replique_cosplay.jpg"  noDL={false} altTag="reglement replique cosplay" />;
         break;
       case "interieur":
         titrePage = t('content.regulation.interior');

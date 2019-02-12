@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { withNamespaces } from 'react-i18next';
 
 import GenericPDFDisplay from '../GenericContent/GenericPDFDisplay.jsx';
+import GenericImageDisplay from '../GenericContent/GenericImageDisplay.jsx';
 
 import './Plans.css';
 
@@ -22,6 +23,7 @@ class Plans extends Component {
         <section className="generic-page-header">
           <h1 className="generic-page-title">{t('content.plans.pageTitle')}</h1>
         </section>
+        <GenericImageDisplay filePath="/images/planS7.jpg"  noDL={true} altTag="plan"/>
         <GenericPDFDisplay filePath="/plan.pdf" />
       </div>
     );
