@@ -38,7 +38,7 @@ class Menu extends Component {
             <li className={this.menuClassName("reglements", true)}><Link to="/reglements"><span>{t('navigation.regulations')}</span></Link></li>
             <li className={this.menuClassName("plans", true)}><Link to="/plans"><span>{t('navigation.plans')}</span></Link></li>
             <li className={this.menuClassName("planning", true)}><Link to="/planning"><span>{t('navigation.planning')}</span></Link></li>
-            <li className={this.menuClassName("guide", true)}><Link to="/guide"><span>{t('navigation.guide')}</span></Link></li>
+            {/* <li className={this.menuClassName("guide", true)}><Link to="/guide"><span>{t('navigation.guide')}</span></Link></li>*/}
             <li className={this.menuClassName("contact", true)}><Link to="/contact"><span>{t('navigation.contact')}</span></Link></li>
             <li className={this.menuClassName("communication", true)}><Link to="/communication"><span>{t('navigation.communication')}</span></Link></li>
           </ul>

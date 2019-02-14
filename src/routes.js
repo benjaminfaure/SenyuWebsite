@@ -128,11 +128,11 @@ const routes = [
         component: Planning
       },
       /* Guide */
-      {
+      /*{
         path: '/guide',
         exact: true,
         component: Guide
-      },
+      },*/
       /* CG */
       {
         path: '/cg',
