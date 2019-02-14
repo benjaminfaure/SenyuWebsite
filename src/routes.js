@@ -182,11 +182,11 @@ const routes = [
         component: Recrutement
       },
       /* Billeterie */
-      {
+      /* {
         path: '/billeterie',
         exact: true,
         component: Billeterie
-      },
+      }, */
       /* 404 */
       {
         path: '*',
