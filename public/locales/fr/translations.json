@@ -80,6 +80,7 @@
       "download": "Télécharger",
       "pagination": "Page <1>{{pageNumber}}</1> sur <3>{{numPages}}</3>",
       "noRecord": "Aucun enregistrement trouvé",
+      "loading": "Chargement...",
       "search": "Rechercher ...",
       "all": "Tous",
       "boutique": "Boutique",

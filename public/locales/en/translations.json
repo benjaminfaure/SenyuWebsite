@@ -79,6 +79,7 @@
       "download": "Download",
       "pagination": "Page <1>{{pageNumber}}</1> of <3>{{numPages}}</3>",
       "noRecord": "No record found",
+      "loading": "Loading...",
       "search": "Search...",
       "all": "All",
       "boutique": "Shop",
