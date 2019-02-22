@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 import './Redirect.css';
 
@@ -42,4 +42,4 @@ class Redirect extends Component {
 }
 
 
-export default withNamespaces('translations')(Redirect);
+export default withTranslation('translations')(Redirect);

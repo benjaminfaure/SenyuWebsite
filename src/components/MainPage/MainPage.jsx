@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation  } from 'react-i18next';
 
 import './MainPage.css';
 import MainPageMap from './MainPageMap.jsx';
@@ -31,4 +31,4 @@ class MainPage extends Component {
 
 
 
-export default withNamespaces('translations')(MainPage);
+export default withTranslation('translations')(MainPage);

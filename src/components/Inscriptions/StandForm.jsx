@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Field, change } from 'redux-form';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
 
 
@@ -208,4 +208,4 @@ const mapDispatchToProps = (dispatch) => (
   }
 );
 
-export default withNamespaces('translations')(connect(null, mapDispatchToProps)(StandForm));
+export default withTranslation('translations')(connect(null, mapDispatchToProps)(StandForm));

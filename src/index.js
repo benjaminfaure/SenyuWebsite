@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import 'react-app-polyfill/ie9'; // For IE 9-11 support
 import 'react-app-polyfill/ie11'; // For IE 11 support
 
@@ -16,20 +16,30 @@ import { unregister } from './registerServiceWorker';
 import './i18n';
 
 const rootElement = document.getElementById('root');
+const Loader = () => (
+  <div className="App">
+    <div>loading...</div>
+  </div>
+);
+
 
 if (rootElement.hasChildNodes()) {
-hydrate(
-  <Provider store={senyuStore}>
-    <BrowserRouter>
-        {renderRoutes(routes)}
-    </BrowserRouter>
-  </Provider>, rootElement);
+  hydrate(
+    <Suspense fallback={<Loader />}>
+      <Provider store={senyuStore}>
+        <BrowserRouter>
+          {renderRoutes(routes)}
+        </BrowserRouter>
+      </Provider>
+    </Suspense>, rootElement);
 } else {
   render(
-    <Provider store={senyuStore}>
-      <BrowserRouter>
-        {renderRoutes(routes)}
-      </BrowserRouter>
-    </Provider>, rootElement);
+    <Suspense fallback={<Loader />}>
+      <Provider store={senyuStore}>
+        <BrowserRouter>
+          {renderRoutes(routes)}
+        </BrowserRouter>
+      </Provider>
+    </Suspense>, rootElement);
 }
 unregister();

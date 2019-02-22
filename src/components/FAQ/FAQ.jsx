@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 import FAQActionCreators from '../../actions/FAQActionCreators';
 
@@ -63,4 +63,4 @@ const mapDispatchToProps = (dispatch) => (
   }
 );
 
-export default withNamespaces('translations')(connect(mapStateToProps, mapDispatchToProps)(FAQ));
+export default withTranslation('translations')(connect(mapStateToProps, mapDispatchToProps)(FAQ));

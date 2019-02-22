@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 import GenericImageDisplay from '../GenericContent/GenericImageDisplay.jsx';
 import GenericPDFDisplay from '../GenericContent/GenericPDFDisplay.jsx';
@@ -64,4 +64,4 @@ class Reglement extends Component {
 }
 
 
-export default withNamespaces('translations')(Reglement);
+export default withTranslation('translations')(Reglement);

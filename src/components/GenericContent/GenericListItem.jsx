@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 
 import './GenericListItem.css';
@@ -44,4 +44,4 @@ GenericListItem.propTypes = {
   propClass: PropTypes.string
 };
 
-export default withNamespaces('translations')(GenericListItem);
+export default withTranslation('translations')(GenericListItem);

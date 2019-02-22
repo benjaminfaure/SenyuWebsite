@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 import { FaEmpire } from 'react-icons/fa';
 
@@ -42,4 +42,4 @@ class EnTravaux extends Component {
 }
 
 
-export default withNamespaces('translations')(EnTravaux);
+export default withTranslation('translations')(EnTravaux);

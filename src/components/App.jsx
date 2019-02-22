@@ -8,7 +8,7 @@ import { IconContext } from 'react-icons';
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux';
 import { renderRoutes } from 'react-router-config';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 
 
@@ -27,7 +27,6 @@ import ErrorsActionCreators from '../actions/ErrorsActionCreators';
 
 
 import './App.css';
-
 
 
 GoogleAnalytics.initialize(process.env.REACT_APP_ANALYTICS_ID);
@@ -82,7 +81,7 @@ class App extends Component {
     const { t } = this.props;
 
     const meta = <Helmet>
-      <title>{ `Senyu | ${ t('titles.generic') }` }</title>
+      <title>{`Senyu | ${t('titles.generic')}`}</title>
     </Helmet>
 
     const scrollStyle = {
@@ -101,22 +100,22 @@ class App extends Component {
     }
 
     return (
-      <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
-        <div className="App" >
-          <ScrollToTop showUnder={160} style={scrollStyle}>
-            <FaRegArrowAltCircleUp />
-          </ScrollToTop>
-          {meta}
-          <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
-          <Menu currentLocation={this.state.currentLocation} />
-          <main className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
-            {errorMessage}
+        <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
+          <div className="App" >
+            <ScrollToTop showUnder={160} style={scrollStyle}>
+              <FaRegArrowAltCircleUp />
+            </ScrollToTop>
+            {meta}
+            <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
+            <Menu currentLocation={this.state.currentLocation} />
+            <main className={this.state.isMenuOpen ? "main-content open" : "main-content"}>
+              {errorMessage}
 
-            {renderRoutes(this.props.route.routes)}
-          </main>
-          <Footer />
-        </div>
-      </IconContext.Provider>
+              {renderRoutes(this.props.route.routes)}
+            </main>
+            <Footer />
+          </div>
+        </IconContext.Provider>
     );
   }
 }
@@ -141,4 +140,4 @@ const mapDispatchToProps = (dispatch) => (
 
 
 
-export default withNamespaces('translations')(withRouter(connect(mapStateToProps, mapDispatchToProps)(App)));
+export default withTranslation('translations')(withRouter(connect(mapStateToProps, mapDispatchToProps)(App)));

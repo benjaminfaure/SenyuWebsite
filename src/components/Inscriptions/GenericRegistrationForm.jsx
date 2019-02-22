@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { reduxForm, FormSection } from 'redux-form'
 import { Helmet } from "react-helmet";
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
 
 import ReferentForm from './ReferentForm.jsx';
@@ -59,7 +59,8 @@ class GenericRegistrationForm extends Component {
     tabs = document.getElementsByClassName('tab');
     this.handleShowTab(currentTab);
 
-    const { t, handleSubmit, pristine, invalid, submitting } = this.props;
+    const { t } = this.props
+    const { handleSubmit, pristine, invalid, submitting } = this.props;
     const pageTitle = t(`content.registration.${registrationType}.pageTitle`);
     let messageDossier = '';
 
@@ -216,4 +217,4 @@ const mapDispatchToProps = (dispatch) => (
 
 const createReduxForm = reduxForm({ form: 'registration', initialValues })
 
-export default createReduxForm(withNamespaces('translations')(connect(mapStateToProps, mapDispatchToProps)(GenericRegistrationForm)));
+export default createReduxForm(withTranslation('translations')(connect(mapStateToProps, mapDispatchToProps)(GenericRegistrationForm)));

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 import { TYPE_EXPOSANT } from '../../constants';
 
@@ -104,4 +104,4 @@ const mapDispatchToProps = (dispatch) => (
 );
 
 
-export default withNamespaces('translations')(connect(mapStateToProps, mapDispatchToProps)(Exposants));
+export default withTranslation('translations')(connect(mapStateToProps, mapDispatchToProps)(Exposants));

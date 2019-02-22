@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 //import { Page } from 'react-pdf';
 //import { Document } from 'react-pdf/dist/entry.webpack';
 import PropTypes from 'prop-types';
-import MediaQuery from 'react-responsive';
-import { withNamespaces, Trans } from 'react-i18next';
+import { withTranslation, Trans } from 'react-i18next';
 
 import { FaAngleLeft, FaAngleRight, FaCloudDownloadAlt } from 'react-icons/fa';
 
@@ -78,4 +77,4 @@ GenericPDFDisplay.propTypes = {
   filePath: PropTypes.string
 };
 
-export default withNamespaces('translations')(GenericPDFDisplay);
+export default withTranslation('translations')(GenericPDFDisplay);

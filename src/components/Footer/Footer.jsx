@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 import { FaFacebook, FaTwitter, FaTwitch, FaYoutube, FaInstagram } from 'react-icons/fa';
 
@@ -36,8 +36,8 @@ class Footer extends Component {
         </div>
         <div className="footer-content">
           <div className="footer-language">
-            <h5><a onClick={() => changeLanguage('fr')}><span><img src="/images/FR.png" alt="FR" title="french flag"/> Français</span></a></h5>
-            <h5><a onClick={() => changeLanguage('en')}><span><img src="/images/GB.png" alt="GB" title="english flag"/> English</span></a></h5>
+            <h5><a href="#" onClick={() => changeLanguage('fr')}><span><img src="/images/FR.png" alt="FR" title="french flag"/> Français</span></a></h5>
+            <h5><a href="#" onClick={() => changeLanguage('en')}><span><img src="/images/GB.png" alt="GB" title="english flag"/> English</span></a></h5>
           </div>
           <div className="footer-cc">
             <h5><span>Senyu</span>© 2017-2018 - {t('footer.allright')}</h5>
@@ -49,4 +49,4 @@ class Footer extends Component {
 }
 
 
-export default withNamespaces('translations')(Footer);
+export default withTranslation('translations')(Footer);

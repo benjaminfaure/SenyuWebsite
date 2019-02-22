@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 
 
@@ -35,4 +35,4 @@ class Contact extends Component {
 }
 
 
-export default withNamespaces('translations')(Contact);
+export default withTranslation('translations')(Contact);

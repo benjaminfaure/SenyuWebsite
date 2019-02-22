@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Field } from 'redux-form';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 
 import { luhn_calculate } from '../../utils';
@@ -122,4 +122,4 @@ class InfosComplementairesForm extends Component {
 
 
 }
-export default withNamespaces('translations')(InfosComplementairesForm);
+export default withTranslation('translations')(InfosComplementairesForm);

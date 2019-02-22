@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import PropTypes from 'prop-types';
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 
 
@@ -42,4 +42,4 @@ GenericList.propTypes = {
   titrePage: PropTypes.string
 };
 
-export default withNamespaces('translations')(GenericList);
+export default withTranslation('translations')(GenericList);
