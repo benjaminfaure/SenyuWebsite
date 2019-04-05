@@ -5,7 +5,7 @@ import { withTranslation } from 'react-i18next';
 
 
 
-import './GenericList.css';
+import './GenericList.scss';
 
 class GenericList extends Component {
   render() {

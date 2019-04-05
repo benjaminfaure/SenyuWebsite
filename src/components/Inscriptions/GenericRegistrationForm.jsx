@@ -11,7 +11,7 @@ import InfosComplementairesForm from './InfosComplementairesForm.jsx';
 import ValidationForm from './ValidationForm.jsx';
 import RegistrationsActionCreators from '../../actions/RegistrationsActionCreators';
 
-import './GenericRegistrationForm.css';
+import './GenericRegistrationForm.scss';
 
 let registrationType;
 let currentTab = 0;

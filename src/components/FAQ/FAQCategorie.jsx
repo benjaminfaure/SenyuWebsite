@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import FAQQuestion from './FAQQuestion.jsx';
 
-import './FAQCategorie.css';
+import './FAQCategorie.scss';
 
 class FAQCategorie extends Component {
 

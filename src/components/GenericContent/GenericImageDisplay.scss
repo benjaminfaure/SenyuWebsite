@@ -1,0 +1,22 @@
+@import '../../styles/colors.scss';
+
+.generic-image-viewer {
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+
+  .generic-image-download {
+    text-decoration: none;
+    color: $blue;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .generic-image-viewer img {
+    width: 50%;
+  }
+}
+

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './MainPageMap.css';
+import './MainPageMap.scss';
 
 let Map, TileLayer, Marker, Popup;
 class MainPageMap extends Component {

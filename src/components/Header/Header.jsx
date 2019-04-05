@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 
-import './Header.css';
+import './Header.scss';
 import MenuIcon from '../Menu/MenuIcon.jsx';
 
 class Header extends Component {

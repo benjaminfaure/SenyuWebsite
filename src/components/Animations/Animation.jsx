@@ -9,7 +9,7 @@ import GenericContentItem from '../GenericContent/GenericContentItem.jsx';
 import AnimationsActionCreators from '../../actions/AnimationsActionCreators';
 
 
-import './Animation.css';
+import './Animation.scss';
 
 let animationId;
 

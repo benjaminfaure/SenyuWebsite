@@ -3,7 +3,7 @@ import { withTranslation } from 'react-i18next';
 import Dropzone from 'react-dropzone';
 
 
-import './GenericFileUpload.css';
+import './GenericFileUpload.scss';
 
 const renderDropzoneInput = (field) => {
   const files = field.input.value;

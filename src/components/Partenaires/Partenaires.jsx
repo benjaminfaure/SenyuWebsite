@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 
 
 
-import './Partenaires.css';
+import './Partenaires.scss';
 
 class Partenaires extends Component {
 

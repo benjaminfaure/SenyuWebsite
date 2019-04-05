@@ -5,7 +5,7 @@ import { withTranslation  } from 'react-i18next';
 import GenericPDFDisplay from '../GenericContent/GenericPDFDisplay';
 
 
-import './CG.css';
+import './CG.scss';
 
 class CG extends Component {
 

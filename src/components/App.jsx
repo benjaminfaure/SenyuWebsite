@@ -26,7 +26,7 @@ import Footer from './Footer/Footer.jsx';
 import ErrorsActionCreators from '../actions/ErrorsActionCreators';
 
 
-import './App.css';
+import './App.scss';
 
 
 GoogleAnalytics.initialize(process.env.REACT_APP_ANALYTICS_ID);

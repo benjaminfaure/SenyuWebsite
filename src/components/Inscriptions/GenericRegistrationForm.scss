@@ -1,0 +1,150 @@
+@import '../../styles/colors.scss';
+.generic-form {
+
+
+  .generic-form-header {
+    background-color: $blue;
+    color: white;
+    padding: 10px 15px;
+  }
+
+  .generic-form-body {
+    padding: 18px;
+  }
+
+  .generic-form-recap-title {
+    color: $blue;
+  }
+
+  .generic-form-completed {
+    text-align: center;
+    color: $darkerGreen;
+    border: 1px solid $darkerGreen;
+    border-radius: 2px;
+    background-color: $lighterGreen;
+    padding: 5px 0 5px 0;
+  }
+
+  span.requiredField {
+    color: brown;
+    padding-left: 2px;
+  }
+
+  .invalid {
+    background-color: #fae8e8;
+  }
+
+  label, textarea {
+    display: inline-block;
+    max-width: 100%;
+    margin: 5px 0;
+    font-weight: 700;
+  }
+
+  label.checkbox {
+    display: flex;
+  }
+
+  input, textarea, select {
+    width: 100%;
+  }
+
+  button {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+  }
+
+  .not-shown {
+    display: none;
+  }
+
+  .tab {
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border: 1px $blue solid;
+    margin-bottom: 50px;
+  }
+
+  .parametreStand {
+    display: none;
+  }
+
+
+  /*
+    Validation Tab
+  */
+  .validation-tab {
+    .libelle {
+      font-weight: 700;
+    }
+    .value {
+      color: $red;
+    }
+  }
+
+  /*
+    Tabs
+  */
+
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: $blue;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+    /* Mark the active step: */
+    .active {
+      opacity: 1;
+    }
+    /* Mark the steps that are finished and valid: */
+    .finish {
+      background-color: $green
+    }
+  }
+
+  #nextBtn, #validBtn {
+    background-color: $blue;
+    &:disabled {
+      background-color: $grey
+    }
+  }
+  #prevBtn {
+    background-color: $grey;
+    margin-right: 5px;
+  }
+
+
+  /*
+  Message Dossier
+  */
+  .message-dossier {
+    color: $red;
+    a{
+      color: $blue;
+      text-decoration: none;
+    }
+  }
+  .lien-dossier{
+    color: $red;
+    text-decoration: none;
+  }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+	.generic-form {
+    margin-left: 25%;
+    width: 50%;
+  }
+
+}

@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 
 
 
-import './Recrutement.css';
+import './Recrutement.scss';
 
 class Recrutement extends Component {
 

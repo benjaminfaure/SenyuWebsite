@@ -5,7 +5,7 @@ import { withTranslation } from 'react-i18next';
 import GenericPDFDisplay from '../GenericContent/GenericPDFDisplay.jsx';
 
 
-import './Guide.css';
+import './Guide.scss';
 
 class Guide extends Component {
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import { withTranslation } from 'react-i18next';
 
-import './Stream.css';
+import './Stream.scss';
 
 class Stream extends Component {
 

@@ -5,7 +5,7 @@ import { withTranslation } from 'react-i18next';
 import GenericPDFDisplay from '../GenericContent/GenericPDFDisplay.jsx';
 import GenericImageDisplay from '../GenericContent/GenericImageDisplay.jsx';
 
-import './Plans.css';
+import './Plans.scss';
 
 class Plans extends Component {
 

@@ -8,7 +8,7 @@ import { FaAngleLeft, FaAngleRight, FaCloudDownloadAlt } from 'react-icons/fa';
 
 
 
-import './GenericPDFDisplay.css';
+import './GenericPDFDisplay.scss';
 
 class GenericPDFDisplay extends Component {
   constructor(props) {

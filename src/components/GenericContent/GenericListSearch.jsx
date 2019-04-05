@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 
 import { FaSearch } from 'react-icons/fa';
 
-import './GenericListSearch.css';
+import './GenericListSearch.scss';
 
 class GenericListSearch extends Component {
 

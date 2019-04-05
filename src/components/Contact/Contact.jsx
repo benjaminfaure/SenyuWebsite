@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 
 
 
-import './Contact.css';
+import './Contact.scss';
 
 class Contact extends Component {
 

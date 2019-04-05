@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-import './Billeterie.css';
+import './Billeterie.scss';
 
 
 class Billeterie extends Component {

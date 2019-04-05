@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import './MenuIcon.css';
+import './MenuIcon.scss';
 
 class MenuIcon extends Component {
 

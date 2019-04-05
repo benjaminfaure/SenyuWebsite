@@ -9,7 +9,7 @@ import GenericContentItem from '../GenericContent/GenericContentItem.jsx';
 import ExposantsActionCreators from '../../actions/ExposantsActionCreators';
 
 
-import './Exposant.css';
+import './Exposant.scss';
 
 let exposantId;
 

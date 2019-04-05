@@ -1,0 +1,28 @@
+@import '../../styles/colors.scss';
+
+.generic-list-search {
+  display: flex;
+  padding-bottom: 10px;
+
+  h4 {
+    margin: 0;
+    color: $blue;
+    padding: 5px 20px 0px 0px;
+
+  }
+
+  input {
+    font-family:inherit;
+    width: 100%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    border: 2px solid $blue;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+
+    &[type=search]:focus {
+      border: 2px solid $yellow;
+  }
+  }
+}

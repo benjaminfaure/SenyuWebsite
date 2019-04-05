@@ -1,0 +1,26 @@
+@import '../../styles/colors.scss';
+
+@media screen and (min-width: 1024px) {
+
+
+  .faq-categorie {
+    display: flex;
+    padding: 10px 0;
+
+    .faq-categorie-label{
+      border-top: 2px $red solid;
+      flex: 2;
+      text-align: center;
+      h4 {
+        text-align: left;
+      }
+    }
+    .faq-categorie-questions {
+      flex: 5;
+      padding-left: 10px;
+    }
+  }
+
+
+
+}

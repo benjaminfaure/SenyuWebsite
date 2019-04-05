@@ -7,7 +7,7 @@ import { FaCloudDownloadAlt } from 'react-icons/fa';
 
 
 
-import './GenericImageDisplay.css';
+import './GenericImageDisplay.scss';
 
 class GenericImageDisplay extends Component {
 

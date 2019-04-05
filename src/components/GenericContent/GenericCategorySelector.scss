@@ -1,0 +1,45 @@
+@import '../../styles/colors.scss';
+
+.generic-category-selector  {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 10px;
+
+  input[type=radio] {
+    display: none;
+
+    &:checked ~ label .generic-category-radio {
+      display: none;
+    }
+
+    &:checked ~ label .generic-category-radio-checked,
+    &:checked ~ label {
+      display: inline-block;
+      color: $blue;
+      font-weight: 700;
+    }
+
+    & ~ label .generic-category-radio-checked {
+      display: none;
+    }
+  }
+
+  label {
+    font-size: 20px;
+  }
+
+
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  .generic-category-selector  {
+    flex-direction: row;
+  }
+
+  .generic-category-selector label {
+    cursor: pointer;
+  }
+}

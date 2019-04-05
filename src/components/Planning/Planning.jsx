@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 
 import GenericImageDisplay from '../GenericContent/GenericImageDisplay.jsx';
 
-import './Planning.css';
+import './Planning.scss';
 
 class Planning extends Component {
 

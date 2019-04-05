@@ -11,7 +11,7 @@ import GenericListSearch from '../GenericContent/GenericListSearch.jsx';
 import GenericCategorySelector from '../GenericContent/GenericCategorySelector.jsx';
 import ExposantsActionCreators from '../../actions/ExposantsActionCreators';
 
-import './Exposants.css';
+import './Exposants.scss';
 
 
 let exposantsType;

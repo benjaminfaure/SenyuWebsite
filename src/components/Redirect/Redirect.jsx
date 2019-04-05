@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Helmet } from "react-helmet";
 import { withTranslation } from 'react-i18next';
 
-import './Redirect.css';
+import './Redirect.scss';
 
 
 class Redirect extends Component {

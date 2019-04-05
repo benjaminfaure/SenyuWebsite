@@ -12,7 +12,7 @@ import GenericCategorySelector from '../GenericContent/GenericCategorySelector.j
 import AnimationsActionCreators from '../../actions/AnimationsActionCreators';
 
 
-import './Animations.css';
+import './Animations.scss';
 
 
 class Animations extends Component {

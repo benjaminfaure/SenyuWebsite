@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 import { FaFacebook, FaTwitter, FaTwitch, FaYoutube, FaInstagram } from 'react-icons/fa';
 
 
-import './Footer.css';
+import './Footer.scss';
 
 class Footer extends Component {
   render() {

@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 
 import { FaEmpire } from 'react-icons/fa';
 
-import './EnTravaux.css';
+import './EnTravaux.scss';
 
 
 class EnTravaux extends Component {

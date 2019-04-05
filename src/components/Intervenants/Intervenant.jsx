@@ -9,7 +9,7 @@ import GenericContentItem from '../GenericContent/GenericContentItem.jsx';
 import IntervenantsActionCreators from '../../actions/IntervenantsActionCreators';
 
 
-import './Intervenant.css';
+import './Intervenant.scss';
 
 let intervenantId;
 

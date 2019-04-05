@@ -10,7 +10,7 @@ import TwitchActionCreators from '../../actions/TwitchActionCreators';
 
 import { FaAngleDown, FaCircle } from 'react-icons/fa';
 
-import './Menu.css';
+import './Menu.scss';
 
 
 class Menu extends Component {

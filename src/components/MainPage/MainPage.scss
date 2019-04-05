@@ -1,0 +1,34 @@
+@import '../../styles/colors.scss';
+
+#main-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  article {
+    padding: 10px;
+  }
+}
+
+#main-page-message {
+  font-size: 20px;
+  font-family: "Comic Book",sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  img {
+    border-radius: 50%;
+    border: 3px solid $blue;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+	#main-page-message img {
+    width: 20%;
+  }
+}

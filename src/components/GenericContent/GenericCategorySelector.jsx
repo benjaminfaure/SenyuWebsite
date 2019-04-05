@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
 
 
-import './GenericCategorySelector.css';
+import './GenericCategorySelector.scss';
 import { FaRegCircle, FaRegCheckCircle } from 'react-icons/fa';
 
 class GenericCategorySelector extends Component {

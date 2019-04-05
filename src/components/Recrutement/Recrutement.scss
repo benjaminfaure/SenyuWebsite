@@ -1,0 +1,20 @@
+@import '../../styles/colors.scss';
+
+.recrutement-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  h2 {
+    color: $blue;
+    margin: auto;
+  }
+
+  h3 {
+    color: $blue;
+    font-size: 12px;
+  }
+}
+

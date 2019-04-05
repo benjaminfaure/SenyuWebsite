@@ -9,7 +9,7 @@ import FAQActionCreators from '../../actions/FAQActionCreators';
 import FAQCategorie from './FAQCategorie.jsx';
 
 
-import './FAQ.css';
+import './FAQ.scss';
 
 class FAQ extends Component {
 

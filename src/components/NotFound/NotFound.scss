@@ -1,0 +1,22 @@
+@import '../../styles/colors.scss';
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  h1 {
+    font-size: 200px;
+
+    color: $blue;
+    margin: 10px;
+  }
+
+  h2 {
+    color: $blue;
+    margin: auto;
+  }
+}
+

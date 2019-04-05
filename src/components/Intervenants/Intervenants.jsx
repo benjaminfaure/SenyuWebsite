@@ -8,7 +8,7 @@ import GenericListItem from '../GenericContent/GenericListItem.jsx';
 import GenericListSearch from '../GenericContent/GenericListSearch.jsx';
 import IntervenantsActionCreators from '../../actions/IntervenantsActionCreators';
 
-import './Intervenants.css';
+import './Intervenants.scss';
 
 class Intervenants extends Component {
   constructor(props) {

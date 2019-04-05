@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withTranslation  } from 'react-i18next';
 
-import './MainPage.css';
+import './MainPage.scss';
 import MainPageMap from './MainPageMap.jsx';
 
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 
 
-import './GenericListItem.css';
+import './GenericListItem.scss';
 
 class GenericListItem extends Component {
   render() {
@@ -37,7 +37,7 @@ class GenericListItem extends Component {
 }
 
 GenericListItem.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.string,
   title: PropTypes.string,
   image: PropTypes.string,
   link: PropTypes.string,

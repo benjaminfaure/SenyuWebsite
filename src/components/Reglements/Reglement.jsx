@@ -5,7 +5,7 @@ import { withTranslation } from 'react-i18next';
 import GenericImageDisplay from '../GenericContent/GenericImageDisplay.jsx';
 import GenericPDFDisplay from '../GenericContent/GenericPDFDisplay.jsx';
 
-import './Reglement.css';
+import './Reglement.scss';
 
 const initialState = {
   reglementType: null

@@ -4,7 +4,7 @@ import { withTranslation } from 'react-i18next';
 
 import { FaTrophy } from 'react-icons/fa';
 
-import './NotFound.css';
+import './NotFound.scss';
 
 
 class NotFound extends Component {

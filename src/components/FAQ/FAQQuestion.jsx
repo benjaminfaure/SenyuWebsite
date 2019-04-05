@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { FaAngleRight, FaAngleDown } from 'react-icons/fa';
 
 
-import './FAQQuestion.css';
+import './FAQQuestion.scss';
 
 class FAQQuestion extends Component {
 
