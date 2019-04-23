@@ -2,7 +2,8 @@ import {
   UPDATE_DIMENSIONS,
 } from '../constants';
 import update from 'immutability-helper';
-import "@babel/polyfill";
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 const defaultDimensions = () => {
   let dims = getCurrentDimensions();

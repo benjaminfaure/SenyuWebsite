@@ -3,7 +3,8 @@ import {
   RECEIVE_EXPOSANTS_BY_TYPE_SUCCESS,
   RECEIVE_EXPOSANT_BY_ID_SUCCESS
 } from '../constants';
-import "@babel/polyfill";
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 
 const initialState = {

@@ -1,7 +1,8 @@
 import {
   RECEIVE_IS_CHANNEL_LIVE
 } from '../constants';
-import "@babel/polyfill";
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 const initialState = [{
   isLive: false

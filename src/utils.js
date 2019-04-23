@@ -1,4 +1,5 @@
-import "@babel/polyfill";
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 export const throttle = (func, wait) => {
   let context, args, prevArgs, argsChanged, result;

@@ -1,7 +1,8 @@
 import {
   RECEIVE_MODELES_DE_STAND_SUCCESS,
 } from '../constants';
-import "@babel/polyfill";
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 
 const initialState = {

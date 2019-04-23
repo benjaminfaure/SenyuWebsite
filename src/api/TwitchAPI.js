@@ -1,5 +1,6 @@
 import axios from 'axios';
-import "@babel/polyfill";
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 const API_URL = 'https://api.twitch.tv/kraken/streams/senyutv';
 const API_HEADERS = {

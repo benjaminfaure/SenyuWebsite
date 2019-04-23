@@ -4,11 +4,11 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.4.3",
-    "@babel/polyfill": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "@babel/register": "^7.4.0",
     "axios": "^0.18.0",
     "babel-preset-react-app": "^8.0.0",
+    "core-js": "^3.0.1",
     "express": "4.16.4",
     "history": "^4.9.0",
     "i18next": "^15.0.9",

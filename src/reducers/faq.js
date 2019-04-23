@@ -1,7 +1,8 @@
 import {
   RECEIVE_FAQ_SUCCESS
 } from '../constants';
-import "@babel/polyfill";
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 
 const initialState = [{
