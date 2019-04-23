@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
 import { withTranslation } from 'react-i18next';
 
 
@@ -12,13 +11,10 @@ class Recrutement extends Component {
 
     const { t } = this.props;
 
-    const meta = <Helmet>
-      <title>{ `Senyu | ${ t('titles.recruitment') }` }</title>
-    </Helmet>
+    document.title = `Senyu | ${ t('titles.recruitment') }`
 
     return (
       <section className="recrutement-form">
-        {meta}
         <h2>
           {t('content.recruitment.line1')}
         </h2>

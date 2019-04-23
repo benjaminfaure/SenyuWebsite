@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
 import { withTranslation } from 'react-i18next';
 
 import './Redirect.scss';
@@ -22,12 +21,9 @@ class Redirect extends Component {
 
     const { t } = this.props;
 
-    const meta = <Helmet>
-      <title>{ `Senyu | ${ t('titles.redirect') }` }</title>
-    </Helmet>
+    document.title = `Senyu | ${ t('titles.redirect') }`
     return (
       <section className="redirect">
-        {meta}
         <h2>
           {t('content.redirect')}
         </h2>

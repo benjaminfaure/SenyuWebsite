@@ -80,9 +80,7 @@ class App extends Component {
 
     const { t } = this.props;
 
-    const meta = <Helmet>
-      <title>{`Senyu | ${t('titles.generic')}`}</title>
-    </Helmet>
+    document.title = `Senyu | ${t('titles.generic')}`
 
     const scrollStyle = {
       color: "#D12222",
@@ -105,7 +103,6 @@ class App extends Component {
             <ScrollToTop showUnder={160} style={scrollStyle}>
               <FaRegArrowAltCircleUp />
             </ScrollToTop>
-            {meta}
             <Header toggleMenu={this.toggleMenu.bind(this)} isMenuOpen={this.state.isMenuOpen} />
             <Menu currentLocation={this.state.currentLocation} />
             <main className={this.state.isMenuOpen ? "main-content open" : "main-content"}>

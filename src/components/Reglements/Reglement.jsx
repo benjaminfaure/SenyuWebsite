@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
 import { withTranslation } from 'react-i18next';
 
 import GenericImageDisplay from '../GenericContent/GenericImageDisplay.jsx';
@@ -44,14 +43,10 @@ class Reglement extends Component {
         break;
     }
 
-
-    const meta = <Helmet>
-      <title>{ `Senyu | ${ titrePage }` }</title>
-    </Helmet>
+    document.title = `Senyu | ${ titrePage }`
 
     return (
       <div className="reglements">
-        {meta}
         <section className="generic-page-header">
           <h1 className="generic-page-title">{titrePage}</h1>
         </section>

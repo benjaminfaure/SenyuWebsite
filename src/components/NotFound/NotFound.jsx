@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
 import { withTranslation } from 'react-i18next';
 
 import { FaTrophy } from 'react-icons/fa';
@@ -14,12 +13,10 @@ class NotFound extends Component {
 
     const { t } = this.props;
 
-    const meta = <Helmet>
-      <title>{ `Senyu | ${ t('titles.404') }` }</title>
-    </Helmet>
+    document.title = `Senyu | ${ t('titles.404') }`
+
     return (
       <section className="not-found">
-        {meta}
         <h2>
           {t('content.404.line1')}
         </h2>

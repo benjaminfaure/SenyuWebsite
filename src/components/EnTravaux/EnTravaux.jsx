@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
 import { withTranslation } from 'react-i18next';
 
 import { FaEmpire } from 'react-icons/fa';
@@ -16,12 +15,10 @@ class EnTravaux extends Component {
 
     const { t } = this.props;
 
-    const meta = <Helmet>
-      <title>{ `Senyu | ${ t('titles.workInProgress') }` }</title>
-    </Helmet>
+    document.title = `Senyu | ${ t('titles.workInProgress') }`
+
     return (
       <section className="work-in-progress">
-        {meta}
         <h2>
           {t('content.workInProgress.pageTitle')}
         </h2>

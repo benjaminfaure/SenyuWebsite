@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
 import { withTranslation } from 'react-i18next';
 
 import GenericPDFDisplay from '../GenericContent/GenericPDFDisplay.jsx';
@@ -13,13 +12,10 @@ class Guide extends Component {
 
     const { t } = this.props;
 
-    const meta = <Helmet>
-      <title>{ `Senyu | ${ t('titles.guide') }` }</title>
-    </Helmet>
+    document.title = `Senyu | ${ t('titles.guide') }`
 
     return (
       <div>
-        {meta}
         <section className="generic-page-header">
           <h1 className="generic-page-title">{t('content.guide.pageTitle')}</h1>
         </section>

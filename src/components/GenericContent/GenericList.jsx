@@ -14,13 +14,10 @@ class GenericList extends Component {
 
     let titrePage = this.props.titrePage && this.props.itemList && this.props.itemList.length > 0 ? this.props.titrePage : t("content.generic.loading")
 
-    const meta = <Helmet>
-      <title>{ `Senyu | ${ titrePage }` }</title>
-    </Helmet>
+    document.title = `Senyu | ${ titrePage }`
 
     return (
       <div>
-        {meta}
         <section className="generic-page-header">
           <h1 className="generic-page-title">{titrePage}</h1>
         </section>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
 import { withTranslation } from 'react-i18next';
 
 import './Inscriptions.scss';
@@ -12,14 +11,12 @@ class Inscriptions extends Component {
 
     const { t } = this.props;
 
-    const meta = <Helmet>
-      <title>{ `Senyu | ${ t('titles.registration') }` }</title>
-    </Helmet>
+
+    document.title = `Senyu | ${ t('titles.registration') }`
 
 
     return (
       <div className="inscriptions">
-        {meta}
         <section className="generic-page-header">
           <h1 className="generic-page-title">{t('content.registration.pageTitle')}</h1>
         </section>

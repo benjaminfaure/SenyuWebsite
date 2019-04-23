@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
 import { withTranslation } from 'react-i18next';
 
 
@@ -12,13 +11,11 @@ class Partenaires extends Component {
 
     const { t } = this.props;
 
-    const meta = <Helmet>
-      <title>{ `Senyu | ${ t('titles.partners') }` }</title>
-    </Helmet>
+
+    document.title = `Senyu | ${ t('titles.partners') }`
 
     return (
       <div className="partenaires">
-        {meta}
         <section className="generic-page-header">
           <h1 className="generic-page-title">{t('content.partners.pageTitle')}</h1>
         </section>

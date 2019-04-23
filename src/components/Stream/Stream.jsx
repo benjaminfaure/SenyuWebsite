@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
 import { withTranslation } from 'react-i18next';
 
 import './Stream.scss';
@@ -18,13 +17,10 @@ class Stream extends Component {
 
     const { t } = this.props;
 
-    const meta = <Helmet>
-      <title>{ `Senyu | ${ t('titles.stream') }` }</title>
-    </Helmet>
+    document.title = `Senyu | ${ t('titles.stream') }`
 
     return (
       <div id="twitch-embed">
-        {meta}
       </div>
     );
   }

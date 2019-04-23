@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
 import { withTranslation } from 'react-i18next';
 
 
@@ -11,11 +10,7 @@ class Contact extends Component {
   render() {
 
     const { t } = this.props;
-    let titrePage = `Senyu | ${ t('titles.contact') }`;
-
-    const meta = <Helmet>
-      <title>{ titrePage }</title>
-    </Helmet>
+    document.title = `Senyu | ${ t('titles.contact') }`;
 
     return (
       <section className="contact-form">

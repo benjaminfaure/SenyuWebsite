@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Helmet } from "react-helmet";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withTranslation } from 'react-i18next';
@@ -22,9 +21,7 @@ class FAQ extends Component {
 
     const { t } = this.props;
 
-    const meta = <Helmet>
-      <title>{ `Senyu | ${ t('titles.faq') }` }</title>
-    </Helmet>
+    document.title = `Senyu | ${ t('titles.faq') }`
 
     let categoriesList = this.props.faq.map((categorie) => {
       return <FAQCategorie key={categorie.id}
@@ -34,7 +31,6 @@ class FAQ extends Component {
 
     return (
       <div>
-        {meta}
         <section className="generic-page-header">
           <h1 className="generic-page-title">{t('content.faq.pageTitle')}</h1>
         </section>
