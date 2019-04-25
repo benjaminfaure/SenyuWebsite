@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Helmet } from "react-helmet";
 import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
@@ -17,7 +17,7 @@ class GenericList extends Component {
     document.title = `Senyu | ${ titrePage }`
 
     return (
-      <div>
+      <Fragment>
         <section className="generic-page-header">
           <h1 className="generic-page-title">{titrePage}</h1>
         </section>
@@ -27,7 +27,7 @@ class GenericList extends Component {
         <section className="generic-content-list">
           {this.props.itemList}
         </section>
-      </div>
+      </Fragment>
     );
   }
 }

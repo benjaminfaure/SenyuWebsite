@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withTranslation } from 'react-i18next';
@@ -30,14 +30,14 @@ class FAQ extends Component {
     });
 
     return (
-      <div>
+      <Fragment>
         <section className="generic-page-header">
           <h1 className="generic-page-title">{t('content.faq.pageTitle')}</h1>
         </section>
         <section className="faq">
           {categoriesList}
         </section>
-      </div>
+      </Fragment>
     );
   }
 }

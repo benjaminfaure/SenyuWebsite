@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { withTranslation  } from 'react-i18next';
 
 import GenericPDFDisplay from '../GenericContent/GenericPDFDisplay';
@@ -16,12 +16,12 @@ class CG extends Component {
     document.title = `Senyu | ${ t('titles.cg') }`
 
     return (
-      <div>
+      <Fragment>
         <section className="generic-page-header">
           <h1 className="generic-page-title">{t('content.cg.pageTitle')}</h1>
         </section>
         <GenericPDFDisplay filePath="/CG.pdf" />
-      </div>
+      </Fragment>
     );
   }
 }
