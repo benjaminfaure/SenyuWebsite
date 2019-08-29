@@ -40,7 +40,7 @@ class Footer extends Component {
             <h5><a href="#" onClick={() => changeLanguage('en')}><span><img src="/images/GB.png" alt="GB" title="english flag"/> English</span></a></h5>
           </div>
           <div className="footer-cc">
-            <h5><span>Senyu</span>© 2017-2018 - {t('footer.allright')}</h5>
+            <h5><span>Senyu</span>© 2017-2019 - {t('footer.allright')}</h5>
           </div>
         </div>
       </footer>
